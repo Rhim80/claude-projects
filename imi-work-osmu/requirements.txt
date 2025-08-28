@@ -1,0 +1,36 @@
+# IMI WORK OSMU 프로젝트 필수 패키지들
+
+# Notion API
+notion-client>=2.2.1
+
+# 환경변수 관리
+python-dotenv>=1.0.0
+
+# YouTube API
+google-api-python-client>=2.100.0
+
+# 웹 요청 및 데이터 처리
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# 날짜/시간 처리
+python-dateutil>=2.8.0
+
+# JSON 및 데이터 처리
+pydantic>=2.3.0
+
+# 로깅
+loguru>=0.7.0
+
+# 이미지 처리 (향후 캐러셀 생성용)
+Pillow>=10.0.0
+
+# HTTP 클라이언트 (Ghost API용)
+httpx>=0.24.0
+
+# 마크다운 처리
+markdown>=3.4.0
+python-markdown>=3.4.0
+
+# HTML 처리
+bleach>=6.0.0

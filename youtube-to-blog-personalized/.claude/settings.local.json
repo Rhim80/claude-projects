@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__sequential-thinking__sequentialthinking",
+      "WebFetch(domain:www.googleapis.com)",
+      "mcp__filesystem__create_directory",
+      "Bash(claude mcp add:*)",
+      "WebSearch"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

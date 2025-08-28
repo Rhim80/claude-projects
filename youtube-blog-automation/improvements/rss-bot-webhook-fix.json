@@ -1,0 +1,34 @@
+{
+  "name": "Trigger Blog Workflow (Enhanced)",
+  "type": "n8n-nodes-base.httpRequest",
+  "typeVersion": 4.2,
+  "parameters": {
+    "method": "POST",
+    "url": "https://n8n.imiwork.com/webhook/youtube-blog-automation",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": {
+      "pageId": "{{ $('Parse Callback Data').item.json.notionPageId }}",
+      "videoId": "{{ $('Parse Callback Data').item.json.videoId }}",
+      "triggeredBy": "telegram",
+      "userId": "{{ $('Parse Callback Data').item.json.userId }}",
+      "userName": "{{ $('Parse Callback Data').item.json.userName }}",
+      "chatId": "{{ $('Parse Callback Data').item.json.chatId }}",
+      "messageId": "{{ $('Parse Callback Data').item.json.messageId }}",
+      "timestamp": "{{ new Date().toISOString() }}",
+      "workflowVersion": "stable-2.0"
+    },
+    "options": {
+      "timeout": 120000,
+      "retry": {
+        "enabled": true,
+        "maxTries": 3,
+        "waitBetween": 2000
+      },
+      "response": {
+        "fullResponse": true
+      }
+    }
+  },
+  "description": "Enhanced webhook call with retry logic and full response handling"
+}

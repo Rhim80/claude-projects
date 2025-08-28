@@ -1,0 +1,351 @@
+{
+  "name": "YouTube Blog Complete Final - 이미커피",
+  "nodes": [
+    {
+      "id": "webhook-trigger",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [240, 300],
+      "parameters": {
+        "path": "youtube-blog-complete-final",
+        "httpMethod": "POST",
+        "responseMode": "responseNode"
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "id": "get-video-info",
+      "name": "Get Video Info from Notion",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [460, 300],
+      "credentials": {
+        "notionApi": {
+          "id": "kCKFfrau35Gf4PvW"
+        }
+      },
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "get",
+        "pageId": {
+          "__rl": true,
+          "value": "={{ $json.body.videoId || $json.videoId }}",
+          "mode": "id"
+        }
+      }
+    },
+    {
+      "id": "get-youtube-transcript",
+      "name": "Get YouTube Transcript",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [680, 300],
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $('Get Video Info from Notion').item.json.properties.transcriptUrl.url || 'https://api.youtubetranscript.com/api/v1/transcript' }}",
+        "authentication": "none",
+        "onError": "continueRegularOutput",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "json",
+        "jsonParameters": {
+          "parameters": [
+            {
+              "name": "videoId",
+              "value": "={{ $json.body.videoId || $json.videoId }}"
+            },
+            {
+              "name": "lang",
+              "value": "ko"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "gemini-model",
+      "name": "Gemini Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [800, 500],
+      "credentials": {
+        "googleGeminiApi": {
+          "id": "SO4eLSfcE2Z5kkss"
+        }
+      },
+      "parameters": {
+        "modelName": "models/gemini-2.5-flash"
+      }
+    },
+    {
+      "id": "create-blog-article",
+      "name": "Create Blog Article with hovoo Persona",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [900, 300],
+      "parameters": {
+        "promptType": "define",
+        "text": "# hovoo 스타일 블로그 글 작성 요청\n\n당신은 15년간 F&B 업계에서 활동하며 이미커피 4개 매장을 운영하고 있는 hovoo입니다. AI 전문가이자 브랜딩 컨설턴트로서, 오프라인 비즈니스와 AI를 융합한 실무 경험이 풍부합니다.\n\n## 작성할 블로그 글 정보:\n**제목**: {{ $('Get Video Info from Notion').item.json.properties.title.title[0].text.content }}\n**YouTube 영상 정보**: {{ $('Get Video Info from Notion').item.json.properties }}\n**자막/전사 내용**: {{ $('Get YouTube Transcript').item.json }}\n\n## hovoo 페르소나 특징:\n- 15년 카페 운영 경험 + AI 전문성\n- 실무 중심의 실용적 접근\n- 오프라인 비즈니스 × AI 융합 전문가\n- GPTers 커뮤니티 스터디장\n- 자동화 시스템(n8n) 5개 운영 중\n\n## 글쓰기 스타일:\n1. **경험 기반**: 실제 매장 운영 사례 포함\n2. **실무 중심**: 즉시 적용 가능한 팁\n3. **친근한 톤**: 동료에게 조언하는 느낌\n4. **구체적 예시**: 추상적 개념보다 실제 사례\n5. **행동 유도**: 실천할 수 있는 구체적 방법 제시\n\n## 블로그 글 구조:\n1. **인트로**: 개인적 경험이나 매장 상황으로 시작\n2. **핵심 내용**: YouTube 영상의 주요 포인트 해석\n3. **실무 적용**: hovoo의 매장/비즈니스에서 어떻게 활용할지\n4. **액션 플랜**: 독자가 바로 실행할 수 있는 단계\n5. **마무리**: 격려와 함께 커뮤니티 참여 유도\n\n위 정보를 바탕으로 hovoo 스타일의 블로그 글을 한국어로 작성해 주세요. 글의 길이는 1500-2000자 정도로, 매장 운영 경험과 AI 전문성이 자연스럽게 드러나도록 해주세요."
+      }
+    },
+    {
+      "id": "seo-optimization",
+      "name": "SEO Optimization",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [1120, 300],
+      "parameters": {
+        "promptType": "define",
+        "text": "# SEO 최적화 메타데이터 생성\n\n다음 블로그 글을 분석하여 SEO에 최적화된 메타데이터를 JSON 형식으로 생성해 주세요.\n\n**원본 블로그 글**: {{ $('Create Blog Article with hovoo Persona').item.json.response }}\n\n## 생성할 메타데이터:\n\n1. **title**: SEO 친화적 제목 (50-60자, 키워드 포함)\n2. **meta_description**: 메타 설명 (140-160자, 클릭 유도)\n3. **tags**: 관련 태그 배열 (5-8개, 검색량 높은 키워드)\n4. **slug**: URL 친화적 슬러그 (영문, 하이픈 사용)\n5. **excerpt**: 요약문 (200-250자, 글의 핵심 내용)\n6. **featured_image_alt**: 대표 이미지 alt 텍스트\n7. **keywords**: 타겟 키워드 배열 (롱테일 키워드 포함)\n8. **category**: 글 카테고리 (hovoo 블로그 맞춤)\n\n## 키워드 전략:\n- **Primary**: 카페 운영, AI 자동화, n8n 워크플로우\n- **Secondary**: 이미커피, hovoo, F&B 브랜딩\n- **Long-tail**: 구체적 기능/방법 관련 키워드\n\n## 고려사항:\n- hovoo의 전문성 영역 (카페 운영 + AI)\n- 타겟 독자: 자영업자, 소상공인, AI 활용 관심자\n- 검색 의도: 실무 적용 가능한 정보 추구\n\n**반드시 유효한 JSON 형식으로만 응답해 주세요.**"
+      }
+    },
+    {
+      "id": "structured-output-parser",
+      "name": "Parse and Validate JSON",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [1340, 300],
+      "parameters": {
+        "schemaType": "fromJson",
+        "autoFix": true,
+        "jsonSchemaExample": "{\n  \"title\": \"hovoo의 카페 운영 노하우: AI로 효율성 극대화하기\",\n  \"meta_description\": \"15년 카페 운영 전문가 hovoo가 공유하는 AI 자동화 실무 적용법. 이미커피 4개 매장 운영 경험을 바탕으로 한 실전 노하우.\",\n  \"tags\": [\"카페운영\", \"AI자동화\", \"n8n\", \"이미커피\", \"hovoo\", \"F&B브랜딩\", \"자영업\", \"소상공인\"],\n  \"slug\": \"hovoo-cafe-ai-automation-tips\",\n  \"excerpt\": \"카페 운영 15년 차 hovoo가 실제 매장에서 활용하고 있는 AI 자동화 시스템을 공개합니다. n8n 워크플로우 5개를 운영하며 얻은 실무 노하우를 통해 여러분의 비즈니스 효율성을 높여보세요.\",\n  \"featured_image_alt\": \"hovoo 이미커피 매장에서 AI 자동화 시스템을 활용하는 모습\",\n  \"keywords\": [\"카페 운영 노하우\", \"AI 자동화 활용법\", \"n8n 워크플로우 구축\", \"F&B 비즈니스 자동화\", \"이미커피 운영 시스템\"],\n  \"category\": \"AI 실무 활용\"\n}"
+      }
+    },
+    {
+      "id": "save-to-blog-db",
+      "name": "Save to Blog DB",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [1560, 300],
+      "credentials": {
+        "notionApi": {
+          "id": "kCKFfrau35Gf4PvW"
+        }
+      },
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "create",
+        "databaseId": {
+          "__rl": true,
+          "value": "={{ $json.body.blogDatabaseId || '기본블로그DB아이디' }}",
+          "mode": "id"
+        },
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "title",
+              "type": "title",
+              "titleValue": "={{ $('Parse and Validate JSON').item.json.title }}"
+            },
+            {
+              "key": "content",
+              "type": "rich_text",
+              "richTextValue": "={{ $('Create Blog Article with hovoo Persona').item.json.response }}"
+            },
+            {
+              "key": "meta_description",
+              "type": "rich_text",
+              "richTextValue": "={{ $('Parse and Validate JSON').item.json.meta_description }}"
+            },
+            {
+              "key": "tags",
+              "type": "multi_select",
+              "multiSelectValue": "={{ $('Parse and Validate JSON').item.json.tags }}"
+            },
+            {
+              "key": "slug",
+              "type": "rich_text",
+              "richTextValue": "={{ $('Parse and Validate JSON').item.json.slug }}"
+            },
+            {
+              "key": "status",
+              "type": "select",
+              "selectValue": "Published"
+            },
+            {
+              "key": "author",
+              "type": "rich_text",
+              "richTextValue": "hovoo"
+            },
+            {
+              "key": "category",
+              "type": "select",
+              "selectValue": "={{ $('Parse and Validate JSON').item.json.category }}"
+            },
+            {
+              "key": "source_video_id",
+              "type": "rich_text",
+              "richTextValue": "={{ $json.body.videoId || $json.videoId }}"
+            },
+            {
+              "key": "excerpt",
+              "type": "rich_text",
+              "richTextValue": "={{ $('Parse and Validate JSON').item.json.excerpt }}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "send-success-message",
+      "name": "Send Success Message",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [1780, 300],
+      "credentials": {
+        "telegramApi": {
+          "id": "hIo5i77YKdu9Rs8g"
+        }
+      },
+      "parameters": {
+        "resource": "message",
+        "operation": "sendMessage",
+        "chatId": "={{ $json.body.telegramChatId || '@hovoo_automation' }}",
+        "text": "🎉 *YouTube 블로그 자동화 완료!*\n\n📝 **제목**: {{ $('Parse and Validate JSON').item.json.title }}\n📊 **SEO 점수**: 최적화 완료\n🏷️ **태그**: {{ $('Parse and Validate JSON').item.json.tags.join(', ') }}\n📁 **카테고리**: {{ $('Parse and Validate JSON').item.json.category }}\n\n✅ **처리 완료 항목**:\n• YouTube 영상 정보 수집\n• 자막/전사 내용 추출\n• hovoo 페르소나 블로그 글 생성 ({{ $('Create Blog Article with hovoo Persona').item.json.response.length }}자)\n• SEO 메타데이터 최적화\n• Notion 블로그 DB 저장\n\n🔗 **생성된 슬러그**: `{{ $('Parse and Validate JSON').item.json.slug }}`\n\n💡 **다음 단계**: Ghost 블로그 자동 발행을 위해 별도 워크플로우를 실행해 주세요.\n\n---\n*이미커피 AI 자동화 시스템 | hovoo*",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        },
+        "onError": "continueRegularOutput"
+      }
+    },
+    {
+      "id": "webhook-response",
+      "name": "Webhook Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [2000, 300],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{\n  \"success\": true,\n  \"message\": \"YouTube 블로그 자동화가 성공적으로 완료되었습니다.\",\n  \"data\": {\n    \"title\": \"{{ $('Parse and Validate JSON').item.json.title }}\",\n    \"slug\": \"{{ $('Parse and Validate JSON').item.json.slug }}\",\n    \"category\": \"{{ $('Parse and Validate JSON').item.json.category }}\",\n    \"tags\": {{ JSON.stringify($('Parse and Validate JSON').item.json.tags) }},\n    \"content_length\": {{ $('Create Blog Article with hovoo Persona').item.json.response.length }},\n    \"notion_page_id\": \"{{ $('Save to Blog DB').item.json.id }}\",\n    \"processed_at\": \"{{ $now.toISO() }}\",\n    \"processing_time_seconds\": \"{{ Math.round(($now - new Date($('Webhook Trigger').item.json.timestamp || Date.now())) / 1000) }}\"\n  }\n}",
+        "onError": "continueRegularOutput"
+      }
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get Video Info from Notion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Video Info from Notion": {
+      "main": [
+        [
+          {
+            "node": "Get YouTube Transcript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get YouTube Transcript": {
+      "main": [
+        [
+          {
+            "node": "Create Blog Article with hovoo Persona",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gemini Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Create Blog Article with hovoo Persona",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "SEO Optimization",
+            "type": "ai_languageModel", 
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Blog Article with hovoo Persona": {
+      "main": [
+        [
+          {
+            "node": "SEO Optimization",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SEO Optimization": {
+      "main": [
+        [
+          {
+            "node": "Parse and Validate JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse and Validate JSON": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "SEO Optimization",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ],
+      "main": [
+        [
+          {
+            "node": "Save to Blog DB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save to Blog DB": {
+      "main": [
+        [
+          {
+            "node": "Send Success Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Success Message": {
+      "main": [
+        [
+          {
+            "node": "Webhook Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

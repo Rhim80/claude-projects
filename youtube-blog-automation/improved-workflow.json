@@ -1,0 +1,425 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "youtube-to-blog-v2",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "id": "ce69223e-9c32-448e-b4a3-c7b3aba27b4f",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -592,
+        1680
+      ],
+      "webhookId": "youtube-to-blog-v2"
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "get",
+        "pageId": {
+          "__rl": true,
+          "value": "={{ $json.body.pageId }}",
+          "mode": "id"
+        }
+      },
+      "id": "f276c64b-46f3-4e48-9a8e-6e767c3000d6",
+      "name": "Get Video Info from Notion",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        -384,
+        1680
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "kCKFfrau35Gf4PvW",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "youtubeId": "={{ $json.URL }}",
+        "preferCapLang": "ko"
+      },
+      "id": "3ddf0959-6f42-4731-ae5f-54f630547983",
+      "name": "Get YouTube Transcript",
+      "type": "n8n-nodes-bandi-youtube-transcript.youtubeTranscriptNode",
+      "typeVersion": 1,
+      "position": [
+        -192,
+        1680
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=당신은 이미커피 대표 hovoo입니다.\n\n15년간 카페 4개 매장을 운영하며 F&B 브랜딩 전문가로 활동했습니다.\n동시에 AI 자동화 전문가로서 GPTers 커뮤니티 스터디장을 맡고 있습니다.\n\nYouTube 영상 자막을 바탕으로 당신의 경험과 통찰이 담긴 블로그 글을 작성하세요.\n\n[영상 정보]\n제목: {{ $('Get Video Info from Notion').item.json.title }}\n채널: {{ $('Get Video Info from Notion').item.json['채널명'] }}\nURL: {{ $('Get Video Info from Notion').item.json.URL }}\n\n[자막 전문]\n{{ $json.transcript }}\n\n[당신의 배경]\n- 이미커피 대표, 15년 F&B 운영 경험\n- 카페 4개 매장 + 베이커리 운영 중\n- AI 자동화 전문가 (n8n 워크플로우 5개 운영)\n- GPTers 스터디장, \"AI 감성 브랜딩 시스템\" 운영\n- 자영업자 대상 AI 교육 강의\n- 도메인: blog.imiwork.com\n\n[작성 스타일]\n1. 실무 경험 기반의 구체적 통찰\n2. 오프라인 비즈니스 × AI 융합 관점\n3. 자영업자/소상공인을 위한 실용적 조언\n4. 15년 카페 운영 경험에서 나오는 깊이\n5. 친근하지만 전문적인 어투\n6. 마크다운 형식, H1 제목 하나, H2/H3 소제목 구조화\n7. 최소 2500자 이상의 완전한 글\n\n[글 구조]\n- 도입: \"15년 카페를 운영하며 느낀...\" 식으로 경험 기반 시작\n- 본문: 영상 내용 + 본인 경험 융합\n- 실전 팁: F&B/AI 관점에서의 구체적 실행법\n- 결론: 독자의 비즈니스 성장을 위한 행동 유도\n\n영상 내용을 단순 요약하지 말고, 당신의 15년 경험과 AI 전문성으로 재해석해서 독자에게 가치 있는 통찰을 제공하세요.",
+        "batching": {}
+      },
+      "id": "ea198241-3d4b-4bf1-9a9f-3f682788b752",
+      "name": "Create Blog Article with Persona",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        16,
+        1680
+      ]
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.0-flash-001",
+        "options": {
+          "maxOutputTokens": 4000,
+          "temperature": 0.6
+        }
+      },
+      "id": "6a7c28ca-b5ad-4f35-af3b-493d12d62ac2",
+      "name": "Gemini for Article",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        128,
+        1904
+      ],
+      "credentials": {
+        "googlePalmApi": {
+          "id": "SO4eLSfcE2Z5kkss",
+          "name": "hovoo Google Gemini Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=당신은 이미커피 대표 hovoo의 SEO 전문가입니다.\n제공된 블로그 글을 이미커피 도메인(blog.imiwork.com)에 최적화하고 메타데이터를 생성하세요.\n\n[원본 글]\n{{ $json.text }}\n\n[영상 정보]\n제목: {{ $('Get Video Info from Notion').item.json.title }}\nURL: {{ $('Get Video Info from Notion').item.json.URL }}\n\n[브랜드 컨텍스트]\n- 도메인: blog.imiwork.com\n- 브랜드: 이미커피 (imi coffee)\n- 전문분야: F&B 브랜딩, AI 자동화, 카페 운영\n- 타겟: 자영업자, 소상공인, AI 관심있는 사업자\n\n**반드시 아래 JSON 형식으로만 출력:**\n\n```json\n{\n  \"title\": \"클릭하고 싶은 매력적인 제목 (60자 이내)\",\n  \"body\": \"SEO 최적화된 블로그 본문 (마크다운)\",\n  \"slug\": \"url-friendly-slug\",\n  \"tags\": [\"태그1\", \"태그2\", \"태그3\", \"태그4\", \"태그5\"],\n  \"meta_description\": \"검색 결과에 표시될 설명 (160자 이내)\",\n  \"feature_image_alt\": \"피처 이미지 alt 텍스트\"\n}\n```\n\n최적화 원칙:\n- 제목은 \"이미커피 대표가 알려주는\" 또는 \"15년 카페 운영 경험으로 본\" 등 권위성 강조\n- 본문 첫 단락에 핵심 키워드와 \"이미커피\", \"hovoo\" 포함\n- F&B, AI, 카페, 브랜딩 관련 키워드 자연스럽게 배치\n- URL 슬러그는 영문 소문자와 하이픈만 사용\n- 태그는 브랜드 관련성 높은 5-7개",
+        "batching": {}
+      },
+      "id": "5a766d0f-8ec1-4149-a2ec-7ae8480a75cb",
+      "name": "SEO Optimization with Brand",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        384,
+        1680
+      ]
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.0-flash-001",
+        "options": {
+          "maxOutputTokens": 4500,
+          "temperature": 0.3
+        }
+      },
+      "id": "4bce31bf-7ae3-4c6b-97eb-83c9480ffaca",
+      "name": "Gemini for SEO",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        480,
+        1920
+      ],
+      "credentials": {
+        "googlePalmApi": {
+          "id": "SO4eLSfcE2Z5kkss",
+          "name": "hovoo Google Gemini Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Enhanced JSON 파싱 및 검증\nconst rawText = $input.first().json.text;\nlet jsonText = rawText;\n\n// JSON 추출\nif (rawText.includes('```json')) {\n  const start = rawText.indexOf('```json') + 7;\n  const end = rawText.lastIndexOf('```');\n  jsonText = rawText.substring(start, end).trim();\n}\n\ntry {\n  const data = JSON.parse(jsonText);\n  const notionData = $('Get Video Info from Notion').item.json;\n  const webhookData = $('Webhook Trigger').item.json.body;\n  \n  // 필수 필드 검증 및 기본값 설정\n  const result = {\n    // 블로그 데이터\n    title: data.title || notionData.title.substring(0, 60),\n    body: data.body || $('Create Blog Article with Persona').item.json.text,\n    slug: data.slug || 'imi-blog-' + Date.now(),\n    tags: Array.isArray(data.tags) ? data.tags : ['이미커피', 'hovoo', 'YouTube', '블로그'],\n    meta_description: data.meta_description || data.title || '이미커피 대표의 실무 경험 공유',\n    feature_image_alt: data.feature_image_alt || data.title || '이미커피 블로그 이미지',\n    \n    // 원본 정보\n    video_url: notionData.URL,\n    channel_name: notionData['채널명'],\n    original_title: notionData.title,\n    \n    // 메타 정보 \n    status: 'draft',\n    visibility: 'public',\n    created_at: new Date().toISOString(),\n    author: 'hovoo (이미커피 대표)',\n    \n    // 웹훅 정보\n    chatId: webhookData.chatId,\n    userId: webhookData.userId,\n    messageId: webhookData.messageId,\n    \n    // 성공 플래그\n    success: true\n  };\n  \n  // 슬러그 정리 (한글 제거, 특수문자 정리)\n  result.slug = result.slug\n    .toLowerCase()\n    .replace(/[^a-z0-9가-힣\\s-]/g, '')\n    .replace(/[가-힣]/g, '')\n    .replace(/\\s+/g, '-')\n    .replace(/-+/g, '-')\n    .replace(/^-|-$/g, '')\n    .substring(0, 50);\n    \n  // 빈 슬러그 방지\n  if (!result.slug || result.slug === '') {\n    result.slug = 'imi-blog-' + Date.now();\n  }\n  \n  // 이미커피 브랜드 태그 강제 포함\n  if (!result.tags.includes('이미커피')) {\n    result.tags.unshift('이미커피');\n  }\n  if (!result.tags.includes('hovoo')) {\n    result.tags.unshift('hovoo');\n  }\n  \n  return result;\n  \n} catch (error) {\n  // 파싱 실패 시 안전한 기본값\n  const notionData = $('Get Video Info from Notion').item.json;\n  const articleText = $('Create Blog Article with Persona').item.json.text || '블로그 생성 중 오류가 발생했습니다.';\n  const webhookData = $('Webhook Trigger').item.json.body;\n  \n  return {\n    title: (notionData.title || '이미커피 블로그 포스트').substring(0, 60),\n    body: articleText,\n    slug: 'imi-blog-' + Date.now(),\n    tags: ['이미커피', 'hovoo', 'YouTube', '블로그'],\n    meta_description: '이미커피 대표의 실무 경험 공유',\n    feature_image_alt: '이미커피 블로그 이미지',\n    video_url: notionData.URL,\n    channel_name: notionData['채널명'],\n    original_title: notionData.title,\n    status: 'draft',\n    visibility: 'public', \n    created_at: new Date().toISOString(),\n    author: 'hovoo (이미커피 대표)',\n    chatId: webhookData.chatId,\n    userId: webhookData.userId,\n    messageId: webhookData.messageId,\n    success: false,\n    error: error.message,\n    raw_output: rawText\n  };\n}"
+      },
+      "id": "60c46622-fe91-4c58-9ac7-d121c6da692d",\n      "name": "Parse and Validate JSON",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        768,
+        1680
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://blog.imiwork.com/ghost/api/admin/posts/",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "ghostAdminApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"posts\": [{\n    \"title\": \"{{ $json.title }}\",\n    \"html\": \"{{ $json.body.replace(/\\n/g, '\\\\n').replace(/\"/g, '\\\\\"') }}\",\n    \"slug\": \"{{ $json.slug }}\",\n    \"meta_title\": \"{{ $json.title }}\",\n    \"meta_description\": \"{{ $json.meta_description }}\",\n    \"feature_image_alt\": \"{{ $json.feature_image_alt }}\",\n    \"tags\": {{ JSON.stringify($json.tags.map(tag => ({name: tag}))) }},\n    \"status\": \"{{ $json.status }}\",\n    \"visibility\": \"{{ $json.visibility }}\",\n    \"created_at\": \"{{ $json.created_at }}\",\n    \"custom_excerpt\": \"{{ $json.meta_description }}\",\n    \"og_title\": \"{{ $json.title }}\",\n    \"og_description\": \"{{ $json.meta_description }}\",\n    \"twitter_title\": \"{{ $json.title }}\",\n    \"twitter_description\": \"{{ $json.meta_description }}\"\n  }]\n}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          },
+          "timeout": 30000
+        }
+      },
+      "id": "cb7ed8de-bb8e-4a1b-8d61-66a38ba552c0",
+      "name": "Create Ghost Blog Post",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        960,
+        1680
+      ],
+      "credentials": {
+        "ghostAdminApi": {
+          "id": "GHOST_ADMIN_API_CREDENTIAL_ID",
+          "name": "Ghost Admin API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": {
+          "__rl": true,
+          "value": "251d0f53623d8158b023d994a1e58122",
+          "mode": "id"
+        },
+        "title": "={{ $('Parse and Validate JSON').item.json.title }}",
+        "simple": false,
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "원본 영상|url",
+              "urlValue": "={{ $('Parse and Validate JSON').item.json.video_url }}"
+            },
+            {
+              "key": "채널명|rich_text",
+              "textContent": "={{ $('Parse and Validate JSON').item.json.channel_name }}"
+            },
+            {
+              "key": "본문|rich_text", 
+              "textContent": "={{ $('Parse and Validate JSON').item.json.body.substring(0, 2000) }}"
+            },
+            {
+              "key": "URL 슬러그|rich_text",
+              "textContent": "={{ $('Parse and Validate JSON').item.json.slug }}"
+            },
+            {
+              "key": "태그|multi_select",
+              "multiSelectValue": "={{ $('Parse and Validate JSON').item.json.tags }}"
+            },
+            {
+              "key": "상태|select",
+              "selectValue": "발행완료"
+            },
+            {
+              "key": "작성일|date",
+              "date": "={{ $now }}"
+            },
+            {
+              "key": "Ghost URL|url",
+              "urlValue": "=https://blog.imiwork.com/{{ $('Parse and Validate JSON').item.json.slug }}/"
+            },
+            {
+              "key": "Ghost Post ID|rich_text",
+              "textContent": "={{ $('Create Ghost Blog Post').item.json.posts[0].id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a5ec7940-23c3-4e46-a1ae-513ae6af9219",
+      "name": "Save to Blog DB with Ghost Info",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        1168,
+        1680
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "kCKFfrau35Gf4PvW",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Parse and Validate JSON').item.json.chatId || '7830356405' }}",
+        "text": "=✅ **이미커피 블로그 포스트 생성 완료!**\n\n📝 **제목:** {{ $('Parse and Validate JSON').item.json.title }}\n🔗 **URL:** https://blog.imiwork.com/{{ $('Parse and Validate JSON').item.json.slug }}/\n🏷 **태그:** {{ $('Parse and Validate JSON').item.json.tags.join(', ') }}\n\n💾 Ghost 블로그에 발행되었습니다.\n📄 Notion DB에도 저장완료.\n\n🎥 **원본 영상:** {{ $('Parse and Validate JSON').item.json.video_url }}\n👨‍💼 **작성자:** hovoo (이미커피 대표)",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown",
+          "reply_to_message_id": "={{ $('Parse and Validate JSON').item.json.messageId }}"
+        }
+      },
+      "id": "0791db12-14ec-4d3e-90e0-c34a8fb4c831",
+      "name": "Send Enhanced Success Message",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1376,
+        1680
+      ],
+      "webhookId": "telegram-webhook",
+      "credentials": {
+        "telegramApi": {
+          "id": "hIo5i77YKdu9Rs8g",
+          "name": "youtube imi Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"status\": \"success\",\n  \"message\": \"이미커피 블로그 포스트가 성공적으로 생성되었습니다.\",\n  \"data\": {\n    \"title\": \"{{ $('Parse and Validate JSON').item.json.title }}\",\n    \"slug\": \"{{ $('Parse and Validate JSON').item.json.slug }}\",\n    \"url\": \"https://blog.imiwork.com/{{ $('Parse and Validate JSON').item.json.slug }}/\",\n    \"tags\": {{ JSON.stringify($('Parse and Validate JSON').item.json.tags) }},\n    \"ghost_post_id\": \"{{ $('Create Ghost Blog Post').item.json.posts[0].id }}\",\n    \"created_at\": \"{{ $('Parse and Validate JSON').item.json.created_at }}\"\n  }\n}"
+      },
+      "id": "545f7bbf-2c7d-463f-b958-39d6f3d0292e",
+      "name": "Enhanced Webhook Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1584,
+        1680
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get Video Info from Notion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Video Info from Notion": {
+      "main": [
+        [
+          {
+            "node": "Get YouTube Transcript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get YouTube Transcript": {
+      "main": [
+        [
+          {
+            "node": "Create Blog Article with Persona",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Blog Article with Persona": {
+      "main": [
+        [
+          {
+            "node": "SEO Optimization with Brand",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gemini for Article": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Create Blog Article with Persona",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SEO Optimization with Brand": {
+      "main": [
+        [
+          {
+            "node": "Parse and Validate JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gemini for SEO": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "SEO Optimization with Brand",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse and Validate JSON": {
+      "main": [
+        [
+          {
+            "node": "Create Ghost Blog Post",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Ghost Blog Post": {
+      "main": [
+        [
+          {
+            "node": "Save to Blog DB with Ghost Info",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save to Blog DB with Ghost Info": {
+      "main": [
+        [
+          {
+            "node": "Send Enhanced Success Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Enhanced Success Message": {
+      "main": [
+        [
+          {
+            "node": "Enhanced Webhook Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "503b3d8b44115e5921e2e4e1edcde177dde00c303a77361802e2da13d7103e31"
+  }
+}

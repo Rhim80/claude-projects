@@ -1,0 +1,907 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "id": "telegram-trigger",
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -1200,
+        800
+      ],
+      "webhookId": "telegram-blog-bot",
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram-creds",
+          "name": "Blog Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "conditions": [
+            {
+              "id": "check-post-command",
+              "leftValue": "={{ $json.message.text }}",
+              "rightValue": "/post",
+              "operator": {
+                "type": "string",
+                "operation": "startsWith"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "check-post-command",
+      "name": "Check Post Command",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -1000,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const fullMessage = $input.first().json.message?.text || '';\nconst content = fullMessage.replace('/post', '').trim();\n\nconst chatId = $input.first().json.message?.chat?.id;\nconst messageId = $input.first().json.message?.message_id;\nconst userName = $input.first().json.message?.from?.first_name || 'User';\n\nif (!content || content.length < 100) {\n  return {\n    error: true,\n    errorType: 'TOO_SHORT',\n    message: '글이 너무 짧습니다. 최소 100자 이상 작성해주세요.',\n    chatId,\n    messageId\n  };\n}\n\nif (content.length > 50000) {\n  return {\n    error: true,\n    errorType: 'TOO_LONG',\n    message: '글이 너무 깁니다. 50,000자 이내로 작성해주세요.',\n    chatId,\n    messageId\n  };\n}\n\nreturn {\n  error: false,\n  content,\n  chatId,\n  messageId,\n  userName,\n  timestamp: new Date().toISOString(),\n  contentLength: content.length\n};"
+      },
+      "id": "extract-content",
+      "name": "Extract and Validate Content",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -800,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "content-valid-check",
+              "leftValue": "={{ $json.error }}",
+              "rightValue": false,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "content-valid",
+      "name": "Content Valid?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -600,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "getAll",
+        "databaseId": {
+          "__rl": true,
+          "value": "24cd0f53623d80e8a2dff10e9d78dbdd",
+          "mode": "id"
+        },
+        "simple": false,
+        "filterType": "manual",
+        "filter": {
+          "filters": [
+            {
+              "key": "Slug",
+              "type": "url",
+              "condition": "equals",
+              "returnValue": "={{ $('Extract and Validate Content').first().json.content.toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/--+/g, '-').replace(/^-|-$/g, '').substring(0, 50) }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "check-duplicate",
+      "name": "Check Duplicate Slug",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        -400,
+        784
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "notion-creds",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "no-duplicates",
+              "leftValue": "={{ $json.length }}",
+              "rightValue": 0,
+              "operator": {
+                "type": "number",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "no-duplicate",
+      "name": "No Duplicate?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -200,
+        784
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "chat",
+        "chatModel": "gpt-4o-mini",
+        "prompt": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are an advanced blog content analyzer specialized in multi-image blog posts. Extract comprehensive metadata and suggest strategic image placements. Return ONLY valid JSON with: title, slug, recommended_url, excerpt, meta_title, meta_description, tags[], primary_tag, content_html, content_markdown, feature_image_prompt, inline_images[], has_code_blocks, estimated_read_time, og_title, og_description, twitter_title, twitter_description.\n\nFor inline_images, include 3-5 strategic image suggestions with:\n- position: 'after_section_N' or 'before_conclusion'\n- prompt: detailed DALL-E prompt\n- alt_text: SEO optimized alt text\n- caption: engaging caption\n- placement_reason: why this image belongs here"
+            },
+            {
+              "content": "Analyze this blog post and suggest strategic image placements:\n\n{{ $('Extract and Validate Content').first().json.content }}"
+            }
+          ]
+        },
+        "simplifyOutput": false,
+        "options": {
+          "temperature": 0.3,
+          "onError": "continueRegularOutput",
+          "retryOnFail": true,
+          "maxTries": 3,
+          "waitBetweenTries": 5000
+        },
+        "requestOptions": {}
+      },
+      "id": "enhanced-ai-analyzer",
+      "name": "Enhanced AI Content Analyzer",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        768
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "openai-creds",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Enhanced AI 응답 파싱 with 다중 이미지 지원\nconst aiContent = $input.first().json.choices[0].message.content;\nlet aiResponse;\n\ntry {\n  const cleanContent = aiContent.replace(/```json|```/gi, '').trim();\n  const start = cleanContent.indexOf('{');\n  const end = cleanContent.lastIndexOf('}');\n  \n  if (start === -1 || end === -1) {\n    throw new Error('JSON 구조를 찾을 수 없습니다');\n  }\n  \n  const jsonString = cleanContent.substring(start, end + 1);\n  aiResponse = JSON.parse(jsonString);\n} catch (e) {\n  throw new Error('AI 응답 파싱 실패: ' + e.message);\n}\n\nconst originalData = $('Extract and Validate Content').first().json;\n\n// URL 생성\nconst generateSlug = (recommended, title) => {\n  const base = recommended || title || 'post-' + Date.now();\n  return base.toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/--+/g, '-').replace(/^-|-$/g, '').substring(0, 100);\n};\n\n// 데이터 정리\nconst blogData = {\n  title: aiResponse.title || '제목 없음',\n  slug: generateSlug(aiResponse.recommended_url, aiResponse.title),\n  excerpt: (aiResponse.excerpt || '').substring(0, 160),\n  meta_title: (aiResponse.meta_title || aiResponse.title || '').substring(0, 60),\n  meta_description: (aiResponse.meta_description || '').substring(0, 160),\n  tags: Array.isArray(aiResponse.tags) ? aiResponse.tags.slice(0, 10) : [],\n  primary_tag: aiResponse.primary_tag || 'General',\n  content_html: aiResponse.content_html || '<p>내용 없음</p>',\n  content_markdown: aiResponse.content_markdown || originalData.content,\n  feature_image_prompt: aiResponse.feature_image_prompt || 'Blog hero image',\n  \n  // 다중 이미지 처리\n  inline_images: Array.isArray(aiResponse.inline_images) ? aiResponse.inline_images.slice(0, 5) : [],\n  \n  has_code_blocks: Boolean(aiResponse.has_code_blocks),\n  estimated_read_time: parseInt(aiResponse.estimated_read_time) || Math.ceil(originalData.contentLength / 500),\n  chatId: originalData.chatId,\n  messageId: originalData.messageId,\n  userName: originalData.userName,\n  timestamp: originalData.timestamp\n};\n\n// Notion 블록 분할\nconst NOTION_BLOCK_LIMIT = 2000;\nconst content = blogData.content_markdown;\n\nif (content.length <= NOTION_BLOCK_LIMIT) {\n  blogData.content_chunks = [content];\n  blogData.content_preview = content;\n  blogData.is_long_content = false;\n  blogData.total_chunks = 1;\n} else {\n  const chunks = [];\n  const paragraphs = content.split('\\n\\n');\n  let currentChunk = '';\n  \n  for (const para of paragraphs) {\n    if ((currentChunk + '\\n\\n' + para).length > NOTION_BLOCK_LIMIT) {\n      chunks.push(currentChunk.trim());\n      currentChunk = para;\n    } else {\n      currentChunk += (currentChunk ? '\\n\\n' : '') + para;\n    }\n  }\n  \n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  blogData.content_chunks = chunks;\n  blogData.content_preview = chunks[0];\n  blogData.is_long_content = true;\n  blogData.total_chunks = chunks.length;\n}\n\n// 이미지 생성 준비\nblogData.total_images = 1 + blogData.inline_images.length; // Feature + Inline images\nblogData.has_inline_images = blogData.inline_images.length > 0;\n\nreturn blogData;"
+      },
+      "id": "process-enhanced-data",
+      "name": "Process Enhanced Blog Data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        200,
+        768
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": {
+          "__rl": true,
+          "value": "24cd0f53623d80e8a2dff10e9d78dbdd",
+          "mode": "id"
+        },
+        "title": "={{ $json.title }}",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Slug|url",
+              "urlValue": "={{ $json.slug }}"
+            },
+            {
+              "key": "Status|select",
+              "selectValue": "generating"
+            },
+            {
+              "key": "Excerpt|rich_text",
+              "richText": true,
+              "text": {
+                "text": [
+                  {
+                    "text": "={{ $json.excerpt }}",
+                    "annotationUi": {}
+                  }
+                ]
+              }
+            },
+            {
+              "key": "Meta Title|rich_text",
+              "richText": true,
+              "text": {
+                "text": [
+                  {
+                    "text": "={{ $json.meta_title }}",
+                    "annotationUi": {}
+                  }
+                ]
+              }
+            },
+            {
+              "key": "Meta Description|rich_text",
+              "richText": true,
+              "text": {
+                "text": [
+                  {
+                    "text": "={{ $json.meta_description }}",
+                    "annotationUi": {}
+                  }
+                ]
+              }
+            },
+            {
+              "key": "Tags|multi_select",
+              "multiSelectValue": "={{ $json.tags }}"
+            },
+            {
+              "key": "Primary Tag|select",
+              "selectValue": "={{ $json.primary_tag }}"
+            },
+            {
+              "key": "Content Preview|rich_text",
+              "richText": true,
+              "text": {
+                "text": [
+                  {
+                    "text": "={{ $json.content_preview }}",
+                    "annotationUi": {}
+                  }
+                ]
+              }
+            },
+            {
+              "key": "Real Time|number",
+              "numberValue": "={{ $json.estimated_read_time }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "create-notion-page",
+      "name": "Create Notion Page",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        400,
+        768
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "notion-creds",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "prompt": "={{ $('Process Enhanced Blog Data').first().json.feature_image_prompt }}",
+        "imageModel": "dall-e-3",
+        "options": {
+          "onError": "continueRegularOutput",
+          "retryOnFail": true,
+          "maxTries": 3,
+          "waitBetweenTries": 5000,
+          "alwaysOutputData": true
+        },
+        "requestOptions": {}
+      },
+      "id": "generate-feature-image",
+      "name": "Generate Feature Image",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1.1,
+      "position": [
+        600,
+        768
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "openai-creds",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "has-inline-images",
+              "leftValue": "={{ $('Process Enhanced Blog Data').first().json.has_inline_images }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "has-inline-images",
+      "name": "Has Inline Images?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        800,
+        768
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// 인라인 이미지 프롬프트 준비\nconst blogData = $('Process Enhanced Blog Data').first().json;\nconst featureImageData = $('Generate Feature Image').first().json;\n\n// Feature image URL 추출\nconst featureImageUrl = featureImageData.data?.[0]?.url || '';\n\n// 인라인 이미지 배열을 개별 아이템으로 분할 준비\nconst inlineImages = blogData.inline_images || [];\n\nreturn inlineImages.map((img, index) => ({\n  ...img,\n  index: index + 1,\n  totalImages: inlineImages.length,\n  blogData: {\n    title: blogData.title,\n    slug: blogData.slug,\n    notionPageId: $('Create Notion Page').first().json.id,\n    featureImageUrl\n  }\n}));"
+      },
+      "id": "prepare-inline-images",
+      "name": "Prepare Inline Images",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1000,
+        624
+      ]
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "split-image-batch",
+      "name": "Split Image Batch",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1200,
+        624
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "prompt": "={{ $json.prompt }}",
+        "imageModel": "dall-e-3",
+        "options": {
+          "onError": "continueRegularOutput",
+          "retryOnFail": true,
+          "maxTries": 3,
+          "waitBetweenTries": 8000,
+          "alwaysOutputData": true
+        },
+        "requestOptions": {}
+      },
+      "id": "generate-inline-image",
+      "name": "Generate Inline Image",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1.1,
+      "position": [
+        1400,
+        624
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "openai-creds",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// 생성된 이미지 데이터를 정리\nconst inputData = $input.first().json;\nconst imageResponse = inputData;\n\n// 원본 이미지 메타데이터 가져오기\nconst batchData = $('Split Image Batch').first().json;\n\nreturn {\n  position: batchData.position,\n  prompt: batchData.prompt,\n  alt_text: batchData.alt_text,\n  caption: batchData.caption,\n  placement_reason: batchData.placement_reason,\n  index: batchData.index,\n  url: imageResponse.data?.[0]?.url || '',\n  generated: !!imageResponse.data?.[0]?.url,\n  blogData: batchData.blogData\n};"
+      },
+      "id": "process-inline-image",
+      "name": "Process Inline Image",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1600,
+        624
+      ]
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "destinationFieldName": "generated_images",
+        "include": "allFields"
+      },
+      "id": "collect-images",
+      "name": "Collect Generated Images",
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        1800,
+        624
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "merge-image-streams",
+      "name": "Merge Image Streams",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        1200,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Enhanced HTML 생성 with 다중 이미지 삽입\nconst blogData = $('Process Enhanced Blog Data').first().json;\nconst featureImageData = $('Generate Feature Image').first().json;\n\n// Feature image URL\nconst featureImageUrl = featureImageData.data?.[0]?.url || '';\n\n// 인라인 이미지 데이터 (있는 경우에만)\nlet inlineImages = [];\nconst hasInlineImages = $('Has Inline Images?').first().json !== undefined;\n\nif (hasInlineImages) {\n  const collectedData = $('Collect Generated Images').first().json;\n  inlineImages = collectedData.generated_images || [];\n}\n\n// HTML에 이미지 삽입 함수\nfunction insertInlineImages(contentHtml, images) {\n  let processedHtml = contentHtml;\n  \n  images.forEach(img => {\n    if (!img.url || !img.generated) return;\n    \n    const imageHtml = `\n      <figure class=\"kg-card kg-image-card kg-width-wide\">\n        <img src=\"${img.url}\" alt=\"${img.alt_text}\" loading=\"lazy\" width=\"1000\" height=\"563\" />\n        <figcaption>${img.caption}</figcaption>\n      </figure>\n    `;\n    \n    // position 기반으로 적절한 위치에 삽입\n    const position = img.position;\n    if (position.includes('after_section_')) {\n      const sectionNum = position.split('_')[2];\n      const regex = new RegExp(`(<\\/h[123456]>)`, 'gi');\n      let matchCount = 0;\n      processedHtml = processedHtml.replace(regex, (match) => {\n        matchCount++;\n        if (matchCount === parseInt(sectionNum)) {\n          return match + imageHtml;\n        }\n        return match;\n      });\n    } else if (position === 'before_conclusion') {\n      // 마지막 섹션 전에 삽입\n      const lastH2Index = processedHtml.lastIndexOf('<h2');\n      if (lastH2Index > -1) {\n        processedHtml = processedHtml.slice(0, lastH2Index) + imageHtml + processedHtml.slice(lastH2Index);\n      }\n    }\n  });\n  \n  return processedHtml;\n}\n\n// 최종 HTML 생성\nlet finalHtml = blogData.content_html;\nif (inlineImages.length > 0) {\n  finalHtml = insertInlineImages(finalHtml, inlineImages);\n}\n\n// Ghost 페이로드 생성\nconst ghostPayload = {\n  posts: [{\n    title: blogData.title,\n    slug: blogData.slug,\n    html: finalHtml,\n    feature_image: featureImageUrl,\n    feature_image_alt: blogData.title + ' - 대표 이미지',\n    meta_title: blogData.meta_title,\n    meta_description: blogData.meta_description,\n    custom_excerpt: blogData.excerpt,\n    tags: blogData.tags.map(tag => ({name: tag})),\n    status: 'draft',\n    visibility: 'public',\n    og_title: blogData.meta_title,\n    og_description: blogData.meta_description,\n    twitter_title: blogData.meta_title,\n    twitter_description: blogData.meta_description\n  }]\n};\n\nreturn {\n  ghostPayload,\n  notionPageId: $('Create Notion Page').first().json.id,\n  chatId: blogData.chatId,\n  messageId: blogData.messageId,\n  title: blogData.title,\n  slug: blogData.slug,\n  totalImages: 1 + inlineImages.length,\n  generatedImages: inlineImages.filter(img => img.generated).length\n};"
+      },
+      "id": "prepare-ghost-payload",
+      "name": "Prepare Enhanced Ghost Payload",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1400,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://blog.imiwork.com/ghost/api/admin/posts/",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "ghostAdminApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json.ghostPayload }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          },
+          "timeout": 30000,
+          "onError": "continueRegularOutput",
+          "retryOnFail": true,
+          "maxTries": 3,
+          "waitBetweenTries": 5000
+        }
+      },
+      "id": "create-ghost-post",
+      "name": "Create Enhanced Ghost Post",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1600,
+        800
+      ],
+      "credentials": {
+        "ghostAdminApi": {
+          "id": "ghost-creds",
+          "name": "Ghost Admin account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "update",
+        "pageId": {
+          "__rl": true,
+          "value": "={{ $('Prepare Enhanced Ghost Payload').first().json.notionPageId }}",
+          "mode": "id"
+        },
+        "simple": false,
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Status|select",
+              "selectValue": "published"
+            },
+            {
+              "key": "Ghost Post ID|rich_text",
+              "textContent": "={{ $json.posts[0].id }}"
+            },
+            {
+              "key": "Ghost URL|url",
+              "urlValue": "={{ $json.posts[0].url }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "update-notion-success",
+      "name": "Update Notion Success",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        1800,
+        800
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "notion-creds",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Prepare Enhanced Ghost Payload').first().json.chatId }}",
+        "text": "✅ **Enhanced 블로그 포스트 생성 완료!** 🎨\n\n📝 **제목**: {{ $('Prepare Enhanced Ghost Payload').first().json.title }}\n🔗 **슬러그**: {{ $('Prepare Enhanced Ghost Payload').first().json.slug }}\n🎨 **이미지**: {{ $('Prepare Enhanced Ghost Payload').first().json.totalImages }}개 생성 (Feature + Inline)\n\n[Ghost 편집기에서 확인](https://blog.imiwork.com/ghost/#/editor/post/{{ $json.posts[0].id }})",
+        "additionalFields": {
+          "parse_mode": "Markdown",
+          "reply_to_message_id": "={{ $('Prepare Enhanced Ghost Payload').first().json.messageId }}"
+        }
+      },
+      "id": "send-success-message",
+      "name": "Send Enhanced Success Message",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2000,
+        800
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram-creds",
+          "name": "Blog Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.chatId }}",
+        "text": "{{ $json.errorType === 'TOO_SHORT' ? '⚠️ ' + $json.message : $json.errorType === 'DUPLICATE' ? '🔄 이미 존재하는 슬러그입니다. 다른 제목으로 시도해주세요.' : '❌ 오류가 발생했습니다: ' + $json.message }}",
+        "additionalFields": {
+          "reply_to_message_id": "={{ $json.messageId }}"
+        }
+      },
+      "id": "send-error-message",
+      "name": "Send Error Message",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -200,
+        1000
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram-creds",
+          "name": "Blog Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "return {\n  error: true,\n  errorType: 'DUPLICATE',\n  message: '이미 존재하는 슬러그입니다.',\n  chatId: $('Extract and Validate Content').first().json.chatId,\n  messageId: $('Extract and Validate Content').first().json.messageId\n};"
+      },
+      "id": "duplicate-error",
+      "name": "Duplicate Error",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -200,
+        900
+      ]
+    }
+  ],
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Check Post Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Post Command": {
+      "main": [
+        [
+          {
+            "node": "Extract and Validate Content",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract and Validate Content": {
+      "main": [
+        [
+          {
+            "node": "Content Valid?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Content Valid?": {
+      "main": [
+        [
+          {
+            "node": "Check Duplicate Slug",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send Error Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Duplicate Slug": {
+      "main": [
+        [
+          {
+            "node": "No Duplicate?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No Duplicate?": {
+      "main": [
+        [
+          {
+            "node": "Enhanced AI Content Analyzer",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Duplicate Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enhanced AI Content Analyzer": {
+      "main": [
+        [
+          {
+            "node": "Process Enhanced Blog Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process Enhanced Blog Data": {
+      "main": [
+        [
+          {
+            "node": "Create Notion Page",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Notion Page": {
+      "main": [
+        [
+          {
+            "node": "Generate Feature Image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Feature Image": {
+      "main": [
+        [
+          {
+            "node": "Has Inline Images?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has Inline Images?": {
+      "main": [
+        [
+          {
+            "node": "Prepare Inline Images",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Merge Image Streams",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Inline Images": {
+      "main": [
+        [
+          {
+            "node": "Split Image Batch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Image Batch": {
+      "main": [
+        [
+          {
+            "node": "Generate Inline Image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Inline Image": {
+      "main": [
+        [
+          {
+            "node": "Process Inline Image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process Inline Image": {
+      "main": [
+        [
+          {
+            "node": "Split Image Batch",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Collect Generated Images",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Collect Generated Images": {
+      "main": [
+        [
+          {
+            "node": "Merge Image Streams",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge Image Streams": {
+      "main": [
+        [
+          {
+            "node": "Prepare Enhanced Ghost Payload",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Enhanced Ghost Payload": {
+      "main": [
+        [
+          {
+            "node": "Create Enhanced Ghost Post",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Enhanced Ghost Post": {
+      "main": [
+        [
+          {
+            "node": "Update Notion Success",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Notion Success": {
+      "main": [
+        [
+          {
+            "node": "Send Enhanced Success Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Duplicate Error": {
+      "main": [
+        [
+          {
+            "node": "Send Error Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "enhanced-ghost-blog-automation"
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "name": "YouTube to Blog Final - 이미커피",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "youtube-to-blog-final",
+        "responseMode": "responseNode"
+      },
+      "onError": "continueRegularOutput",
+      "id": "webhook-trigger",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [240, 300],
+      "webhookId": "youtube-blog-webhook"
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "get",
+        "pageId": {
+          "__rl": true,
+          "value": "={{ $json.pageId }}",
+          "mode": "expression"
+        }
+      },
+      "id": "get-notion-page",
+      "name": "Notion 페이지 조회",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [460, 300],
+      "credentials": {
+        "notionApi": {
+          "id": "kCKFfrau35Gf4PvW",
+          "name": "Notion API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// YouTube URL에서 video ID 추출 및 자막 URL 생성\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  try {\n    // Notion 페이지에서 YouTube URL 추출 (properties.URL 또는 properties.url 등에서)\n    let youtubeUrl = '';\n    \n    // 여러 가능한 필드명 확인\n    const properties = item.json.properties;\n    if (properties.URL && properties.URL.url) {\n      youtubeUrl = properties.URL.url;\n    } else if (properties.url && properties.url.url) {\n      youtubeUrl = properties.url.url;\n    } else if (properties['YouTube URL'] && properties['YouTube URL'].url) {\n      youtubeUrl = properties['YouTube URL'].url;\n    } else if (properties.링크 && properties.링크.url) {\n      youtubeUrl = properties.링크.url;\n    }\n    \n    if (!youtubeUrl) {\n      throw new Error('YouTube URL을 찾을 수 없습니다.');\n    }\n    \n    // YouTube video ID 추출\n    let videoId = '';\n    const urlPatterns = [\n      /(?:youtube\\.com\\/watch\\?v=|youtu\\.be\\/)([^&\\n?#]+)/,\n      /youtube\\.com\\/embed\\/([^&\\n?#]+)/,\n      /youtube\\.com\\/v\\/([^&\\n?#]+)/\n    ];\n    \n    for (const pattern of urlPatterns) {\n      const match = youtubeUrl.match(pattern);\n      if (match) {\n        videoId = match[1];\n        break;\n      }\n    }\n    \n    if (!videoId) {\n      throw new Error('유효한 YouTube video ID를 추출할 수 없습니다.');\n    }\n    \n    // 자막 URL 생성 (YouTube Transcript API 방식)\n    const transcriptUrl = `https://www.youtube.com/api/timedtext?lang=ko&v=${videoId}&fmt=json3`;\n    \n    results.push({\n      ...item.json,\n      videoId: videoId,\n      youtubeUrl: youtubeUrl,\n      transcriptUrl: transcriptUrl,\n      title: properties.제목?.title?.[0]?.plain_text || properties.Name?.title?.[0]?.plain_text || '제목 없음'\n    });\n  } catch (error) {\n    // 에러 발생시에도 배열 반환\n    results.push({\n      ...item.json,\n      error: error.message,\n      videoId: null,\n      youtubeUrl: null,\n      transcriptUrl: null\n    });\n  }\n}\n\nreturn results;"
+        }
+      },
+      "id": "extract-youtube-info",
+      "name": "YouTube 정보 추출",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 300],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.transcriptUrl }}",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "fetch-transcript",
+      "name": "YouTube 자막 추출",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [900, 300],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// YouTube 자막 데이터 전처리\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  try {\n    let transcriptText = '';\n    \n    if (item.json.events && Array.isArray(item.json.events)) {\n      // YouTube API JSON3 형식 처리\n      transcriptText = item.json.events\n        .filter(event => event.segs && event.segs.length > 0)\n        .map(event => \n          event.segs\n            .map(seg => seg.utf8 || '')\n            .join('')\n        )\n        .join(' ')\n        .replace(/\\s+/g, ' ')\n        .trim();\n    } else if (typeof item.json === 'string') {\n      // 문자열 형태의 자막 처리\n      transcriptText = item.json;\n    } else {\n      // 다른 형식 시도\n      transcriptText = JSON.stringify(item.json);\n    }\n    \n    // 자막 정리\n    transcriptText = transcriptText\n      .replace(/\\[.*?\\]/g, '') // 대괄호 제거\n      .replace(/\\(.*?\\)/g, '') // 소괄호 제거\n      .replace(/\\s+/g, ' ')    // 다중 공백 정리\n      .trim();\n    \n    if (transcriptText.length < 50) {\n      throw new Error('자막이 너무 짧습니다. 다른 언어나 수동 자막을 확인해보세요.');\n    }\n    \n    results.push({\n      ...item.json,\n      transcript: transcriptText,\n      transcriptLength: transcriptText.length,\n      processed: true\n    });\n  } catch (error) {\n    results.push({\n      ...item.json,\n      transcript: '',\n      error: error.message,\n      processed: false\n    });\n  }\n}\n\nreturn results;"
+      },
+      "onError": "continueRegularOutput",
+      "id": "process-transcript",
+      "name": "자막 전처리",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1120, 300]
+    },
+    {
+      "parameters": {
+        "resource": "text",
+        "operation": "message",
+        "modelId": {
+          "__rl": true,
+          "value": "gemini-1.5-pro-latest",
+          "mode": "list"
+        },
+        "prompt": "=# 이미커피 대표 hovoo의 YouTube 블로그 글 작성\n\n당신은 15년간 카페를 운영하며 F&B 브랜딩 전문가로 활동해온 '이미커피' 대표 hovoo입니다.\n현재 AI 자동화 전문가로도 활동하며, GPTers 커뮤니티에서 'AI 감성 브랜딩 시스템' 스터디를 운영하고 있습니다.\n\n## 당신의 정체성\n- 15년차 F&B 브랜딩 및 운영 전문가\n- 카페 4개 매장 운영 (imi coffee)\n- 이미양과자 베이커리 운영\n- 로스팅 사업 (식품제조가공업 보유)\n- AI 교육 사업 (자영업자/소상공인 대상)\n- GPTers 스터디장 (한국 최대 AI 커뮤니티)\n- n8n 자동화 전문가 (5개 워크플로우 운영 중)\n\n## 블로그 글 작성 가이드라인\n1. **경험 중심**: 15년 카페 운영 경험을 바탕으로 한 실무적 관점\n2. **AI × 오프라인 융합**: AI 기술을 오프라인 비즈니스에 적용하는 관점\n3. **실용적 조언**: 이론보다는 즉시 활용 가능한 실무 팁\n4. **감성적 브랜딩**: 기술적 내용도 감성과 스토리로 포장\n5. **자영업자 관점**: 소상공인이 이해하기 쉬운 언어 사용\n\n## 글 구조\n1. **도입부**: 개인적 경험이나 매장에서의 에피소드로 시작\n2. **핵심 내용**: YouTube 내용을 hovoo의 관점으로 재해석\n3. **실무 적용**: 카페/베이커리 운영이나 AI 활용에 어떻게 적용할 수 있는지\n4. **마무리**: 독자에게 주는 실용적 조언이나 다음 액션\n\n## 말투 및 스타일\n- 친근하고 따뜻한 말투 (반말 사용)\n- 전문적이지만 어렵지 않게\n- 개인적 경험과 데이터를 균형있게 활용\n- 호기심을 자극하는 제목과 소제목\n\n---\n\n**YouTube 영상 정보:**\n제목: {{ $json.title }}\nURL: {{ $json.youtubeUrl }}\n\n**YouTube 자막 내용:**\n{{ $json.transcript }}\n\n위 YouTube 영상 내용을 바탕으로, 이미커피 대표 hovoo의 관점에서 블로그 글을 작성해주세요.\n글자 수는 1,500-2,500자 정도로, 읽기 쉽고 실용적인 내용으로 구성해주세요."
+      },
+      "id": "generate-blog-content",
+      "name": "블로그 글 생성",
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "position": [1340, 300],
+      "credentials": {
+        "googleGeminiApi": {
+          "id": "SO4eLSfcE2Z5kkss",
+          "name": "Gemini API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "create",
+        "databaseId": {
+          "__rl": true,
+          "value": "251d0f53623d8158b023d994a1e58122",
+          "mode": "id"
+        },
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "제목",
+              "textValue": "={{ $json.title }} - 이미커피 블로그"
+            },
+            {
+              "key": "내용",
+              "richTextValue": "={{ $json.text }}"
+            },
+            {
+              "key": "상태",
+              "selectValue": "작성완료"
+            },
+            {
+              "key": "작성일",
+              "dateValue": "={{ $now.toISODate() }}"
+            },
+            {
+              "key": "YouTube URL",
+              "urlValue": "={{ $json.youtubeUrl }}"
+            }
+          ]
+        }
+      },
+      "id": "save-to-notion",
+      "name": "Notion 블로그 저장",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [1560, 300],
+      "credentials": {
+        "notionApi": {
+          "id": "kCKFfrau35Gf4PvW",
+          "name": "Notion API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "sendMessage",
+        "chatId": "7830356405",
+        "text": "🎉 이미커피 블로그 자동화 완료!\n\n📝 제목: {{ $json.title }}\n🔗 YouTube: {{ $json.youtubeUrl }}\n📊 자막 길이: {{ $json.transcriptLength }}자\n⏰ 생성시간: {{ $now.toDateTime() }}\n\n✅ Notion 블로그 DB에 저장 완료\n💡 hovoo의 15년 F&B 경험이 담긴 블로그 글이 생성되었습니다!"
+      },
+      "id": "send-telegram-notification",
+      "name": "Telegram 알림",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [1780, 200],
+      "onError": "continueRegularOutput",
+      "credentials": {
+        "telegramApi": {
+          "id": "hIo5i77YKdu9Rs8g",
+          "name": "Telegram"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{\n  \"success\": true,\n  \"message\": \"YouTube 블로그 자동화 완료\",\n  \"data\": {\n    \"title\": \"{{ $json.title }}\",\n    \"youtubeUrl\": \"{{ $json.youtubeUrl }}\",\n    \"transcriptLength\": {{ $json.transcriptLength }},\n    \"blogCreated\": true,\n    \"notificationSent\": true,\n    \"timestamp\": \"{{ $now.toDateTime() }}\"\n  }\n}"
+      },
+      "id": "webhook-response",
+      "name": "Webhook 응답",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [1780, 400],
+      "onError": "continueRegularOutput"
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Notion 페이지 조회",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notion 페이지 조회": {
+      "main": [
+        [
+          {
+            "node": "YouTube 정보 추출",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "YouTube 정보 추출": {
+      "main": [
+        [
+          {
+            "node": "YouTube 자막 추출",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "YouTube 자막 추출": {
+      "main": [
+        [
+          {
+            "node": "자막 전처리",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "자막 전처리": {
+      "main": [
+        [
+          {
+            "node": "블로그 글 생성",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "블로그 글 생성": {
+      "main": [
+        [
+          {
+            "node": "Notion 블로그 저장",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notion 블로그 저장": {
+      "main": [
+        [
+          {
+            "node": "Telegram 알림",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Webhook 응답",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2025-01-24T12:00:00.000Z",
+      "updatedAt": "2025-01-24T12:00:00.000Z",
+      "id": "imiwork-automation",
+      "name": "이미커피 자동화"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-24T12:00:00.000Z",
+  "versionId": "1"
+}

@@ -1,0 +1,850 @@
+{
+  "name": "YouTube RSS Bot",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour"
+            }
+          ]
+        },
+        "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCDLlMjELbrJdETmSiAB68AA"
+      },
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -96,
+        -48
+      ],
+      "id": "309acbd4-ab6d-4741-8df2-c667fb966897",
+      "name": "시민개발자 구씨"
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour"
+            }
+          ]
+        },
+        "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC6t1O76G0jYXOAoYCm153dA"
+      },
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        144
+      ],
+      "id": "e31af9fb-2d6f-4cac-822c-440cb1f85ce2",
+      "name": "Lenny's Podcast"
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour"
+            }
+          ]
+        },
+        "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCIUni4ScRp4mqPXsxy62L5w"
+      },
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        304
+      ],
+      "id": "9f90a6d9-509d-47ec-b563-cda84a6aaff0",
+      "name": "언더스텐딩딩"
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour"
+            }
+          ]
+        },
+        "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCk_xkR8ORNwtMkaffvYArGA"
+      },
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        464
+      ],
+      "id": "44b2b41f-0c24-4b12-96e6-1fc4c8552e7c",
+      "name": "디자인하는AI"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "title-id",
+              "name": "title",
+              "value": "={{ $json.title }}",
+              "type": "string"
+            },
+            {
+              "id": "link-id",
+              "name": "link",
+              "value": "={{ $json.link.includes('/shorts/') ? $json.link.replace('youtube.com/shorts/', 'youtube.com/watch?v=') : $json.link }}",
+              "type": "string"
+            },
+            {
+              "id": "pubDate-id",
+              "name": "pubDate",
+              "value": "={{ $json.pubDate }}",
+              "type": "string"
+            },
+            {
+              "id": "author-id",
+              "name": "author",
+              "value": "={{ $json.author }}",
+              "type": "string"
+            },
+            {
+              "id": "rss-source-id",
+              "name": "rss_source",
+              "value": "={{ $json.author.includes('구씨') ? '시민개발자 구씨' : $json.author.includes('Lenny') ? 'Lenny\\'s Podcast' : $json.author.includes('언더스텐딩딩') ? '언더스텐딩딩' : $json.author.includes('디자인') ? '디자인하는AI' : $json.author }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        192,
+        192
+      ],
+      "id": "7ee1be2b-64b5-4e56-9eff-fdd31a9a736d",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "youtubeId": "={{ $json.link }}",
+        "preferCapLang": "ko"
+      },
+      "type": "n8n-nodes-bandi-youtube-transcript.youtubeTranscriptNode",
+      "typeVersion": 1,
+      "position": [
+        400,
+        192
+      ],
+      "id": "ccdc909a-4612-4f6e-bf15-3981e1b5cbc2",
+      "name": "Youtube Transcript"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=다음 YouTube 영상 자막을 한국어로 요약하세요.\n\n자막 내용:\n{{ $json.transcript }}\n\n요약 지침:\n먼저 전체 자막을 읽고 핵심 주제와 결론을 파악한 후, 다음 순서로 요약하세요:\n\n1. 전체 내용의 핵심 주제 1-2문장으로 시작\n2. 주요 논점이나 사례를 2-3개 선별하여 설명\n3. 화자의 결론이나 핵심 메시지로 마무리\n\n요약 요구사항:\n- 전체 800자 이내 엄수 (중간에 끊기지 않도록)\n- 시작부터 끝까지 완결된 요약 작성\n- 구체적인 숫자나 예시 포함\n- 자연스러운 한국어 문체\n- 영상 전체의 맥락과 결론 반영\n\n작성 규칙:\n- 이중 중괄호나 파이프 문자 등 템플릿 문법 사용 금지\n- 순수 한국어 텍스트만 작성  \n- 마크다운 헤더나 특수문자 사용 금지\n- 문단 구분은 줄바꿈으로만 처리\n\n중요: 반드시 800자 이내에서 완결된 요약을 작성하고, 중간에 끊기지 않도록 주의하세요.",
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        624,
+        192
+      ],
+      "id": "182d0bab-4df9-490f-ac85-fc504c2503b3",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.0-flash-001",
+        "options": {
+          "maxOutputTokens": 300,
+          "temperature": 0.3
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        704,
+        400
+      ],
+      "id": "dbd30597-0098-44bc-86b2-64e7d3357248",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "SO4eLSfcE2Z5kkss",
+          "name": "hovoo Google Gemini Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": {
+          "__rl": true,
+          "value": "23fd0f53-623d-81fe-a9cb-fda36d562a91",
+          "mode": "id"
+        },
+        "title": "={{ $('Edit Fields').item.json.title }}",
+        "simple": false,
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "URL|url",
+              "urlValue": "={{ $('Edit Fields').item.json.link }}"
+            },
+            {
+              "key": "채널명|rich_text",
+              "textContent": "={{ $('Edit Fields').item.json.author }}"
+            },
+            {
+              "key": "게시일|date",
+              "includeTime": false,
+              "date": "={{ $('Edit Fields').item.json.pubDate }}"
+            },
+            {
+              "key": "수집일|date",
+              "includeTime": false,
+              "date": "={{ $now }}"
+            },
+            {
+              "key": "RSS소스|select",
+              "selectValue": "={{ $('Edit Fields').item.json.rss_source }}"
+            },
+            {
+              "key": "요약|rich_text",
+              "textContent": "={{ $json.text }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        976,
+        192
+      ],
+      "id": "d77b46ab-e6fd-4586-8496-b5cd321e00dd",
+      "name": "Save to Notion",
+      "credentials": {
+        "notionApi": {
+          "id": "kCKFfrau35Gf4PvW",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour"
+            }
+          ]
+        },
+        "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC9cn0TuPq4dnbTY-CBsm8XA"
+      },
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        640
+      ],
+      "id": "cabd42eb-7056-4b13-bffa-4e51763d5234",
+      "name": "a16z RSS"
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour"
+            }
+          ]
+        },
+        "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvQECJukTDE2i6aCoMnS-Vg"
+      },
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -352,
+        640
+      ],
+      "id": "c52dc5da-db8b-4d31-b2c1-184416308260",
+      "name": "Big Think RSS"
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour"
+            }
+          ]
+        },
+        "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCctXZhXmG-kf3tlIXgVZUlw"
+      },
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -352,
+        -32
+      ],
+      "id": "c0dcea06-2ca6-4f70-bc6c-345b5708828a",
+      "name": "GaryVee RSS"
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour"
+            }
+          ]
+        },
+        "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCwB3HiWejAkml1UZ0Qo2bFg"
+      },
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -352,
+        144
+      ],
+      "id": "19cddc64-fb3c-48b2-8578-c22958e0bece",
+      "name": "Startup Grind RSS"
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour"
+            }
+          ]
+        },
+        "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCoOae5nYA7VqaXzerajD0lg"
+      },
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -352,
+        304
+      ],
+      "id": "331db07e-5625-4943-96c8-7a26a32ff161",
+      "name": "Ali Abdaal RSS"
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour"
+            }
+          ]
+        },
+        "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCN5xPNTy8hLoRVTGbECznMg"
+      },
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        -352,
+        480
+      ],
+      "id": "93ac43e1-c600-4f6d-9e8f-1d8787a2b5a6",
+      "name": "CMI Content RSS"
+    },
+    {
+      "parameters": {
+        "updates": [
+          "callback_query"
+        ],
+        "additionalFields": {}
+      },
+      "id": "6db46fa6-a753-43b6-8f23-57736d80c4d6",
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        208,
+        1072
+      ],
+      "webhookId": "telegram-callback-webhook",
+      "credentials": {
+        "telegramApi": {
+          "id": "hIo5i77YKdu9Rs8g",
+          "name": "youtube imi Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.callback_query.data }}",
+              "operation": "startsWith",
+              "value2": "=create_blog:"
+            }
+          ]
+        }
+      },
+      "id": "def1006d-d1a8-42f9-8d48-7bb34ecbd9b0",
+      "name": "Is Blog Creation?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        416,
+        1072
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Callback data 파싱\n  // Format: [=]create_blog:notion_page_id:video_id\n  const callbackData = $input.first().json.callback_query.data;\n  const cleanData = callbackData.startsWith('=') ? callbackData.substring(1) : callbackData;\n  const parts = cleanData.split(':');\n\n  if (parts.length !== 3 || parts[0] !== 'create_blog') {\n    throw new Error(`Invalid callback data format: ${callbackData}`);\n  }\n\n  const notionPageId = parts[1];\n  const videoId = parts[2];\n  const userId = $input.first().json.callback_query.from.id;\n  const userName = $input.first().json.callback_query.from.first_name || 'User';\n  const messageId = $input.first().json.callback_query.message.message_id;\n  const chatId = $input.first().json.callback_query.message.chat.id;\n\n  return {\n    notionPageId,\n    videoId,\n    userId,\n    userName,\n    messageId,\n    chatId,\n    callbackQueryId: $input.first().json.callback_query.id,\n    timestamp: new Date().toISOString()\n  };\n"
+      },
+      "id": "7229b846-5d7b-4e0d-b187-1f4a74fc7007",
+      "name": "Parse Callback Data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        624,
+        1056
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "callback",
+        "queryId": "={{ $json.callbackQueryId }}",
+        "additionalFields": {
+          "text": "블로그 글 생성을 시작합니다... 📝"
+        }
+      },
+      "id": "17b5eee6-6fb6-4242-80d2-5adb20791616",
+      "name": "Answer Callback",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        880,
+        912
+      ],
+      "webhookId": "e760a4ae-a266-4636-a7d3-85bf8034d71b",
+      "credentials": {
+        "telegramApi": {
+          "id": "hIo5i77YKdu9Rs8g",
+          "name": "youtube imi Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.chatId }}",
+        "text": "=⏳ 블로그 글 생성 중...\n\n📝 작업 시작: {{ $json.userName }}님이 요청\n🎬 Video ID: {{ $json.videoId }}\n📄 Notion Page: {{ $json.notionPageId }}\n\n잠시만 기다려주세요. 완료되면 알려드리겠습니다.",
+        "additionalFields": {
+          "appendAttribution": false,
+          "reply_to_message_id": "={{ $json.messageId }}"
+        }
+      },
+      "id": "870fcc8c-f9ae-499f-b63e-f23e0e0db5d5",
+      "name": "Send Processing Message",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        864,
+        1184
+      ],
+      "webhookId": "fc327277-ea31-4eae-aa1c-1197328462fd",
+      "credentials": {
+        "telegramApi": {
+          "id": "hIo5i77YKdu9Rs8g",
+          "name": "youtube imi Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://n8n.imiwork.com/webhook-test/youtube-blog-complete-final",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"pageId\": \"{{ $('Parse Callback Data').item.json.notionPageId }}\",\n  \"videoId\": \"{{ $('Parse Callback Data').item.json.videoId }}\",\n  \"triggeredBy\": \"telegram\",\n  \"userId\": \"{{ $('Parse Callback Data').item.json.userId }}\",\n  \"userName\": \"{{ $('Parse Callback Data').item.json.userName }}\",\n  \"chatId\": \"{{ $('Parse Callback Data').item.json.chatId }}\",\n  \"messageId\": \"{{ $('Parse Callback Data').item.json.messageId }}\"\n}",
+        "options": {
+          "timeout": 300000
+        }
+      },
+      "id": "df319aa3-8e8b-4aca-aeee-b8ffeb458e76",
+      "name": "Trigger Blog Workflow",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1072,
+        1184
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Parse Callback Data').item.json.chatId }}",
+        "text": "=✅ 블로그 글 생성 완료!\n\n📝 요청자: {{ $('Parse Callback Data').item.json.userName }}\n🎬 Video ID: {{ $('Parse Callback Data').item.json.videoId }}\n\n상세 결과는 별도 메시지로 전송되었습니다.",
+        "additionalFields": {
+          "appendAttribution": false,
+          "reply_to_message_id": "={{ $('Parse Callback Data').item.json.messageId }}"
+        }
+      },
+      "id": "2eeca954-1696-4ff2-91f6-138d5c7cab21",
+      "name": "Send Complete Message",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1296,
+        1104
+      ],
+      "webhookId": "894cc48f-8c74-411b-9689-487a29851866",
+      "credentials": {
+        "telegramApi": {
+          "id": "hIo5i77YKdu9Rs8g",
+          "name": "youtube imi Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Parse Callback Data').item.json.chatId }}",
+        "text": "=❌ 블로그 글 생성 실패\n\n오류: {{ $json.error.message || '알 수 없는 오류' }}\n\n다시 시도해주세요.",
+        "additionalFields": {
+          "appendAttribution": false,
+          "reply_to_message_id": "={{ $('Parse Callback Data').item.json.messageId }}"
+        }
+      },
+      "id": "871408c3-a4ba-47c7-953c-5243aaa697b5",
+      "name": "Send Error Message",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1296,
+        1328
+      ],
+      "webhookId": "4b8a052e-1e47-4755-946c-5b0df6fc4363",
+      "credentials": {
+        "telegramApi": {
+          "id": "hIo5i77YKdu9Rs8g",
+          "name": "youtube imi Telegram account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "chatId": "7830356405",
+        "text": "=🎬 새 YouTube 영상 수집완료\n\n📺 {{ $(\"Edit Fields\").item.json.title }}\n👤 {{ $(\"Edit Fields\").item.json.author }}\n📅 {{ $(\"Edit Fields\").item.json.pubDate }}\n\n📝 {{ $json.properties[\"요약\"].rich_text[0].plain_text }}\n\n✅ Notion 저장완료\n🔗 {{ $(\"Edit Fields\").item.json.link }}",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "📝 블로그 글 생성",
+                    "additionalFields": {
+                      "callback_data": "=create_blog:{{ $json.id }}:{{ $('Edit Fields').item.json.link.split('watch?v=')[1]?.split('&')[0] || 'no-video-id' }}"
+                    }
+                  },
+                  {
+                    "text": "🎥 영상 보기",
+                    "additionalFields": {
+                      "url": "={{ $('Edit Fields').item.json.link }}"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "📋 Notion에서 보기",
+                    "additionalFields": {
+                      "url": "={{ $json.url }}"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1200,
+        192
+      ],
+      "id": "e4b19b6b-695e-49e9-ac0a-db0f139d8318",
+      "name": "Send to Telegram",
+      "webhookId": "69557766-6cdf-4808-b6fc-ad70bab7f55f",
+      "credentials": {
+        "telegramApi": {
+          "id": "hIo5i77YKdu9Rs8g",
+          "name": "youtube imi Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Youtube RSS \n**유튜브 요약 후 telegram**\n\n",
+        "height": 800,
+        "width": 336
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -800,
+        -32
+      ],
+      "typeVersion": 1,
+      "id": "c6c7bf01-9ff9-4e8f-b223-6365901777aa",
+      "name": "Sticky Note"
+    }
+  ],
+  "connections": {
+    "시민개발자 구씨": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lenny's Podcast": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "언더스텐딩딩": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "디자인하는AI": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Youtube Transcript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Youtube Transcript": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "Save to Notion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save to Notion": {
+      "main": [
+        [
+          {
+            "node": "Send to Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "a16z RSS": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Big Think RSS": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GaryVee RSS": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Startup Grind RSS": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ali Abdaal RSS": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CMI Content RSS": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Is Blog Creation?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Is Blog Creation?": {
+      "main": [
+        [
+          {
+            "node": "Parse Callback Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Callback Data": {
+      "main": [
+        [
+          {
+            "node": "Answer Callback",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Send Processing Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Processing Message": {
+      "main": [
+        [
+          {
+            "node": "Trigger Blog Workflow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Trigger Blog Workflow": {
+      "main": [
+        [
+          {
+            "node": "Send Complete Message",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Send Error Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "503b3d8b44115e5921e2e4e1edcde177dde00c303a77361802e2da13d7103e31"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__n8n-mcp__search_nodes",
+      "mcp__n8n-mcp__get_node_essentials",
+      "mcp__n8n-mcp__validate_node_minimal",
+      "mcp__n8n-mcp__validate_node_operation",
+      "mcp__n8n-mcp__validate_workflow",
+      "mcp__n8n-mcp__n8n_update_partial_workflow",
+      "mcp__n8n-mcp__n8n_update_full_workflow",
+      "mcp__n8n-mcp__n8n_validate_workflow",
+      "mcp__sequential-thinking__sequentialthinking",
+      "Bash(mkdir:*)",
+      "WebSearch"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
