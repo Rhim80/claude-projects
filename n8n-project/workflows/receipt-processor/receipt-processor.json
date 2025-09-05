@@ -1,0 +1,1087 @@
+{
+  "name": "영수증 처리기 - 5개 사업장",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 10
+            }
+          ]
+        }
+      },
+      "id": "5bd8b5ee-6fce-4d6d-b3b8-c6d6f98a2b3c",
+      "name": "사무실 - 10분마다 체크",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        140,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 10
+            }
+          ]
+        }
+      },
+      "id": "7a2c4f11-8e3d-4b2e-9f1a-d5e7b9c3a4f2",
+      "name": "동교동 - 10분마다 체크",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        140,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 10
+            }
+          ]
+        }
+      },
+      "id": "3e9f1b2c-5d7a-4c8e-af3b-1e6d9c2f4a7b",
+      "name": "인사동 - 10분마다 체크",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        140,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 10
+            }
+          ]
+        }
+      },
+      "id": "8f4a2c7e-1b9d-3e5f-6a8c-4f7e2d1b5c9a",
+      "name": "구로 - 10분마다 체크",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        140,
+        900
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 10
+            }
+          ]
+        }
+      },
+      "id": "2d6f9a1e-4c8b-7e3f-5a9d-8b4e1f7c2a6d",
+      "name": "연남동 - 10분마다 체크",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        140,
+        1100
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "resource": "file",
+        "operation": "list",
+        "driveId": {
+          "__rl": true,
+          "value": "1aB2cD3eF4gH5iJ6kL7mN8oP9qR0sT1u",
+          "mode": "list",
+          "cachedResultName": "사무실 영수증"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1xY2zA3bC4dE5fG6hI7jK8lM9nO0pQ1r",
+          "mode": "list",
+          "cachedResultName": "처리대기"
+        },
+        "filters": {
+          "name": "*.jpg,*.jpeg,*.png,*.pdf"
+        }
+      },
+      "id": "4b7e2a9f-6d1c-3e8a-5f9b-2c4e7a1d6f3b",
+      "name": "사무실 영수증 검색",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        360,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "resource": "file",
+        "operation": "list",
+        "driveId": {
+          "__rl": true,
+          "value": "2bC3dE4fG5hI6jK7lM8nO9pQ0rS1tU2v",
+          "mode": "list",
+          "cachedResultName": "동교동 영수증"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "2yZ3aB4cD5eF6gH7iJ8kL9mN0oP1qR2s",
+          "mode": "list",
+          "cachedResultName": "처리대기"
+        },
+        "filters": {
+          "name": "*.jpg,*.jpeg,*.png,*.pdf"
+        }
+      },
+      "id": "9e2f5a1b-8c4d-6f3a-7e9b-4a2c5f8e1d7b",
+      "name": "동교동 영수증 검색",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        360,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "resource": "file",
+        "operation": "list",
+        "driveId": {
+          "__rl": true,
+          "value": "3cD4eF5gH6iJ7kL8mN9oP0qR1sT2uV3w",
+          "mode": "list",
+          "cachedResultName": "인사동 영수증"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "3zA4bC5dE6fG7hI8jK9lM0nO1pQ2rS3t",
+          "mode": "list",
+          "cachedResultName": "처리대기"
+        },
+        "filters": {
+          "name": "*.jpg,*.jpeg,*.png,*.pdf"
+        }
+      },
+      "id": "1f8a4c2e-9b5d-7f2a-6e8c-3a5f9b2e4d8a",
+      "name": "인사동 영수증 검색",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        360,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "resource": "file",
+        "operation": "list",
+        "driveId": {
+          "__rl": true,
+          "value": "4dE5fG6hI7jK8lM9nO0pQ1rS2tU3vW4x",
+          "mode": "list",
+          "cachedResultName": "구로 영수증"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "4aB5cD6eF7gH8iJ9kL0mN1oP2qR3sT4u",
+          "mode": "list",
+          "cachedResultName": "처리대기"
+        },
+        "filters": {
+          "name": "*.jpg,*.jpeg,*.png,*.pdf"
+        }
+      },
+      "id": "6c9f2b4e-1a7d-5f8a-3e6c-8b1f4a7e2d9c",
+      "name": "구로 영수증 검색",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        360,
+        900
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "resource": "file",
+        "operation": "list",
+        "driveId": {
+          "__rl": true,
+          "value": "5eF6gH7iJ8kL9mN0oP1qR2sT3uV4wX5y",
+          "mode": "list",
+          "cachedResultName": "연남동 영수증"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "5bC6dE7fG8hI9jK0lM1nO2pQ3rS4tU5v",
+          "mode": "list",
+          "cachedResultName": "처리대기"
+        },
+        "filters": {
+          "name": "*.jpg,*.jpeg,*.png,*.pdf"
+        }
+      },
+      "id": "8a3f6c1e-4b9d-2f7a-5e8c-9a2f6c4e7b1a",
+      "name": "연남동 영수증 검색",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        360,
+        1100
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $json.files ? $json.files.length : 0 }}",
+              "operation": "larger",
+              "value2": 0
+            }
+          ]
+        }
+      },
+      "id": "7e4a1f9b-2c6d-8f3a-4e7b-1a5f9c2e6d8a",
+      "name": "사무실 파일 있나?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        580,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $json.files ? $json.files.length : 0 }}",
+              "operation": "larger",
+              "value2": 0
+            }
+          ]
+        }
+      },
+      "id": "3b8e5a2f-7d1c-4f6a-9e3b-6a4f8e1c5d7b",
+      "name": "동교동 파일 있나?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        580,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $json.files ? $json.files.length : 0 }}",
+              "operation": "larger",
+              "value2": 0
+            }
+          ]
+        }
+      },
+      "id": "9f2c6a4e-8b5d-1f7a-3e9c-5a8f2c6e4d9a",
+      "name": "인사동 파일 있나?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        580,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $json.files ? $json.files.length : 0 }}",
+              "operation": "larger",
+              "value2": 0
+            }
+          ]
+        }
+      },
+      "id": "2d7f3a6c-4e9b-8f2a-6d8c-1a7f3c6e9b2d",
+      "name": "구로 파일 있나?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        580,
+        900
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $json.files ? $json.files.length : 0 }}",
+              "operation": "larger",
+              "value2": 0
+            }
+          ]
+        }
+      },
+      "id": "5c8a2f6e-1d4b-7f9a-2c5e-8a1f5c9e2d6a",
+      "name": "연남동 파일 있나?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        580,
+        1100
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// 사무실 사업장 표시 추가\nfor (const item of $input.all()) {\n  item.json.location = '사무실';\n  item.json.location_code = 'office';\n}\n\nreturn $input.all();"
+      },
+      "id": "4f9a2c6e-8b5d-1f7a-4f9c-2a6f9c3e8b5d",
+      "name": "사무실 위치 태그",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        800,
+        250
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// 동교동 사업장 표시 추가\nfor (const item of $input.all()) {\n  item.json.location = '동교동';\n  item.json.location_code = 'donggyo';\n}\n\nreturn $input.all();"
+      },
+      "id": "7c2e5a8f-4b9d-6f3a-7c2f-5a8c2f6e9b4d",
+      "name": "동교동 위치 태그",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        800,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// 인사동 사업장 표시 추가\nfor (const item of $input.all()) {\n  item.json.location = '인사동';\n  item.json.location_code = 'insadong';\n}\n\nreturn $input.all();"
+      },
+      "id": "1a5f8c2e-9b4d-3f7a-1a5c-8f2a5c9e4b7d",
+      "name": "인사동 위치 태그",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        800,
+        650
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// 구로 사업장 표시 추가\nfor (const item of $input.all()) {\n  item.json.location = '구로';\n  item.json.location_code = 'guro';\n}\n\nreturn $input.all();"
+      },
+      "id": "6d9c2f5a-3e8b-1f4a-6d9f-2c5f9c8e3b1d",
+      "name": "구로 위치 태그",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        800,
+        850
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// 연남동 사업장 표시 추가\nfor (const item of $input.all()) {\n  item.json.location = '연남동';\n  item.json.location_code = 'yeonnam';\n}\n\nreturn $input.all();"
+      },
+      "id": "8b4e7a1f-2c5d-9f6a-8b4a-7e1c5f2a6d9c",
+      "name": "연남동 위치 태그",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        800,
+        1050
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combinationMode": "mergeByIndex",
+        "options": {}
+      },
+      "id": "3c7f1a5e-9b2d-4f8a-3c7a-1f5c7a9e2d4f",
+      "name": "모든 매장 통합",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2.1,
+      "position": [
+        1020,
+        650
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "resource": "file",
+        "operation": "download",
+        "fileId": "={{ $json.id }}",
+        "options": {
+          "googleFileConversion": {
+            "conversion": {
+              "docsToFormat": "txt"
+            }
+          }
+        }
+      },
+      "id": "9e3a6c2f-7b1d-5f4a-9e3c-6a2c9e4f7b5d",
+      "name": "영수증 이미지 다운로드",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1240,
+        650
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o-mini",
+        "options": {
+          "temperature": 0.1
+        },
+        "messages": {
+          "values": [
+            {
+              "role": "user",
+              "content": "=이 영수증 이미지를 분석해서 다음 정보를 JSON 형태로 추출해주세요:\n\n{\n  \"date\": \"YYYY-MM-DD\",\n  \"store_name\": \"상호명\",\n  \"business_number\": \"사업자등록번호\",\n  \"total_amount\": 총금액숫자만,\n  \"tax_amount\": 세금금액숫자만,\n  \"items\": [\n    {\n      \"name\": \"품목명\",\n      \"quantity\": 수량숫자만,\n      \"unit_price\": 단가숫자만,\n      \"amount\": 금액숫자만\n    }\n  ],\n  \"payment_method\": \"결제방법\",\n  \"category_suggestion\": \"다음 9개 중 하나: 식재료비, 부재료비, 포장재비, 운반비, 수도광열비, 소모품비, 수선비, 광고선전비, 기타\"\n}\n\n영수증이 불분명하거나 읽기 어려운 부분은 \"확인불가\"로 표시해주세요."
+            }
+          ]
+        },
+        "inputBinaryField": "data",
+        "options": {
+          "useCustomFields": true,
+          "customFields": {
+            "values": [
+              {
+                "name": "detail",
+                "value": "low"
+              }
+            ]
+          }
+        }
+      },
+      "id": "2f6a9c4e-8b3d-1f5a-2f6c-9a4c2f8e5b1d",
+      "name": "GPT-4o로 OCR 처리",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.3,
+      "position": [
+        1460,
+        650
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// GPT 응답에서 JSON 추출 및 파싱\nconst items = [];\n\nfor (const item of $input.all()) {\n  try {\n    let gptResponse = item.json.response || item.json.output || '';\n    \n    // JSON 부분만 추출 (```json 블록이나 일반 JSON)\n    let jsonMatch = gptResponse.match(/```json\\s*([\\s\\S]*?)\\s*```/) || \n                   gptResponse.match(/\\{[\\s\\S]*\\}/);\n    \n    if (jsonMatch) {\n      const jsonStr = jsonMatch[1] || jsonMatch[0];\n      const parsedData = JSON.parse(jsonStr);\n      \n      // 원본 데이터와 파싱된 데이터 결합\n      items.push({\n        ...item.json,\n        extracted_data: parsedData,\n        processing_status: 'success',\n        processed_at: new Date().toISOString(),\n        file_name: item.json.name || '알수없음'\n      });\n    } else {\n      throw new Error('JSON 형식을 찾을 수 없습니다');\n    }\n  } catch (error) {\n    items.push({\n      ...item.json,\n      extracted_data: null,\n      processing_status: 'error',\n      error_message: error.message,\n      processed_at: new Date().toISOString(),\n      file_name: item.json.name || '알수없음'\n    });\n  }\n}\n\nreturn items.map(item => ({ json: item }));"
+      },
+      "id": "5a8c3f6e-1b9d-4f2a-5a8f-3c6a5f9e2b4d",
+      "name": "OCR 결과 파싱",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1680,
+        650
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.processing_status }}",
+              "operation": "equal",
+              "value2": "success"
+            }
+          ]
+        }
+      },
+      "id": "7b2f5a9c-4e8d-6f1a-7b2a-5f9b7e4c8d1f",
+      "name": "처리 성공한 것만",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1900,
+        650
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o-mini",
+        "options": {
+          "temperature": 0.1,
+          "maxTokens": 200
+        },
+        "messages": {
+          "values": [
+            {
+              "role": "system",
+              "content": "당신은 카페 운영의 회계 전문가입니다. 영수증 정보를 바탕으로 정확한 계정과목을 분류해주세요."
+            },
+            {
+              "role": "user",
+              "content": "=다음 영수증 정보를 분석해서 가장 적절한 계정과목 1개를 선택해주세요.\n\n영수증 정보:\n- 상호명: {{ $json.extracted_data.store_name }}\n- 총금액: {{ $json.extracted_data.total_amount }}원\n- 구매품목: {{ $json.extracted_data.items ? $json.extracted_data.items.map(item => item.name).join(', ') : '확인불가' }}\n- 사업장: {{ $json.location }}\n\n선택가능한 계정과목 (9개):\n1. 식재료비 - 커피원두, 우유, 시럽, 베이커리 재료 등\n2. 부재료비 - 설탕, 빨대, 냅킨, 컵홀더 등 소모성 부자재\n3. 포장재비 - 일회용 컵, 뚜껑, 포장지, 쇼핑백 등\n4. 운반비 - 배송비, 택배비, 운송료 등\n5. 수도광열비 - 전기료, 가스료, 상하수도료 등\n6. 소모품비 - 청소용품, 사무용품, 매장 관리용품 등\n7. 수선비 - 장비수리, 인테리어 보수, 기계점검 등\n8. 광고선전비 - 마케팅, 광고, 홍보물 제작 등\n9. 기타 - 위 8개에 해당하지 않는 모든 비용\n\n답변 형식: 숫자만 (예: 1, 2, 3...)"
+            }
+          ]
+        }
+      },
+      "id": "4c9a2f6e-7b1d-3f8a-4c9f-2a6c4f8e7b3d",
+      "name": "AI 계정과목 분류",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.3,
+      "position": [
+        2120,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// 계정과목 매핑 및 최종 데이터 정리\nconst accountMapping = {\n  '1': '식재료비',\n  '2': '부재료비', \n  '3': '포장재비',\n  '4': '운반비',\n  '5': '수도광열비',\n  '6': '소모품비',\n  '7': '수선비',\n  '8': '광고선전비',\n  '9': '기타'\n};\n\nconst items = [];\n\nfor (const item of $input.all()) {\n  const aiCategory = (item.json.response || '').trim();\n  const categoryName = accountMapping[aiCategory] || '기타';\n  \n  // 최종 처리 데이터 구조화\n  const processedData = {\n    // 기본 정보\n    file_id: item.json.id,\n    file_name: item.json.name,\n    location: item.json.location,\n    location_code: item.json.location_code,\n    \n    // 추출된 영수증 정보\n    receipt_date: item.json.extracted_data?.date || '확인불가',\n    store_name: item.json.extracted_data?.store_name || '확인불가',\n    business_number: item.json.extracted_data?.business_number || '확인불가',\n    total_amount: item.json.extracted_data?.total_amount || 0,\n    tax_amount: item.json.extracted_data?.tax_amount || 0,\n    payment_method: item.json.extracted_data?.payment_method || '확인불가',\n    \n    // AI 분류 결과\n    account_category_code: aiCategory,\n    account_category_name: categoryName,\n    \n    // 품목 정보 (문자열로 변환)\n    items_detail: item.json.extracted_data?.items ? \n      item.json.extracted_data.items.map(i => `${i.name}(${i.quantity}개×${i.unit_price}원)`).join('; ') : '확인불가',\n    \n    // 처리 메타데이터\n    processed_at: new Date().toISOString(),\n    sheet_row_data: [\n      new Date().toLocaleDateString('ko-KR'), // A: 처리일\n      item.json.location, // B: 사업장\n      item.json.extracted_data?.date || '확인불가', // C: 영수증일자\n      item.json.extracted_data?.store_name || '확인불가', // D: 상호명\n      categoryName, // E: 계정과목\n      item.json.extracted_data?.total_amount || 0, // F: 금액\n      item.json.extracted_data?.tax_amount || 0, // G: 세액\n      item.json.extracted_data?.payment_method || '확인불가', // H: 결제방법\n      item.json.name, // I: 파일명\n      item.json.extracted_data?.business_number || '확인불가' // J: 사업자번호\n    ]\n  };\n  \n  items.push(processedData);\n}\n\nreturn items.map(item => ({ json: item }));"
+      },
+      "id": "8d5f2a9c-3b7e-6f1a-8d5a-2f9d8b3c7e6a",
+      "name": "최종 데이터 정리",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2340,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1mN2oP3qR4sT5uV6wX7yZ8aB9cD0eF1gH",
+          "mode": "list",
+          "cachedResultName": "영수증 관리대장"
+        },
+        "sheetName": "=Sheet1",
+        "columnToMatchOn": "I",
+        "valueToMatchOn": "={{ $json.file_name }}",
+        "options": {
+          "cellFormat": "USER_ENTERED",
+          "useAppend": true
+        },
+        "columnsUi": {
+          "values": [
+            {
+              "column": "A",
+              "value": "={{ $json.sheet_row_data[0] }}"
+            },
+            {
+              "column": "B", 
+              "value": "={{ $json.sheet_row_data[1] }}"
+            },
+            {
+              "column": "C",
+              "value": "={{ $json.sheet_row_data[2] }}"
+            },
+            {
+              "column": "D",
+              "value": "={{ $json.sheet_row_data[3] }}"
+            },
+            {
+              "column": "E",
+              "value": "={{ $json.sheet_row_data[4] }}"
+            },
+            {
+              "column": "F",
+              "value": "={{ $json.sheet_row_data[5] }}"
+            },
+            {
+              "column": "G",
+              "value": "={{ $json.sheet_row_data[6] }}"
+            },
+            {
+              "column": "H",
+              "value": "={{ $json.sheet_row_data[7] }}"
+            },
+            {
+              "column": "I",
+              "value": "={{ $json.sheet_row_data[8] }}"
+            },
+            {
+              "column": "J",
+              "value": "={{ $json.sheet_row_data[9] }}"
+            }
+          ]
+        }
+      },
+      "id": "1a6c9f2e-4d7b-8f3a-1a6f-9c2a1d7e4b8c",
+      "name": "구글 시트 기록",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [
+        2560,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "resource": "file",
+        "operation": "update",
+        "fileId": "={{ $json.file_id }}",
+        "updateFields": {
+          "name": "={{ $json.processed_at.split('T')[0] }}_{{ $json.location_code }}_{{ $json.account_category_name }}_{{ $json.total_amount }}원_{{ $json.file_name }}"
+        }
+      },
+      "id": "6f3a8c2e-9b1d-5f4a-6f3c-8a2c6f9e1d5b",
+      "name": "파일명 변경",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        2780,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "resource": "file", 
+        "operation": "move",
+        "fileId": "={{ $json.file_id }}",
+        "driveId": {
+          "__rl": true,
+          "value": "={{ $json.location_code === 'office' ? '1aB2cD3eF4gH5iJ6kL7mN8oP9qR0sT1u' : \n              $json.location_code === 'donggyo' ? '2bC3dE4fG5hI6jK7lM8nO9pQ0rS1tU2v' :\n              $json.location_code === 'insadong' ? '3cD4eF5gH6iJ7kL8mN9oP0qR1sT2uV3w' :\n              $json.location_code === 'guro' ? '4dE5fG6hI7jK8lM9nO0pQ1rS2tU3vW4x' :\n              '5eF6gH7iJ8kL9mN0oP1qR2sT3uV4wX5y' }}",
+          "mode": "list"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "={{ $json.location_code === 'office' ? '1pQ2rS3tU4vW5xY6zA7bC8dE9fG0hI1j' : \n              $json.location_code === 'donggyo' ? '2qR3sT4uV5wX6yZ7aB8cD9eF0gH1iJ2k' :\n              $json.location_code === 'insadong' ? '3rS4tU5vW6xY7zA8bC9dE0fG1hI2jK3l' :\n              $json.location_code === 'guro' ? '4sT5uV6wX7yZ8aB9cD0eF1gH2iJ3kL4m' :\n              '5tU6vW7xY8zA9bC0dE1fG2hI3jK4lM5n' }}",
+          "mode": "list"
+        }
+      },
+      "id": "3c8f5a2e-7b4d-9f1a-3c8a-5f2c8f7e4b9d",
+      "name": "완료폴더로 이동",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        3000,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1001234567890",
+        "text": "=🧾 영수증 처리 완료\n\n📍 **{{ $json.location }}**\n📅 영수증일자: {{ $json.receipt_date }}\n🏪 상호: {{ $json.store_name }}\n💰 금액: {{ $json.total_amount.toLocaleString() }}원\n📊 계정과목: {{ $json.account_category_name }}\n📎 파일: {{ $json.file_name }}\n\n⏰ {{ $json.processed_at.split('T')[0] }} {{ $json.processed_at.split('T')[1].split('.')[0] }} 처리완료",
+        "additionalFields": {
+          "disable_notification": true
+        }
+      },
+      "id": "9a4c2f7e-6b8d-1f5a-9a4f-2c7a9e6b8d1c",
+      "name": "텔레그램 알림",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        3220,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1001234567890",
+        "text": "=⚠️ 영수증 처리 실패\n\n📍 **{{ $json.location }}**\n📎 파일: {{ $json.file_name || '파일명 알수없음' }}\n❌ 오류: {{ $json.error_message || '알수없는 오류' }}\n\n🔧 수동 확인이 필요합니다.",
+        "additionalFields": {
+          "disable_notification": false
+        }
+      },
+      "id": "2e7f4a9c-8b3d-5f6a-2e7a-4f9e2b8c5d6f",
+      "name": "실패 알림",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        3220,
+        750
+      ]
+    }
+  ],
+  "connections": {
+    "사무실 - 10분마다 체크": {
+      "main": [
+        [
+          {
+            "node": "사무실 영수증 검색",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "동교동 - 10분마다 체크": {
+      "main": [
+        [
+          {
+            "node": "동교동 영수증 검색",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "인사동 - 10분마다 체크": {
+      "main": [
+        [
+          {
+            "node": "인사동 영수증 검색",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "구로 - 10분마다 체크": {
+      "main": [
+        [
+          {
+            "node": "구로 영수증 검색",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "연남동 - 10분마다 체크": {
+      "main": [
+        [
+          {
+            "node": "연남동 영수증 검색",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "사무실 영수증 검색": {
+      "main": [
+        [
+          {
+            "node": "사무실 파일 있나?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "동교동 영수증 검색": {
+      "main": [
+        [
+          {
+            "node": "동교동 파일 있나?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "인사동 영수증 검색": {
+      "main": [
+        [
+          {
+            "node": "인사동 파일 있나?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "구로 영수증 검색": {
+      "main": [
+        [
+          {
+            "node": "구로 파일 있나?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "연남동 영수증 검색": {
+      "main": [
+        [
+          {
+            "node": "연남동 파일 있나?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "사무실 파일 있나?": {
+      "main": [
+        [
+          {
+            "node": "사무실 위치 태그",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "동교동 파일 있나?": {
+      "main": [
+        [
+          {
+            "node": "동교동 위치 태그",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "인사동 파일 있나?": {
+      "main": [
+        [
+          {
+            "node": "인사동 위치 태그",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "구로 파일 있나?": {
+      "main": [
+        [
+          {
+            "node": "구로 위치 태그",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "연남동 파일 있나?": {
+      "main": [
+        [
+          {
+            "node": "연남동 위치 태그",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "사무실 위치 태그": {
+      "main": [
+        [
+          {
+            "node": "모든 매장 통합",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "동교동 위치 태그": {
+      "main": [
+        [
+          {
+            "node": "모든 매장 통합",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "인사동 위치 태그": {
+      "main": [
+        [
+          {
+            "node": "모든 매장 통합",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "구로 위치 태그": {
+      "main": [
+        [
+          {
+            "node": "모든 매장 통합",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "연남동 위치 태그": {
+      "main": [
+        [
+          {
+            "node": "모든 매장 통합",
+            "type": "main",
+            "index": 4
+          }
+        ]
+      ]
+    },
+    "모든 매장 통합": {
+      "main": [
+        [
+          {
+            "node": "영수증 이미지 다운로드",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "영수증 이미지 다운로드": {
+      "main": [
+        [
+          {
+            "node": "GPT-4o로 OCR 처리",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GPT-4o로 OCR 처리": {
+      "main": [
+        [
+          {
+            "node": "OCR 결과 파싱",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OCR 결과 파싱": {
+      "main": [
+        [
+          {
+            "node": "처리 성공한 것만",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "처리 성공한 것만": {
+      "main": [
+        [
+          {
+            "node": "AI 계정과목 분류",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "실패 알림",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI 계정과목 분류": {
+      "main": [
+        [
+          {
+            "node": "최종 데이터 정리",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "최종 데이터 정리": {
+      "main": [
+        [
+          {
+            "node": "구글 시트 기록",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "구글 시트 기록": {
+      "main": [
+        [
+          {
+            "node": "파일명 변경",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "파일명 변경": {
+      "main": [
+        [
+          {
+            "node": "완료폴더로 이동",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "완료폴더로 이동": {
+      "main": [
+        [
+          {
+            "node": "텔레그램 알림",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "12a34567-89ab-cdef-0123-456789abcdef",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "id": "98",
+  "tags": [
+    {
+      "createdAt": "2024-12-15T10:30:00.000Z",
+      "updatedAt": "2024-12-15T10:30:00.000Z",
+      "id": "15",
+      "name": "영수증처리"
+    },
+    {
+      "createdAt": "2024-12-15T10:30:00.000Z", 
+      "updatedAt": "2024-12-15T10:30:00.000Z",
+      "id": "16",
+      "name": "회계자동화"
+    }
+  ]
+}

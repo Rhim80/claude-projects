@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1주차: AI와 제대로 파트너 맺기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+        }
+        
+        body {
+            background: #4a4a4a;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100vh;
+            color: white;
+        }
+        
+        .slide {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px;
+            box-sizing: border-box;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1;
+            transition: all 0.6s ease-in-out;
+        }
+        
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+            z-index: 2;
+        }
+        
+        .slide-content {
+            max-width: 1200px;
+            width: 100%;
+            text-align: left;
+            color: white;
+            position: relative;
+        }
+        
+        .accent-circle {
+            position: absolute;
+            top: 60px;
+            right: 60px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+        
+        .footer {
+            position: absolute;
+            bottom: 30px;
+            right: 60px;
+            font-size: 16px;
+            color: white;
+            opacity: 0.8;
+        }
+        
+        .orange { background: #ff7b47; }
+        .purple { background: #8b5cf6; }
+        .pink { background: #ec4899; }
+        .yellow { background: #fbbf24; }
+        .green { background: #10b981; }
+        .blue { background: #3b82f6; }
+        .red { background: #ef4444; }
+        .lime { background: #84cc16; }
+        
+        .main-title {
+            font-size: 5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            text-align: center;
+        }
+        
+        .subtitle {
+            font-size: 2.5rem;
+            font-weight: 600;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+        
+        .content-text {
+            font-size: 1.8rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .quote-text {
+            font-size: 2.5rem;
+            font-weight: 400;
+            line-height: 1.4;
+            margin-bottom: 2rem;
+        }
+        
+        .author-text {
+            font-size: 1.5rem;
+            opacity: 0.8;
+            margin-top: 1rem;
+        }
+        
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .placeholder-image {
+            background: #e5e5e5;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.1) 10px, rgba(255,255,255,.1) 20px),
+                repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(0,0,0,.1) 10px, rgba(0,0,0,.1) 20px);
+            border-radius: 8px;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin: 2rem 0;
+        }
+        
+        .three-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .example-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: left;
+        }
+        
+        .arrow {
+            font-size: 3rem;
+            opacity: 0.5;
+            text-align: center;
+        }
+        
+        .numbered-item {
+            margin-bottom: 2rem;
+        }
+        
+        .number {
+            font-size: 2rem;
+            font-weight: 600;
+            opacity: 0.6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .item-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .item-desc {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            opacity: 0.8;
+        }
+        
+        .purple-section {
+            background: linear-gradient(90deg, #8b5cf6 50%, #4a4a4a 50%);
+        }
+        
+        .purple-content {
+            padding: 60px;
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .gray-content {
+            padding: 60px;
+            color: white;
+        }
+        
+        .navigation {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            z-index: 1000;
+        }
+        
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 0.5rem;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .slide-counter {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            color: white;
+            opacity: 0.7;
+            font-size: 0.9rem;
+            z-index: 1000;
+        }
+        
+        .objective-list {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .objective-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 0.5rem;
+            border-left: 3px solid #60a5fa;
+        }
+        
+        .objective-number {
+            background: #60a5fa;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 슬라이드 1: 표지 -->
+    <div class="slide active">
+        <div class="accent-circle orange"></div>
+        <div class="slide-content" style="text-align: center;">
+            <h1 class="main-title">AI와 제대로<br>파트너 맺기</h1>
+            <p class="subtitle">LLM 원리 이해 및 실전 질문법</p>
+            <div style="margin-top: 3rem;">
+                <div style="font-size: 1.5rem; opacity: 0.8;">F&B AI 교육 프로그램 - 1주차</div>
+                <div style="font-size: 1.2rem; opacity: 0.6; margin-top: 1rem;">이미커피 대표 | 2025년 9월</div>
+            </div>
+        </div>
+        <div class="footer">F&B AI 교육 프로그램 | 1주차 | 이미커피 &nbsp;&nbsp;&nbsp; 1</div>
+    </div>
+
+    <!-- 슬라이드 2: 학습 목표 -->
+    <div class="slide">
+        <div class="accent-circle green"></div>
+        <div class="slide-content">
+            <h2 class="section-title">학습 목표</h2>
+            <div style="margin-top: 3rem;">
+                <div class="numbered-item">
+                    <div class="number">01</div>
+                    <div class="item-title">LLM 핵심 원리 이해</div>
+                    <div class="item-desc">현업 관점에서 LLM의 작동 원리와 특성 파악</div>
+                </div>
+                <div class="numbered-item">
+                    <div class="number">02</div>
+                    <div class="item-title">3가지 질문법 습득</div>
+                    <div class="item-desc">AI 잠재력을 200% 끌어내는 실전 질문 기법</div>
+                </div>
+                <div class="numbered-item">
+                    <div class="number">03</div>
+                    <div class="item-title">모델 활용법 구분</div>
+                    <div class="item-desc">일반 모델과 추론 모델의 차이점과 적용 방법</div>
+                </div>
+                <div class="numbered-item">
+                    <div class="number">04</div>
+                    <div class="item-title">비즈니스 적용</div>
+                    <div class="item-desc">실제 업무 문제에 AI 파트너십 구축</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">F&B AI 교육 프로그램 | 1주차 | 이미커피 &nbsp;&nbsp;&nbsp; 2</div>
+    </div>
+
+    <!-- 슬라이드 3: LLM이란? -->
+    <div class="slide">
+        <div class="accent-circle blue"></div>
+        <div class="slide-content">
+            <h2 class="section-title mb-8">LLM = Large Language Model</h2>
+            <div class="highlight-box fade-in">
+                <p class="text-3xl font-bold mb-4">"도서관의 모든 책 + 온라인의 모든 텍스트를<br>AI에게 주입"</p>
+                <p class="text-xl opacity-80">AI가 이 데이터로 확률적 계산을 통해 글을 생성</p>
+            </div>
+            <div class="mt-8 fade-in">
+                <p class="text-2xl font-semibold text-blue-300">"LLM의 기본 개념은 데이터와 확률로 움직이는 언어 모델이다"</p>
+                <p class="text-lg opacity-60 mt-2">- 실제 강의 중</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 슬라이드 4: 3대 핵심 개념 -->
+    <div class="slide">
+        <div class="accent-circle purple"></div>
+        <div class="slide-content">
+            <h2 class="section-title mb-8">3대 핵심 개념</h2>
+            <div class="grid grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="example-card fade-in">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="text-2xl font-bold mb-2">데이터</h3>
+                    <p class="opacity-80">AI가 학습한 모든 텍스트 정보</p>
+                </div>
+                <div class="example-card fade-in">
+                    <div class="text-4xl mb-4">🎲</div>
+                    <h3 class="text-2xl font-bold mb-2">확률</h3>
+                    <p class="opacity-80">다음 단어를 예측하는 계산 방식</p>
+                </div>
+                <div class="example-card fade-in">
+                    <div class="text-4xl mb-4">🔤</div>
+                    <h3 class="text-2xl font-bold mb-2">토큰</h3>
+                    <p class="opacity-80">AI가 텍스트를 이해하는 단위</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 슬라이드 5: "철수가 밥을" 예시 -->
+    <div class="slide">
+        <div class="accent-circle yellow"></div>
+        <div class="slide-content">
+            <h2 class="section-title mb-8">확률 작동 원리</h2>
+            <div class="probability-example fade-in">
+                <div class="example-card">
+                    <p class="text-lg mb-2">제가 이렇게 말하면...</p>
+                    <p class="text-3xl font-bold text-yellow-300">"철수가 밥을"</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="example-card">
+                    <p class="text-lg mb-2">다음에 올 단어는?</p>
+                    <p class="text-2xl font-bold text-green-300">먹었다 (75%)</p>
+                    <p class="text-lg opacity-60">주문했다 (15%)</p>
+                    <p class="text-lg opacity-60">싫어한다 (7%)</p>
+                </div>
+            </div>
+            <div class="highlight-box mt-8 fade-in">
+                <p class="text-xl font-semibold">핵심 인사이트</p>
+                <p class="text-lg opacity-90 mt-2">앞선 정보(맥락)가 뒤의 확률 분포를 바꾸는 것이 핵심</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 슬라이드 6: 맥락의 힘 -->
+    <div class="slide">
+        <div class="accent-circle pink"></div>
+        <div class="slide-content">
+            <h2 class="section-title mb-8">맥락의 힘</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="example-card fade-in">
+                    <h3 class="text-xl font-bold mb-4 text-pink-300">일반적 상황</h3>
+                    <p class="text-2xl mb-4">"철수가 밥을" →</p>
+                    <p class="text-xl text-green-300">먹었다 (75%)</p>
+                </div>
+                <div class="example-card fade-in">
+                    <h3 class="text-xl font-bold mb-4 text-pink-300">맥락 추가</h3>
+                    <p class="text-2xl mb-4">"요리사 철수가 밥을" →</p>
+                    <div class="text-left">
+                        <p class="text-lg">• 만들었다 (40%)</p>
+                        <p class="text-lg">• 요리했다 (25%)</p>
+                        <p class="text-lg">• 먹었다 (20%)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 슬라이드 7: AI가 거짓말하는 이유 -->
+    <div class="slide">
+        <div class="accent-circle red"></div>
+        <div class="slide-content">
+            <h2 class="section-title mb-8">AI가 거짓말하는 이유</h2>
+            <div class="highlight-box fade-in">
+                <p class="text-2xl font-bold mb-4 text-red-300">"AI가 거짓말을 하는 이유?"</p>
+                <p class="text-xl mb-4">앞의 뜻을 이해하고 뱉는 게 아니고<br><strong>확률적으로 그냥 내뱉는 거예요</strong></p>
+                <p class="text-lg opacity-60">- 실제 강의 중</p>
+            </div>
+            <div class="grid grid-cols-3 gap-4 mt-8 fade-in">
+                <div class="example-card">
+                    <p class="text-lg font-semibold">의미 이해 ❌</p>
+                    <p class="text-sm opacity-80">단지 패턴 인식</p>
+                </div>
+                <div class="example-card">
+                    <p class="text-lg font-semibold">확률적 예측 ✅</p>
+                    <p class="text-sm opacity-80">가장 높은 확률 선택</p>
+                </div>
+                <div class="example-card">
+                    <p class="text-lg font-semibold">활용 기회 🚀</p>
+                    <p class="text-sm opacity-80">특성을 알면 활용 가능</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 슬라이드 8: 일반 모델 vs 추론 모델 -->
+    <div class="slide">
+        <div class="accent-circle blue"></div>
+        <div class="slide-content">
+            <h2 class="section-title mb-8">일반 모델 vs 추론 모델</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="example-card fade-in">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-300">일반 모델</h3>
+                    <div class="text-left space-y-2">
+                        <p><strong>• ChatGPT, Claude</strong></p>
+                        <p>• 창의적 작업</p>
+                        <p>• 복잡한 텍스트 생성</p>
+                        <p>• 대화, 요약, 콘텐츠 생성</p>
+                    </div>
+                </div>
+                <div class="example-card fade-in">
+                    <h3 class="text-2xl font-bold mb-4 text-green-300">추론 모델</h3>
+                    <div class="text-left space-y-2">
+                        <p><strong>• o1-series</strong></p>
+                        <p>• 복잡한 추론</p>
+                        <p>• 단계적 문제 해결</p>
+                        <p>• 논리적 분석</p>
+                    </div>
+                </div>
+            </div>
+            <div class="highlight-box mt-8 fade-in">
+                <p class="text-xl font-semibold">활용 시나리오</p>
+                <p class="text-lg opacity-90">언제 어떤 모델을 선택할 것인가?</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 슬라이드 9: 3가지 질문법 소개 -->
+    <div class="slide">
+        <div class="accent-circle purple"></div>
+        <div class="slide-content">
+            <h2 class="section-title mb-8">AI 잠재력 200% 질문법</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div class="example-card fade-in">
+                    <div class="text-4xl mb-4">👨‍💼</div>
+                    <h3 class="text-xl font-bold mb-2">역할 부여법</h3>
+                    <p class="text-sm opacity-80">전문성을 가진 특정 역할 부여</p>
+                </div>
+                <div class="example-card fade-in">
+                    <div class="text-4xl mb-4">📋</div>
+                    <h3 class="text-xl font-bold mb-2">프레임 요청법</h3>
+                    <p class="text-sm opacity-80">검증된 비즈니스 프레임워크 활용</p>
+                </div>
+                <div class="example-card fade-in">
+                    <div class="text-4xl mb-4">⭐</div>
+                    <h3 class="text-xl font-bold mb-2">성공 모델 언급법</h3>
+                    <p class="text-sm opacity-80">성공한 사례나 모델을 참조점으로 제시</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 슬라이드 10: 역할 부여법 -->
+    <div class="slide">
+        <div class="accent-circle orange"></div>
+        <div class="slide-content">
+            <h2 class="section-title mb-6">① 역할 부여법</h2>
+            <div class="highlight-box mb-8 fade-in">
+                <p class="text-2xl font-bold mb-4 text-orange-300">"너는 콘텐츠 마케터야, 너는 학교 선생님이야, 너는 디자이너야"</p>
+                <p class="text-lg opacity-60">- 실제 강의 중</p>
+            </div>
+            <div class="question-method fade-in">
+                <h3 class="text-xl font-bold mb-2">작동 원리</h3>
+                <p class="text-lg">• "너는 콘텐츠 마케터야"라는 발언을 한 순간</p>
+                <p class="text-lg">• AI가 말할 수 있는 맥락이 <strong>콘텐츠 마케터가 뱉을 수 있는 내용들만</strong> 나옴</p>
+                <p class="text-lg text-blue-300">• <strong>확률을 줄여놓는 게 핵심</strong></p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                <div class="example-card bg-red-900/30 fade-in">
+                    <h4 class="text-lg font-bold mb-2 text-red-300">❌ 일반적 질문</h4>
+                    <p>"수학 분석에 대해서 알려줘"</p>
+                </div>
+                <div class="example-card bg-green-900/30 fade-in">
+                    <h4 class="text-lg font-bold mb-2 text-green-300">✅ 역할 부여 후</h4>
+                    <p>"너는 경영 컨설턴트로서 스타트업 회사의 수학 분석을 어떻게 생각하는지 설명해줘"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 슬라이드 11: 프레임 요청법 -->
+    <div class="slide">
+        <div class="accent-circle green"></div>
+        <div class="slide-content">
+            <h2 class="section-title mb-6">② 프레임 요청법</h2>
+            <div class="question-method fade-in">
+                <h3 class="text-xl font-bold mb-4">검증된 비즈니스 프레임워크 활용 요청</h3>
+                <div class="space-y-4">
+                    <div class="example-card">
+                        <p class="text-lg">"<strong>SWOT 분석</strong>을 활용해서 우리 카페의 현황을 분석해주세요"</p>
+                    </div>
+                    <div class="example-card">
+                        <p class="text-lg">"<strong>5W1H</strong>로 신메뉴 마케팅 계획을 정리해주세요"</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8 mt-8 max-w-3xl mx-auto">
+                <div class="text-center fade-in">
+                    <div class="text-3xl mb-2">🎯</div>
+                    <h4 class="text-lg font-bold">핵심</h4>
+                    <p class="text-sm opacity-80">체계적이고 논리적인 분석</p>
+                </div>
+                <div class="text-center fade-in">
+                    <div class="text-3xl mb-2">💡</div>
+                    <h4 class="text-lg font-bold">효과</h4>
+                    <p class="text-sm opacity-80">비즈니스 상황별 적합한 프레임워크 매칭</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 슬라이드 12: 성공 모델 언급법 -->
+    <div class="slide">
+        <div class="accent-circle pink"></div>
+        <div class="slide-content">
+            <h2 class="section-title mb-6">③ 성공 모델 언급법</h2>
+            <div class="question-method fade-in">
+                <h3 class="text-xl font-bold mb-4">성공한 사례나 모델을 참조점으로 제시</h3>
+                <div class="example-card">
+                    <p class="text-lg">"<strong>스타벅스의 시즌 메뉴 마케팅 전략</strong>을 참고해서, 우리 카페에 적용 가능한 방안을 제안해주세요"</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8 mt-8 max-w-3xl mx-auto">
+                <div class="text-center fade-in">
+                    <div class="text-3xl mb-2">🏆</div>
+                    <h4 class="text-lg font-bold">핵심</h4>
+                    <p class="text-sm opacity-80">검증된 방법론 기반의 실용적 제안</p>
+                </div>
+                <div class="text-center fade-in">
+                    <div class="text-3xl mb-2">🚀</div>
+                    <h4 class="text-lg font-bold">효과</h4>
+                    <p class="text-sm opacity-80">내 업종의 성공 모델 발굴 및 활용</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 슬라이드 13: 실습 및 과제 -->
+    <div class="slide">
+        <div class="accent-circle blue"></div>
+        <div class="slide-content">
+            <h2 class="section-title mb-8">🛠️ 실습 및 과제</h2>
+            <div class="highlight-box fade-in">
+                <h3 class="text-2xl font-bold mb-4">현장 실습: 3가지 질문법 템플릿 만들기</h3>
+                <p class="text-lg opacity-90">각 참가자는 자신의 비즈니스 상황에 맞는 템플릿을 작성합니다</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 max-w-5xl mx-auto">
+                <div class="example-card fade-in">
+                    <h4 class="text-lg font-bold mb-2">실습 1: 역할 부여 템플릿</h4>
+                    <p class="text-sm opacity-80">내 비즈니스에 필요한 전문가 역할 3개 정의</p>
+                </div>
+                <div class="example-card fade-in">
+                    <h4 class="text-lg font-bold mb-2">실습 2: 프레임 요청 템플릿</h4>
+                    <p class="text-sm opacity-80">자주 마주치는 비즈니스 문제에 프레임워크 매칭</p>
+                </div>
+                <div class="example-card fade-in">
+                    <h4 class="text-lg font-bold mb-2">실습 3: 성공 모델 템플릿</h4>
+                    <p class="text-sm opacity-80">내 업종의 벤치마킹 대상 3곳 선정</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 슬라이드 14: 과제 안내 -->
+    <div class="slide">
+        <div class="accent-circle yellow"></div>
+        <div class="slide-content">
+            <h2 class="section-title mb-6">📋 과제: AI 파트너와 5회 대화하기</h2>
+            <div class="highlight-box mb-8 fade-in">
+                <p class="text-xl font-bold mb-2">목표</p>
+                <p class="text-lg">실제 업무 문제를 3가지 질문법으로 해결해보기</p>
+            </div>
+            <div class="question-method fade-in">
+                <h3 class="text-lg font-bold mb-4">과제 가이드라인</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-3">
+                        <p><strong>1. 문제 선정:</strong> 현재 고민 중인 실제 업무 문제 1개</p>
+                        <p><strong>2. 대화 진행:</strong> AI와 5번 이상 주고받기</p>
+                    </div>
+                    <div class="space-y-3">
+                        <p><strong>3. 결과 기록:</strong> 대화 과정과 얻은 인사이트 정리</p>
+                        <p><strong>4. 공유 준비:</strong> 2주차에 경험 공유 (2분 발표)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 슬라이드 15: 다음 주 예고 -->
+    <div class="slide">
+        <div class="accent-circle green"></div>
+        <div class="slide-content">
+            <h2 class="section-title mb-8">📅 다음 주 예고</h2>
+            <div class="highlight-box fade-in">
+                <h3 class="text-3xl font-bold mb-4 text-green-300">2주차: 반복 업무 자동화</h3>
+                <p class="text-xl mb-4">AI 비서 시스템 직접 구축해봅시다!</p>
+                <div class="text-left max-w-2xl mx-auto space-y-2">
+                    <p>• 실제 이미커피 페어링 공지 자동화 시스템 사례</p>
+                    <p>• GPT 프로젝트 만들기 실습</p>
+                    <p>• 내 비즈니스 자동화 설계</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 네비게이션 -->
+    <div class="navigation">
+        <button class="nav-btn" onclick="prevSlide()">이전</button>
+        <button class="nav-btn" onclick="nextSlide()">다음</button>
+    </div>
+
+    <!-- 슬라이드 카운터 -->
+    <div class="slide-counter">
+        <span id="current-slide">1</span> / <span id="total-slides">15</span>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        document.getElementById('total-slides').textContent = totalSlides;
+        
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            document.getElementById('current-slide').textContent = currentSlide + 1;
+            
+            // 애니메이션 효과
+            const fadeElements = slides[currentSlide].querySelectorAll('.fade-in');
+            fadeElements.forEach((el, index) => {
+                el.style.animation = 'none';
+                el.offsetHeight; // 리플로우 강제 실행
+                el.style.animation = `fadeInUp 0.8s ease-out ${index * 0.1}s both`;
+            });
+        }
+        
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+        
+        // 키보드 네비게이션
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+        
+        // 초기 애니메이션
+        showSlide(0);
+    </script>
+</body>
+</html>

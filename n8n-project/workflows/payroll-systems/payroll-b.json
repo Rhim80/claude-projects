@@ -1,0 +1,527 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "jsCode": "// Parse File Name 노드 코드 (범용적 급여명세서 파일명 파싱)\n// 다양한 파일명 패턴을 지원하는 범용 파서\n\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  try {\n    // 파일명 추출\n    const fileName = item.json.name;\n    \n    // 파일 확장자 검증\n    const fileExtension = fileName.split('.').pop().toLowerCase();\n    if (fileExtension !== 'pdf') {\n      throw new Error(`지원하지 않는 파일 형식: ${fileExtension}`);\n    }\n    \n    // 파일명에서 확장자 제거\n    const nameWithoutExtension = fileName.split('.').slice(0, -1).join('.');\n    \n    let employeeName = '';\n    let targetMonth = '';\n    let patternMatched = false;\n    \n    // 패턴 1: \"홍길동_급여명세서_202507.pdf\"\n    const pattern1 = /^(.+?)_급여명세서_(\\\d{6})$/;\n    const match1 = nameWithoutExtension.match(pattern1);\n    if (match1) {\n      employeeName = match1[1];\n      const yyyymm = match1[2];\n      targetMonth = `${yyyymm.slice(0, 4)}-${yyyymm.slice(4, 6)}`;\n      patternMatched = true;\n    }\n    \n    // 패턴 2: \"급여명세서(근로기준1)_15_이사황_202506.pdf\"\n    if (!patternMatched) {\n      const pattern2 = /^급여명세서.+?_\\\d+_(.+?)_(\\\d{6})$/;\n      const match2 = nameWithoutExtension.match(pattern2);\n      if (match2) {\n        employeeName = match2[1];\n        const yyyymm = match2[2];\n        targetMonth = `${yyyymm.slice(0, 4)}-${yyyymm.slice(4, 6)}`;\n        patternMatched = true;\n      }\n    }\n    \n    // 패턴 3: \"이미커피(인사동)_25년 08월 김정훈님 급여명세서.pdf\"\n    if (!patternMatched) {\n      const pattern3 = /^.+?\\(.+?\\)_(\\\d{2})년\\s*(\\\d{1,2})월\\s*(.+?)님?\\s*급여명세서$/;\n      const match3 = nameWithoutExtension.match(pattern3);\n      if (match3) {\n        const year = parseInt(match3[1]);\n        const month = parseInt(match3[2]);\n        const fullYear = year >= 50 ? 1900 + year : 2000 + year;\n        \n        employeeName = match3[3].replace(/님$/, ''); // 끝에 '님' 제거\n        targetMonth = `${fullYear}-${String(month).padStart(2, '0')}`;\n        patternMatched = true;\n      }\n    }\n    \n    // 패턴 4: \"회사명_2024년12월_홍길동_급여명세서.pdf\" (추가 범용 패턴)\n    if (!patternMatched) {\n      const pattern4 = /^.+?_(\\\d{4})년(\\\d{1,2})월_(.+?)_급여명세서$/;\n      const match4 = nameWithoutExtension.match(pattern4);\n      if (match4) {\n        const year = match4[1];\n        const month = parseInt(match4[2]);\n        employeeName = match4[3];\n        targetMonth = `${year}-${String(month).padStart(2, '0')}`;\n        patternMatched = true;\n      }\n    }\n    \n    // 패턴 5: \"2024-12_홍길동_급여명세서.pdf\" (간단한 패턴)\n    if (!patternMatched) {\n      const pattern5 = /^(\\\d{4})-(\\\d{1,2})_(.+?)_급여명세서$/;\n      const match5 = nameWithoutExtension.match(pattern5);\n      if (match5) {\n        const year = match5[1];\n        const month = parseInt(match5[2]);\n        employeeName = match5[3];\n        targetMonth = `${year}-${String(month).padStart(2, '0')}`;\n        patternMatched = true;\n      }\n    }\n    \n    // 패턴 매칭 실패 시 에러\n    if (!patternMatched) {\n      throw new Error(`파일명 형식이 올바르지 않습니다: ${fileName}`);\n    }\n    \n    // 직원명 정리 (공백, 특수문자 제거)\n    employeeName = employeeName.trim().replace(/[()]/g, '');\n    \n    // 이메일 제목 생성\n    const emailSubject = `[이미커피] ${targetMonth}월 급여명세서 안내`;\n    \n    // 이메일 내용 생성\n    const emailMessage = `안녕하세요, ${employeeName}님.\n\n${targetMonth}월 급여명세서를 첨부하여 보내드립니다.\n\n내용 확인 후 문의사항이 있으시면 언제든지 연락 주세요.\n\n감사합니다.\n\n이미커피 관리팀`;\n\n    // Notion 로그 제목 생성\n    const notionTitle = `${targetMonth}월 급여명세서 (${employeeName})`;\n    \n    // 처리된 데이터 객체 생성\n    const processedItem = {\n      ...item.json,\n      // 추출된 정보\n      employeeName: employeeName,\n      targetMonth: targetMonth,\n      targetMonthForNotion: `${targetMonth}-01`, // Notion Date 형식\n      fileName: fileName,\n      // 이메일 관련\n      emailSubject: emailSubject,\n      emailMessage: emailMessage,\n      // Notion 로그 관련\n      notionTitle: notionTitle,\n      // 현재 시간\n      currentDateTime: new Date().toISOString(),\n      // 매칭된 패턴 정보 (디버깅용)\n      matchedPattern: getMatchedPatternName(nameWithoutExtension)\n    };\n    \n    results.push({ json: processedItem });\n    \n  } catch (error) {\n    // 에러 발생 시에도 결과를 반환하여 에러 처리 플로우로 진행\n    results.push({ \n      json: { \n        ...item.json,\n        error: error.message,\n        fileName: item.json.name,\n        employeeName: '',\n        targetMonth: '',\n        currentDateTime: new Date().toISOString()\n      }\n    });\n  }\n}\n\n// 매칭된 패턴명을 반환하는 헬퍼 함수\nfunction getMatchedPatternName(filename) {\n  if (/^(.+?)_급여명세서_(\\\d{6})$/.test(filename)) return 'Pattern1_Name_YYYYMM';\n  if (/^급여명세서.+?_\\\d+_(.+?)_(\\\d{6})$/.test(filename)) return 'Pattern2_PayrollDoc_Num_Name_YYYYMM';\n  if (/^.+?\\(.+?\\)_(\\\d{2})년\\s*(\\\d{1,2})월\\s*(.+?)님?\\s*급여명세서$/.test(filename)) return 'Pattern3_Company_YY년MM월_Name님';\n  if (/^.+?_(\\\d{4})년(\\\d{1,2})월_(.+?)_급여명세서$/.test(filename)) return 'Pattern4_Company_YYYY년MM월_Name';\n  if (/^(\\\d{4})-(\\\d{1,2})_(.+?)_급여명세서$/.test(filename)) return 'Pattern5_YYYY-MM_Name';\n  return 'Unknown_Pattern';\n}\n\nreturn results;"
+      },
+      "id": "de6845a3-c5b1-452b-9092-692675eea2a9",
+      "name": "Parse File Name",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -544,
+        128
+      ],
+      "typeVersion": 2,
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "getAll",
+        "databaseId": {
+          "__rl": true,
+          "value": "231d0f53-623d-81ea-aca9-dfb9547d41f9",
+          "mode": "list",
+          "cachedResultName": "[HR] 직원 관리 DB",
+          "cachedResultUrl": "https://www.notion.so/231d0f53623d81eaaca9dfb9547d41f9"
+        },
+        "returnAll": true,
+        "simple": false,
+        "filterType": "manual",
+        "matchType": "allFilters",
+        "filters": {
+          "conditions": [
+            {
+              "key": "재직상태|select",
+              "condition": "equals",
+              "selectValue": "재직"
+            },
+            {
+              "key": "=직원명|title",
+              "condition": "equals",
+              "titleValue": "={{ $('Parse File Name').item.json.employeeName }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5f0cc3a9-101d-40f8-bba6-e356750a7d57",
+      "name": "Notion Employee Lookup",
+      "type": "n8n-nodes-base.notion",
+      "position": [
+        -368,
+        128
+      ],
+      "typeVersion": 2.2,
+      "alwaysOutputData": true,
+      "credentials": {
+        "notionApi": {
+          "id": "kCKFfrau35Gf4PvW",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "08afff64-6241-4d67-8993-2417b84cf0ef",
+              "leftValue": "={{ $json.properties.이메일.email }}",
+              "rightValue": 0,
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "459c6bf9-c163-42bb-8c7e-3938debc0bf9",
+      "name": "IF Employee Found",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        -192,
+        128
+      ],
+      "typeVersion": 2.2,
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $('Google Drive Search').item.json.id }}",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "id": "a409169b-bd76-4dfe-a158-18109984dede",
+      "name": "Google Drive Download",
+      "type": "n8n-nodes-base.googleDrive",
+      "position": [
+        0,
+        0
+      ],
+      "typeVersion": 3,
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "C07VaSW8519qIvpr",
+          "name": "hovoo Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Notion Employee Lookup').item.json.properties.이메일.email }}",
+        "subject": "={{ $('Parse File Name').item.json.emailSubject }}",
+        "emailType": "text",
+        "message": "={{ $('Parse File Name').item.json.emailMessage }}",
+        "options": {
+          "attachmentsUi": {
+            "attachmentsBinary": [
+              {}
+            ]
+          }
+        }
+      },
+      "id": "4bb36120-fc13-43fe-8a0b-b580e9e53f2a",
+      "name": "Send Payroll Email",
+      "type": "n8n-nodes-base.gmail",
+      "position": [
+        176,
+        0
+      ],
+      "typeVersion": 2.1,
+      "webhookId": "a2531ccc-38a2-4a97-bdb3-1b2176f03b3b",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "n735fVjFPAKUNivZ",
+          "name": "hovoo Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": "231d0f53-623d-818a-b6f9-f586586c71b8",
+        "title": "={{ $('Parse File Name').item.json.notionTitle }}",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "발송상태|select",
+              "selectValue": "발송 완료"
+            },
+            {
+              "key": "파일명|rich_text",
+              "richText": true,
+              "text": {
+                "text": [
+                  {
+                    "text": "={{ $('Parse File Name').item.json.fileName }}",
+                    "annotationUi": {}
+                  }
+                ]
+              }
+            },
+            {
+              "key": "대상월|date",
+              "date": "={{ $('Parse File Name').item.json.targetMonthForNotion }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b3f5296d-ca2e-46e3-a8e1-68c5a9995fe4",
+      "name": "Log Success to Notion",
+      "type": "n8n-nodes-base.notion",
+      "position": [
+        368,
+        0
+      ],
+      "typeVersion": 2.2,
+      "credentials": {
+        "notionApi": {
+          "id": "kCKFfrau35Gf4PvW",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "imiroasters@gmail.com",
+        "subject": "[알림] 급여명세서 발송 실패 - 직원 조회 오류",
+        "emailType": "text",
+        "message": "=파일명: {{ $('Parse File Name').item.json.fileName }}\n추출된 이름: {{ $('Parse File Name').item.json.employeeName }}\n사유: 해당 이름의 재직 직원을 찾을 수 없습니다.\n\n확인 후 조치 바랍니다.",
+        "options": {}
+      },
+      "id": "2e194893-ac8b-4367-9751-63671677f1b9",
+      "name": "Send Error Notification",
+      "type": "n8n-nodes-base.gmail",
+      "position": [
+        32,
+        320
+      ],
+      "typeVersion": 2.1,
+      "webhookId": "21f4f1bf-5e48-47da-84ef-71880c1a5cea",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "n735fVjFPAKUNivZ",
+          "name": "hovoo Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": "231d0f53-623d-818a-b6f9-f586586c71b8",
+        "title": "={{ $('Parse File Name').item.json.notionTitle }} - 발송 실패",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "발송상태|select",
+              "selectValue": "발송 실패"
+            },
+            {
+              "key": "파일명|rich_text",
+              "richText": true,
+              "text": {
+                "text": [
+                  {
+                    "text": "={{ $('Parse File Name').item.json.fileName }}",
+                    "annotationUi": {}
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "417081f0-5470-42cf-8556-c4165b00ebac",
+      "name": "Log Error to Notion",
+      "type": "n8n-nodes-base.notion",
+      "position": [
+        224,
+        320
+      ],
+      "typeVersion": 2.2,
+      "credentials": {
+        "notionApi": {
+          "id": "kCKFfrau35Gf4PvW",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "fileFolder",
+        "searchMethod": "query",
+        "queryString": "=('1AfkbWquXN8RUdrRca2LBom-2yVKGzBM1' in parents) \nand name contains '급여명세서'\nand trashed = false\nand mimeType = 'application/pdf'",
+        "returnAll": true,
+        "filter": {},
+        "options": {}
+      },
+      "id": "8dd192d6-1f18-4da1-b0d7-7b7494050d7b",
+      "name": "Google Drive Search",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        -752,
+        128
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "C07VaSW8519qIvpr",
+          "name": "hovoo Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 14
+            }
+          ]
+        }
+      },
+      "id": "371cbaf9-1d57-4f90-a3ae-da2a55ff2020",
+      "name": "Schedule Trigger (hovoo)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -944,
+        128
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "move",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $('Google Drive Search').item.json.id }}",
+          "mode": "id"
+        },
+        "driveId": {
+          "__rl": true,
+          "value": "My Drive",
+          "mode": "list",
+          "cachedResultName": "My Drive",
+          "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1hz-D97uwOmS-_sEAfHl2LgU1Ffn1KOK2",
+          "mode": "id"
+        }
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        560,
+        0
+      ],
+      "id": "19b42e0e-fedc-44c9-b563-a509c015bd30",
+      "name": "Move file4",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "C07VaSW8519qIvpr",
+          "name": "hovoo Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "move",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $('Google Drive Search').item.json.id }}",
+          "mode": "id"
+        },
+        "driveId": {
+          "__rl": true,
+          "value": "My Drive",
+          "mode": "list",
+          "cachedResultName": "My Drive",
+          "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1H5QQpAJIeEoW2ENROG3QlEXALjNCXkTd",
+          "mode": "id"
+        }
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        400,
+        320
+      ],
+      "id": "35b8bdee-795a-4224-a5be-a72272247dea",
+      "name": "Move file",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "C07VaSW8519qIvpr",
+          "name": "hovoo Google Drive account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Parse File Name": {
+      "main": [
+        [
+          {
+            "node": "Notion Employee Lookup",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notion Employee Lookup": {
+      "main": [
+        [
+          {
+            "node": "IF Employee Found",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Employee Found": {
+      "main": [
+        [
+          {
+            "node": "Google Drive Download",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send Error Notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive Download": {
+      "main": [
+        [
+          {
+            "node": "Send Payroll Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Payroll Email": {
+      "main": [
+        [
+          {
+            "node": "Log Success to Notion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Log Success to Notion": {
+      "main": [
+        [
+          {
+            "node": "Move file4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Error Notification": {
+      "main": [
+        [
+          {
+            "node": "Log Error to Notion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Log Error to Notion": {
+      "main": [
+        [
+          {
+            "node": "Move file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive Search": {
+      "main": [
+        [
+          {
+            "node": "Parse File Name",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger (hovoo)": {
+      "main": [
+        [
+          {
+            "node": "Google Drive Search",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "503b3d8b44115e5921e2e4e1edcde177dde00c303a77361802e2da13d7103e31"
+  },
+  "name": "급여명세서 자동 발송 (Payroll B)",
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "12a34567-89ab-cdef-0123-456789abcdef",
+  "id": "100",
+  "tags": [
+    {
+      "createdAt": "2024-12-15T10:30:00.000Z",
+      "updatedAt": "2024-12-15T10:30:00.000Z",
+      "id": "17",
+      "name": "급여관리"
+    },
+    {
+      "createdAt": "2024-12-15T10:30:00.000Z", 
+      "updatedAt": "2024-12-15T10:30:00.000Z",
+      "id": "19",
+      "name": "문서발송"
+    }
+  ]
+}

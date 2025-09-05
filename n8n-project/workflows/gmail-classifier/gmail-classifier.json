@@ -1,0 +1,592 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyX",
+              "unit": "minutes"
+            }
+          ]
+        },
+        "filters": {
+          "labelIds": [
+            "INBOX"
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -864,
+        -400
+      ],
+      "id": "8caf0cf2-a9dd-4ccb-9948-8395a2da534c",
+      "name": "Gmail Trigger",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "n735fVjFPAKUNivZ",
+          "name": "hovoo Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "messageId": "={{ $json.id }}",
+        "simple": false,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -656,
+        -400
+      ],
+      "id": "4138e08f-2d37-42bc-8de8-239df0bd5bc0",
+      "name": "Get Message Details",
+      "webhookId": "9b2ca339-ece1-4158-828b-b7875ed68221",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "n735fVjFPAKUNivZ",
+          "name": "hovoo Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.text }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "=당신은 15년차 F&B 브랜드 대표이자 AI 강의 전문가의 이메일 분류 전처리 담당자입니다.\n\n## 사용자 프로필\n- 이미커피 & 이미양과자 대표 (15년 운영)\n- AI 실무 활용 전문가 (n8n, Notion, Claude 자동화)\n- 기업 강의 및 컨설팅 (소상공인, 자영업자 대상)\n- 작가 (출간 경험), 트레바리 리더\n\n## 분류 가이드라인\n\n### 🟡 개인 메일\n- 가족, 친구, 지인의 사적인 연락\n- 개인적 취미, 관심사 관련\n- 사업과 무관한 개인적 소통\n- 키워드: 안부, 생일, 개인적, 친구, 가족\n- 예시: \"오늘 저녁 약속\", \"생일 축하\", \"개인적 안부\"\n\n### 🟡 개인 업무 (교육 / 인터뷰 / 이벤트)\n- CEO 개인에게 직접 온 사업 기회\n- AI 강의, 교육, 워크샵 요청\n- 인터뷰, 팟캐스트, 미디어 출연 섭외\n- 컨설팅, 자문 요청\n- 출판, 집필 관련 제안\n- 컨퍼런스, 세미나 강연 요청\n- 키워드: 강의, 교육, 인터뷰, 출연, 컨설팅, 워크샵, 세미나, AI 교육, 기업 교육\n- 예시: \"삼성전자 AI 교육 요청\", \"팟캐스트 출연 섭외\", \"스타트업 멘토링\"\n\n### ⚫ 광고\n- 마케팅, 프로모션 메일\n- 상품/서비스 광고\n- 뉴스레터 (상업적 목적)\n- 스팸성 메일\n- 키워드: 할인, 프로모션, 광고, 마케팅, 세일, 이벤트, 혜택\n- 예시: \"50% 할인\", \"신제품 출시\", \"마케팅 제안\"\n\n### 🔴 세무 회계\n- 노무법인, 세무서, 회계사무소 발신\n- 급여, 세금, 재무제표 관련\n- 정부 기관 세무 통지\n- 사업자등록, 부가세 신고\n- 키워드: 노무법인, 세무서, 급여대장, 세금계산서, 부가세, 소득세, 재무제표\n- 예시: \"급여대장 송부\", \"부가세 신고\", \"세무조사 통지\"\n\n### 🔴 업무 관리\n- 이미커피/이미양과자 매장 운영\n- 고객 서비스, 클레임 처리\n- 공급업체, 벤더 커뮤니케이션\n- 장비 유지보수, A/S\n- 일반적인 비즈니스 업무\n- 키워드: 매장, 운영, 고객, 공급업체, 주문, 배송, 장비, A/S\n- 예시: \"원두 공급 문의\", \"장비 수리 요청\", \"고객 컴플레인\"\n\n### 🔴 인사 급여\n- 직원 채용, 관리, 퇴사 관련\n- 급여 처리, 4대보험\n- 근로계약서, 노무 관련\n- 교육, 복리후생\n- 키워드: 직원, 급여, 4대보험, 근로계약, 퇴사, 교육, 복리후생\n- 예시: \"직원 교육 안내\", \"4대보험 변경\", \"근로계약서 작성\"\n\n### 🔴 채용 및 기타\n- 바리스타, 로스터 지원서\n- 구인, 구직 관련\n- 채용 공고, 면접 관련\n- 인력 소개, 추천\n- 키워드: 지원서, 이력서, 채용, 구인, 바리스타, 로스터, 면접\n- 예시: \"바리스타 지원\", \"로스터 이력서\", \"인력 추천\"\n\n### 🔵 인보이스\n- 청구서, 세금계산서\n- 결제 요청, 수금\n- 공과금, 임대료\n- 구매 대금 청구\n- 키워드: 청구서, 인보이스, 결제, 세금계산서, 공과금, 임대료\n- 예시: \"월 임대료 청구\", \"전기료 고지서\", \"원두 대금 청구\"\n\n### 🟢 AI 기술\n- AI, 자동화, n8n 관련\n- 기술 뉴스, 업데이트\n- 소프트웨어, 도구 관련\n- GPTers, 개발자 커뮤니티\n- 키워드: AI, 자동화, n8n, 기술, 소프트웨어, GPT, Claude, 개발\n- 예시: \"GPTers 커뮤니티\", \"n8n 업데이트\", \"AI 도구 소개\"\n\n### 🟢 인사이트\n- 비즈니스 전략, 인사이트\n- 시장 분석, 트렌드\n- 경영 관련 정보\n- 전문가 의견, 칼럼\n- 키워드: 인사이트, 전략, 분석, 트렌드, 경영, 시장, 전망\n- 예시: \"F&B 시장 전망\", \"소상공인 지원정책\", \"경영 전략\"\n\n### 🟢 업계정보\n- 카페, F&B 업계 뉴스\n- 경쟁사 정보, 업계 동향\n- 원두, 커피 관련 정보\n- 업계 이벤트, 박람회\n- 키워드: 카페, 커피, F&B, 업계, 동향, 박람회, 원두, 로스팅\n- 예시: \"커피 박람회 안내\", \"원두 가격 동향\", \"카페 트렌드\"\n\n## 분석 지시사항\n\n다음 이메일을 분석하여 정확한 카테고리로 분류해주세요.\n\n이메일 정보:\n발신자: {{ $json.from.value[0].name }}\n제목: {{ $json.subject }}\n내용: {{ $json.text }}\n\n분석 결과를 다음 형태로 출력해주세요:\n\n발신자 유형: [개인/회사/기관/자동발송]\n추정 카테고리: [위 11개 카테고리 중 가장 적합한 것]\n주요 키워드: [분류에 도움되는 핵심 키워드 3-5개]\n내용 요약: [핵심 내용을 한 문장으로]\n분류 근거: [왜 해당 카테고리로 판단했는지 구체적 이유]\n메시지ID: {{ $json.id }}\n\n특별 분류 규칙 (우선순위 순):\n1. 발신자명이 \"LongBlack\" 또는 \"시티호퍼스\" → 무조건 \"인사이트\"\n2. 발신자가 \"GPTers\" → 무조건 \"AI 기술\"  \n3. 발신자가 노무법인, 세무서 → 무조건 \"세무 회계\"\n4. 기업에서 CEO 개인에게 온 강의/교육 요청 → \"개인 업무\"\n5. 매장 운영 관련 → \"업무 관리\"\n6. 명확한 광고성 메일 → \"광고\"\n7. 위 조건 해당 없음 → 내용 기반 분류"
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        -464,
+        -400
+      ],
+      "id": "9177b483-014b-410b-8d64-912e582e1930",
+      "name": "AI Email Classifier"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -464,
+        -192
+      ],
+      "id": "99f0f54f-0435-42c3-987c-57bb0184567c",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "ZFmQNyo0kSoO9TXC",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "try {\n  const input = $input.first().json;\n  const text = input.text || '';\n  \n  // Get Message Details에서 실제 메시지 ID 가져오기\n  const messageId = $('Get Message Details').first().json.id;\n  \n  // 추정 카테고리 추출\n  const categoryMatch = text.match(/추정 카테고리:\\s*([^\\n]+)/);\n  let category = categoryMatch ? categoryMatch[1].trim() : '기타';\n  \n  // Gmail 라벨 ID 매핑\n  const categoryMapping = {\n    '개인 메일': 'Label_1',\n    '개인 업무 (교육 / 인터뷰 / 이벤트)': 'Label_1959499669462627962',\n    '광고': 'Label_2664386232547169382',\n    '세무 회계': 'Label_5346007232886454131',\n    '업무 관리': 'Label_7564681703374459659',\n    '인사 급여': 'Label_7989676787127045663',\n    '채용 및 기타': 'Label_2729306689238858667',\n    '인보이스': 'Label_2551575746782135007',\n    'AI 기술': 'Label_7861502927282720092',\n    '인사이트': 'Label_6365891902333944865',\n    '업계정보': 'Label_3912834597189393784'\n  };\n  \n  const labelId = categoryMapping[category] || 'Label_2873843655671434004';\n  \n  // 중요 카테고리 판별\n  const importantCategories = [\n    'Label_1959499669462627962', // 개인 업무\n    'Label_7564681703374459659',  // 업무 관리  \n    'Label_2551575746782135007',  // 인보이스\n    'Label_7861502927282720092',  // AI 기술\n    'Label_6365891902333944865',  // 인사이트\n    'Label_5346007232886454131'   // 세무 회계\n  ];\n  \n  const isImportant = importantCategories.includes(labelId);\n  \n  // 원본 이메일 데이터\n  const originalEmail = $('Get Message Details').first().json;\n  \n  console.log('실제 메시지 ID:', messageId);\n  console.log('분류 결과:', category);\n  console.log('라벨 ID:', labelId);\n  console.log('중요 여부:', isImportant);\n  \n  return {\n    json: {\n      classification: category,\n      id: messageId,  // 실제 메시지 ID\n      originalText: text,\n      category: category,\n      labelName: labelId,\n      isImportant: isImportant,\n      emailData: {\n        subject: originalEmail.subject,\n        from: originalEmail.from,\n        text: originalEmail.text,\n        html: originalEmail.html\n      }\n    }\n  };\n} catch (error) {\n  console.log('파싱 에러:', error.message);\n  return {\n    json: {\n      classification: '기타',\n      id: null,\n      error: error.message,\n      originalText: $input.first().json.text || '',\n      category: '기타',\n      labelName: 'Label_2873843655671434004',\n      isImportant: false\n    }\n  };\n}"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -128,
+        -400
+      ],
+      "id": "61f277b0-0f08-4326-b2ec-815b47127756",
+      "name": "Parse Classification"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Get Message Details').item.json.id }}",
+        "labelIds": "={{ [$json.labelName] }}"
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        112,
+        -400
+      ],
+      "id": "62d109d0-1c8f-4c24-baef-82d8ccd9330b",
+      "name": "Add Gmail Label",
+      "webhookId": "2347659d-7d44-4d09-8131-33ded3585374",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "n735fVjFPAKUNivZ",
+          "name": "hovoo Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $('Get Message Details').item.json.text }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "=이메일 본문을 한글로 핵심만 요약하라. 이 메일은 '{{ $('Parse Classification').item.json.category }}' 카테고리로 분류되었습니다.\n\n[카테고리별 맞춤 요약 가이드]\n- 개인 업무 (교육/인터뷰): 요청 내용, 일정, 보상/조건, 참석자 수 중심\n- 업무 관리: 긴급도, 처리 방법, 담당자, 기한 중심  \n- 인보이스: 금액, 기한, 지불 방법, 항목 중심\n- AI 기술: 새로운 기능, 활용 방안, 업데이트 내용 중심\n- 인사이트: 핵심 인사이트, 시사점, 액션 아이템 중심\n- 세무 회계: 처리 기한, 필요 서류, 담당자 연락처 중심\n\n[요약 기준]\n- 반드시 제목과 본문 요약을 구분하여 [제목], [요약] 형식으로 출력\n- 요약은 최대 3문단 이내로, 본문의 핵심 정보와 주요 업데이트·안내만 포함\n- URL, 하이퍼링크, 이메일, 연락처 등 링크/개인정보는 절대 포함하지 말 것\n- 광고·이벤트 안내, 피드백, 수신거부, n8n 등 자동발송·푸터·출처 안내 등 메일 하단의 부가 안내 문구는 요약에 절대 포함하지 말 것\n- 영문 텍스트가 포함될 경우, 의미만 반영해서 한글로 자연스럽게 요약\n- 필요시 핵심만 압축해서 불필요한 반복·장황한 설명은 생략\n\n[출력 예시]\n[제목] (메일 제목 또는 주제 한 줄)\n[카테고리] {{ $json.category }}\n[요약] (핵심 내용 2~3문단, 간결·정보 위주)"
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        352,
+        -400
+      ],
+      "id": "8dc0aaf4-6af0-4ed0-a7d1-b3fbfe9f6000",
+      "name": "AI Email Summarizer"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        544,
+        -192
+      ],
+      "id": "633226ce-e3fe-44e0-8e44-716ee31f663d",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "SO4eLSfcE2Z5kkss",
+          "name": "hovoo Google Gemini Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{\n  json: {\n    text: $json.text,\n    id: $('Parse Classification').first().json.id,\n    category: $('Parse Classification').first().json.category\n  }\n}]"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        736,
+        -400
+      ],
+      "id": "698f1af9-4595-48ec-a420-2b578f7fc52e",
+      "name": "Prepare Telegram Message"
+    },
+    {
+      "parameters": {
+        "chatId": "7830356405",
+        "text": "={{ $json.text }}",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "📥 보관",
+                    "additionalFields": {
+                      "callback_data": "=archive-{{ $json.id }}"
+                    }
+                  },
+                  {
+                    "text": "🗑️ 삭제",
+                    "additionalFields": {
+                      "callback_data": "=delete-{{ $json.id }}"
+                    }
+                  },
+                  {
+                    "text": "⭐ 별표",
+                    "additionalFields": {
+                      "callback_data": "=star-{{ $json.id }}"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "disable_web_page_preview": true,
+          "reply_to_message_id": 0
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        960,
+        -400
+      ],
+      "id": "0feb1791-f959-485a-a213-c2a3511fccfe",
+      "name": "Send Telegram Alert",
+      "webhookId": "3ea14b51-add6-41ea-92e1-d381c3815080",
+      "alwaysOutputData": false,
+      "credentials": {
+        "telegramApi": {
+          "id": "xPpU86c6hxvRmL6b",
+          "name": "Gmail bot Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "updates": [
+          "callback_query"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -864,
+        80
+      ],
+      "id": "99d92b39-c219-402b-9877-7671b4585cb8",
+      "name": "Telegram Callback",
+      "webhookId": "39ccf06b-a859-4083-bd38-270b9344ab56",
+      "credentials": {
+        "telegramApi": {
+          "id": "xPpU86c6hxvRmL6b",
+          "name": "Gmail bot Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// 콜백 데이터 파싱\nconst callbackData = $json.callback_query?.data || null;\n\nif (!callbackData) {\n  return [{\n    json: {\n      error: 'callback_data 없음',\n      raw: $json,\n    }\n  }];\n}\n\nconst [action, id] = callbackData.split('-');\n\nreturn [{\n  json: {\n    action: action || null,\n    messageId: id ? id.trim() : null,\n    raw: $json,\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -656,
+        80
+      ],
+      "id": "4f1a0988-6759-4bf9-8602-eceb0dcf44d1",
+      "name": "Parse Callback Data"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.action }}",
+                    "rightValue": "archive",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "243c2ffe-c0e2-4955-b1cc-dae844cdb86b"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "55b48e53-f5c7-427d-bbc6-e18bffe9edd1",
+                    "leftValue": "={{ $json.action }}",
+                    "rightValue": "delete",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "db132dbc-3172-4bbd-ad79-8c960deceede",
+                    "leftValue": "={{ $json.action }}",
+                    "rightValue": "star",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -464,
+        64
+      ],
+      "id": "4d4f1227-7ff0-4d2f-bd77-cbd4a4f06774",
+      "name": "Action Switch"
+    },
+    {
+      "parameters": {
+        "operation": "removeLabels",
+        "messageId": "={{ $json.messageId }}",
+        "labelIds": [
+          "INBOX"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -256,
+        -48
+      ],
+      "id": "e886d700-ea21-4576-89bd-1b168617ec6e",
+      "name": "Archive Mail",
+      "webhookId": "da2565e9-e077-4e2f-8b1e-2782fb2e4ff9",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "n735fVjFPAKUNivZ",
+          "name": "hovoo Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "messageId": "={{ $json.messageId }}"
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -256,
+        96
+      ],
+      "id": "2dfbc4bd-c488-46ea-8f9d-463597966d12",
+      "name": "Delete Mail",
+      "webhookId": "699ffe4f-e934-4f09-bb65-e4d8acfcded1",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "n735fVjFPAKUNivZ",
+          "name": "hovoo Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $json.messageId }}",
+        "labelIds": [
+          "STARRED"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -256,
+        240
+      ],
+      "id": "ecc1ab42-d72d-4204-9705-ed5105cca784",
+      "name": "Star Mail",
+      "webhookId": "99acda85-e8f2-43fd-b801-15d1e1278730",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "n735fVjFPAKUNivZ",
+          "name": "hovoo Gmail account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Gmail Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get Message Details",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Message Details": {
+      "main": [
+        [
+          {
+            "node": "AI Email Classifier",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Email Classifier": {
+      "main": [
+        [
+          {
+            "node": "Parse Classification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Email Classifier",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Classification": {
+      "main": [
+        [
+          {
+            "node": "Add Gmail Label",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Add Gmail Label": {
+      "main": [
+        [
+          {
+            "node": "AI Email Summarizer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Email Summarizer": {
+      "main": [
+        [
+          {
+            "node": "Prepare Telegram Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Email Summarizer",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Telegram Message": {
+      "main": [
+        [
+          {
+            "node": "Send Telegram Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram Callback": {
+      "main": [
+        [
+          {
+            "node": "Parse Callback Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Callback Data": {
+      "main": [
+        [
+          {
+            "node": "Action Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Action Switch": {
+      "main": [
+        [
+          {
+            "node": "Archive Mail",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Delete Mail",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Star Mail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "503b3d8b44115e5921e2e4e1edcde177dde00c303a77361802e2da13d7103e31"
+  }
+}

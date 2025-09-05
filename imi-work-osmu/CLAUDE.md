@@ -75,9 +75,9 @@ Notion 저장 + Telegram 알림 (향후)
 - **에이전트명**: `imi-work-youtube-blogger`
 - **기능**: 3개 가이드라인 파일 자동 참조하여 브랜드 일관성 보장
 - **파일 의존성**:
-  - `/Users/rhim/projects/youtube-to-blog-personalized/IMI_WORK_PERSONA_GUIDE.md`
-  - `/Users/rhim/projects/youtube-to-blog-personalized/IMI_WORK_PROMPT_TEMPLATE.md`
-  - `/Users/rhim/projects/youtube-to-blog-personalized/SENSE_AI_SEO_STRATEGY.md`
+  - `/home/hovoo/Projects/imi-work-osmu/guides/IMI_WORK_PERSONA_GUIDE.md`
+  - `/home/hovoo/Projects/imi-work-osmu/guides/IMI_WORK_PROMPT_TEMPLATE.md`
+  - `/home/hovoo/Projects/imi-work-osmu/guides/SENSE_AI_SEO_STRATEGY.md`
 
 #### 3. **YouTube 임베딩 시스템** ✅
 - **기능**: 블로그 글 내 원본 YouTube 영상 자동 임베딩

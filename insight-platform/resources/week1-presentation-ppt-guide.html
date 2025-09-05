@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1주차: AI와 제대로 파트너 맺기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #4a4a4a;
+            color: white;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            padding: 60px;
+            box-sizing: border-box;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        .accent-circle {
+            position: absolute;
+            top: 60px;
+            right: 60px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 30px;
+            right: 60px;
+            font-size: 16px;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .orange { background: #ff7b47; }
+        .green { background: #10b981; }
+        .blue { background: #3b82f6; }
+        .purple { background: #8b5cf6; }
+        .pink { background: #ec4899; }
+        .yellow { background: #fbbf24; }
+        .lime { background: #84cc16; }
+        .red { background: #ef4444; }
+
+        h1 {
+            font-size: 5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 3rem;
+        }
+
+        .subtitle {
+            font-size: 2.5rem;
+            font-weight: 600;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .content-large {
+            font-size: 2.8rem;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 2rem;
+        }
+
+        .content-medium {
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-small {
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 1.5;
+            opacity: 0.8;
+        }
+
+        .quote-text {
+            font-size: 2.5rem;
+            font-weight: 400;
+            line-height: 1.4;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .author-text {
+            font-size: 1.8rem;
+            opacity: 0.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            height: calc(100vh - 200px);
+        }
+
+        .three-column {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .numbered-list .item {
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .numbered-list .number {
+            font-size: 2rem;
+            font-weight: 600;
+            opacity: 0.6;
+            min-width: 4rem;
+        }
+
+        .numbered-list .title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .numbered-list .desc {
+            font-size: 1.3rem;
+            opacity: 0.8;
+            line-height: 1.5;
+        }
+
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+        }
+
+        .probability-demo {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .probability-input {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+
+        .probability-output {
+            background: rgba(16, 185, 129, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: calc(100vh - 200px);
+            text-align: center;
+        }
+
+        .left-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: calc(100vh - 200px);
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 0.5rem;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .slide-counter {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            color: white;
+            opacity: 0.7;
+            font-size: 0.9rem;
+            z-index: 1000;
+        }
+
+        .purple-split {
+            background: linear-gradient(90deg, #8b5cf6 50%, #4a4a4a 50%);
+            padding: 0;
+        }
+
+        .purple-side {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .gray-side {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 슬라이드 1: 표지 -->
+    <div class="slide active">
+        <div class="accent-circle orange"></div>
+        <div class="center-content">
+            <h1>AI와 제대로<br>파트너 맺기</h1>
+            <div class="subtitle">LLM 원리 이해 및 실전 질문법</div>
+            <div class="content-medium" style="margin-top: 3rem; opacity: 0.8;">F&B AI 교육 프로그램 - 1주차</div>
+            <div class="content-small">이미커피 대표 | 2025년 9월</div>
+        </div>
+        <div class="footer">F&B AI 교육 프로그램 | 1주차 | 이미커피 &nbsp;&nbsp;&nbsp; 1</div>
+    </div>
+
+    <!-- 슬라이드 2: Course outline -->
+    <div class="slide">
+        <div class="accent-circle purple"></div>
+        <div class="left-content">
+            <h2>Course outline</h2>
+            <div class="three-column">
+                <div>
+                    <div class="content-large">Week 1</div>
+                    <div class="content-small">AI와 제대로 파트너 맺기. LLM의 핵심 원리와 3가지 실전 질문법을 통해 AI 활용의 기초를 다집니다.</div>
+                </div>
+                <div>
+                    <div class="content-large">Week 2</div>
+                    <div class="content-small">반복 업무 자동화. AI 비서 시스템을 직접 구축하여 업무 효율성을 극대화합니다.</div>
+                </div>
+                <div>
+                    <div class="content-large">Week 3</div>
+                    <div class="content-small">F&B 특화 AI 활용. 실제 카페 운영에 적용 가능한 실무 중심 솔루션을 개발합니다.</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">F&B AI 교육 프로그램 | 1주차 | 이미커피 &nbsp;&nbsp;&nbsp; 2</div>
+    </div>
+
+    <!-- 슬라이드 3: 학습 목표 -->
+    <div class="slide">
+        <div class="accent-circle lime"></div>
+        <div class="left-content">
+            <h2>학습 목표</h2>
+            <div class="numbered-list">
+                <div class="item">
+                    <div class="number">01</div>
+                    <div>
+                        <div class="title">LLM 핵심 원리 이해</div>
+                        <div class="desc">현업 관점에서 LLM의 작동 원리와 특성 파악</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="number">02</div>
+                    <div>
+                        <div class="title">3가지 질문법 습득</div>
+                        <div class="desc">AI 잠재력을 200% 끌어내는 실전 질문 기법</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="number">03</div>
+                    <div>
+                        <div class="title">모델 활용법 구분</div>
+                        <div class="desc">일반 모델과 추론 모델의 차이점과 적용 방법</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="number">04</div>
+                    <div>
+                        <div class="title">비즈니스 적용</div>
+                        <div class="desc">실제 업무 문제에 AI 파트너십 구축</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">F&B AI 교육 프로그램 | 1주차 | 이미커피 &nbsp;&nbsp;&nbsp; 3</div>
+    </div>
+
+    <!-- 슬라이드 4: Introduction -->
+    <div class="slide">
+        <div class="accent-circle yellow"></div>
+        <div class="center-content">
+            <h1 style="font-size: 6rem;">Introduction</h1>
+            <div class="content-large" style="margin-top: 4rem; opacity: 0.9;">
+                15년차 F&B 전문가가 전하는<br>
+                AI와 진짜 파트너 되는 법
+            </div>
+        </div>
+        <div class="footer">F&B AI 교육 프로그램 | 1주차 | 이미커피 &nbsp;&nbsp;&nbsp; 4</div>
+    </div>
+
+    <!-- 슬라이드 5: 명언 슬라이드 -->
+    <div class="slide">
+        <div class="accent-circle pink"></div>
+        <div class="center-content">
+            <div class="quote-text">
+                "AI가 거짓말을 하는 이유?<br>
+                앞의 뜻을 이해하고 뱉는 게 아니고<br>
+                확률적으로 그냥 내뱉는 거예요"
+            </div>
+            <div class="author-text">— 실제 강의 중</div>
+        </div>
+        <div class="footer">F&B AI 교육 프로그램 | 1주차 | 이미커피 &nbsp;&nbsp;&nbsp; 5</div>
+    </div>
+
+    <!-- 슬라이드 6: LLM이란? -->
+    <div class="slide">
+        <div class="accent-circle blue"></div>
+        <div class="left-content">
+            <h2>LLM이란?</h2>
+            <div class="content-large" style="margin-bottom: 3rem;">
+                도서관의 모든 책 + 온라인의 모든 텍스트를<br>
+                AI에게 주입한 후,<br>
+                <strong>확률적으로 다음 단어를 예측하는 녀석</strong>
+            </div>
+            <div class="highlight-box">
+                <div class="content-medium">
+                    LLM = Large Language Model<br>
+                    핵심은 <strong>데이터</strong>와 <strong>확률</strong>입니다.
+                </div>
+            </div>
+        </div>
+        <div class="footer">F&B AI 교육 프로그램 | 1주차 | 이미커피 &nbsp;&nbsp;&nbsp; 6</div>
+    </div>
+
+    <!-- 슬라이드 7: "철수가 밥을" 확률 예시 -->
+    <div class="slide">
+        <div class="accent-circle green"></div>
+        <div class="left-content">
+            <h2>확률 작동 원리</h2>
+            <div class="probability-demo">
+                <div class="probability-input">
+                    <div class="content-small">제가 이렇게 말하면...</div>
+                    <div class="content-large" style="color: #fbbf24; margin-top: 1rem;">"철수가 밥을"</div>
+                </div>
+                
+                <div style="font-size: 4rem; margin: 2rem 0; opacity: 0.5;">↓</div>
+                
+                <div class="probability-output">
+                    <div class="content-small">다음에 올 단어는?</div>
+                    <div class="content-large" style="color: #10b981; margin-top: 1rem;">• 먹었다 (75%)</div>
+                    <div class="content-medium" style="opacity: 0.7;">• 주문했다 (15%)</div>
+                    <div class="content-medium" style="opacity: 0.7;">• 싫어한다 (7%)</div>
+                </div>
+            </div>
+            <div class="highlight-box" style="text-align: center;">
+                <div class="content-medium">
+                    <strong>핵심 인사이트:</strong> 앞선 정보(맥락)가 뒤의 확률 분포를 바꾸는 것이 핵심
+                </div>
+            </div>
+        </div>
+        <div class="footer">F&B AI 교육 프로그램 | 1주차 | 이미커피 &nbsp;&nbsp;&nbsp; 7</div>
+    </div>
+
+    <!-- 슬라이드 8: 맥락의 힘 -->
+    <div class="slide">
+        <div class="accent-circle purple"></div>
+        <div class="left-content">
+            <h2>맥락의 힘</h2>
+            <div class="two-column" style="gap: 3rem;">
+                <div class="highlight-box">
+                    <div class="content-medium" style="margin-bottom: 2rem;"><strong>일반적 상황</strong></div>
+                    <div class="content-large" style="margin-bottom: 2rem;">"철수가 밥을" →</div>
+                    <div class="content-medium" style="color: #10b981;">먹었다 (75%)</div>
+                </div>
+                <div class="highlight-box">
+                    <div class="content-medium" style="margin-bottom: 2rem;"><strong>맥락 추가</strong></div>
+                    <div class="content-large" style="margin-bottom: 2rem;">"요리사 철수가 밥을" →</div>
+                    <div class="content-small">• 만들었다 (40%)</div>
+                    <div class="content-small">• 요리했다 (25%)</div>
+                    <div class="content-small">• 먹었다 (20%)</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">F&B AI 교육 프로그램 | 1주차 | 이미커피 &nbsp;&nbsp;&nbsp; 8</div>
+    </div>
+
+    <!-- 슬라이드 9: AI 잠재력 200% 질문법 -->
+    <div class="slide">
+        <div class="accent-circle orange"></div>
+        <div class="center-content">
+            <h1 style="font-size: 4.5rem;">AI 잠재력 200%<br>질문법</h1>
+            <div class="content-large" style="margin-top: 3rem; opacity: 0.9;">
+                3가지 핵심 기법으로<br>
+                AI를 진짜 파트너로 만들기
+            </div>
+        </div>
+        <div class="footer">F&B AI 교육 프로그램 | 1주차 | 이미커피 &nbsp;&nbsp;&nbsp; 9</div>
+    </div>
+
+    <!-- 슬라이드 10: ① 역할 부여법 -->
+    <div class="slide purple-split">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; height: 100vh;">
+            <div class="purple-side">
+                <div style="font-size: 4rem; font-weight: 700; margin-bottom: 2rem;">01</div>
+                <div style="font-size: 3rem; font-weight: 600;">역할 부여법</div>
+            </div>
+            <div class="gray-side">
+                <div class="quote-text" style="margin-bottom: 3rem;">
+                    "너는 콘텐츠 마케터야,<br>
+                    너는 학교 선생님이야,<br>
+                    너는 디자이너야"
+                </div>
+                <div class="content-medium" style="margin-bottom: 2rem;">
+                    <strong>작동 원리:</strong><br>
+                    특정 역할을 부여하는 순간, AI가 말할 수 있는 맥락이<br>
+                    <strong>그 전문가가 뱉을 수 있는 내용들만</strong> 나옵니다.
+                </div>
+                <div class="highlight-box">
+                    <div class="content-small">
+                        <strong>핵심:</strong> 확률을 줄여놓는 게 포인트
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer" style="color: white;">F&B AI 교육 프로그램 | 1주차 | 이미커피 &nbsp;&nbsp;&nbsp; 10</div>
+    </div>
+
+    <!-- 슬라이드 11: ② 프레임 요청법 -->
+    <div class="slide purple-split">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; height: 100vh;">
+            <div class="purple-side">
+                <div style="font-size: 4rem; font-weight: 700; margin-bottom: 2rem;">02</div>
+                <div style="font-size: 3rem; font-weight: 600;">프레임<br>요청법</div>
+            </div>
+            <div class="gray-side">
+                <div class="content-medium" style="margin-bottom: 3rem;">
+                    검증된 비즈니스 프레임워크를 활용해<br>
+                    체계적이고 논리적인 분석을 요청
+                </div>
+                <div class="highlight-box" style="margin-bottom: 2rem;">
+                    <div class="content-small">
+                        <strong>예시 1:</strong> "SWOT 분석을 활용해서<br>
+                        우리 카페의 현황을 분석해주세요"
+                    </div>
+                </div>
+                <div class="highlight-box">
+                    <div class="content-small">
+                        <strong>예시 2:</strong> "5W1H로 신메뉴<br>
+                        마케팅 계획을 정리해주세요"
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer" style="color: white;">F&B AI 교육 프로그램 | 1주차 | 이미커피 &nbsp;&nbsp;&nbsp; 11</div>
+    </div>
+
+    <!-- 슬라이드 12: ③ 성공 모델 언급법 -->
+    <div class="slide purple-split">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; height: 100vh;">
+            <div class="purple-side">
+                <div style="font-size: 4rem; font-weight: 700; margin-bottom: 2rem;">03</div>
+                <div style="font-size: 3rem; font-weight: 600;">성공 모델<br>언급법</div>
+            </div>
+            <div class="gray-side">
+                <div class="content-medium" style="margin-bottom: 3rem;">
+                    성공한 사례나 모델을 참조점으로 제시하여<br>
+                    검증된 방법론 기반의 실용적 제안 획득
+                </div>
+                <div class="highlight-box">
+                    <div class="content-small">
+                        <strong>예시:</strong> "스타벅스의 시즌 메뉴<br>
+                        마케팅 전략을 참고해서, 우리 카페에<br>
+                        적용 가능한 방안을 제안해주세요"
+                    </div>
+                </div>
+                <div class="content-small" style="margin-top: 2rem; opacity: 0.8;">
+                    <strong>효과:</strong> 내 업종의 성공 모델을<br>
+                    벤치마킹하여 실현 가능한 솔루션 도출
+                </div>
+            </div>
+        </div>
+        <div class="footer" style="color: white;">F&B AI 교육 프로그램 | 1주차 | 이미커피 &nbsp;&nbsp;&nbsp; 12</div>
+    </div>
+
+    <!-- 슬라이드 13: 실습 안내 -->
+    <div class="slide">
+        <div class="accent-circle blue"></div>
+        <div class="left-content">
+            <h2>실습: 3가지 질문법<br>템플릿 만들기</h2>
+            <div class="three-column">
+                <div class="highlight-box">
+                    <div class="content-medium" style="margin-bottom: 1.5rem;"><strong>실습 1</strong></div>
+                    <div class="content-small">
+                        <strong>역할 부여 템플릿</strong><br>
+                        내 비즈니스에 필요한<br>
+                        전문가 역할 3개 정의
+                    </div>
+                </div>
+                <div class="highlight-box">
+                    <div class="content-medium" style="margin-bottom: 1.5rem;"><strong>실습 2</strong></div>
+                    <div class="content-small">
+                        <strong>프레임 요청 템플릿</strong><br>
+                        자주 마주치는 비즈니스 문제에<br>
+                        프레임워크 매칭
+                    </div>
+                </div>
+                <div class="highlight-box">
+                    <div class="content-medium" style="margin-bottom: 1.5rem;"><strong>실습 3</strong></div>
+                    <div class="content-small">
+                        <strong>성공 모델 템플릿</strong><br>
+                        내 업종의 벤치마킹 대상<br>
+                        3곳 선정
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">F&B AI 교육 프로그램 | 1주차 | 이미커피 &nbsp;&nbsp;&nbsp; 13</div>
+    </div>
+
+    <!-- 슬라이드 14: 과제 안내 -->
+    <div class="slide purple-split">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; height: 100vh;">
+            <div class="purple-side">
+                <div style="font-size: 3rem; font-weight: 600; margin-bottom: 2rem;">과제</div>
+                <div style="font-size: 2.5rem; font-weight: 600;">AI 파트너와<br>5회 대화하기</div>
+            </div>
+            <div class="gray-side">
+                <div class="content-medium" style="margin-bottom: 2rem;">
+                    <strong>목표:</strong> 실제 업무 문제를<br>
+                    3가지 질문법으로 해결해보기
+                </div>
+                <div class="numbered-list">
+                    <div class="item">
+                        <div class="number">1</div>
+                        <div>
+                            <div class="title">문제 선정</div>
+                            <div class="desc">현재 고민 중인 실제 업무 문제 1개</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="number">2</div>
+                        <div>
+                            <div class="title">대화 진행</div>
+                            <div class="desc">AI와 5번 이상 주고받기<br>(3가지 질문법 모두 사용)</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="number">3</div>
+                        <div>
+                            <div class="title">결과 공유</div>
+                            <div class="desc">2주차에 경험 공유 (2분 발표)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer" style="color: white;">F&B AI 교육 프로그램 | 1주차 | 이미커피 &nbsp;&nbsp;&nbsp; 14</div>
+    </div>
+
+    <!-- 슬라이드 15: Thank you! -->
+    <div class="slide">
+        <div class="accent-circle blue"></div>
+        <div class="center-content">
+            <h1 style="font-size: 6rem;">Thank you!</h1>
+            <div class="two-column" style="margin-top: 4rem;">
+                <div>
+                    <div class="content-medium" style="margin-bottom: 1rem;"><strong>이미커피 대표</strong></div>
+                    <div class="content-small">• imi@coffee.com</div>
+                    <div class="content-small">• 카페 4개 매장 운영</div>
+                    <div class="content-small">• 15년차 F&B 전문가</div>
+                </div>
+                <div>
+                    <div class="quote-text" style="font-size: 2rem;">
+                        "AI를 단순한 도구가 아닌<br>
+                        진짜 비즈니스 파트너로<br>
+                        활용하세요"
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">F&B AI 교육 프로그램 | 1주차 | 이미커피 &nbsp;&nbsp;&nbsp; 15</div>
+    </div>
+
+    <!-- 네비게이션 -->
+    <div class="navigation">
+        <button class="nav-btn" onclick="prevSlide()">이전</button>
+        <button class="nav-btn" onclick="nextSlide()">다음</button>
+    </div>
+
+    <!-- 슬라이드 카운터 -->
+    <div class="slide-counter">
+        <span id="current-slide">1</span> / <span id="total-slides">15</span>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        document.getElementById('total-slides').textContent = totalSlides;
+        
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            document.getElementById('current-slide').textContent = currentSlide + 1;
+        }
+        
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+        
+        // 키보드 네비게이션
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevSlide();
+            }
+        });
+        
+        // 초기 설정
+        showSlide(0);
+    </script>
+</body>
+</html>

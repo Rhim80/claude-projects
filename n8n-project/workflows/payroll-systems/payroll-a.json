@@ -1,0 +1,603 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        16,
+        512
+      ],
+      "id": "19e40af5-693c-4606-8072-b0d28a59ebe2",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "ZFmQNyo0kSoO9TXC",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.text }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "=당신은 급여 변동사항 텍스트를 분석하여 구조화된 JSON 데이터로 변환하는 전문가입니다.\n\n분석 규칙:\n1. 직원명, 매장명, 근무 유형, 시간/일수를 정확히 추출\n2. \"변동사항 없음\" 경우에도 반드시 1개 레코드 생성\n3. details는 핵심 내용만 간단히 (50자 이내)\n4. 원본 요청 메일 내용은 제외\n5. null, undefined 절대 금지\n\n변동사항 없음 처리:\n- employee: \"변동사항 없음\"\n- workType: \"변동사항 없음\"  \n- hours: 0\n- days: 0\n- details: \"매장명 변동사항 없음\" (간단히)\n- store: 해당 매장명\n\n출력은 반드시 순수 JSON만:\n{\n  \"workRecords\": [\n    {\n      \"employee\": \"직원명\",\n      \"workType\": \"근무 유형\",\n      \"hours\": 0,\n      \"days\": 0, \n      \"details\": \"간단한 설명\",\n      \"store\": \"매장명\"\n    }\n  ]\n}"
+            },
+            {
+              "type": "HumanMessagePromptTemplate",
+              "message": "=다음 이메일에서 근무 내역을 추출해주세요:  {{ $json.text }}"
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        -128,
+        352
+      ],
+      "id": "5c436af9-cfd2-4520-9de3-3c69c582c121",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\nconst results = [];\nconst currentDate = new Date();\nconst targetMonth = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-01`;\n\nconst storeGroups = new Map();\n\nfor (const item of items) {\n  try {\n    let aiResponse = item.json.text;\n    \n    // 이스케이프 문자 제거\n    aiResponse = aiResponse.replace(/\\\\\\\"/g, '\"');\n    aiResponse = aiResponse.replace(/\\\\\\\\/g, '\\\\');\n    \n    console.log('정제된 JSON:', aiResponse);\n    \n    const parsedData = JSON.parse(aiResponse);\n    \n    // workRecords 배열 처리\n    for (const record of parsedData.workRecords) {\n      const storeName = record.store === \"null\" ? \"매장 미확인\" : (record.store || \"매장 미확인\");\n      \n      // 매장별로 그룹핑\n      if (!storeGroups.has(storeName)) {\n        storeGroups.set(storeName, []);\n      }\n      \n      const workRecord = {\n        employee: record.employee,\n        workType: record.workType,\n        hours: record.hours || null,\n        days: record.days || null,\n        details: record.details,\n        targetMonth: targetMonth\n      };\n      \n      storeGroups.get(storeName).push(workRecord);\n    }\n  } catch (error) {\n    console.error('JSON 파싱 오류:', error);\n  }\n}\n\n// 매장별로 정리된 데이터 생성\nfor (const [storeName, records] of storeGroups) {\n  results.push({\n    json: {\n      storeName: storeName,\n      targetMonth: targetMonth,\n      workRecords: records,\n      totalRecords: records.length\n    }\n  });\n}\n\nreturn results;"
+      },
+      "id": "ff98cc50-ceed-4e08-97fd-a5e99adfbbde",
+      "name": "매장별 데이터 그룹핑",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        256,
+        352
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": "231d0f53-623d-8122-8c9d-ef51b3478957",
+        "title": "={{ $json.targetMonth }} {{ $json.storeName }} 근무 내역 ({{ $json.totalRecords }}건)",
+        "simple": false,
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "대상월|date",
+              "type": "date",
+              "date": "=={{ $json.targetMonth }}"
+            },
+            {
+              "key": "상세내용|rich_text",
+              "richText": true,
+              "text": {
+                "text": [
+                  {
+                    "text": "=[{{ $json.storeName }}] 근무 내역 ({{ $json.totalRecords }}건):\n{{ $json.workRecords.map(r => {\n  if (r.employee === '변동사항 없음') {\n    return '• 변동사항 없음';\n  } else {\n    const timeInfo = [];\n    if (r.hours > 0) timeInfo.push(r.hours + '시간');\n    if (r.days > 0) timeInfo.push(r.days + '일');\n    const timeStr = timeInfo.length > 0 ? timeInfo.join(' ') : '';\n    return `• ${r.employee}${timeStr ? ': ' + timeStr : ''} - ${r.details}`;\n  }\n}).join('\\n') }}",
+                    "annotationUi": {}
+                  }
+                ]
+              }
+            },
+            {
+              "key": "입력 담당자|rich_text",
+              "richText": true,
+              "text": {
+                "text": [
+                  {
+                    "text": "={{ $json.storeName }} 담당자",
+                    "annotationUi": {}
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5489f07b-e273-498f-97bf-d21f2ac9ee68",
+      "name": "Notion DB에 매장별 저장",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2,
+      "position": [
+        480,
+        352
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "kCKFfrau35Gf4PvW",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// HTML 리포트를 바이너리 데이터로 변환\nconst reportContent = $input.first().json.reportContent;\nconst fileName = $input.first().json.fileName;\n\n// HTML을 바이너리로 변환\nconst binaryData = Buffer.from(reportContent, 'utf8');\n\nreturn [{\n  json: $input.first().json,\n  binary: {\n    reportFile: {\n      data: binaryData.toString('base64'),\n      mimeType: 'text/html',\n      fileName: fileName,\n      fileExtension: 'html'\n    }\n  }\n}];"
+      },
+      "id": "85100217-b656-4c20-9ea9-7ef5a8d622f2",
+      "name": "리포트 바이너리 변환",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        112,
+        768
+      ]
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.recipientEmail }}",
+        "subject": "=[이미커피] {{ $json.targetMonthKorean }} 급여 변동사항 제출 요청",
+        "emailType": "text",
+        "message": "=안녕하세요, {{ $json.recipientName }}님.\n\n{{ $json.targetMonthKorean }} 급여 계산을 위해 {{ $json.storeName }} 관련 아래 근무 내역을 확인하여 회신해 주세요.\n\n제목에 '급여 변동사항'을 써주세요.\n\n【확인 필요 사항】\n1. 파트타이머 근무 시간\n2. 휴일 근무 여부\n3. 추가 근무 내역\n4. 기타 특이사항 (팝업행사 일용직 근로자 신고)\n\n【회신 형식】\n각 항목별로 해당 사항이 있으면 아래 형식으로 작성해 주세요:\n\n■ 파트타이머 근무 시간\n- 직원명: [이름]\n\n■ 휴일 근무\n- 직원명: [이름]\n- 휴일 근무: [일수]일\n- 상세내용: [날짜 및 휴일명]\n\n■ 추가 근무\n- 직원명: [이름]\n- 추가 근무: [시간]시간\n- 상세내용: [날짜 및 업무 내용]\n\n■ 기타 특이사항\n- 직원명: [이름] (팝업행사 일용직 등)\n- 근무 기간: [기간]\n- 상세내용: [구체적 업무 내용]\n\n【작성 예시】\n■ 파트타이머 근무 시간\n- 직원명: 홍길동\n\n■ 휴일 근무\n- 직원명: 김영희\n- 휴일 근무: 1일\n- 상세내용: 7/15 광복절 근무\n\n■ 추가 근무\n- 직원명: 이철수\n- 추가 근무: 5시간\n- 상세내용: 7/25 야간 업무\n\n【제출 마감일】\n매월 27일까지 회신 부탁드립니다.\n\n해당 사항이 없을 경우 \"{{ $json.storeName }} 변동사항 없음\"이라고 회신해 주세요.\n\n감사합니다.\n\n이미커피 관리팀\nhovooimi@gmail.com",
+        "options": {}
+      },
+      "id": "64d593e1-d3f8-4682-8b19-491c1549d460",
+      "name": "변동사항 요청 이메일 발송1",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        112,
+        48
+      ],
+      "webhookId": "4ef83d60-3b60-46e9-9daf-085cd1ebde25",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "n735fVjFPAKUNivZ",
+          "name": "hovoo Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "simple": false,
+        "filters": {
+          "q": "=to:hovooimi@gmail.com subject:급여 변동사항 after:{{ $now.minus({ days: 5 }).toFormat('yyyy/MM/dd') }}"
+        },
+        "options": {}
+      },
+      "id": "f39b11af-7dc4-49a3-ad60-e2deabc55547",
+      "name": "변동사항 회신 이메일 수집1",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -336,
+        352
+      ],
+      "webhookId": "ecd601a4-0e0b-4ec2-b802-60cf7fa7d29b",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "n735fVjFPAKUNivZ",
+          "name": "hovoo Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "getAll",
+        "databaseId": {
+          "__rl": true,
+          "value": "231d0f53-623d-8122-8c9d-ef51b3478957",
+          "mode": "list",
+          "cachedResultName": "[급여자동화] 월별 급여 변동 DB",
+          "cachedResultUrl": "https://www.notion.so/231d0f53623d81228c9def51b3478957"
+        },
+        "simple": false,
+        "filterType": "manual",
+        "matchType": "allFilters",
+        "filters": {
+          "conditions": [
+            {
+              "key": "대상월|date",
+              "condition": "equals",
+              "date": "=={{ $now.toFormat('yyyy-MM') }}-01"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6fff7b0c-e8bd-4f5f-9a11-93007404e539",
+      "name": "월별 변동사항 취합1",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2,
+      "position": [
+        -336,
+        768
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "kCKFfrau35Gf4PvW",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "naeil08@hanmail.net",
+        "subject": "=[이미커피] {{ $json.targetMonth }} 급여 변동사항 전달",
+        "emailType": "text",
+        "message": "=안녕하세요.\n\n{{ $json.targetMonth }} 급여 변동사항을 정리하여 전달드립니다.\n\n【변동사항 요약】\n- 총 매장 데이터: {{ $json.totalEntries }}개\n- 수집 기간: 매월 25일~27일\n- 데이터 형태: 매장별 근무 내역 정리\n\n첨부된 파일을 확인하시어 급여 계산에 반영 부탁드립니다.\n개별 직원 확인이 필요한 경우 연락 주시면 상세 정보 제공하겠습니다.\n\n감사합니다.\n\n이미커피 관리팀\nhovooimi@gmail.com",
+        "options": {
+          "attachmentsUi": {
+            "attachmentsBinary": [
+              {
+                "property": "reportFile"
+              }
+            ]
+          }
+        }
+      },
+      "id": "b39300c7-29cc-4eda-83b7-37e2d9eef33a",
+      "name": "노무사 전달",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        336,
+        768
+      ],
+      "webhookId": "636ae9b2-6e48-497e-9e88-a098e0f87e0c",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "n735fVjFPAKUNivZ",
+          "name": "hovoo Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// 취합된 데이터를 노무사용 HTML 리포트 형식으로 가공\nconst items = $input.all();\nconst currentDate = new Date();\nconst targetMonth = `${currentDate.getFullYear()}년 ${currentDate.getMonth() + 1}월`;\n\n// HTML 리포트 생성\nlet htmlContent = `<!DOCTYPE html>\n<html lang=\"ko\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>${targetMonth} IMI COFFEE 급여 변동사항 리포트</title>\n    <style>\n        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');\n        \n        body { \n            font-family: 'Noto Sans KR', 'Malgun Gothic', Arial, sans-serif; \n            line-height: 1.6; \n            margin: 0; \n            padding: 40px; \n            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);\n            color: #333;\n        }\n        \n        .container { \n            max-width: 900px; \n            margin: 0 auto; \n            background: white; \n            border-radius: 16px; \n            overflow: hidden;\n            box-shadow: 0 10px 40px rgba(0,0,0,0.1);\n        }\n        \n        .header { \n            background: linear-gradient(135deg, #3D2914 0%, #5D3E23 100%);\n            color: white;\n            text-align: center; \n            padding: 40px 30px;\n            position: relative;\n        }\n        \n        .header::before {\n            content: '';\n            position: absolute;\n            top: 0;\n            left: 0;\n            right: 0;\n            bottom: 0;\n            background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><circle cx=\"20\" cy=\"20\" r=\"2\" fill=\"rgba(255,255,255,0.1)\"/><circle cx=\"80\" cy=\"40\" r=\"1.5\" fill=\"rgba(255,255,255,0.08)\"/><circle cx=\"40\" cy=\"80\" r=\"1\" fill=\"rgba(255,255,255,0.06)\"/></svg>');\n        }\n        \n        .logo { \n            font-size: 32px; \n            font-weight: 700; \n            letter-spacing: 2px;\n            margin-bottom: 8px;\n            position: relative;\n            z-index: 1;\n        }\n        \n        .header h1 { \n            font-size: 24px; \n            font-weight: 500; \n            margin: 0;\n            opacity: 0.95;\n            position: relative;\n            z-index: 1;\n        }\n        \n        .header p { \n            margin: 8px 0 0 0; \n            opacity: 0.8;\n            font-size: 16px;\n            position: relative;\n            z-index: 1;\n        }\n        \n        .summary { \n            background: #f8f8f8; \n            padding: 30px; \n            display: grid;\n            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n            gap: 20px;\n            border-bottom: 1px solid #e0e0e0;\n        }\n        \n        .summary-item { \n            background: white;\n            padding: 20px;\n            border-radius: 12px;\n            text-align: center;\n            box-shadow: 0 2px 8px rgba(0,0,0,0.06);\n            border-left: 4px solid #3D2914;\n        }\n        \n        .summary-item .emoji { \n            font-size: 24px; \n            display: block;\n            margin-bottom: 8px;\n        }\n        \n        .summary-item strong { \n            color: #3D2914; \n            font-weight: 600;\n            display: block;\n            margin-bottom: 4px;\n        }\n        \n        .summary-item .value {\n            font-size: 18px;\n            font-weight: 500;\n            color: #5D3E23;\n        }\n        \n        .items {\n            padding: 30px;\n        }\n        \n        .item { \n            border: 1px solid #e8e8e8;\n            border-radius: 12px;\n            padding: 25px; \n            margin: 20px 0; \n            background: #fdfdfd;\n            transition: all 0.3s ease;\n        }\n        \n        .item:hover {\n            box-shadow: 0 5px 15px rgba(61, 41, 20, 0.1);\n            transform: translateY(-2px);\n        }\n        \n        .item h3 { \n            color: #3D2914; \n            margin: 0 0 15px 0; \n            font-size: 20px;\n            font-weight: 600;\n            padding-bottom: 10px;\n            border-bottom: 2px solid #f0f0f0;\n        }\n        \n        .item-details { \n            display: grid;\n            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));\n            gap: 15px;\n            margin-bottom: 20px;\n            font-size: 14px;\n        }\n        \n        .item-details span { \n            background: #f8f8f8;\n            padding: 8px 12px;\n            border-radius: 8px;\n            color: #666;\n        }\n        \n        .item-content { \n            background: #f9f9f9; \n            padding: 20px; \n            border-radius: 10px; \n            border-left: 4px solid #3D2914;\n            color: #333;\n            font-size: 15px;\n            line-height: 1.8;\n        }\n        \n        .footer { \n            background: #f8f8f8;\n            padding: 30px; \n            border-top: 1px solid #e0e0e0;\n        }\n        \n        .footer h3 { \n            color: #3D2914; \n            margin-bottom: 20px; \n            font-size: 18px;\n            font-weight: 600;\n        }\n        \n        .footer ul { \n            color: #666; \n            padding-left: 0;\n            list-style: none;\n        }\n        \n        .footer li { \n            margin-bottom: 12px; \n            padding-left: 20px;\n            position: relative;\n        }\n        \n        .footer li::before {\n            content: '✓';\n            position: absolute;\n            left: 0;\n            color: #3D2914;\n            font-weight: bold;\n        }\n        \n        .contact { \n            background: linear-gradient(135deg, #3D2914 0%, #5D3E23 100%);\n            color: white;\n            padding: 20px; \n            border-radius: 12px; \n            margin-top: 25px;\n        }\n        \n        .contact strong { \n            color: #fff;\n            font-weight: 600;\n        }\n        \n        .status-pending { \n            color: #D2691E; \n            font-weight: 600; \n        }\n        \n        .emoji { \n            font-size: 16px; \n            margin-right: 8px; \n        }\n        \n        @media (max-width: 768px) {\n            body { padding: 20px; }\n            .header { padding: 30px 20px; }\n            .logo { font-size: 28px; }\n            .header h1 { font-size: 20px; }\n            .summary { grid-template-columns: 1fr; }\n            .item-details { grid-template-columns: 1fr; }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"container\">\n        <div class=\"header\">\n            <div class=\"logo\">IMI COFFEE</div>\n            <h1>${targetMonth} 급여 변동사항 리포트</h1>\n            <p>급여 정산을 위한 변동사항 보고서</p>\n        </div>\n        \n        <div class=\"summary\">\n            <div class=\"summary-item\">\n                <span class=\"emoji\">📅</span>\n                <strong>보고 기간</strong>\n                <div class=\"value\">${targetMonth}</div>\n            </div>\n            <div class=\"summary-item\">\n                <span class=\"emoji\">📊</span>\n                <strong>총 데이터 수</strong>\n                <div class=\"value\">${items.length}개</div>\n            </div>\n            <div class=\"summary-item\">\n                <span class=\"emoji\">📧</span>\n                <strong>담당 부서</strong>\n                <div class=\"value\">이미커피 관리팀</div>\n            </div>\n        </div>\n        \n        <div class=\"items\">`;\n\n// 각 항목별 데이터 정리\nitems.forEach((item, index) => {\n  const data = item.json;\n  \n  // properties에서 제목과 상세내용 추출\n  const title = data.properties?.['변동 내역 요약']?.title?.[0]?.plain_text || `급여 변동사항 ${index + 1}`;\n  let content = data.properties?.['상세내용']?.rich_text?.[0]?.plain_text || \"내용 없음\";\n  const store = data.properties?.['입력 담당자']?.rich_text?.[0]?.plain_text || \"담당자 미확인\";\n  \n  // 이스케이프 문자 처리\n  content = content.replace(/\\\\n/g, '<br>');\n  content = content.replace(/\\n/g, '<br>');\n  \n  htmlContent += `\n            <div class=\"item\">\n                <h3>${index + 1}. ${title}</h3>\n                <div class=\"item-details\">\n                    <span><span class=\"emoji\">🏪</span>담당자: ${store}</span>\n                    <span><span class=\"emoji\">📅</span>등록일: ${currentDate.toLocaleDateString('ko-KR')}</span>\n                    <span><span class=\"emoji\">⏳</span>상태: <span class=\"status-pending\">확인 필요</span></span>\n                </div>\n                <div class=\"item-content\">\n                    ${content}\n                </div>\n            </div>`;\n});\n\nhtmlContent += `\n        </div>\n        \n        <div class=\"footer\">\n            <h3><span class=\"emoji\">📝</span>처리 안내</h3>\n            <ul>\n                <li>각 항목별로 급여 계산 후 반영 부탁드립니다</li>\n                <li>추가 확인이 필요한 경우 언제든지 연락 주세요</li>\n                <li>다음 달 처리를 위해 매월 28일 자동 발송됩니다</li>\n            </ul>\n            \n            <div class=\"contact\">\n                <strong><span class=\"emoji\">📞</span>문의:</strong> hovooimi@gmail.com<br>\n                <strong><span class=\"emoji\">📅</span>발송일:</strong> ${currentDate.toLocaleDateString('ko-KR')} ${currentDate.toLocaleTimeString('ko-KR')}\n            </div>\n        </div>\n    </div>\n</body>\n</html>`;\n\nreturn [{\n  json: {\n    reportContent: htmlContent,\n    targetMonth: targetMonth,\n    totalEntries: items.length,\n    fileName: `IMI_COFFEE_급여변동사항_리포트_${currentDate.getFullYear()}${String(currentDate.getMonth() + 1).padStart(2, '0')}.html`\n  }\n}];"
+      },
+      "id": "b096c844-9e15-479f-accc-5d43c44fd2af",
+      "name": "노무사용 리포트 생성",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -112,
+        768
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const managers = $input.all();\nconst emailData = [];\n\nconst now = new Date();\nconst targetMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;\nconst targetMonthKorean = `${now.getFullYear()}년 ${now.getMonth() + 1}월`;\n\nfor (const manager of managers) {\n  try {\n    const properties = manager.json.properties || {};\n    \n    // 원본 Notion 데이터 구조에서 추출\n    const employeeName = \n      properties['직원명']?.title?.[0]?.text?.content ||\n      properties['직원명']?.title?.[0]?.plain_text ||\n      '이름 없음';\n    \n    const email = \n      properties['이메일']?.email ||\n      'no-email@imicoffee.com';\n    \n    const storeName = \n      properties['소속매장']?.select?.name ||\n      '매장 없음';\n    \n    const position = \n      properties['직급']?.select?.name ||\n      '직급 없음';\n    \n    const workStatus = \n      properties['재직상태']?.select?.name ||\n      '상태 없음';\n    \n    // 재직 중인 점장, 팀장만 필터링\n    if (workStatus === '재직' && (position === '점장' || position === '팀장')) {\n      emailData.push({\n        recipientEmail: email,\n        recipientName: employeeName,\n        storeName: storeName,\n        position: position,\n        targetMonth: targetMonth,\n        targetMonthKorean: targetMonthKorean,\n        managerId: manager.json.id\n      });\n    }\n    \n    console.log(`체크: ${employeeName} - ${email} - ${storeName} - ${position} - ${workStatus}`);\n    \n  } catch (error) {\n    console.error('데이터 처리 오류:', error);\n  }\n}\n\nconsole.log(`총 ${emailData.length}명의 점장/팀장 데이터 추출`);\nreturn emailData.map(data => ({ json: data }));"
+      },
+      "id": "dadaddf6-a7dd-4d21-b96d-f5388b0cc121",
+      "name": "이메일 데이터 준비",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -112,
+        48
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 각 매장 변동사항 요청 이메일 보내기 (매월25일 5시)",
+        "height": 320,
+        "width": 1360
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -640,
+        -96
+      ],
+      "typeVersion": 1,
+      "id": "b29c2176-86dd-4ffd-9baf-880901ee6543",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "## 회신 메일 정리해서 Notion에 자동 저장 (매월 28일 10시)",
+        "height": 352,
+        "width": 1360,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -640,
+        272
+      ],
+      "typeVersion": 1,
+      "id": "e79cda51-dcb0-487a-b4f4-b3a83d03342b",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "## 최종 리포트 자동 생성 및 노무사에게 이메일 발송 (매월 28일 11시)",
+        "height": 304,
+        "width": 1360,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -640,
+        672
+      ],
+      "typeVersion": 1,
+      "id": "4acfef4c-76e0-4ae6-a6f8-b9b7f83864fa",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "months",
+              "triggerAtDayOfMonth": 25,
+              "triggerAtHour": 17
+            }
+          ]
+        }
+      },
+      "id": "bde864eb-7aca-4b14-bd06-40fefb6ed820",
+      "name": "매월 25일 5시 트리거",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -544,
+        48
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "months",
+              "triggerAtDayOfMonth": 28,
+              "triggerAtHour": 22
+            }
+          ]
+        }
+      },
+      "id": "ab27b89f-782f-4273-9a43-ecc848e42d4e",
+      "name": "매월 28일 10시 트리거",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -544,
+        352
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "months",
+              "triggerAtDayOfMonth": 28,
+              "triggerAtHour": 23
+            }
+          ]
+        }
+      },
+      "id": "a23d681e-c7bf-48c8-972e-62a2d1195eb8",
+      "name": "매월 28일 11시 트리거",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -544,
+        768
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "getAll",
+        "databaseId": {
+          "__rl": true,
+          "value": "231d0f53-623d-81ea-aca9-dfb9547d41f9",
+          "mode": "list",
+          "cachedResultName": "[HR] 직원 관리 DB",
+          "cachedResultUrl": "https://www.notion.so/231d0f53623d81eaaca9dfb9547d41f9"
+        },
+        "simple": false,
+        "filterType": "manual",
+        "filters": {
+          "conditions": [
+            {
+              "key": "직급|select",
+              "condition": "equals",
+              "selectValue": "점장"
+            },
+            {
+              "key": "직급|select",
+              "condition": "equals",
+              "selectValue": "팀장"
+            },
+            {
+              "key": "직급|select",
+              "condition": "equals",
+              "selectValue": "부대표"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "11170f73-4e1a-497a-b8da-3fe4a9ccd72a",
+      "name": "점장·팀장 정보 조회",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2,
+      "position": [
+        -336,
+        48
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "kCKFfrau35Gf4PvW",
+          "name": "Notion account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "매장별 데이터 그룹핑",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "매장별 데이터 그룹핑": {
+      "main": [
+        [
+          {
+            "node": "Notion DB에 매장별 저장",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "리포트 바이너리 변환": {
+      "main": [
+        [
+          {
+            "node": "노무사 전달",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "변동사항 회신 이메일 수집1": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "월별 변동사항 취합1": {
+      "main": [
+        [
+          {
+            "node": "노무사용 리포트 생성",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "노무사용 리포트 생성": {
+      "main": [
+        [
+          {
+            "node": "리포트 바이너리 변환",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "이메일 데이터 준비": {
+      "main": [
+        [
+          {
+            "node": "변동사항 요청 이메일 발송1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "매월 25일 5시 트리거": {
+      "main": [
+        [
+          {
+            "node": "점장·팀장 정보 조회",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "매월 28일 10시 트리거": {
+      "main": [
+        [
+          {
+            "node": "변동사항 회신 이메일 수집1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "매월 28일 11시 트리거": {
+      "main": [
+        [
+          {
+            "node": "월별 변동사항 취합1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "점장·팀장 정보 조회": {
+      "main": [
+        [
+          {
+            "node": "이메일 데이터 준비",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "503b3d8b44115e5921e2e4e1edcde177dde00c303a77361802e2da13d7103e31"
+  },
+  "name": "급여 변동사항 수집 및 노무사 리포트 (Payroll A)",
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "12a34567-89ab-cdef-0123-456789abcdef",
+  "id": "99",
+  "tags": [
+    {
+      "createdAt": "2024-12-15T10:30:00.000Z",
+      "updatedAt": "2024-12-15T10:30:00.000Z",
+      "id": "17",
+      "name": "급여관리"
+    },
+    {
+      "createdAt": "2024-12-15T10:30:00.000Z", 
+      "updatedAt": "2024-12-15T10:30:00.000Z",
+      "id": "18",
+      "name": "HR자동화"
+    }
+  ]
+}
