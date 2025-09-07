@@ -23,7 +23,8 @@
       "mcp__filesystem__create_directory",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "mcp__filesystem__write_file"
     ],
     "deny": [],
     "ask": []
