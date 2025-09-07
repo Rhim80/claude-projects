@@ -19,7 +19,8 @@
       "WebFetch(domain:www.googleapis.com)",
       "Bash(yt-dlp:*)",
       "Read(/home/hovoo/**)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "mcp__filesystem__create_directory"
     ],
     "deny": [],
     "ask": []
