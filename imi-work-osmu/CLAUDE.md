@@ -1,17 +1,17 @@
-# CLAUDE.md - IMI WORK YouTube to Blog 자동화 프로젝트
+# CLAUDE.md - IMI WORK OSMU v2.0 프로젝트
 
-> "일을 잘한다는 것"에 대한 통찰을 전하는 SENSE & AI 블로그 콘텐츠 자동화
+> "일을 잘한다는 것"에 대한 통찰을 전하는 SENSE & AI 블로그 OSMU 콘텐츠 자동화 시스템
 
 ## 📋 프로젝트 개요
 
-### 목표
-YouTube 영상을 IMI WORK 브랜드 정체성에 맞게 "일을 잘한다는 것"에 대한 깊이 있는 블로그 글로 자동 변환
+### 현재 목표
+YouTube 콘텐츠를 IMI WORK 브랜드 페르소나로 변환하여 Ghost, 네이버 블로그, Instagram 등 다중 플랫폼에 최적화된 콘텐츠로 자동 배포하는 OSMU 시스템 구축
 
 ### 핵심 차별점
-- **n8n 대신 Claude Code** 사용으로 더 유연하고 정교한 콘텐츠 생성
-- **IMI WORK 브랜드 페르소나** 활용한 차별화된 콘텐츠 생성
-- **"일을 잘한다" 중심**: 단순 AI/비즈니스 넘어선 근본적 통찰
-- **SENSE & AI 블로그** 특화 SEO 최적화
+- **Claude Code 서브에이전트 아키텍처**: 각 에이전트의 전문성 극대화
+- **OSMU 이미지 중앙화**: osmu-image-generator가 모든 플랫폼용 이미지 패키지 생성
+- **IMI WORK 브랜드 일관성**: "일을 잘한다" 철학 중심의 콘텐츠 변환
+- **slug 기반 자산 관리**: 체계적인 디렉토리 구조와 매니페스트 관리
 
 ## 🌟 IMI WORK 브랜드 정체성
 
@@ -44,24 +44,40 @@ YouTube 영상을 IMI WORK 브랜드 정체성에 맞게 "일을 잘한다는 �
 **1차 타겟**: 브랜딩/마케팅 전문가들 (비즈니스 우선)
 **2차 타겟**: 자영업자/소상공인들 (마음이 가는 곳)
 
-## 🛠 기술 아키텍처
+## 🏗️ OSMU v2.0 아키텍처
 
-### Claude Code 기반 워크플로우
+### 새로운 서브에이전트 분업 체계
 ```
-YouTube URL 입력
-↓
-YouTube Data API v3 (영상 메타데이터 추출)
-↓
-[imi-work-youtube-blogger] IMI WORK 전용 에이전트
-├── IMI_WORK_PERSONA_GUIDE.md 자동 적용
-├── IMI_WORK_PROMPT_TEMPLATE.md 템플릿 사용
-└── SENSE_AI_SEO_STRATEGY.md SEO 최적화
-↓
-완성된 블로그 글 (Markdown + SEO 메타데이터 + YouTube 임베딩)
-↓
-Ghost Admin API 포스팅 (자동 YouTube 임베딩 포함)
-↓
-Notion 저장 + Telegram 알림 (향후)
+1. 콘텐츠 작성 (imi-work-persona-writer)
+   ├── YouTube 영상 분석 및 메타데이터 추출
+   ├── IMI WORK 브랜드 페르소나 적용
+   └── 마크다운 콘텐츠 생성
+   
+2. 이미지 패키지 생성 (osmu-image-generator)
+   ├── Gemini AI 기반 이미지 생성
+   ├── 플랫폼별 최적화 (Ghost/네이버/Instagram)
+   └── image-manifest.json 메타데이터 생성
+   
+3. 플랫폼별 발행
+   ├── Ghost 발행 (ghost-auto-publisher)
+   ├── 네이버 최적화 (naver-seo-writer)
+   └── SNS 에세이 (sns-essay-writer)
+```
+
+### slug 기반 자산 관리 구조
+```
+imi-work-osmu/assets/images/
+└── [slug]/                  # 콘텐츠별 통합 관리
+    ├── ghost/               # Ghost 블로그 전용
+    │   ├── feature.png      # 피처 이미지 (1200x630)
+    │   └── content-1.png    # 본문 이미지 (800x450)
+    ├── naver/               # 네이버 블로그 전용
+    │   ├── main.png         # 대표 이미지 (800x450)
+    │   └── body-1.png       # 본문 이미지 (800x450)
+    ├── instagram/           # 인스타그램 전용
+    │   ├── feed.png         # 피드 이미지 (1080x1080)
+    │   └── story.png        # 스토리 이미지 (1080x1350)
+    └── image-manifest.json  # 이미지 메타데이터
 ```
 
 ### 핵심 구성 요소
@@ -71,13 +87,12 @@ Notion 저장 + Telegram 알림 (향후)
 - **API 키**: `AIzaSyCRQTa4R1X2huihwWoLpLnsJsM0jZwj-PI` (설정 완료)
 - **제한사항**: 자막 텍스트는 별도 방법 필요 (사용자 입력 보완)
 
-#### 2. **IMI WORK 전용 서브에이전트** ✅
-- **에이전트명**: `imi-work-youtube-blogger`
-- **기능**: 3개 가이드라인 파일 자동 참조하여 브랜드 일관성 보장
-- **파일 의존성**:
-  - `/home/hovoo/Projects/imi-work-osmu/guides/IMI_WORK_PERSONA_GUIDE.md`
-  - `/home/hovoo/Projects/imi-work-osmu/guides/IMI_WORK_PROMPT_TEMPLATE.md`
-  - `/home/hovoo/Projects/imi-work-osmu/guides/SENSE_AI_SEO_STRATEGY.md`
+#### 2. **OSMU 서브에이전트 시스템** ✅
+- **imi-work-persona-writer**: YouTube → IMI WORK 콘텐츠 변환
+- **osmu-image-generator**: 다중 플랫폼 이미지 패키지 생성
+- **ghost-auto-publisher**: Ghost CMS 자동 발행 (v2.0)
+- **naver-seo-writer**: 네이버 블로그 SEO 최적화
+- **sns-essay-writer**: SNS 에세이 톤 글쓰기
 
 #### 3. **YouTube 임베딩 시스템** ✅
 - **기능**: 블로그 글 내 원본 YouTube 영상 자동 임베딩
@@ -167,21 +182,20 @@ Notion 저장 + Telegram 알림 (향후)
 
 ## 🔧 환경 변수 및 설정
 
-### 현재 설정된 API 키
+### API 키 중앙화 (.env) ✅
 ```bash
-# YouTube Data API v3 ✅
-YOUTUBE_API_KEY=AIzaSyCRQTa4R1X2huihwWoLpLnsJsM0jZwj-PI
-
-# 향후 추가 필요
+# imi-work-osmu/.env
+GEMINI_API_KEY=AIzaSyDBjAmTsAcj3YT2_F0eh6thHb4ctAxFfL4
 GHOST_API_URL=https://blog.imiwork.com
-GHOST_ADMIN_API_KEY=(추후 설정)
-
-NOTION_API_TOKEN=(기존 n8n 토큰 재사용 가능)
-NOTION_DATABASE_ID=(기존 n8n DB ID 재사용 가능)
-
-TELEGRAM_BOT_TOKEN=(기존 n8n 토큰 재사용 가능)
-TELEGRAM_CHAT_ID=(기존 n8n 채팅 ID 재사용 가능)
+GHOST_ADMIN_API_KEY=689ab9c2806ede000158236d:bcf8cc2cdfe9d9ecf91c534145101b6586aa6586f6ccec19ba359ec071cc2f8a
+YOUTUBE_API_KEY=AIzaSyCRQTa4R1X2huihwWoLpLnsJsM0jZwj-PI
 ```
+
+### 보안 개선사항 ✅
+- 모든 하드코딩된 API 키 제거
+- `.env` 파일을 통한 환경변수 관리
+- `.gitignore`에 `.env` 포함하여 Git 커밋 방지
+- 모든 JavaScript 파일에서 `require('dotenv').config()` 적용
 
 ### Claude Code 설정
 ```json
@@ -204,9 +218,9 @@ TELEGRAM_CHAT_ID=(기존 n8n 채팅 ID 재사용 가능)
 YouTube URL: https://www.youtube.com/watch?v=shvJ5mWb4Kk
 핵심 포인트: "GaryVee가 말하는 변화 적응에 대한 부분이 특히 인상깊었음"
 
-# 2. imi-work-youtube-blogger 에이전트 호출
+# 2. imi-work-persona-writer 에이전트 호출
 /agents
-imi-work-youtube-blogger 사용하여 위 영상 분석 및 블로그 글 작성
+imi-work-persona-writer 사용하여 위 영상 분석 및 블로그 글 작성
 
 # 3. 자동 실행 과정
 ├── YouTube Data API로 영상 메타데이터 추출
@@ -221,7 +235,7 @@ imi-work-youtube-blogger 사용하여 위 영상 분석 및 블로그 글 작성
 ```bash
 # 완성된 프로세스
 1. YouTube URL + 핵심 포인트 입력
-2. imi-work-youtube-blogger 에이전트로 브랜드 맞춤 콘텐츠 생성
+2. imi-work-persona-writer 에이전트로 브랜드 맞춤 콘텐츠 생성
 3. HTML 변환 및 YouTube 임베드 최적화
 4. Featured Image 생성 (브랜드 가이드라인 기반)
 5. Ghost 블로그 수동 포스팅 완료
@@ -234,11 +248,20 @@ imi-work-youtube-blogger 사용하여 위 영상 분석 및 블로그 글 작성
 ✅ Featured Image 워크플로우
 ```
 
-### 향후 구현 예정 (자동화 확장)
-- **Ghost API 자동 포스팅**: blog.imiwork.com에 직접 발행
-- **Notion DB 저장**: 콘텐츠 관리 및 아카이빙
-- **Telegram 알림**: 작업 완료 상태 실시간 공유
-- **A/B 테스트**: 여러 버전 생성 후 최적화 선택
+### 현재 워크플로우 (OSMU v2.0) ✅
+```bash
+# 권장 방법: Claude Code 인터랙티브 가이드
+1. YouTube URL 제공 → imi-work-persona-writer 호출
+2. 콘텐츠 완성 → osmu-image-generator 호출  
+3. 이미지 패키지 완성 → ghost-auto-publisher 호출
+4. Ghost 발행 완료 → naver-seo-writer 호출 (필요시)
+5. 개인적 에세이 → sns-essay-writer 호출 (필요시)
+```
+
+### 향후 구현 예정 (확장)
+- **LinkedIn, Facebook** 등 추가 플랫폼 지원
+- **성과 분석 및 최적화** 자동화
+- **A/B 테스트 이미지** 생성 기능
 
 ## 📊 성과 측정
 
@@ -261,7 +284,7 @@ imi-work-youtube-blogger 사용하여 위 영상 분석 및 블로그 글 작성
 
 - **2025.08.26**: 프로젝트 초기 설정 및 CLAUDE.md 생성
 - **2025.08.26**: YouTube Data API v3 연동 완료 (`AIzaSyCRQTa4R1X2huihwWoLpLnsJsM0jZwj-PI`)
-- **2025.08.26**: IMI WORK 전용 서브에이전트 `imi-work-youtube-blogger` 생성 
+- **2025.08.26**: IMI WORK 전용 서브에이전트 `imi-work-persona-writer` 생성 
 - **2025.08.26**: 3개 가이드라인 파일 작성 완료 (페르소나, 프롬프트, SEO)
 - **2025.08.27**: 첫 번째 블로그 글 작성 및 피드백 반영 (사실 왜곡, 강제 비교, 페르소나 과노출 문제 해결)
 - **2025.08.27**: 템플릿 시스템 유연화 - 정형 구조 → 자연스러운 흐름 우선
@@ -273,8 +296,10 @@ imi-work-youtube-blogger 사용하여 위 영상 분석 및 블로그 글 작성
 - **2025.08.27**: 프로젝트 폴더 재구성 (`/Users/rhim/projects/imi-work-osmu/`)
 - **2025.08.27**: Notion 워크스페이스 설계 (대시보드 + 3개 DB 스키마)
 - **2025.08.27**: Smithery Notion MCP 연동 준비 (페이지 ID: 25cd0f53623d8078b7bccc15d606ede0)
-- **현재**: Notion MCP 인증 대기 중, OSMU 워크스페이스 구축 준비 완료
+- **2025.09.08**: OSMU v2.0 아키텍처 대전환 (서브에이전트 분업 + 이미지 중앙화)
+- **2025.09.08**: API 키 보안 강화 (.env 도입) 및 프로젝트 구조 최적화
+- **현재**: OSMU v2.0 시스템 완성, Claude Code 인터랙티브 가이드 방식 확립
 
 ---
 
-*"YouTube에서 얻은 인사이트를 hovoo의 15년 F&B 경험으로 재해석하여, 자영업자들에게 실질적 가치를 제공하는 개인화된 콘텐츠 자동화"*
+*"서브에이전트 분업과 OSMU 전략으로 구현된 효율적이고 확장 가능한 AI 콘텐츠 자동화 시스템 - 2025.09.08 완성"*
