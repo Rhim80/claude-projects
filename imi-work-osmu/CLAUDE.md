@@ -84,7 +84,7 @@ imi-work-osmu/assets/images/
 
 #### 1. **YouTube Data API v3 연동** ✅
 - **기능**: 영상 제목, 채널명, 설명, 발행일 등 메타데이터 추출
-- **API 키**: `AIzaSyCRQTa4R1X2huihwWoLpLnsJsM0jZwj-PI` (설정 완료)
+- **API 키**: 환경변수로 설정 (.env 파일 참조)
 - **제한사항**: 자막 텍스트는 별도 방법 필요 (사용자 입력 보완)
 
 #### 2. **OSMU 서브에이전트 시스템** ✅
@@ -185,10 +185,10 @@ imi-work-osmu/assets/images/
 ### API 키 중앙화 (.env) ✅
 ```bash
 # imi-work-osmu/.env
-GEMINI_API_KEY=AIzaSyDBjAmTsAcj3YT2_F0eh6thHb4ctAxFfL4
+GEMINI_API_KEY=your_gemini_api_key_here
 GHOST_API_URL=https://blog.imiwork.com
-GHOST_ADMIN_API_KEY=689ab9c2806ede000158236d:bcf8cc2cdfe9d9ecf91c534145101b6586aa6586f6ccec19ba359ec071cc2f8a
-YOUTUBE_API_KEY=AIzaSyCRQTa4R1X2huihwWoLpLnsJsM0jZwj-PI
+GHOST_ADMIN_API_KEY=your_ghost_admin_api_key_here
+YOUTUBE_API_KEY=your_youtube_api_key_here
 ```
 
 ### 보안 개선사항 ✅
@@ -283,7 +283,7 @@ imi-work-persona-writer 사용하여 위 영상 분석 및 블로그 글 작성
 ## 🔄 업데이트 로그
 
 - **2025.08.26**: 프로젝트 초기 설정 및 CLAUDE.md 생성
-- **2025.08.26**: YouTube Data API v3 연동 완료 (`AIzaSyCRQTa4R1X2huihwWoLpLnsJsM0jZwj-PI`)
+- **2025.08.26**: YouTube Data API v3 연동 완료 (환경변수로 보안 설정)
 - **2025.08.26**: IMI WORK 전용 서브에이전트 `imi-work-persona-writer` 생성 
 - **2025.08.26**: 3개 가이드라인 파일 작성 완료 (페르소나, 프롬프트, SEO)
 - **2025.08.27**: 첫 번째 블로그 글 작성 및 피드백 반영 (사실 왜곡, 강제 비교, 페르소나 과노출 문제 해결)

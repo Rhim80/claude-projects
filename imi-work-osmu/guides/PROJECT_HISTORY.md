@@ -147,10 +147,10 @@ class OSMUGhostPublisherV2 {
 ### API 키 중앙화 (.env)
 ```bash
 # imi-work-osmu/.env
-GEMINI_API_KEY=AIzaSyDBjAmTsAcj3YT2_F0eh6thHb4ctAxFfL4
+GEMINI_API_KEY=your_gemini_api_key_here
 GHOST_API_URL=https://blog.imiwork.com
-GHOST_ADMIN_API_KEY=689ab9c2806ede000158236d:bcf8cc2cdfe9d9ecf91c534145101b6586aa6586f6ccec19ba359ec071cc2f8a
-YOUTUBE_API_KEY=AIzaSyCRQTa4R1X2huihwWoLpLnsJsM0jZwj-PI
+GHOST_ADMIN_API_KEY=your_ghost_admin_api_key_here
+YOUTUBE_API_KEY=your_youtube_api_key_here
 ```
 
 ### 보안 개선사항
