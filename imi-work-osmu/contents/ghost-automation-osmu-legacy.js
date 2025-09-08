@@ -1,11 +1,12 @@
 const GhostAdminAPI = require('@tryghost/admin-api');
 const fs = require('fs');
 const path = require('path');
+require('dotenv').config();
 
 // OSMU 지원하는 Ghost 자동화 스크립트
 const api = new GhostAdminAPI({
-    url: 'https://blog.imiwork.com',
-    key: '689ab9c2806ede000158236d:bcf8cc2cdfe9d9ecf91c534145101b6586aa6586f6ccec19ba359ec071cc2f8a',
+    url: process.env.GHOST_API_URL || 'https://blog.imiwork.com',
+    key: process.env.GHOST_ADMIN_API_KEY,
     version: 'v5.0'
 });
 

@@ -195,29 +195,22 @@ Visual Style:
 - [ ] 해시태그 전략과 연계된 디자인
 - [ ] 스토리용 세로 이미지도 고려 (1080x1350)
 
-## 🚀 새로운 OSMU 파이프라인
+## 🚀 OSMU 실행 워크플로우
 
-### OSMU Pipeline Orchestrator
-```javascript
-// imi-work-osmu/scripts/osmu-pipeline.js
-const pipeline = new OSMUPipeline();
+### 권장 실행 방법: Claude Code 인터랙티브 가이드
+현재는 Claude Code의 대화형 인터페이스를 통한 단계별 실행이 가장 효율적입니다:
 
-const jobConfig = {
-  slug: 'ai-literacy-gap',
-  title: 'AI 리터러시 격차',
-  summary: '콘텐츠 요약',
-  platforms: ['ghost', 'naver', 'instagram']
-};
-
-// 전체 파이프라인 실행
-await pipeline.execute(jobConfig);
+```
+사용자: "YouTube 영상을 OSMU로 처리하고 싶습니다"
+Claude: "imi-work-persona-writer부터 시작하겠습니다"
 ```
 
 ### 단계별 실행 과정
-1. **이미지 패키지 생성**: osmu-image-generator 호출
-2. **Ghost 발행**: ghost-auto-publisher 호출 (이미지 패키지 사용)
-3. **네이버 최적화**: naver-seo-writer 호출 (이미지 패키지 사용)
-4. **SNS 준비**: sns-essay-writer 호출 (이미지 패키지 사용)
+1. **콘텐츠 생성**: imi-work-persona-writer 호출
+2. **이미지 패키지 생성**: osmu-image-generator 호출  
+3. **Ghost 발행**: ghost-auto-publisher 호출 (이미지 패키지 사용)
+4. **네이버 최적화**: naver-seo-writer 호출 (이미지 패키지 사용)
+5. **SNS 준비**: sns-essay-writer 호출 (필요시만)
 
 ### 서브에이전트 분업의 장점
 - **명확한 책임 분리**: 각 에이전트가 핵심 업무에 집중

@@ -1,6 +1,7 @@
 const GhostAdminAPI = require('@tryghost/admin-api');
 const fs = require('fs');
 const path = require('path');
+require('dotenv').config();
 
 /**
  * OSMU Ghost Publisher v2.0
@@ -10,8 +11,8 @@ const path = require('path');
  * - 이 클래스는 이미지 패키지를 로드하여 Ghost에 발행하는 것에만 집중
  */
 const api = new GhostAdminAPI({
-    url: 'https://blog.imiwork.com',
-    key: '689ab9c2806ede000158236d:bcf8cc2cdfe9d9ecf91c534145101b6586aa6586f6ccec19ba359ec071cc2f8a',
+    url: process.env.GHOST_API_URL || 'https://blog.imiwork.com',
+    key: process.env.GHOST_ADMIN_API_KEY,
     version: 'v5.0'
 });
 

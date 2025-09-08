@@ -25,13 +25,16 @@
 
 ### API 키 설정
 ```bash
-# .env 파일 생성 (이미지 생성용)
-GEMINI_API_KEY=AIzaSyDBjAmTsAcj3YT2_F0eh6thHb4ctAxFfL4
+# .env 파일 생성 (프로젝트 루트에)
+cp .env.template .env
 
-# Ghost API 설정 (발행용)
+# API 키 설정 (실제 키로 교체)
+GEMINI_API_KEY=your_gemini_api_key_here
 GHOST_API_URL=https://blog.imiwork.com
-GHOST_ADMIN_API_KEY=689ab9c2806ede000158236d:bcf8cc2cdfe9d9ecf91c534145101b6586aa6586f6ccec19ba359ec071cc2f8a
+GHOST_ADMIN_API_KEY=your_ghost_admin_api_key_here
 ```
+
+⚠️ **보안 주의**: `.env` 파일은 Git에 커밋하지 마세요! `.gitignore`에 포함되어 있습니다.
 
 ### 디렉토리 구조 확인
 ```bash
@@ -97,26 +100,22 @@ imi-work-osmu/
 - 이미지 패키지 자동 연동
 ```
 
-### 방법 2: 통합 파이프라인 실행
-```bash
-# OSMU 파이프라인 오케스트레이터 사용
-cd imi-work-osmu/scripts
-node osmu-pipeline.js
+### 현재 권장 방법: 단계별 서브에이전트 실행
 
-# 또는 설정 파일로 실행
-node osmu-pipeline.js --config job-config.json
+Claude Code의 인터랙티브 가이드를 통해 각 단계를 순차적으로 실행하는 것이 가장 효율적입니다:
+
+```
+1. YouTube URL 제공 → imi-work-persona-writer 호출
+2. 콘텐츠 완성 → osmu-image-generator 호출  
+3. 이미지 패키지 완성 → ghost-auto-publisher 호출
+4. Ghost 발행 완료 → naver-seo-writer 호출 (필요시)
+5. 개인적 에세이 → sns-essay-writer 호출 (필요시)
 ```
 
-#### 파이프라인 설정 예시
-```json
-{
-  "slug": "ai-literacy-gap",
-  "title": "AI 리터러시 격차, 4개월이면 충분할까?",
-  "summary": "AI 활용 능력의 극단적 격차와 그 해결 방안을 15년 현장 경험으로 분석",
-  "platforms": ["ghost", "naver", "instagram"],
-  "youtubeUrl": "https://youtu.be/9v_mwoi9Q4Q"
-}
-```
+**장점:**
+- Claude Code의 실시간 가이드와 오류 처리
+- 각 단계별 결과 확인 및 조정 가능
+- 예상치 못한 상황에서도 유연한 대응
 
 ## 📊 image-manifest.json 구조
 
