@@ -1,37 +1,75 @@
 {
   "slug": "ai-literacy-gap",
-  "title": "AI 리터러시 격차, 4개월이면 충분할까?",
+  "title": "AI 리터러시 격차: 같은 시대, 다른 세상을 살아가는 사람들",
   "created_at": "2025-09-08T10:00:00Z",
-  "generator_version": "1.0",
-  "content_summary": "AI 활용 능력의 극단적 격차와 그 해결 방안을 15년 현장 경험으로 분석",
+  "updated_at": "2025-09-08T17:55:00Z",
+  "generator_version": "1.1",
+  "content_summary": "15년차 카페 사장이 경험한 AI 리터러시 격차의 현실과 Claude Code, n8n을 통한 디지털 전환 여정",
   "platforms": {
     "ghost": {
       "feature": "ghost/feature.png",
       "content": []
     },
     "naver": {
-      "main": "",
-      "body": []
+      "main": "naver/main.png",
+      "body": [
+        "naver/body-1.png",
+        "naver/body-2.png", 
+        "naver/body-3.png"
+      ]
     },
     "instagram": {
-      "feed": "",
-      "story": "",
+      "feed": "instagram/feed.png",
+      "story": "instagram/story.png",
       "carousel": []
     }
   },
   "generation_metadata": {
-    "total_images": 1,
+    "total_images": 7,
     "prompts_used": {
-      "ghost_feature": "Create a professional feature image for IMI WORK blog post about AI literacy gap"
+      "ghost_feature": "Professional feature image for AI literacy gap concept",
+      "naver_main": "Split-screen visualization showing traditional vs AI-powered business operations",
+      "naver_body1": "Claude Code terminal environment showcasing CLI-based AI automation tools",
+      "naver_body2": "n8n workflow diagram displaying automated business processes and integrations",
+      "naver_body3": "Productivity transformation visualization with before/after metrics",
+      "instagram_feed": "Square format image symbolizing AI literacy gap with dual-world concept",
+      "instagram_story": "Vertical CTA-focused image encouraging AI adoption with actionable messaging"
     },
-    "generation_time": "2025-09-08T10:05:00Z",
-    "api_calls": 1,
-    "generator_agent": "manual-migration"
+    "generation_time": "2025-09-08T17:55:00Z",
+    "processing_time_minutes": 45,
+    "api_calls": 0,
+    "generator_agent": "osmu-image-generator",
+    "generation_method": "PIL-based graphics creation"
   },
   "brand_settings": {
     "primary_colors": ["#1e3a8a", "#ffffff", "#f8fafc"],
+    "accent_colors": ["#3b82f6", "#22c55e", "#f97316"],
     "brand_name": "IMI WORK",
     "blog_name": "SENSE & AI",
-    "target_audience": ["business professionals", "entrepreneurs", "small business owners"]
+    "target_audience": ["business professionals", "entrepreneurs", "small business owners", "cafe owners"],
+    "visual_tone": "professional yet approachable, expert credibility, transformation-focused"
+  },
+  "content_themes": [
+    "AI literacy gap",
+    "Digital transformation",
+    "Claude Code automation",
+    "n8n workflows",
+    "Non-developer AI adoption",
+    "Business process automation",
+    "Productivity enhancement",
+    "15-year F&B experience"
+  ],
+  "platform_optimization": {
+    "naver": {
+      "dimensions": "800x450px",
+      "format": "PNG",
+      "optimization": "Korean audience, blog-friendly layout"
+    },
+    "instagram": {
+      "feed_dimensions": "1080x1080px",
+      "story_dimensions": "1080x1350px", 
+      "format": "PNG",
+      "optimization": "Mobile-first, high engagement design"
+    }
   }
 }

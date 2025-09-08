@@ -1,0 +1,108 @@
+{
+  "title": "AI 리터러시 격차, 같은 시대 다른 세상을 사는 우리",
+  "slug": "ai-literacy-gap-same-era-different-worlds",
+  "meta_description": "이미양과자에서 만난 사람과의 대화가 계기가 되어 깨달은 AI 리터러시 격차의 현실. 같은 시대를 살지만 완전히 다른 세상을 경험하는 사람들의 이야기.",
+  "keywords": {
+    "primary": ["AI 리터러시 격차", "AI 시대", "같은 시대 다른 세상"],
+    "secondary": ["관심과 실행", "ChatGPT", "Claude Code", "업무자동화"],
+    "natural_extracted": ["이미양과자", "노정석", "GPTers 스터디", "n8n", "15년"]
+  },
+  "content_preservation": {
+    "original_genre": "개인적 경험담 기반 철학적 에세이",
+    "tone_maintained": "사색적, 성찰적, 개인적",
+    "key_experiences_preserved": [
+      "이미양과자에서 만난 지인과의 대화",
+      "노정석님 YouTube 영상 시청",
+      "40대 중반 카페 사장의 AI 도구 활용",
+      "GPTers 스터디장 활동 경험"
+    ],
+    "core_message": "관심과 실행의 차이가 만드는 운명의 분기점",
+    "philosophical_elements": [
+      "초조함과 경이로움의 공존",
+      "변곡점에서의 자아 성찰",
+      "무엇이 가능한지 아는 것의 중요성"
+    ]
+  },
+  "seo_optimization": {
+    "title_length": 33,
+    "word_count": 2156,
+    "keyword_frequency": {
+      "AI 리터러시 격차": 5,
+      "AI 시대": 3,
+      "관심과 실행": 2,
+      "같은 시대 다른 세상": 2
+    },
+    "structure": {
+      "sections": 6,
+      "paragraphs_under_120chars": "100%",
+      "mobile_optimized": true
+    },
+    "engagement_elements": {
+      "summary_section": true,
+      "comment_invitation": true,
+      "hashtags_count": 8,
+      "personal_connection_points": 5
+    }
+  },
+  "content_transformation_approach": {
+    "method": "Enhancement without alteration",
+    "preserved_elements": [
+      "All specific experiences and episodes",
+      "Original narrative flow and structure", 
+      "Author's contemplative voice",
+      "Philosophical questioning style",
+      "Personal anecdotes and examples"
+    ],
+    "seo_applications": [
+      "Title optimization for search visibility",
+      "Strategic paragraph breaks for mobile",
+      "Natural keyword integration",
+      "Section headers for readability",
+      "Summary and engagement elements"
+    ]
+  },
+  "target_audience": {
+    "primary": "AI 도구에 관심은 있지만 시작을 망설이는 사람들",
+    "secondary": "디지털 전환을 고민하는 40-50대 자영업자들",
+    "emotional_resonance": "격차에 대한 불안감과 호기심을 동시에 가진 독자들"
+  },
+  "image_integration": {
+    "main_image": {
+      "file": "naver/main.png",
+      "position": "첫 번째 섹션 하단",
+      "purpose": "AI 격차 시각적 표현"
+    },
+    "body_images": [
+      {
+        "file": "naver/body-1.png",
+        "position": "Claude Code 언급 부분",
+        "purpose": "CLI 환경 실제 모습"
+      },
+      {
+        "file": "naver/body-2.png", 
+        "position": "n8n 워크플로우 설명 부분",
+        "purpose": "자동화 시스템 구조 표현"
+      },
+      {
+        "file": "naver/body-3.png",
+        "position": "마지막 섹션",
+        "purpose": "변화와 성장의 시각화"
+      }
+    ]
+  },
+  "publishing_strategy": {
+    "optimal_timing": "평일 오전 9-10시 또는 오후 7-8시",
+    "category": "IT/컴퓨터 > 인공지능",
+    "expected_performance": {
+      "search_visibility": "AI 리터러시, AI 격차 관련 검색 상위 노출",
+      "engagement": "높은 체류시간과 댓글 참여 예상",
+      "brand_building": "개인적 경험 중심의 신뢰도 구축"
+    }
+  },
+  "version_info": {
+    "version": "2.0 (improved)",
+    "generation_date": "2025-09-08T18:30:00Z",
+    "agent_version": "naver-seo-writer v2.0 (content-preserving)",
+    "improvement_notes": "원본 콘텐츠의 본질과 톤을 완전히 보존하면서 네이버 SEO만 최적화"
+  }
+}
