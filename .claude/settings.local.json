@@ -27,7 +27,9 @@
       "mcp__filesystem__write_file",
       "Bash(npm init:*)",
       "Bash(npm install:*)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(python3:*)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []
