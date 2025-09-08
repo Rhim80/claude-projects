@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const api = new GhostAdminAPI({
     url: 'https://blog.imiwork.com',
-    key: '689ab9c2806ede000158236d:bcf8cc2cdfe9d9ecf91c534145101b6586aa6586f6ccec19ba359ec071cc2f8a',
+    key: process.env.GHOST_ADMIN_API_KEY,
     version: 'v5.0'
 });
 

@@ -1,7 +1,7 @@
 const axios = require('axios');
 const fs = require('fs');
 
-const NANOBANA_API_KEY = 'AIzaSyDBjAmTsAcj3YT2_F0eh6thHb4ctAxFfL4';
+const NANOBANA_API_KEY = process.env.GEMINI_API_KEY;
 
 async function generateFeatureImage() {
     try {
