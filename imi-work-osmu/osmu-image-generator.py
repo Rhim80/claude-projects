@@ -130,126 +130,174 @@ class OSMUImageGenerator:
             return False
 
     def generate_platform_prompts(self, content_title, content_summary):
-        """플랫폼별 이미지 프롬프트 생성"""
+        """플랫폼별 이미지 프롬프트 생성 (텍스트 없는 비주얼 중심)"""
         
         base_brand = f"""
         Brand: SENSE & AI | IMI WORK
         Colors: Navy blue ({self.brand_colors['primary']}) as primary, white ({self.brand_colors['secondary']}) as secondary
-        Style: Professional Korean business infographic
-        Korean text: All Korean text must be clearly visible and readable
-        Quality: Business presentation grade, suitable for professional sharing
+        Style: Professional business infographic with NO TEXT overlays
+        Visual approach: Icons, colors, and symbols only - no text labels
+        Quality: Business presentation grade, suitable for international sharing
         """
         
         prompts = {
             "ghost": {
-                "feature": f"""Create a professional Korean business infographic about "{content_title}".
+                "feature": f"""Create a professional business crossroads infographic about small brand survival strategy.
                 
-                Visual concept: Show a business crossroads metaphor with Korean labels:
-                - LEFT PATH: "매출 성장" (declining with red warning icons)
-                - MIDDLE PATH: "규모 성장" (challenging with yellow caution icons)  
-                - RIGHT PATH: "브랜딩" (bright success with green checkmarks)
-                
-                Include a business figure at the center choosing paths.
+                Visual concept: Business figure at center with 3 diverging paths:
+                - LEFT PATH: Red declining arrows ↓, warning triangles ⚠️, money icon 💰 (sales struggles)
+                - MIDDLE PATH: Yellow caution signs ⚠️, complex network diagram 📊, growth chart 📈 (scale challenges)  
+                - RIGHT PATH: Green upward arrows ↗️, star icons ⭐, sparkle effects ✨ (branding success)
                 
                 {base_brand}
                 
-                Additional requirements:
-                - Include icons: 💰 for sales, 📈 for scale, ✨ for branding
-                - Make branding path clearly the best choice visually
-                - Clean modern layout suitable for blog header
+                Visual elements only:
+                - Use color coding: Red (difficult), Yellow (challenging), Green (successful)
+                - Icons instead of text: 💰 📈 ✨
+                - Directional arrows showing outcomes
+                - Professional silhouette figure choosing paths
+                - Clean geometric design
                 """,
                 
-                "content-1": f"""Create a Korean business comparison infographic for "{content_title}".
+                "content-1": f"""Create a business strategy comparison chart with visual elements only.
                 
-                Visual concept: Growth strategy comparison table
-                - Show 3 columns: "매출 중심", "규모 중심", "브랜딩 중심"
-                - Include pros/cons for each strategy with Korean text
-                - Use checkmarks and X marks for clarity
-                - Highlight branding advantages
+                Visual concept: 3-column comparison table
+                - Column 1: 💰 icon + red color theme + declining bars + X marks
+                - Column 2: 📈 icon + yellow color theme + complex zigzag lines + warning symbols
+                - Column 3: ✨ icon + green color theme + ascending curve + checkmarks
+                
+                Use visual indicators:
+                - Star rating system (★★★★★) for difficulty levels
+                - Bar charts for resource requirements
+                - ✓ and ✗ symbols for pros/cons
+                - Color-coded backgrounds
                 
                 {base_brand}
                 """,
                 
-                "content-2": f"""Create a Korean brand recognition compound effect chart for "{content_title}".
+                "content-2": f"""Create a compound growth effect visualization chart.
                 
-                Visual concept: 
-                - Show exponential growth curve with Korean labels
-                - "브랜드 인지도" on Y-axis, "시간" on X-axis  
-                - Include compound effect visualization
-                - Small icons showing gradual brand building steps
+                Visual concept: Mathematical/scientific style chart
+                - X-axis: Time progression (1, 2, 3, 4... timeline markers)
+                - Y-axis: Exponential growth curve in navy blue
+                - Show compound effect with curved line vs straight line comparison
+                - Data points marked with star icons ⭐
+                - Small icons along curve: 📝 → 🎯 → 💬 → ⭐
+                
+                Mathematical visualization:
+                - Exponential curve equation-style visual
+                - Percentage markers (10%, 25%, 55%, 100%)
+                - Grid lines for professional chart appearance
                 
                 {base_brand}
                 """
             },
             
             "naver": {
-                "main": f"""Create a Korean business strategic thinking infographic for "{content_title}".
+                "main": f"""Create a strategic business thinking visualization.
                 
-                Visual concept: Korean business setting with strategic elements
-                - Show a professional Korean business environment
-                - Include strategic planning elements with Korean text
-                - Focus on "전략적 사고" concept
-                - Modern office or meeting room setting
+                Visual concept: Modern office strategy session
+                - Professional business figure with thought bubbles containing strategy icons
+                - Strategy symbols: ♟️ (chess piece), 💡 (lightbulb), 🎯 (target), 📋 (planning)
+                - Clean modern workspace with charts on wall
+                - Arrow flow diagrams showing strategic process
                 
-                {base_brand}
-                """,
-                
-                "body-1": f"""Create three growth strategies comparison for "{content_title}".
-                
-                Visual concept: Side-by-side comparison
-                - "단기 매출", "사업 규모", "브랜드 가치" comparison
-                - Use Korean labels and clear visual hierarchy
-                - Include timeline and difficulty indicators
+                Elements:
+                - Strategic thinking icons in thought clouds
+                - Flow chart arrows connecting ideas
+                - Professional color scheme with navy accents
+                - Clean, minimalist office environment
                 
                 {base_brand}
                 """,
                 
-                "body-2": f"""Create instructor A vs B comparison for "{content_title}".
+                "body-1": f"""Create a three-strategy visual comparison.
                 
-                Visual concept: Professional comparison infographic
-                - Two instructor figures labeled "A 강사" and "B 강사"  
-                - Show different approaches with Korean descriptions
-                - Highlight brand-focused approach advantages
-                - Use professional color coding
+                Visual concept: Side-by-side comparison with icons and metrics
+                - Strategy 1: 💰 + declining red bars + complex workflow
+                - Strategy 2: 📈 + yellow zigzag pattern + medium complexity  
+                - Strategy 3: ✨ + green ascending curve + simple workflow
+                
+                Visual metrics:
+                - Timeline bars showing duration
+                - Complexity indicators using geometric patterns
+                - Success probability shown with filled vs empty circles
+                - Resource requirement shown with stacked elements
                 
                 {base_brand}
                 """,
                 
-                "body-3": f"""Create small brand advantages infographic for "{content_title}".
+                "body-2": f"""Create an A vs B professional comparison.
                 
-                Visual concept: Advantage breakdown chart
-                - List 5-6 key advantages in Korean
-                - Use icons and bullet points
-                - "소규모 브랜드의 장점" as main title
-                - Clean, easy-to-read layout
+                Visual concept: Two professional silhouettes with attribute visualization
+                - Figure A: Technical skill icons (⚙️ 🔧 💻) + smaller recognition symbol
+                - Figure B: Recognition icons (⭐ 🏆 👥) + moderate technical symbols
+                - Radar chart comparison showing different strengths
+                - Visual indication that B is the preferred choice (green highlight)
+                
+                Comparison elements:
+                - Skill level bars
+                - Recognition indicators  
+                - Experience timeline
+                - Success probability visualization
+                
+                {base_brand}
+                """,
+                
+                "body-3": f"""Create a small brand advantages infographic.
+                
+                Visual concept: Advantage showcase with icons
+                - 4-6 key advantages represented by icons only:
+                  - ⚡ (Quick decisions - lightning bolt)
+                  - 📖 (Personal story - open book)
+                  - 🎯 (Expertise focus - target)
+                  - 🤝 (Customer intimacy - handshake)
+                  - 💡 (Innovation - lightbulb)
+                  - 🛡️ (Flexibility - shield)
+                
+                Layout:
+                - Clean grid layout with icons and visual indicators
+                - Positive color scheme with green accents
+                - Checkmarks and positive symbols throughout
                 
                 {base_brand}
                 """
             },
             
             "instagram": {
-                "feed": f"""Create a mobile-optimized brand message for "{content_title}".
+                "feed": f"""Create a mobile-optimized square design for small brand success.
                 
-                Visual concept: Bold, eye-catching square design
-                - Large Korean text: "브랜딩이 답이다"
-                - Include compelling sub-message in Korean
-                - Mobile-friendly text size and contrast
-                - Instagram-optimized visual hierarchy
+                Visual concept: Bold central message with symbols
+                - Large central icon: ✨ (branding symbol)
+                - Supporting icons arranged around: 💰❌ 📈⚠️ ✨✅
+                - Strong visual hierarchy with navy blue and white
+                - Minimalist design optimized for mobile viewing
+                
+                Design elements:
+                - Single powerful central metaphor
+                - High contrast for mobile screens
+                - Symbol-based communication
+                - Clean geometric composition
                 
                 {base_brand}
-                - Mobile optimization: High contrast, large readable text
+                - Mobile-first design approach
                 """,
                 
-                "story": f"""Create vertical three-level progression design for "{content_title}".
+                "story": f"""Create a vertical progression story format.
                 
-                Visual concept: Vertical story format
-                - TOP: Problem statement in Korean
-                - MIDDLE: Solution approach
-                - BOTTOM: Brand-focused outcome
-                - Story-friendly vertical flow
+                Visual concept: Three-level vertical flow
+                - TOP: Problem visualization (💰📈 with ❌ or declining arrows)
+                - MIDDLE: Transition arrow pointing down ⬇️
+                - BOTTOM: Solution visualization (✨ with ✅ and upward arrows ↗️)
+                
+                Story elements:
+                - Clear problem → solution visual narrative
+                - Vertical flow optimized for mobile stories
+                - Strong visual contrast between problem and solution
+                - Motivational upward progression
                 
                 {base_brand}
-                - Story format: Vertical design optimized for mobile viewing
+                - Vertical format optimized for mobile stories
                 """
             }
         }

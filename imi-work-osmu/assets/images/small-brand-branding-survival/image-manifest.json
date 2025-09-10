@@ -1,7 +1,7 @@
 {
   "slug": "small-brand-branding-survival",
   "title": "소규모 브랜드의 생존 전략: 브랜딩이 답이다",
-  "generated_at": "2025-09-10T19:40:03.656615",
+  "generated_at": "2025-09-10T19:48:30.236500",
   "generation_method": "Gemini 2.5 Flash Image Preview",
   "images": {
     "ghost": {
@@ -31,7 +31,7 @@
       "image_type": "feature",
       "size": "1200x630",
       "success": true,
-      "timestamp": "2025-09-10T19:40:13.424768"
+      "timestamp": "2025-09-10T19:48:38.075288"
     },
     {
       "file": "ghost/content-1.png",
@@ -39,7 +39,7 @@
       "image_type": "content-1",
       "size": "800x450",
       "success": true,
-      "timestamp": "2025-09-10T19:40:23.394864"
+      "timestamp": "2025-09-10T19:48:46.989427"
     },
     {
       "file": "ghost/content-2.png",
@@ -47,7 +47,7 @@
       "image_type": "content-2",
       "size": "800x450",
       "success": true,
-      "timestamp": "2025-09-10T19:40:31.011343"
+      "timestamp": "2025-09-10T19:48:58.514172"
     },
     {
       "file": "naver/main.png",
@@ -55,7 +55,7 @@
       "image_type": "main",
       "size": "800x450",
       "success": true,
-      "timestamp": "2025-09-10T19:40:40.457704"
+      "timestamp": "2025-09-10T19:49:08.566099"
     },
     {
       "file": "naver/body-1.png",
@@ -63,7 +63,7 @@
       "image_type": "body-1",
       "size": "800x450",
       "success": true,
-      "timestamp": "2025-09-10T19:40:49.294160"
+      "timestamp": "2025-09-10T19:49:18.232500"
     },
     {
       "file": "naver/body-2.png",
@@ -71,7 +71,7 @@
       "image_type": "body-2",
       "size": "800x450",
       "success": true,
-      "timestamp": "2025-09-10T19:40:58.044871"
+      "timestamp": "2025-09-10T19:49:26.772891"
     },
     {
       "file": "naver/body-3.png",
@@ -79,7 +79,7 @@
       "image_type": "body-3",
       "size": "800x450",
       "success": true,
-      "timestamp": "2025-09-10T19:41:04.702446"
+      "timestamp": "2025-09-10T19:49:34.674591"
     },
     {
       "file": "instagram/feed.png",
@@ -87,7 +87,7 @@
       "image_type": "feed",
       "size": "1080x1080",
       "success": true,
-      "timestamp": "2025-09-10T19:41:12.245646"
+      "timestamp": "2025-09-10T19:49:42.915533"
     },
     {
       "file": "instagram/story.png",
@@ -95,10 +95,10 @@
       "image_type": "story",
       "size": "1080x1350",
       "success": true,
-      "timestamp": "2025-09-10T19:41:20.718746"
+      "timestamp": "2025-09-10T19:49:51.121069"
     }
   ],
-  "generation_duration_seconds": 77.062154,
+  "generation_duration_seconds": 80.884594,
   "total_images": 9,
   "successful_images": 9,
   "failed_images": 0,
