@@ -1,7 +1,7 @@
 {
-  "slug": "small-brand-branding-survival",
-  "title": "소규모 브랜드의 생존 전략: 브랜딩이 답이다",
-  "generated_at": "2025-09-11T13:11:20.485900",
+  "slug": "ai-literacy-gap-v2",
+  "title": "AI 리터러시 격차로 벌어지는 새로운 계층 구조",
+  "generated_at": "2025-09-11T13:01:17.570874",
   "generation_method": "Gemini 2.5 Flash Image Preview",
   "images": {
     "ghost": {
@@ -31,7 +31,7 @@
       "image_type": "feature",
       "size": "1200x630",
       "success": true,
-      "timestamp": "2025-09-11T13:11:30.089979"
+      "timestamp": "2025-09-11T13:01:26.693630"
     },
     {
       "file": "ghost/content-1.png",
@@ -39,7 +39,7 @@
       "image_type": "content-1",
       "size": "800x450",
       "success": true,
-      "timestamp": "2025-09-11T13:11:36.046829"
+      "timestamp": "2025-09-11T13:01:36.445079"
     },
     {
       "file": "ghost/content-2.png",
@@ -47,7 +47,7 @@
       "image_type": "content-2",
       "size": "800x450",
       "success": true,
-      "timestamp": "2025-09-11T13:11:45.481398"
+      "timestamp": "2025-09-11T13:01:42.887695"
     },
     {
       "file": "naver/main.png",
@@ -55,7 +55,7 @@
       "image_type": "main",
       "size": "800x450",
       "success": true,
-      "timestamp": "2025-09-11T13:11:55.296924"
+      "timestamp": "2025-09-11T13:01:51.702811"
     },
     {
       "file": "naver/body-1.png",
@@ -63,7 +63,7 @@
       "image_type": "body-1",
       "size": "800x450",
       "success": true,
-      "timestamp": "2025-09-11T13:12:05.509368"
+      "timestamp": "2025-09-11T13:02:00.534681"
     },
     {
       "file": "naver/body-2.png",
@@ -71,7 +71,7 @@
       "image_type": "body-2",
       "size": "800x450",
       "success": true,
-      "timestamp": "2025-09-11T13:12:13.927053"
+      "timestamp": "2025-09-11T13:02:06.609000"
     },
     {
       "file": "naver/body-3.png",
@@ -79,7 +79,7 @@
       "image_type": "body-3",
       "size": "800x450",
       "success": true,
-      "timestamp": "2025-09-11T13:12:23.839188"
+      "timestamp": "2025-09-11T13:02:15.801484"
     },
     {
       "file": "instagram/feed.png",
@@ -87,7 +87,7 @@
       "image_type": "feed",
       "size": "1080x1080",
       "success": true,
-      "timestamp": "2025-09-11T13:12:32.338181"
+      "timestamp": "2025-09-11T13:02:24.838580"
     },
     {
       "file": "instagram/story.png",
@@ -95,10 +95,10 @@
       "image_type": "story",
       "size": "1080x1350",
       "success": true,
-      "timestamp": "2025-09-11T13:12:38.312586"
+      "timestamp": "2025-09-11T13:02:32.984129"
     }
   ],
-  "generation_duration_seconds": 77.826722,
+  "generation_duration_seconds": 75.413279,
   "total_images": 9,
   "successful_images": 9,
   "failed_images": 0,

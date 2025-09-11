@@ -100,29 +100,48 @@ class GhostPublisher:
         """Ghost에 포스트 생성"""
         print(f"🔑 JWT 토큰 생성 중...")
         token = self.generate_jwt_token()
-        url = f"{self.api_base}posts/"
+        # source=html 파라미터 추가 - Ghost v5 Lexical 형식 호환성을 위함
+        url = f"{self.api_base}posts/?source=html"
         
         headers = {
             'Authorization': f'Ghost {token}',
             'Content-Type': 'application/json'
         }
         
+        # Lexical 형식 충돌 방지를 위한 필드 정리
+        cleaned_post_data = post_data.copy()
+        # mobiledoc와 lexical 필드를 명시적으로 제거하여 HTML 우선 처리
+        cleaned_post_data.pop('mobiledoc', None)
+        cleaned_post_data.pop('lexical', None)
+        
+        # HTML 콘텐츠에서 중복 H1 제목 제거
+        if 'html' in cleaned_post_data and cleaned_post_data['html']:
+            html_content = cleaned_post_data['html']
+            # 첫 번째 H1 태그 제거 (Ghost 포스트 제목과 중복 방지)
+            import re
+            # <h1>...</h1> 패턴을 찾아서 첫 번째 것만 제거
+            h1_pattern = r'<h1[^>]*>.*?</h1>'
+            html_content = re.sub(h1_pattern, '', html_content, count=1, flags=re.DOTALL)
+            cleaned_post_data['html'] = html_content.strip()
+            print(f"🔧 중복 H1 제목 제거 완료 - 수정된 HTML 길이: {len(cleaned_post_data['html'])}")
+        
         # 전송할 데이터 디버깅
         print(f"📤 Ghost API 요청 준비:")
         print(f"   URL: {url}")
-        print(f"   포스트 제목: {post_data.get('title', 'N/A')}")
-        print(f"   HTML 크기: {len(post_data.get('html', ''))} characters")
-        print(f"   HTML 미리보기: {post_data.get('html', '')[:200]}...")
-        print(f"   슬러그: {post_data.get('slug', 'N/A')}")
-        print(f"   메타 제목: {post_data.get('meta_title', 'N/A')}")
-        print(f"   상태: {post_data.get('status', 'N/A')}")
+        print(f"   포스트 제목: {cleaned_post_data.get('title', 'N/A')}")
+        print(f"   HTML 크기: {len(cleaned_post_data.get('html', ''))} characters")
+        print(f"   HTML 미리보기: {cleaned_post_data.get('html', '')[:200]}...")
+        print(f"   슬러그: {cleaned_post_data.get('slug', 'N/A')}")
+        print(f"   메타 제목: {cleaned_post_data.get('meta_title', 'N/A')}")
+        print(f"   상태: {cleaned_post_data.get('status', 'N/A')}")
         
         # 페이로드 전체 구조 확인
-        payload = {'posts': [post_data]}
+        payload = {'posts': [cleaned_post_data]}
         print(f"🔍 전송 페이로드 키들: {list(payload['posts'][0].keys())}")
+        print(f"⚠️ source=html 파라미터 사용으로 Ghost가 HTML을 Lexical로 자동 변환")
         
         try:
-            payload = {'posts': [post_data]}
+            payload = {'posts': [cleaned_post_data]}
             print(f"🚀 Ghost API 호출 중...")
             response = requests.post(url, headers=headers, json=payload)
             
@@ -137,11 +156,14 @@ class GhostPublisher:
                 print(f"🔍 Ghost API 응답 전체 분석:")
                 print(f"   응답 키들: {list(created_post.keys())}")
                 print(f"   HTML 길이 (실제): {len(created_post.get('html', ''))}")
-                print(f"   HTML 내용: {created_post.get('html', 'None')}")
+                print(f"   HTML 내용 여부: {'있음' if created_post.get('html') else '없음'}")
                 print(f"   Lexical 존재 여부: {'lexical' in created_post}")
-                if 'lexical' in created_post:
-                    print(f"   Lexical 내용: {created_post.get('lexical', '')[:200]}...")
+                if 'lexical' in created_post and created_post.get('lexical'):
+                    lexical_str = str(created_post.get('lexical', ''))
+                    print(f"   Lexical 길이: {len(lexical_str)}")
+                    print(f"   Lexical 미리보기: {lexical_str[:200]}...")
                 print(f"   Feature Image: {created_post.get('feature_image', 'None')}")
+                print(f"✅ source=html 파라미터로 인한 자동 변환 {'성공' if created_post.get('lexical') else '실패'}")
                 
                 return created_post
             else:

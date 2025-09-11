@@ -1,13 +1,13 @@
-# Image Generation Report - small-brand-branding-survival
+# Image Generation Report - ai-literacy-gap-v2
 
 ## Summary
 - **Total Images**: 9
 - **Successful**: 9 
 - **Failed**: 0
 - **Success Rate**: 100.0%
-- **Generation Time**: 77.83 seconds
+- **Generation Time**: 75.41 seconds
 - **Generation Method**: Gemini 2.5 Flash Image Preview
-- **Generated At**: 2025-09-11 13:11:20
+- **Generated At**: 2025-09-11 13:01:17
 
 ## Platform Breakdown
 ### Ghost Blog (3 images)

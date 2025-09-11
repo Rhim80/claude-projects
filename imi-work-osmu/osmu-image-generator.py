@@ -44,16 +44,11 @@ class OSMUImageGenerator:
             }
         }
         
-        # IMI WORK 브랜드 색상 설정
-        self.brand_colors = {
-            "primary": "#1e3a8a",  # Navy blue
-            "secondary": "#ffffff",  # White
-            "accent": "#f8fafc"     # Light gray
-        }
+        # 브랜드 제약 제거 - 콘텐츠 맞춤형 색상 사용
         
         print(f"🤖 OSMU 이미지 생성기 v2.0 초기화 완료")
         print(f"   모델: {self.model_name}")
-        print(f"   브랜드: SENSE & AI | IMI WORK")
+        print(f"   전략: 콘텐츠 중심 포토리얼리즘")
 
     def generate_single_image(self, prompt, width, height, output_path):
         """단일 이미지 생성"""
@@ -129,175 +124,219 @@ class OSMUImageGenerator:
             print(f"❌ 이미지 생성 오류: {e}")
             return False
 
-    def generate_platform_prompts(self, content_title, content_summary):
-        """플랫폼별 이미지 프롬프트 생성 (텍스트 없는 비주얼 중심)"""
+    def analyze_content_context(self, content_title, content_summary):
+        """콘텐츠 내용을 분석하여 적절한 시각적 컨텍스트 생성"""
         
-        base_brand = f"""
-        Brand: SENSE & AI | IMI WORK
-        Colors: Navy blue ({self.brand_colors['primary']}) as primary, white ({self.brand_colors['secondary']}) as secondary
-        Style: Professional business infographic with NO TEXT overlays
-        Visual approach: Icons, colors, and symbols only - no text labels
-        Quality: Business presentation grade, suitable for international sharing
+        content_text = f"{content_title} {content_summary}".lower()
+        
+        # 주제별 시각적 컨텍스트 매핑
+        if any(keyword in content_text for keyword in ['ai', '인공지능', 'automation', '자동화']):
+            return {
+                'setting': 'a modern, minimalist workspace with soft technology integration',
+                'mood': 'innovative and thoughtful ambiance',
+                'lighting': 'clean, natural light from large windows',
+                'focus_element': 'the harmony between human creativity and digital tools',
+                'color_theme': 'cool blue and warm white',
+                'atmosphere': 'forward-thinking yet approachable',
+                'secondary_scene': 'detailed view of hands typing on a laptop with subtle AI interface elements',
+                'detail_focus': 'the intersection of human touch and digital innovation',
+                'light_direction': 'overhead skylight creating even illumination',
+                'color_mood': 'clean, contemporary palette'
+            }
+        elif any(keyword in content_text for keyword in ['카페', 'coffee', 'cafe', '커피', '매장']):
+            return {
+                'setting': 'a warm, inviting coffee shop during golden hour',
+                'mood': 'cozy and authentic atmosphere',
+                'lighting': 'warm, natural sunlight streaming through windows',
+                'focus_element': 'the craftsmanship and care in coffee culture',
+                'color_theme': 'warm amber and rich brown',
+                'atmosphere': 'intimate and welcoming',
+                'secondary_scene': 'close-up of skilled hands preparing coffee with artisanal attention',
+                'detail_focus': 'the textures of coffee beans, steam, and ceramic',
+                'light_direction': 'side window light creating dramatic shadows',
+                'color_mood': 'warm, earth-toned palette'
+            }
+        elif any(keyword in content_text for keyword in ['브랜딩', 'branding', '마케팅', 'marketing', '브랜드']):
+            return {
+                'setting': 'a creative studio space with design elements and inspiration boards',
+                'mood': 'creative and strategic energy',
+                'lighting': 'balanced studio lighting with natural accent',
+                'focus_element': 'the creative process and strategic thinking',
+                'color_theme': 'sophisticated neutrals with bold accents',
+                'atmosphere': 'professional creativity',
+                'secondary_scene': 'designer\'s hands sketching concepts with colorful materials nearby',
+                'detail_focus': 'the tools and materials of brand creation',
+                'light_direction': 'multi-directional studio lighting',
+                'color_mood': 'refined palette with strategic color pops'
+            }
+        elif any(keyword in content_text for keyword in ['비즈니스', 'business', '경영', '창업', 'startup']):
+            return {
+                'setting': 'a contemporary office space with natural elements',
+                'mood': 'confident and professional atmosphere',
+                'lighting': 'crisp, even daylight with subtle shadows',
+                'focus_element': 'the balance of ambition and practical wisdom',
+                'color_theme': 'navy and white with natural wood accents',
+                'atmosphere': 'successful yet approachable',
+                'secondary_scene': 'professional meeting or discussion in progress',
+                'detail_focus': 'handshakes, documents, and collaborative gestures',
+                'light_direction': 'large window providing natural boardroom lighting',
+                'color_mood': 'authoritative yet warm palette'
+            }
+        else:
+            # 기본 범용 컨텍스트
+            return {
+                'setting': 'a thoughtfully designed space that encourages reflection',
+                'mood': 'contemplative and inspiring atmosphere',
+                'lighting': 'soft, natural light creating gentle contrasts',
+                'focus_element': 'the quiet moments of insight and understanding',
+                'color_theme': 'muted earth tones',
+                'atmosphere': 'peaceful productivity',
+                'secondary_scene': 'person in thoughtful pose with meaningful objects nearby',
+                'detail_focus': 'textures and objects that tell a story',
+                'light_direction': 'window light from the side',
+                'color_mood': 'calming, natural palette'
+            }
+
+    def generate_platform_prompts(self, content_title, content_summary):
+        """플랫폼별 이미지 프롬프트 생성 (Gemini 2.5 Flash Image 최적화)"""
+        
+        # 콘텐츠 기반 장면 분석
+        scene_context = self.analyze_content_context(content_title, content_summary)
+        
+        base_quality = """
+        High resolution, professional photography quality
+        Natural lighting and realistic textures
+        Composition follows rule of thirds and photographic principles
+        Sharp focus with appropriate depth of field
+        Film grain texture for authenticity
         """
         
         prompts = {
             "ghost": {
-                "feature": f"""Create a professional business crossroads infographic about small brand survival strategy.
+                "feature": f"""A photorealistic wide-angle shot of {scene_context['setting']}.
                 
-                Visual concept: Business figure at center with 3 diverging paths:
-                - LEFT PATH: Red declining arrows ↓, warning triangles ⚠️, money icon 💰 (sales struggles)
-                - MIDDLE PATH: Yellow caution signs ⚠️, complex network diagram 📊, growth chart 📈 (scale challenges)  
-                - RIGHT PATH: Green upward arrows ↗️, star icons ⭐, sparkle effects ✨ (branding success)
+                The scene captures {scene_context['mood']} with {scene_context['lighting']}.
+                Shot with a 24-70mm lens at f/4, creating balanced depth of field.
+                The composition emphasizes {scene_context['focus_element']} while maintaining
+                environmental context. Natural color palette with subtle {scene_context['color_theme']} accents.
                 
-                {base_brand}
+                Atmosphere: {scene_context['atmosphere']}
+                Style: Contemporary editorial photography suitable for professional blog headers
                 
-                Visual elements only:
-                - Use color coding: Red (difficult), Yellow (challenging), Green (successful)
-                - Icons instead of text: 💰 📈 ✨
-                - Directional arrows showing outcomes
-                - Professional silhouette figure choosing paths
-                - Clean geometric design
+                {base_quality}
                 """,
                 
-                "content-1": f"""Create a business strategy comparison chart with visual elements only.
+                "content-1": f"""A photorealistic medium shot showcasing {scene_context['secondary_scene']}.
                 
-                Visual concept: 3-column comparison table
-                - Column 1: 💰 icon + red color theme + declining bars + X marks
-                - Column 2: 📈 icon + yellow color theme + complex zigzag lines + warning symbols
-                - Column 3: ✨ icon + green color theme + ascending curve + checkmarks
+                The image depicts a detailed view of {scene_context['detail_focus']} with
+                careful attention to texture and materials. Shot with an 85mm lens at f/2.8,
+                creating a shallow depth of field that draws attention to key elements.
                 
-                Use visual indicators:
-                - Star rating system (★★★★★) for difficulty levels
-                - Bar charts for resource requirements
-                - ✓ and ✗ symbols for pros/cons
-                - Color-coded backgrounds
+                Lighting: Soft, diffused natural light from {scene_context['light_direction']}
+                Color mood: {scene_context['color_mood']} with natural saturation
+                Composition: Clean, uncluttered with purposeful negative space
                 
-                {base_brand}
+                {base_quality}
                 """,
                 
-                "content-2": f"""Create a compound growth effect visualization chart.
+                "content-2": f"""A photorealistic close-up capturing the essence of {scene_context['detail_focus']}.
                 
-                Visual concept: Mathematical/scientific style chart
-                - X-axis: Time progression (1, 2, 3, 4... timeline markers)
-                - Y-axis: Exponential growth curve in navy blue
-                - Show compound effect with curved line vs straight line comparison
-                - Data points marked with star icons ⭐
-                - Small icons along curve: 📝 → 🎯 → 💬 → ⭐
+                The scene focuses on intimate details that tell the story of {scene_context['focus_element']}.
+                Shot with a macro lens at f/4, revealing textures and craftsmanship.
+                The background gently fades to emphasize the subject.
                 
-                Mathematical visualization:
-                - Exponential curve equation-style visual
-                - Percentage markers (10%, 25%, 55%, 100%)
-                - Grid lines for professional chart appearance
+                Lighting: Natural window light creating soft, directional illumination
+                Mood: {scene_context['atmosphere']} with authentic, unposed feeling
+                Color palette: {scene_context['color_theme']} tones for visual harmony
                 
-                {base_brand}
+                {base_quality}
                 """
             },
             
             "naver": {
-                "main": f"""Create a strategic business thinking visualization.
+                "main": f"""A photorealistic wide shot of {scene_context['setting']} with Korean sensibilities.
                 
-                Visual concept: Modern office strategy session
-                - Professional business figure with thought bubbles containing strategy icons
-                - Strategy symbols: ♟️ (chess piece), 💡 (lightbulb), 🎯 (target), 📋 (planning)
-                - Clean modern workspace with charts on wall
-                - Arrow flow diagrams showing strategic process
+                The scene portrays {scene_context['mood']} suitable for Korean blog readers.
+                Shot with a 35mm lens at f/5.6, providing clear environmental context.
+                The composition balances professional appeal with approachable warmth.
                 
-                Elements:
-                - Strategic thinking icons in thought clouds
-                - Flow chart arrows connecting ideas
-                - Professional color scheme with navy accents
-                - Clean, minimalist office environment
+                Lighting: {scene_context['lighting']} with soft, even illumination
+                Atmosphere: {scene_context['atmosphere']} with cultural familiarity
+                Color palette: {scene_context['color_theme']} with clean, magazine-style aesthetic
                 
-                {base_brand}
+                Style: Editorial photography suitable for Korean professional blogs
+                
+                {base_quality}
                 """,
                 
-                "body-1": f"""Create a three-strategy visual comparison.
+                "body-1": f"""A photorealistic lifestyle shot showcasing {scene_context['secondary_scene']}.
                 
-                Visual concept: Side-by-side comparison with icons and metrics
-                - Strategy 1: 💰 + declining red bars + complex workflow
-                - Strategy 2: 📈 + yellow zigzag pattern + medium complexity  
-                - Strategy 3: ✨ + green ascending curve + simple workflow
+                The image captures authentic moments of {scene_context['detail_focus']} in a Korean context.
+                Shot with a 50mm lens at f/2.8, creating natural perspective with gentle background blur.
                 
-                Visual metrics:
-                - Timeline bars showing duration
-                - Complexity indicators using geometric patterns
-                - Success probability shown with filled vs empty circles
-                - Resource requirement shown with stacked elements
+                Lighting: Warm, natural daylight creating inviting atmosphere
+                Mood: Practical yet inspiring, relatable to Korean readers
+                Composition: Organized and clean with attention to meaningful details
                 
-                {base_brand}
+                {base_quality}
                 """,
                 
-                "body-2": f"""Create an A vs B professional comparison.
+                "body-2": f"""A photorealistic detailed view of {scene_context['detail_focus']} with Korean aesthetic preferences.
                 
-                Visual concept: Two professional silhouettes with attribute visualization
-                - Figure A: Technical skill icons (⚙️ 🔧 💻) + smaller recognition symbol
-                - Figure B: Recognition icons (⭐ 🏆 👥) + moderate technical symbols
-                - Radar chart comparison showing different strengths
-                - Visual indication that B is the preferred choice (green highlight)
+                The scene emphasizes the practical aspects of {scene_context['focus_element']} through careful composition.
+                Shot with a 85mm lens at f/4, highlighting specific elements while maintaining context.
                 
-                Comparison elements:
-                - Skill level bars
-                - Recognition indicators  
-                - Experience timeline
-                - Success probability visualization
+                Lighting: Studio-quality natural light with minimal shadows
+                Color treatment: Clean, neutral palette with subtle {scene_context['color_theme']} accents
+                Style: Professional product photography with editorial sensibility
                 
-                {base_brand}
+                {base_quality}
                 """,
                 
-                "body-3": f"""Create a small brand advantages infographic.
+                "body-3": f"""A photorealistic environmental shot of {scene_context['setting']} with storytelling elements.
                 
-                Visual concept: Advantage showcase with icons
-                - 4-6 key advantages represented by icons only:
-                  - ⚡ (Quick decisions - lightning bolt)
-                  - 📖 (Personal story - open book)
-                  - 🎯 (Expertise focus - target)
-                  - 🤝 (Customer intimacy - handshake)
-                  - 💡 (Innovation - lightbulb)
-                  - 🛡️ (Flexibility - shield)
+                The image tells the complete story of {scene_context['focus_element']} through environmental details.
+                Shot with a 24mm lens at f/8, ensuring everything is in sharp focus for informational clarity.
                 
-                Layout:
-                - Clean grid layout with icons and visual indicators
-                - Positive color scheme with green accents
-                - Checkmarks and positive symbols throughout
+                Lighting: Even, professional lighting suitable for informational content
+                Composition: Organized layout with visual hierarchy
+                Atmosphere: {scene_context['atmosphere']} with educational appeal
                 
-                {base_brand}
+                {base_quality}
                 """
             },
             
             "instagram": {
-                "feed": f"""Create a mobile-optimized square design for small brand success.
+                "feed": f"""A photorealistic square composition optimized for Instagram feed viewing.
                 
-                Visual concept: Bold central message with symbols
-                - Large central icon: ✨ (branding symbol)
-                - Supporting icons arranged around: 💰❌ 📈⚠️ ✨✅
-                - Strong visual hierarchy with navy blue and white
-                - Minimalist design optimized for mobile viewing
+                The image captures {scene_context['mood']} in a 1:1 format perfect for social media.
+                Shot with a 50mm lens at f/2.2, creating an intimate perspective with subtle background blur.
+                The composition is centered and balanced for mobile viewing.
                 
-                Design elements:
-                - Single powerful central metaphor
-                - High contrast for mobile screens
-                - Symbol-based communication
-                - Clean geometric composition
+                Lighting: {scene_context['lighting']} with high contrast for mobile screens
+                Atmosphere: {scene_context['atmosphere']} with social media appeal
+                Color treatment: {scene_context['color_theme']} with vibrant, Instagram-friendly saturation
                 
-                {base_brand}
-                - Mobile-first design approach
+                Style: Lifestyle photography with editorial quality
+                Focus: Strong visual impact that stops scrolling
+                
+                {base_quality}
                 """,
                 
-                "story": f"""Create a vertical progression story format.
+                "story": f"""A photorealistic vertical composition optimized for Instagram stories.
                 
-                Visual concept: Three-level vertical flow
-                - TOP: Problem visualization (💰📈 with ❌ or declining arrows)
-                - MIDDLE: Transition arrow pointing down ⬇️
-                - BOTTOM: Solution visualization (✨ with ✅ and upward arrows ↗️)
+                The image presents {scene_context['detail_focus']} in a 9:16 aspect ratio.
+                Shot with a wide-angle lens to capture environmental context in vertical format.
+                The composition guides the eye from top to bottom with natural flow.
                 
-                Story elements:
-                - Clear problem → solution visual narrative
-                - Vertical flow optimized for mobile stories
-                - Strong visual contrast between problem and solution
-                - Motivational upward progression
+                Lighting: Dynamic lighting that works well in vertical format
+                Mood: {scene_context['atmosphere']} with story-telling appeal
+                Composition: Vertical hierarchy with strong visual elements
                 
-                {base_brand}
-                - Vertical format optimized for mobile stories
+                Style: Mobile-first photography with story narrative
+                Focus: Engaging content that encourages interaction
+                
+                {base_quality}
                 """
             }
         }
@@ -389,19 +428,18 @@ class OSMUImageGenerator:
             "successful_images": successful_images,
             "failed_images": failed_images,
             "generation_log": generation_log,
-            "brand_settings": {
-                "primary_color": self.brand_colors["primary"],
-                "secondary_color": self.brand_colors["secondary"],
-                "accent_color": self.brand_colors["accent"],
-                "brand_identity": "SENSE & AI",
-                "company": "IMI WORK"
+            "generation_settings": {
+                "approach": "Content-driven photorealism",
+                "brand_constraints": "Removed for creative freedom",
+                "color_strategy": "Content-adaptive palette"
             },
             "design_specifications": {
-                "korean_text": "Native Korean text support via Gemini AI",
-                "infographic_style": "Professional AI-generated business infographic",
-                "color_scheme": "Navy blue primary with strategic accent colors",
-                "mobile_optimization": "All images optimized for mobile viewing",
-                "generation_method": "Gemini 2.5 Flash Image Preview API"
+                "style": "Photorealistic editorial photography",
+                "quality": "Professional photography grade with natural textures",
+                "color_approach": "Content-adaptive color palette",
+                "mobile_optimization": "All images optimized for mobile and social media",
+                "generation_method": "Gemini 2.5 Flash Image Preview API",
+                "prompt_strategy": "Scene description over keyword lists"
             }
         })
         
@@ -452,11 +490,11 @@ class OSMUImageGenerator:
 - Story image: 1080x1350px - Vertical format for Instagram stories
 
 ## Design Features Applied
-✅ **Native Korean Text**: Gemini AI provides perfect Korean text rendering
-✅ **Professional AI Graphics**: High-quality business infographic style  
-✅ **Brand Color Consistency**: Navy blue ({manifest['brand_settings']['primary_color']}) primary theme
-✅ **Mobile Optimization**: High contrast and readable for all devices
-✅ **Content Alignment**: Visual metaphors perfectly match article themes
+✅ **Photorealistic Quality**: Professional photography-grade images with natural textures
+✅ **Content-Driven Design**: Visual style adapts to content themes and context
+✅ **Mobile Optimization**: High contrast and composition optimized for all devices
+✅ **Platform-Specific**: Each platform gets tailored image dimensions and style
+✅ **Natural Aesthetics**: Authentic lighting and realistic environments
 
 ## Generation Details
 
@@ -470,10 +508,11 @@ class OSMUImageGenerator:
 ## Technical Specifications  
 - **Image Format**: PNG with optimization
 - **Color Space**: RGB
-- **AI Model**: {manifest['generation_method']}
-- **Korean Font**: Native AI text rendering (no font files needed)
+- **AI Model**: {manifest['design_specifications']['generation_method']}
+- **Style Approach**: {manifest['design_specifications']['style']}
+- **Quality Standard**: {manifest['design_specifications']['quality']}
 - **Responsive Design**: Platform-specific sizing optimization
-- **Brand Guidelines**: Strict adherence to IMI WORK visual identity
+- **Content Strategy**: {manifest['generation_settings']['approach']}
 
 ## Quality Improvements vs PIL
 1. **Perfect Korean Typography**: No more □□□ boxes - native Korean text support
@@ -498,15 +537,26 @@ class OSMUImageGenerator:
 
 def main():
     """메인 실행 함수"""
+    import sys
+    
     try:
         generator = OSMUImageGenerator()
         
-        # 테스트: small-brand-branding-survival 재생성
-        success = generator.generate_image_package(
-            slug="small-brand-branding-survival",
-            content_title="소규모 브랜드의 생존 전략: 브랜딩이 답이다",
-            content_summary="소규모 브랜드가 매출 성장과 규모 성장 대신 브랜딩에 집중해야 하는 이유와 실전 전략"
-        )
+        # 커맨드라인 인자 처리
+        if len(sys.argv) > 1 and "--ai-literacy" in sys.argv:
+            # AI 리터러시 격차 글 테스트
+            success = generator.generate_image_package(
+                slug="ai-literacy-gap-v2",
+                content_title="AI 리터러시 격차로 벌어지는 새로운 계층 구조",
+                content_summary="같은 시대를 살지만 AI 활용 능력에 따라 전혀 다른 세상을 경험하는 사람들. 15년차 카페 사장이 Claude Code와 n8n으로 경험한 디지털 전환의 현실과 AI 시대의 새로운 계층 구조"
+            )
+        else:
+            # 기본 테스트: small-brand-branding-survival 재생성
+            success = generator.generate_image_package(
+                slug="small-brand-branding-survival",
+                content_title="소규모 브랜드의 생존 전략: 브랜딩이 답이다",
+                content_summary="소규모 브랜드가 매출 성장과 규모 성장 대신 브랜딩에 집중해야 하는 이유와 실전 전략"
+            )
         
         if success:
             print("\n🎉 OSMU 이미지 패키지 생성 성공!")

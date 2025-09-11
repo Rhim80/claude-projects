@@ -29,7 +29,9 @@
       "Bash(npm install:*)",
       "Bash(git reset:*)",
       "Bash(python3:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(awk:*)"
     ],
     "deny": [],
     "ask": []
