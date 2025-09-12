@@ -31,7 +31,8 @@
       "Bash(python3:*)",
       "Bash(find:*)",
       "Bash(grep:*)",
-      "Bash(awk:*)"
+      "Bash(awk:*)",
+      "Bash(git pull:*)"
     ],
     "deny": [],
     "ask": []
