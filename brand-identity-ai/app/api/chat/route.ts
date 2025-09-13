@@ -1,5 +1,7 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NextRequest, NextResponse } from 'next/server';
+import { generateStep0Prompt } from '../../../lib/brand-system/step0-prompts';
+import { detectUserStruggling } from '../../../lib/brand-system/stage-experts';
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
 
@@ -240,12 +242,13 @@ export async function POST(req: NextRequest) {
       message, 
       step, 
       conversationHistory = [], 
-      currentBrandData = {} 
+      currentBrandData = {},
+      requestSummary = false
     } = await req.json();
 
     // Step 0에서 단계별 질문 처리 (API 키 불필요)
     if (step === 0) {
-      return handleStep0Question(message, conversationHistory, currentBrandData);
+      return handleStep0Question(message, conversationHistory, currentBrandData, requestSummary);
     }
 
     // API 키 유효성 검증 (Step 1 이상에서만)
@@ -304,41 +307,44 @@ export async function POST(req: NextRequest) {
   }
 }
 
-// Step 0 질문 처리 함수 (AI 기반)
-async function handleStep0Question(userMessage: string, conversationHistory: ChatMessage[], currentBrandData: Partial<BrandData>) {
-  const currentQuestion = currentBrandData.currentQuestion || 0;
+// Step 0 질문 처리 함수 (Expert System 기반)
+async function handleStep0Question(userMessage: string, conversationHistory: ChatMessage[], currentBrandData: Partial<BrandData>, requestSummary: boolean = false) {
+  let currentQuestion = currentBrandData.currentQuestion || 0;
   const brandType = currentBrandData.brandType || '';
+  
+  // requestSummary가 true이면 종합 정리 단계(8번)로 설정
+  if (requestSummary) {
+    currentQuestion = 8;
+  }
   
   try {
     const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash-exp' });
     
-    // 첫 번째 방문시 브랜드 유형 질문
+    // 새로운 Expert System을 사용한 프롬프트 생성
+    const expertPrompt = generateStep0Prompt({
+      currentQuestion,
+      userMessage,
+      conversationHistory,
+      brandData: currentBrandData,
+      brandType
+    });
+    
+    const result = await model.generateContent(expertPrompt);
+    const response = result.response;
+    const message = response.text();
+    
+    // requestSummary인 경우 브랜드 씨앗 종합 정리 반환
+    if (requestSummary) {
+      return NextResponse.json({
+        message: message,
+        extractedData: { currentQuestion: 8 },
+        isStepComplete: true,
+        nextStep: 1
+      });
+    }
+    
+    // 첫 방문시 처리
     if (currentQuestion === 0 && !userMessage.trim()) {
-      const prompt = `당신은 브랜드 아이덴티티 구축을 도와주는 전문 AI 코치입니다. 
-사용자가 처음 방문했을 때 친근하고 따뜻하게 인사하며 브랜드 유형을 파악하는 질문을 해주세요.
-
-다음 두 가지 브랜드 유형을 제시하고, 구체적인 예시도 함께 보여주세요:
-
-📌 **비즈니스 브랜드**
-• 카페, 레스토랑, 베이커리
-• 온라인 쇼핑몰, 플랫폼  
-• 디자인 스튜디오, 에이전시
-• 제조업, 유통업
-• 서비스업 (컨설팅, 교육 등)
-
-📌 **퍼스널 브랜드**
-• 전문가, 강사, 코치
-• 인플루언서, 크리에이터
-• 프리랜서 (디자이너, 개발자 등)
-• 작가, 아티스트
-• 경영진, 리더
-
-자연스럽고 대화하기 편한 톤으로 질문해주세요. 한국어로 응답하세요.`;
-
-      const result = await model.generateContent(prompt);
-      const response = result.response;
-      const message = response.text();
-      
       return NextResponse.json({
         message: message,
         extractedData: { currentQuestion: 0 },
@@ -347,24 +353,9 @@ async function handleStep0Question(userMessage: string, conversationHistory: Cha
       });
     }
     
-    // 브랜드 유형 파악 후 다음 질문으로 진행
+    // 브랜드 유형 파악 후 처리
     if (currentQuestion === 0 && userMessage.trim()) {
       const extractedBrandType = extractBrandType(userMessage);
-      
-      const prompt = `사용자가 "${userMessage}"라고 답변했습니다. 이는 ${extractedBrandType} 분야의 브랜드인 것 같습니다.
-
-이제 브랜드 씨앗 발굴의 첫 번째 단계로 넘어가야 합니다. 
-"브랜드를 시작하게 된 계기"에 대해 물어보세요.
-
-${getBrandTypePromptContext(extractedBrandType, 'starting')}
-
-친근하고 대화하기 편한 톤으로, 사용자가 부담 없이 답변할 수 있도록 격려해주세요.
-진행 상황도 보여주세요: "🎯 브랜드 씨앗 탐색 (1/7 단계)"
-한국어로 응답하세요.`;
-
-      const result = await model.generateContent(prompt);
-      const response = result.response;
-      const message = response.text();
       
       return NextResponse.json({
         message: message,
@@ -385,22 +376,6 @@ ${getBrandTypePromptContext(extractedBrandType, 'starting')}
       
       // 7단계 완료 시
       if (currentQuestion === 7) {
-        const prompt = `사용자가 브랜드 씨앗 발굴의 마지막 단계를 완료했습니다!
-사용자의 답변: "${userMessage}"
-
-이제 Step 0이 완료되었음을 축하하고, 지금까지 수집된 정보를 간단히 요약해주세요.
-다음 단계(브랜드 아이덴티티 휠 구축)로 넘어갈 것을 제안해주세요.
-
-🎉 축하와 격려의 메시지
-📝 브랜드 씨앗의 핵심 요소들을 간단히 정리
-➡️ 다음 단계 안내
-
-친근하고 성취감을 느낄 수 있는 톤으로 작성해주세요. 한국어로 응답하세요.`;
-
-        const result = await model.generateContent(prompt);
-        const response = result.response;
-        const message = response.text();
-        
         return NextResponse.json({
           message: message,
           extractedData: {
@@ -412,26 +387,7 @@ ${getBrandTypePromptContext(extractedBrandType, 'starting')}
         });
       }
       
-      // 다음 질문 생성 (AI 기반)
-      const questionContext = getQuestionContext(nextQuestionNum);
-      const prompt = `사용자가 "${userMessage}"라고 답변했습니다. 
-
-좋은 답변에 대해 자연스럽게 격려하고 반응해주세요.
-
-이제 브랜드 씨앗 발굴의 ${nextQuestionNum + 1}번째 단계로 넘어가야 합니다.
-${questionContext.description}
-
-${getBrandTypePromptContext(brandType, questionContext.type)}
-
-진행상황: "🎯 브랜드 씨앗 탐색 (${nextQuestionNum + 1}/7 단계)"
-
-대화하듯 자연스럽고 친근한 톤으로, 사용자가 편안하게 답변할 수 있도록 해주세요.
-한국어로 응답하세요.`;
-
-      const result = await model.generateContent(prompt);
-      const response = result.response;
-      const message = response.text();
-      
+      // 다음 질문으로 진행
       return NextResponse.json({
         message: message,
         extractedData: {
@@ -443,14 +399,7 @@ ${getBrandTypePromptContext(brandType, questionContext.type)}
       });
     }
     
-    // 기본 응답 (AI 기반)
-    const prompt = `사용자가 예상치 못한 상황에 있습니다. 친근하게 다시 한번 말해달라고 요청해주세요. 
-격려하는 톤으로 한국어로 응답하세요.`;
-    
-    const result = await model.generateContent(prompt);
-    const response = result.response;
-    const message = response.text();
-    
+    // 기본 응답
     return NextResponse.json({
       message: message,
       extractedData: currentBrandData,
@@ -469,73 +418,7 @@ ${getBrandTypePromptContext(brandType, questionContext.type)}
   }
 }
 
-// 브랜드 유형별 프롬프트 컨텍스트 제공
-function getBrandTypePromptContext(brandType: string, questionType: string): string {
-  const contexts: Record<string, Record<string, string>> = {
-    '카페/레스토랑': {
-      starting: `예시로 이런 경험들을 들어보세요:
-• "친구들과 카페를 갔는데 분위기나 음료가 아쉬워서..."
-• "맛있는 음식을 만들어 사람들과 나누고 싶어서..."
-• "동네에 이런 공간이 있으면 좋겠다고 생각해서..."`,
-      pain: `예시:
-• "가격대비 퀄리티가 아쉬운 곳들이 많더라"
-• "진정성 있는 브랜드를 찾기 어려웠다"
-• "획일화된 인테리어와 메뉴들"`,
-      ideal: `예시:
-• "사람들이 편안하게 쉴 수 있는 공간"
-• "정성스럽게 만든 음식을 대화와 함께 즐기는 모습"
-• "단골손님들이 가족처럼 편안해하는 장면"`
-    },
-    '온라인 비즈니스': {
-      starting: `예시:
-• "기존 서비스들이 불편해서 직접 만들어보고 싶었다"
-• "사람들의 문제를 해결할 수 있는 아이디어가 떠올랐다"
-• "온라인으로 더 많은 사람들에게 도움을 주고 싶었다"`,
-      pain: `예시:
-• "복잡하고 사용하기 어려운 인터페이스들"
-• "고객 서비스 품질이 떨어지는 플랫폼들"
-• "진정성보다는 이익만 추구하는 느낌"`,
-      ideal: `예시:
-• "사용자가 쉽고 직관적으로 이용할 수 있는 서비스"
-• "고객의 문제를 진정으로 해결해주는 모습"
-• "기술로 사람들의 삶이 더 편해지는 장면"`
-    },
-    '전문가/교육': {
-      starting: `예시:
-• "내가 가진 전문성으로 더 많은 사람들을 도울 수 있겠다"
-• "기존 교육 방식에 한계를 느끼고 새로운 방법을 시도하고 싶었다"
-• "경험과 노하우를 체계적으로 전수하고 싶었다"`,
-      pain: `예시:
-• "이론 중심의 실무와 동떨어진 교육들"
-• "일방적이고 지루한 강의 방식들"
-• "개인의 상황을 고려하지 않는 획일적인 커리큘럼"`,
-      ideal: `예시:
-• "학습자가 실제로 성장하고 변화하는 모습"
-• "이론과 실무가 자연스럽게 연결되는 교육"
-• "개인별 맞춤형 성장 경로를 제공하는 장면"`
-    }
-  };
-  
-  const defaultContext = `구체적인 경험이나 감정을 자유롭게 이야기해주세요.`;
-  
-  return contexts[brandType]?.[questionType] || defaultContext;
-}
-
-// 질문 단계별 컨텍스트 제공
-function getQuestionContext(questionNum: number): { description: string; type: string } {
-  const contexts = [
-    { description: "브랜드 유형을 파악합니다", type: "type" },
-    { description: "브랜드를 시작하게 된 계기와 트리거 순간에 대해 물어봅니다", type: "starting" },
-    { description: "이 업계에서 느꼈던 불편함이나 아쉬운 점에 대해 물어봅니다", type: "pain" },
-    { description: "브랜드를 통해 그리고 싶은 이상적인 장면에 대해 물어봅니다", type: "ideal" },
-    { description: "브랜드를 오감으로 표현했을 때 어떤 느낌인지 물어봅니다", type: "sense" },
-    { description: "브랜드 운영에서 지켜야 할 원칙과 피해야 할 것들에 대해 물어봅니다", type: "principles" },
-    { description: "이 브랜드와 잘 맞는/맞지 않는 고객에 대해 물어봅니다", type: "customer" },
-    { description: "최종적으로 이 브랜드의 정체성을 한 문장으로 정리해달라고 요청합니다", type: "identity" }
-  ];
-  
-  return contexts[questionNum] || { description: "브랜드에 대해 더 알아봅니다", type: "general" };
-}
+// 브랜드 유형 추출 함수 (간소화 - expert system에서 더 정교한 처리 진행)
 
 // 브랜드 유형 추출 함수
 function extractBrandType(userMessage: string): string {

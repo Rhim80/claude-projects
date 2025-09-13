@@ -19,13 +19,15 @@ interface ChatInterfaceProps {
   currentBrandData: Partial<BrandData>;
   qaHistory: QAPair[];
   onStepComplete: (answer: string, extractedData: Partial<BrandData>) => void;
+  onStep0Progress?: (extractedData: Partial<BrandData>) => void;
 }
 
 export function ChatInterface({
   currentStep,
   currentBrandData,
   qaHistory,
-  onStepComplete
+  onStepComplete,
+  onStep0Progress
 }: ChatInterfaceProps) {
   const [answer, setAnswer] = useState('');
   const [isHistoryOpen, setIsHistoryOpen] = useState(false);
@@ -118,8 +120,48 @@ export function ChatInterface({
       setConversationHistory(prev => [...prev, aiMessage]);
       setAiResponse(data.message);
 
-      // If step is complete, trigger completion
-      if (data.isStepComplete) {
+      // Step 0 진행상황 업데이트 또는 완료 처리
+      if (currentStep === 0) {
+        if (onStep0Progress && data.extractedData) {
+          onStep0Progress(data.extractedData);
+        }
+        
+        // Step 0 완료 체크 - currentQuestion이 8에 도달하면 종합 정리 요청
+        if (data.extractedData?.currentQuestion >= 8) {
+          // Step 0 종합 정리를 위한 추가 API 요청
+          const summaryResponse = await fetch('/api/chat', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              message: '브랜드 씨앗 종합 정리를 해주세요.',
+              step: 0,
+              conversationHistory: conversationHistory,
+              currentBrandData: { ...currentBrandData, ...data.extractedData },
+              requestSummary: true
+            }),
+          });
+
+          if (summaryResponse.ok) {
+            const summaryData = await summaryResponse.json();
+            
+            // 종합 정리 메시지를 AI 응답으로 업데이트
+            const summaryMessage: ChatMessage = {
+              role: 'assistant',
+              content: summaryData.message,
+              timestamp: new Date().toISOString(),
+              step: currentStep
+            };
+            
+            setConversationHistory(prev => [...prev, summaryMessage]);
+            setAiResponse(summaryData.message);
+            
+            // Step 완료 처리
+            onStepComplete(answer, { ...data.extractedData, currentQuestion: 8 });
+          }
+        }
+      } else if (data.isStepComplete) {
         onStepComplete(answer, data.extractedData);
       }
       
