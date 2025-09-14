@@ -1,4 +1,6 @@
 import { STEP1_EXPERT, detectUserStruggling, summarizeConversation, summarizeBrandData } from './stage-experts';
+import { assessAnswerQuality, AnswerValidation } from './validation';
+import { generateResponse } from './response-templates';
 
 export interface Step1PromptContext {
   currentBrandData: any;
@@ -6,101 +8,108 @@ export interface Step1PromptContext {
   conversationHistory: any[];
 }
 
-// Step 1 전용 프롬프트 생성기
+// Step 1 전용 프롬프트 생성기 (검증 시스템 통합)
 export function generateStep1Prompt(context: Step1PromptContext): string {
   const { currentBrandData, userMessage, conversationHistory } = context;
-  
-  const isUserStruggling = detectUserStruggling(userMessage);
-  const conversationSummary = summarizeConversation(conversationHistory);
-  const brandDataSummary = summarizeBrandData(currentBrandData);
 
-  // Step 0에서 전달받은 브랜드 씨앗 정보 구조화
+  // Step 0 브랜드 씨앗 정보 구조화
   const step0Output = currentBrandData.step0Output || {};
   const brandSeed = {
     brandType: step0Output.brandType || currentBrandData.brandType || '알 수 없음',
     triggerStory: step0Output.triggerStory || currentBrandData.triggers || '',
-    painPoint: step0Output.painPoint || '',
-    idealScene: step0Output.idealScene || '',
-    brandSense: step0Output.brandSense || {},
-    principles: step0Output.principles || { keep: [], avoid: [] },
-    targetCustomer: step0Output.targetCustomer || { fit: '', notFit: '' },
     oneLineIdentity: step0Output.oneLineIdentity || ''
   };
 
-  let prompt = `${STEP1_EXPERT.systemPrompt}
-
-[🌱 Step 0에서 발굴된 브랜드 씨앗]
-브랜드 유형: ${brandSeed.brandType}
-트리거 스토리: ${brandSeed.triggerStory}
-해결하고자 한 문제: ${brandSeed.painPoint}
-이상적 장면: ${brandSeed.idealScene}
-브랜드 감각: ${JSON.stringify(brandSeed.brandSense)}
-브랜드 원칙: 
-- 지킬 것: ${Array.isArray(brandSeed.principles.keep) ? brandSeed.principles.keep.join(', ') : ''}
-- 피할 것: ${Array.isArray(brandSeed.principles.avoid) ? brandSeed.principles.avoid.join(', ') : ''}
-타깃 고객: 
-- 맞는 고객: ${brandSeed.targetCustomer.fit}
-- 안 맞는 고객: ${brandSeed.targetCustomer.notFit}
-한 문장 정체성: ${brandSeed.oneLineIdentity}
-
-[Step 1 미션: 브랜드 정체성 체계 구축]
-목적: 브랜드 씨앗을 바탕으로 명확한 미션, 비전, 핵심가치 정립
-방법: Step 0 정보를 기반으로 한 전략적 브랜드 정체성 체계 구축
-
-[대화 컨텍스트]
-${conversationSummary}
-
-[현재까지 수집된 브랜드 정보]
-${brandDataSummary}
-
-[사용자 현재 답변]
-"${userMessage}"
-`;
-
-  // 첫 방문자인 경우 (비어있는 메시지)
+  // 첫 방문자인 경우
   if (!userMessage.trim()) {
-    prompt += `
-[첫 방문 환영 메시지]
-Step 0에서 발굴한 브랜드 씨앗을 바탕으로 브랜드의 정체성 체계를 구축하는 단계임을 안내하세요.
+    return `${STEP1_EXPERT.systemPrompt}
 
-다음 요소들을 포함해서 질문하세요:
-1. Step 0 결과에 대한 간단한 요약과 인정
-2. 이제 구체적인 미션, 비전, 핵심가치를 정립할 것임을 설명
-3. 브랜드 씨앗의 핵심 요소들을 활용하여 제안 제시
-4. 사용자가 편하게 대화할 수 있도록 격려`;
+[Step 1 시작 - 브랜드 정체성 체계 구축]
+Step 0에서 발굴하신 "${brandSeed.oneLineIdentity}" 정체성을 바탕으로 구체적인 미션, 비전, 핵심가치를 정립하겠습니다.
+
+브랜드 유형: ${brandSeed.brandType}
+트리거 스토리를 활용하여 미션부터 시작해보겠습니다.
+
+따뜻하고 전문적인 톤으로 미션 질문을 시작하세요.`;
   }
 
-  // 사용자가 어려워하는 경우
-  if (isUserStruggling) {
-    prompt += `
-[중요] 사용자가 답변을 어려워하고 있습니다!
-- ${STEP1_EXPERT.helpPatterns.helpResponse}
-- Step 0에서 수집된 정보를 바탕으로 구체적인 미션/비전 제안을 제공하세요
-- 브랜드 씨앗의 내용을 연결하여 이해하기 쉽게 설명해주세요`;
+  // 현재 진행 중인 요소 파악 (미션 → 비전 → 핵심가치 순서)
+  let currentElement = 'mission';
+  if (currentBrandData.mission && !currentBrandData.vision) {
+    currentElement = 'vision';
+  } else if (currentBrandData.mission && currentBrandData.vision && !currentBrandData.coreValues) {
+    currentElement = 'coreValues';
   }
 
-  prompt += `
-[Step 1 산출물 목표]
-이 단계에서는 다음을 완성해야 합니다:
-- 미션 (Mission): "우리는 누구를 위해 무엇을 하는가?"
-- 비전 (Vision): "우리가 그리는 미래의 모습은?"  
-- 핵심가치 (Core Values): "우리가 가장 중요하게 여기는 가치 3-5개"
-- 타깃 오디언스 (Target Audience): "구체적인 고객 프로필"
+  // 답변 품질 검증
+  const validation = assessAnswerQuality(userMessage, currentElement, 1);
 
-[응답 가이드라인]
-1. Step 0 브랜드 씨앗 정보를 적극 활용하여 연결성 있는 제안 제시
-2. 추상적인 질문보다는 구체적인 예시와 함께 제안
-3. 브랜드 유형(${brandSeed.brandType})에 맞는 맞춤형 접근
-4. 사용자의 트리거 스토리와 이상적 장면을 미션/비전과 연결
-5. 발견된 브랜드 요소를 간단히 정리하며 진행
-6. 따뜻하고 전문적인 브랜드 컨설턴트 톤 유지
-7. 한 번에 하나의 요소씩 집중 (미션 → 비전 → 핵심가치 → 타깃 순서)
+  // 검증 결과에 따른 맞춤형 응답
+  if (validation.actionRequired === 'help') {
+    return `${STEP1_EXPERT.systemPrompt}
 
-${!userMessage.trim() ? `
-특히 첫 메시지에서는:
-- "Step 0에서 발굴하신 '${brandSeed.oneLineIdentity}' 정체성이 정말 인상적이네요!"
-- "이제 이 브랜드 씨앗을 바탕으로 구체적인 미션과 비전을 만들어보겠습니다"
-- 트리거 스토리나 이상적 장면을 언급하며 자연스럽게 미션 질문으로 연결` : ''}`;
+[도움 요청 감지 - Step 1]
+Step 0 브랜드 씨앗을 바탕으로 구체적인 ${currentElement} 제안을 드리겠습니다.
 
-  return prompt;
+브랜드 씨앗 정보:
+- 유형: ${brandSeed.brandType}  
+- 트리거: ${brandSeed.triggerStory}
+- 정체성: ${brandSeed.oneLineIdentity}
+
+이 정보를 연결하여 구체적인 예시와 함께 도움을 제공하세요.`;
+  }
+
+  if (validation.actionRequired === 'redirect') {
+    return `${STEP1_EXPERT.systemPrompt}
+
+[주제 이탈 감지 - Step 1]
+${currentElement} 질문에서 벗어난 답변입니다. 브랜드 관점에서 다시 유도해주세요.
+
+현재 작업: ${currentElement}
+브랜드 컨텍스트: ${brandSeed.brandType}
+
+친근하게 올바른 방향으로 유도하세요.`;
+  }
+
+  if (validation.actionRequired === 'ask_more') {
+    return `${STEP1_EXPERT.systemPrompt}
+
+[추가 정보 필요 - Step 1]  
+${currentElement}에 대한 답변이 부족합니다.
+
+Step 0 정보를 활용하여 더 구체적인 질문을 해주세요:
+- 트리거 스토리: ${brandSeed.triggerStory}
+- 브랜드 정체성: ${brandSeed.oneLineIdentity}
+
+긍정적으로 인정한 후 구체적인 보충 질문을 하세요.`;
+  }
+
+  // Step 1 완료 체크
+  if (currentBrandData.mission && currentBrandData.vision && currentBrandData.coreValues) {
+    return `${STEP1_EXPERT.systemPrompt}
+
+[Step 1 완료 - 브랜드 정체성 체계 완성]
+미션, 비전, 핵심가치가 모두 완성되었습니다.
+
+지금까지의 결과를 체계적으로 정리하고 Step 2로의 전환을 안내하세요:
+- 미션: ${currentBrandData.mission}
+- 비전: ${currentBrandData.vision}  
+- 핵심가치: ${Array.isArray(currentBrandData.coreValues) ? currentBrandData.coreValues.join(', ') : currentBrandData.coreValues}
+
+"브랜드 정체성 체계가 완성되었습니다! 다음 단계로 진행하시겠습니까?"라고 안내하세요.`;
+  }
+
+  // 일반적인 진행 상황
+  return `${STEP1_EXPERT.systemPrompt}
+
+[Step 1 진행 중]
+현재 작업: ${currentElement}
+답변 품질: ${validation.quality}
+
+Step 0 브랜드 씨앗을 적극 활용하여:
+- 브랜드 유형: ${brandSeed.brandType}
+- 트리거 스토리를 ${currentElement}와 연결
+
+전문가 관점에서 해석하고 다음 단계로 자연스럽게 진행하세요.
+응답은 4-5줄로 제한하세요.`;
 }

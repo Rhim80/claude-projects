@@ -1,4 +1,6 @@
 import { STEP0_EXPERT, detectUserStruggling, summarizeConversation, summarizeBrandData } from './stage-experts';
+import { assessAnswerQuality, AnswerValidation } from './validation';
+import { generateResponse } from './response-templates';
 
 export interface Step0PromptContext {
   currentQuestion: number;
@@ -116,178 +118,90 @@ const STEP0_QUESTION_GUIDES = {
   }
 };
 
-// Step 0 전용 프롬프트 생성기
+// Step 0 전용 프롬프트 생성기 (검증 시스템 통합)
 export function generateStep0Prompt(context: Step0PromptContext): string {
   const { currentQuestion, userMessage, conversationHistory, brandData, brandType } = context;
-  
-  const isUserStruggling = detectUserStruggling(userMessage);
-  const conversationSummary = summarizeConversation(conversationHistory);
-  const brandDataSummary = summarizeBrandData(brandData);
-  const questionGuide = STEP0_QUESTION_GUIDES[currentQuestion as keyof typeof STEP0_QUESTION_GUIDES];
-  const progressDisplay = STEP0_EXPERT.progressTemplate(currentQuestion, 7);
 
-  // questionGuide가 없는 경우 안전장치
-  if (!questionGuide) {
+  // 첫 방문자인 경우 (빈 메시지)
+  if (!userMessage.trim()) {
     return `${STEP0_EXPERT.systemPrompt}
 
-브랜드 씨앗 발굴 과정에서 예상치 못한 문제가 발생했습니다. 
-현재 단계: ${currentQuestion + 1}
-사용자 답변: "${userMessage}"
+[첫 방문 환영 메시지]
+브랜드 씨앗 발굴을 시작합니다. 먼저 어떤 종류의 브랜드를 구상하고 계신지 알려주세요.
 
-이전 단계들을 통해 수집된 정보를 바탕으로 브랜드 씨앗을 종합 정리해드리겠습니다.`;
+예시: 카페, 온라인 쇼핑몰, 디자인 스튜디오, 전문가 브랜딩, 교육 서비스 등
+
+자연스럽고 편안한 톤으로 질문해주세요.`;
   }
 
-  // 기본 시스템 프롬프트 (진행 상황은 UI에서 표시하므로 제거)
-  let prompt = `${STEP0_EXPERT.systemPrompt}
+  // 답변이 있는 경우 검증 시스템 활용
+  const questionTypes = ['brandType', 'triggerStory', 'painPoint', 'idealScene', 'brandSense', 'principles', 'targetCustomer', 'identity'];
+  const questionType = questionTypes[currentQuestion] || 'brandType';
+  
+  // 답변 품질 검증
+  const validation = assessAnswerQuality(userMessage, questionType, 0);
+  
+  // 검증 결과에 따른 맞춤형 응답 생성
+  if (validation.actionRequired === 'help') {
+    return `${STEP0_EXPERT.systemPrompt}
 
-[현재 질문 단계: ${currentQuestion + 1}/8]
-목적: ${questionGuide.purpose}
-접근법: ${questionGuide.approach}
+[도움 요청 감지]
+사용자가 도움을 요청했습니다. 구체적인 예시와 함께 친근하게 도와주세요.
 
-[대화 컨텍스트]
-${conversationSummary}
+현재 질문: ${questionType}
+브랜드 유형: ${brandType || '파악 중'}
 
-[현재까지 수집된 브랜드 정보]
-${brandDataSummary}
-
-[사용자 현재 답변]
-"${userMessage}"
-`;
-
-  // 사용자가 어려워하는 경우
-  if (isUserStruggling) {
-    prompt += `
-[중요] 사용자가 답변을 어려워하고 있습니다!
-- ${STEP0_EXPERT.helpPatterns.helpResponse}
-- 이전 대화 내용을 바탕으로 구체적 예시나 제안을 제공하세요
-- 부담을 덜어주되 목표는 달성하도록 도와주세요`;
+격려하며 구체적인 예시를 들어 도움을 제공하세요.`;
   }
 
-  // 단계별 특화 지침
-  switch(currentQuestion) {
-    case 0: // 브랜드 유형 파악
-      if (!userMessage.trim()) {
-        prompt += `
-[첫 방문자 안내]
-따뜻한 인사와 함께 다음을 포함하여 질문하세요:
-${questionGuide.examples}
+  if (validation.actionRequired === 'redirect') {
+    return `${STEP0_EXPERT.systemPrompt}
 
-자연스럽고 대화하기 편한 톤으로 질문해주세요.`;
-      } else {
-        prompt += `
-[브랜드 유형 확인 후]
-- 사용자 답변을 바탕으로 브랜드 유형을 파악하고 확인
-- 다음 단계(시작 장면) 질문으로 자연스럽게 전환
-- 반드시 진행 상황 표시 포함`;
-      }
-      break;
+[주제 이탈 감지]
+답변이 질문 주제에서 벗어났습니다. 친근하게 올바른 방향으로 유도해주세요.
 
-    case 1: case 2: // 시작 장면, 불편함
-      const brandTypeExamples = questionGuide.byBrandType?.[brandType as keyof typeof questionGuide.byBrandType] || '';
-      prompt += `
-[브랜드 유형별 맞춤 질문]
-브랜드 유형: ${brandType}
-${brandTypeExamples}
+현재 질문: ${questionType}
+문제점: ${validation.issues.join(', ')}
 
-구체적인 경험과 감정을 끌어내세요.`;
-      break;
-
-    case 3: // 이상적 장면
-      prompt += `
-[비전 설정 단계]
-${questionGuide.examples}
-
-영화 한 장면처럼 구체적으로 묘사하도록 유도하세요.`;
-      break;
-
-    case 4: // 감각 표현
-      prompt += `
-[감각 표현 수집]
-다음 템플릿을 사용하여 5개 요소를 모두 물어보세요:
-${questionGuide.template}`;
-      break;
-
-    case 5: // 태도
-      prompt += `
-[원칙 설정]
-${questionGuide.template}
-
-DO & DON'T를 구분하여 수집하세요.`;
-      break;
-
-    case 6: // 고객
-      prompt += `
-[타깃 고객 설정]
-${questionGuide.examples}
-
-구체적 인물상을 그릴 수 있도록 유도하세요.`;
-      break;
-
-    case 7: // 정체성
-      prompt += `
-[최종 정체성 정리]
-${questionGuide.template}
-
-이제 마지막 단계입니다! 격려하며 마무리하세요.`;
-      break;
-
-    case 8: // Step 0 완료 - 브랜드 씨앗 종합 정리
-      prompt += `
-[🌱 브랜드 씨앗 완성 - 종합 정리]
-8개의 질문을 모두 완료했습니다! 이제 브랜드 컨설턴트로서 수집된 모든 정보를 종합하여 브랜드 씨앗을 정리해야 합니다.
-
-다음 구조로 브랜드 씨앗을 요약 정리하세요:
-
-## 🌱 브랜드 씨앗 발굴 완료!
-
-### 💫 핵심 트리거 (브랜드 시작 동기)
-- 시작 계기: [구체적 상황과 감정]
-- 해결하고자 한 문제: [불편함/이상함]
-
-### 🎯 브랜드 비전 (이상적 장면)
-- 꿈꾸는 모습: [구체적 장면 묘사]
-
-### 🌈 브랜드 감각 정체성
-- 색상/계절/음악/속도/질감 키워드 정리
-
-### 🛡️ 브랜드 원칙
-- 지킬 것: [DO 항목들]
-- 피할 것: [DON'T 항목들]
-
-### 👥 타깃 고객 프로필
-- 맞는 고객: [구체적 인물상]
-- 안 맞는 고객: [피해야 할 타입]
-
-### 💎 브랜드 정체성 선언
-- [한 문장 정체성 정리]
-
-**다음 단계 안내**
-"브랜드 씨앗 발굴이 완료되었습니다! 이제 이 씨앗을 바탕으로 구체적인 미션, 비전, 핵심가치를 정립하는 '브랜드 정체성 체계' 단계로 넘어가겠습니다."`;
-      break;
+이해 표현 후 브랜드 관점에서 다시 질문해주세요.`;
   }
 
-  // 마지막에 응답 가이드라인
-  prompt += `
+  if (validation.actionRequired === 'ask_more') {
+    return `${STEP0_EXPERT.systemPrompt}
 
-[응답 가이드라인]
-1. 사용자 답변에 공감과 이해 표현 (1줄)
-2. **브랜드 전문가 관점에서 해석과 인사이트 제공 (필수!)** (1-2줄)
-   - "이 답변에서 브랜드의 [특성]이 잘 드러나네요"
-   - "이는 브랜드의 [가치]를 보여주는 중요한 단서입니다"
-3. 발견된 브랜드 요소를 간단히 정리 (1줄)
-4. ${isUserStruggling ? '도움과 예시 제공 후' : '자연스럽게'} 다음 질문으로 연결 (1-2줄)
-5. **전체 응답은 최대 5-6줄로 제한! 긴 설명이나 예시는 금지**
-6. **마크다운 문법 사용 금지 (**, *, - 등 사용 안함)**
-7. 질문은 하나씩만! 여러 질문 금지
-8. 격려적이고 대화적인 톤 유지
-9. 진행 상황 표시는 UI에서 자동 처리되므로 텍스트로 출력하지 마세요
+[추가 정보 필요]
+답변이 부족합니다. 더 구체적인 정보를 요청하세요.
 
-${currentQuestion === 7 ? `
-⚠️ 마지막 단계 완료시 반드시 다음 안내 출력:
-"브랜드 씨앗 발굴이 완료되었습니다! 이제 다음 단계로 진행하시겠습니까?"
-- "네, 다음 단계로 갈게요" 
-- "아직 수정하고 싶어요"
-- "일단 여기서 마무리할게요"` : ''}`;
+현재 질문: ${questionType}
+부족한 부분: ${validation.suggestions.join(', ')}
 
-  return prompt;
+긍정적으로 인정한 후 구체적인 보충 질문을 해주세요.`;
+  }
+
+  // 좋은 답변인 경우 단계 완료 및 종료 처리
+  if (currentQuestion >= 7) {
+    return `${STEP0_EXPERT.systemPrompt}
+
+[Step 0 완료 - 브랜드 씨앗 종합 정리]
+8개 질문이 모두 완료되었습니다. 브랜드 씨앗을 체계적으로 정리해주세요.
+
+수집된 정보를 다음 구조로 요약:
+- 브랜드 유형과 시작 계기
+- 해결하고자 한 문제와 이상적 비전
+- 브랜드 감각과 운영 원칙
+- 타깃 고객과 정체성 선언
+
+마지막에 "브랜드 씨앗 발굴이 완료되었습니다! 다음 단계로 진행하시겠습니까?"라고 안내하세요.`;
+  }
+
+  // 일반적인 진행 상황
+  return `${STEP0_EXPERT.systemPrompt}
+
+[현재 진행 상황]
+질문 단계: ${currentQuestion + 1}/8 (${questionType})
+답변 품질: ${validation.quality}
+
+사용자 답변을 브랜드 관점에서 해석하고, 발견된 가치를 정리한 후 자연스럽게 다음 질문으로 연결하세요.
+
+응답은 4-5줄로 제한하고 전문적이면서 격려적인 톤을 유지하세요.`;
 }
