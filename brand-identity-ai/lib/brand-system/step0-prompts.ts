@@ -13,20 +13,8 @@ const STEP0_QUESTION_GUIDES = {
   0: { // 브랜드 유형 파악
     purpose: "브랜드 유형을 파악하여 맞춤형 질문 제공 기반 구축",
     approach: "비즈니스/퍼스널 브랜드 구분과 구체적 예시 제공",
-    examples: `
-📌 **비즈니스 브랜드**
-• 카페, 레스토랑, 베이커리
-• 온라인 쇼핑몰, 플랫폼  
-• 디자인 스튜디오, 에이전시
-• 제조업, 유통업
-• 서비스업 (컨설팅, 교육 등)
-
-📌 **퍼스널 브랜드**
-• 전문가, 강사, 코치
-• 인플루언서, 크리에이터
-• 프리랜서 (디자이너, 개발자 등)
-• 작가, 아티스트
-• 경영진, 리더`,
+    examples: `비즈니스 브랜드: 카페, 온라인 쇼핑몰, 디자인 스튜디오 등
+퍼스널 브랜드: 전문가, 인플루언서, 프리랜서 등`,
     validation: "사용자가 구체적 분야를 언급했는지 확인"
   },
 
@@ -118,6 +106,13 @@ const STEP0_QUESTION_GUIDES = {
 
 또는 자유롭게 한 문장으로 표현해보세요!`,
     validation: "브랜드 정체성이 명확히 담긴 한 문장"
+  },
+
+  8: { // 종합 정리
+    purpose: "8개 질문을 통해 수집된 브랜드 씨앗을 체계적으로 정리",
+    approach: "수집된 모든 정보를 브랜드 씨앗 구조로 체계화하여 요약 제시",
+    template: `브랜드 씨앗 발굴이 완료되었습니다! 수집된 정보를 정리하여 브랜드 정체성의 기초를 만들어드립니다.`,
+    validation: "모든 단계별 정보가 체계적으로 정리됨"
   }
 };
 
@@ -130,6 +125,17 @@ export function generateStep0Prompt(context: Step0PromptContext): string {
   const brandDataSummary = summarizeBrandData(brandData);
   const questionGuide = STEP0_QUESTION_GUIDES[currentQuestion as keyof typeof STEP0_QUESTION_GUIDES];
   const progressDisplay = STEP0_EXPERT.progressTemplate(currentQuestion, 7);
+
+  // questionGuide가 없는 경우 안전장치
+  if (!questionGuide) {
+    return `${STEP0_EXPERT.systemPrompt}
+
+브랜드 씨앗 발굴 과정에서 예상치 못한 문제가 발생했습니다. 
+현재 단계: ${currentQuestion + 1}
+사용자 답변: "${userMessage}"
+
+이전 단계들을 통해 수집된 정보를 바탕으로 브랜드 씨앗을 종합 정리해드리겠습니다.`;
+  }
 
   // 기본 시스템 프롬프트 (진행 상황은 UI에서 표시하므로 제거)
   let prompt = `${STEP0_EXPERT.systemPrompt}
@@ -264,16 +270,17 @@ ${questionGuide.template}
   prompt += `
 
 [응답 가이드라인]
-1. 사용자 답변에 공감과 이해 표현
-2. **브랜드 전문가 관점에서 해석과 인사이트 제공 (필수!)**
+1. 사용자 답변에 공감과 이해 표현 (1줄)
+2. **브랜드 전문가 관점에서 해석과 인사이트 제공 (필수!)** (1-2줄)
    - "이 답변에서 브랜드의 [특성]이 잘 드러나네요"
    - "이는 브랜드의 [가치]를 보여주는 중요한 단서입니다"
-   - "[답변 내용]은 고객에게 [어떤 느낌]을 줄 것 같아요"
-3. 발견된 브랜드 요소를 간단히 정리
-4. ${isUserStruggling ? '도움과 예시 제공 후' : '자연스럽게'} 다음 질문으로 연결
-5. 격려적이고 대화적인 톤 유지
-6. 질문은 하나씩만! 여러 질문 금지
-7. 진행 상황 표시는 UI에서 자동 처리되므로 텍스트로 출력하지 마세요
+3. 발견된 브랜드 요소를 간단히 정리 (1줄)
+4. ${isUserStruggling ? '도움과 예시 제공 후' : '자연스럽게'} 다음 질문으로 연결 (1-2줄)
+5. **전체 응답은 최대 5-6줄로 제한! 긴 설명이나 예시는 금지**
+6. **마크다운 문법 사용 금지 (**, *, - 등 사용 안함)**
+7. 질문은 하나씩만! 여러 질문 금지
+8. 격려적이고 대화적인 톤 유지
+9. 진행 상황 표시는 UI에서 자동 처리되므로 텍스트로 출력하지 마세요
 
 ${currentQuestion === 7 ? `
 ⚠️ 마지막 단계 완료시 반드시 다음 안내 출력:

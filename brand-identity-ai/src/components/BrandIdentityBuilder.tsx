@@ -5,14 +5,10 @@ import { FinalReport } from './FinalReport';
 import { Step0Progress } from './Step0Progress';
 import { Button } from './ui/button';
 import { Card } from './ui/card';
+import { QAPair, BrandData } from '../types/brand';
 
-export interface QAPair {
-  question: string;
-  answer: string;
-  step: number;
-}
-
-export interface BrandData {
+// 기존 타입들은 ../types/brand.ts로 이동됨
+export interface LegacyBrandData {
   // Step 0 관련
   currentQuestion?: number;
   brandType?: string;
@@ -215,6 +211,14 @@ export function BrandIdentityBuilder() {
               qaHistory={qaHistory}
               onStepComplete={handleStepComplete}
               onStep0Progress={handleStep0Progress}
+              onStepSummaryEdit={(editedOutput) => {
+                // 편집된 산출물을 brandData에 반영
+                setBrandData(prev => ({ ...prev, ...editedOutput }));
+              }}
+              onNextStep={() => {
+                // 요약 카드에서 다음 단계로 진행 버튼 클릭 시
+                setCurrentStep(prev => prev + 1);
+              }}
             />
           </div>
         </div>

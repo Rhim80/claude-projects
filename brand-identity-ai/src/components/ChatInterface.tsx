@@ -4,7 +4,8 @@ import { Button } from './ui/button';
 import { Textarea } from './ui/textarea';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from './ui/collapsible';
 import { ChevronDown, ChevronUp, Send, Bot, User } from 'lucide-react';
-import { QAPair, BrandData } from './BrandIdentityBuilder';
+import { QAPair, BrandData, StepSummary, Step0Output } from '../types/brand';
+import { StepSummaryCard } from './StepSummaryCard';
 import ReactMarkdown from 'react-markdown';
 
 interface ChatMessage {
@@ -20,6 +21,8 @@ interface ChatInterfaceProps {
   qaHistory: QAPair[];
   onStepComplete: (answer: string, extractedData: Partial<BrandData>) => void;
   onStep0Progress?: (extractedData: Partial<BrandData>) => void;
+  onStepSummaryEdit?: (editedOutput: any) => void;
+  onNextStep?: () => void;
 }
 
 export function ChatInterface({
@@ -27,49 +30,129 @@ export function ChatInterface({
   currentBrandData,
   qaHistory,
   onStepComplete,
-  onStep0Progress
+  onStep0Progress,
+  onStepSummaryEdit,
+  onNextStep
 }: ChatInterfaceProps) {
   const [answer, setAnswer] = useState('');
   const [isHistoryOpen, setIsHistoryOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [aiResponse, setAiResponse] = useState('');
   const [conversationHistory, setConversationHistory] = useState<ChatMessage[]>([]);
+  const [showStepSummary, setShowStepSummary] = useState(false);
+  const [currentStepSummary, setCurrentStepSummary] = useState<StepSummary | null>(null);
+
+  // 응답 텍스트 포맷팅 함수 - 문장 부호 뒤에 줄바꿈 추가
+  const formatResponseText = (text: string): string => {
+    return text
+      .replace(/\. /g, '.\n\n')  // 마침표 뒤에 줄바꿈
+      .replace(/\? /g, '?\n\n')  // 물음표 뒤에 줄바꿈  
+      .replace(/! /g, '!\n\n')   // 느낌표 뒤에 줄바꿈
+      .replace(/: /g, ':\n')     // 콜론 뒤에 줄바꿈
+      .replace(/\n{3,}/g, '\n\n'); // 연속된 줄바꿈은 최대 2개로 제한
+  };
 
   // Initialize AI conversation for current step
   useEffect(() => {
     initializeStepConversation();
+    setShowStepSummary(false); // 새 단계 시작 시 요약 카드 숨김
   }, [currentStep]);
 
-  const initializeStepConversation = async () => {
-    // Step 0의 경우 API를 호출해서 초기 질문을 받아옴
-    if (currentStep === 0) {
-      try {
-        const response = await fetch('/api/chat', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            message: '',
-            step: 0,
-            conversationHistory: [],
-            currentBrandData: currentBrandData
-          }),
-        });
+  // 단계별 산출물 생성 함수
+  const generateStepOutput = (step: number, brandData: Partial<BrandData>): any => {
+    switch (step) {
+      case 0:
+        return {
+          brandType: brandData.brandType || '',
+          triggerStory: brandData.step0Data?.startingMoment || brandData.triggers || '',
+          painPoint: brandData.step0Data?.painPoint || '',
+          idealScene: brandData.step0Data?.idealScene || '',
+          brandSense: brandData.step0Data?.brandSense || {},
+          principles: brandData.step0Data?.principles || { keep: [], avoid: [] },
+          targetCustomer: brandData.step0Data?.targetCustomer || { fit: '', notFit: '' },
+          oneLineIdentity: brandData.step0Data?.identity || ''
+        } as Step0Output;
+      
+      case 1:
+        return {
+          mission: brandData.mission || '',
+          vision: brandData.vision || '',
+          coreValues: brandData.values || [],
+          targetAudience: brandData.targetAudience || ''
+        };
+      
+      case 2:
+        return {
+          finalBrandName: brandData.brandName || '',
+          namingStrategy: brandData.namingStrategy || '',
+          alternatives: brandData.alternatives || [],
+          domainCheck: []
+        };
+      
+      default:
+        return brandData;
+    }
+  };
 
-        if (response.ok) {
-          const data = await response.json();
-          setAiResponse(data.message);
-        } else {
-          const errorData = await response.json();
-          setAiResponse(errorData.error || '서비스 초기화 중 문제가 발생했습니다.');
-        }
-      } catch (error) {
-        setAiResponse('서비스 연결에 문제가 있습니다. 잠시 후 다시 시도해 주세요.');
+  // 단계 완료 시 요약 생성
+  const handleStepCompleted = (step: number, brandData: Partial<BrandData>) => {
+    const stepTitles = [
+      '브랜드 씨앗 발굴',
+      '브랜드 정체성 체계',
+      '브랜드 네이밍',
+      '브랜드 언어 설계',
+      '컨셉 검증',
+      '실행 설계',
+      '브랜딩 휠 완성'
+    ];
+
+    const stepMissions = [
+      '브랜드의 근본적 동기와 감정을 발굴했습니다',
+      '미션, 비전, 핵심가치를 체계화했습니다',
+      '브랜드 정체성을 담은 이름을 만들었습니다',
+      '일관된 커뮤니케이션 시스템을 구축했습니다',
+      '브랜드 컨셉을 객관적으로 검증했습니다',
+      '구체적인 실행 전략을 수립했습니다',
+      '완성된 브랜드 아이덴티티를 통합했습니다'
+    ];
+
+    const summary: StepSummary = {
+      step,
+      title: stepTitles[step] || `Step ${step + 1}`,
+      mission: stepMissions[step] || '단계를 완료했습니다',
+      output: generateStepOutput(step, brandData),
+      completedAt: new Date().toISOString(),
+      isEditable: true
+    };
+
+    setCurrentStepSummary(summary);
+    setShowStepSummary(true);
+  };
+
+  const initializeStepConversation = async () => {
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: '',
+          step: currentStep,
+          conversationHistory: [],
+          currentBrandData: currentBrandData
+        }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setAiResponse(data.message);
+      } else {
+        const errorData = await response.json();
+        setAiResponse(errorData.error || '서비스 초기화 중 문제가 발생했습니다.');
       }
-    } else {
-      const initialMessage = getStepInitialMessage(currentStep);
-      setAiResponse(initialMessage);
+    } catch (error) {
+      setAiResponse('서비스 연결에 문제가 있습니다. 잠시 후 다시 시도해 주세요.');
     }
   };
 
@@ -157,12 +240,14 @@ export function ChatInterface({
             setConversationHistory(prev => [...prev, summaryMessage]);
             setAiResponse(summaryData.message);
             
-            // Step 완료 처리
-            onStepComplete(answer, { ...data.extractedData, currentQuestion: 8 });
+            // Step 완료 처리 - 요약 카드 먼저 표시
+            const completedData = { ...data.extractedData, currentQuestion: 8 };
+            handleStepCompleted(currentStep, { ...currentBrandData, ...completedData });
           }
         }
       } else if (data.isStepComplete) {
-        onStepComplete(answer, data.extractedData);
+        // 다른 단계 완료 시에도 요약 카드 먼저 표시
+        handleStepCompleted(currentStep, { ...currentBrandData, ...data.extractedData });
       }
       
       setAnswer('');
@@ -320,7 +405,7 @@ export function ChatInterface({
           </div>
           <div className="flex-1">
             <h3 className="font-semibold mb-2">AI 브랜드 코치</h3>
-            <div className="text-foreground leading-relaxed prose prose-sm max-w-none">
+            <div className="text-foreground prose prose-sm max-w-none max-h-96 overflow-y-auto" style={{ lineHeight: '1.8' }}>
               <ReactMarkdown
                 components={{
                   p: ({ children }) => <p className="mb-3 leading-relaxed">{children}</p>,
@@ -331,12 +416,35 @@ export function ChatInterface({
                   h2: ({ children }) => <h2 className="text-md font-semibold mb-2">{children}</h2>,
                 }}
               >
-                {aiResponse || '대화를 시작하는 중입니다...'}
+{formatResponseText(aiResponse || '대화를 시작하는 중입니다...')}
               </ReactMarkdown>
             </div>
           </div>
         </div>
       </Card>
+
+      {/* Step Summary Card - 단계 완료 시 표시 */}
+      {showStepSummary && currentStepSummary && (
+        <div className="mb-4">
+          <StepSummaryCard 
+            stepSummary={currentStepSummary}
+            onEdit={(editedOutput) => {
+              if (onStepSummaryEdit) {
+                onStepSummaryEdit(editedOutput);
+              }
+            }}
+            onContinue={() => {
+              if (onNextStep) {
+                onNextStep();
+              } else {
+                // 기존 onStepComplete 호출
+                onStepComplete('', currentStepSummary.output);
+              }
+            }}
+            isLastStep={currentStep >= 6}
+          />
+        </div>
+      )}
 
       {/* Conversation History */}
       {qaHistory.length > 0 && (

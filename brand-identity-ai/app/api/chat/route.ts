@@ -1,6 +1,7 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NextRequest, NextResponse } from 'next/server';
 import { generateStep0Prompt } from '../../../lib/brand-system/step0-prompts';
+import { generateStep1Prompt } from '../../../lib/brand-system/step1-prompts';
 import { detectUserStruggling } from '../../../lib/brand-system/stage-experts';
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
@@ -210,6 +211,54 @@ function getStepPrompt(step: number): string {
 }
 
 
+// 이전 단계 산출물을 포맷팅하는 함수
+function formatPreviousOutputs(brandData: Partial<BrandData>, currentStep: number): string {
+  if (currentStep === 0) return '';
+  
+  let formattedOutputs = '\n\n📋 **이전 단계에서 완성된 산출물:**\n\n';
+  
+  // Step 0 산출물 포맷팅
+  if (currentStep >= 1 && brandData.step0Data) {
+    formattedOutputs += `### 🌱 Step 0: 브랜드 씨앗 발굴
+**브랜드 트리거 스토리:** ${brandData.step0Data.startingMoment || ''}
+**해결하고자 한 문제:** ${brandData.step0Data.painPoint || ''}
+**이상적 장면:** ${brandData.step0Data.idealScene || ''}
+**브랜드 감각:** ${JSON.stringify(brandData.step0Data.brandSense || {})}
+**브랜드 원칙:** 
+- 지킬 것: ${(brandData.step0Data.principles?.keep || []).join(', ')}
+- 피할 것: ${(brandData.step0Data.principles?.avoid || []).join(', ')}
+**타겟 고객:** ${brandData.step0Data.targetCustomer?.fit || ''}
+**한 문장 정체성:** ${brandData.step0Data.identity || ''}
+
+`;
+  }
+  
+  // Step 1 산출물 포맷팅  
+  if (currentStep >= 2 && brandData.mission) {
+    formattedOutputs += `### 🎯 Step 1: 브랜드 정체성 체계
+**미션:** ${brandData.mission}
+**비전:** ${brandData.vision || ''}
+**핵심 가치:** ${(brandData.values || []).join(', ')}
+**타겟 오디언스:** ${brandData.targetAudience || ''}
+
+`;
+  }
+  
+  // Step 2 산출물 포맷팅
+  if (currentStep >= 3 && brandData.brandName) {
+    formattedOutputs += `### 🏷️ Step 2: 브랜드 네이밍
+**최종 브랜드명:** ${brandData.brandName}
+**네이밍 전략:** ${brandData.namingStrategy || ''}
+**대안:** ${(brandData.alternatives || []).join(', ')}
+
+`;
+  }
+  
+  // 더 많은 단계들도 추가 가능...
+  
+  return formattedOutputs;
+}
+
 function buildContextualPrompt(
   userMessage: string,
   conversationHistory: ChatMessage[],
@@ -218,10 +267,19 @@ function buildContextualPrompt(
 ): string {
   let context = '';
   
-  // Add previous brand data context
+  // Add previous step outputs first
+  context += formatPreviousOutputs(currentBrandData, step);
+  
+  // Add previous brand data context (현재 단계 진행 상황)
   if (Object.keys(currentBrandData).length > 0) {
-    context += '\n\n[현재까지 구축된 브랜드 정보]\n';
-    context += JSON.stringify(currentBrandData, null, 2);
+    context += '\n\n[현재 단계 진행 상황]\n';
+    // 현재 단계 관련 데이터만 표시
+    const currentStepData: any = {};
+    if (step === 0 && currentBrandData.step0Data) {
+      currentStepData.step0Progress = currentBrandData.step0Data;
+      currentStepData.currentQuestion = currentBrandData.currentQuestion;
+    }
+    context += JSON.stringify(currentStepData, null, 2);
   }
   
   // Add conversation history context (last 3 messages only for context window management)
@@ -260,7 +318,7 @@ export async function POST(req: NextRequest) {
     }
 
     const model = genAI.getGenerativeModel({ 
-      model: "gemini-2.5-flash-latest",
+      model: "gemini-2.5-flash",
       systemInstruction: getStepPrompt(step)
     });
 
@@ -318,10 +376,13 @@ async function handleStep0Question(userMessage: string, conversationHistory: Cha
   }
   
   try {
-    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash-exp' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
     
-    // 새로운 Expert System을 사용한 프롬프트 생성
-    const expertPrompt = generateStep0Prompt({
+    // Step별 Expert System을 사용한 프롬프트 생성
+    let expertPrompt: string;
+    
+    // handleStep0Question 함수는 Step 0 전용이므로 항상 Step 0 프롬프트 사용
+    expertPrompt = generateStep0Prompt({
       currentQuestion,
       userMessage,
       conversationHistory,
@@ -399,12 +460,35 @@ async function handleStep0Question(userMessage: string, conversationHistory: Cha
       });
     }
     
-    // 기본 응답
+    // Step 1 처리 로직
+    if (step === 1) {
+      // Step 1에서는 미션, 비전, 핵심가치, 타깃을 순차적으로 수집
+      const extractedData = extractStep1Data(userMessage, currentBrandData);
+      
+      // Step 1 완료 체크: 모든 필수 요소가 있으면 완료
+      const hasAllRequiredData = extractedData.mission && 
+                                extractedData.vision && 
+                                extractedData.coreValues && 
+                                extractedData.targetAudience;
+      
+      return NextResponse.json({
+        message: message,
+        extractedData: {
+          ...currentBrandData,
+          ...extractedData,
+          step1Output: extractedData
+        },
+        isStepComplete: hasAllRequiredData,
+        nextStep: hasAllRequiredData ? 2 : 1
+      });
+    }
+    
+    // Step 2-6 기본 처리
     return NextResponse.json({
       message: message,
       extractedData: currentBrandData,
       isStepComplete: false,
-      nextStep: 0
+      nextStep: step
     });
     
   } catch (error) {
@@ -458,6 +542,48 @@ function extractBrandType(userMessage: string): string {
   }
   
   return userMessage; // 원문 그대로 반환
+}
+
+// Step 1 데이터 추출 함수
+function extractStep1Data(userMessage: string, currentBrandData: Partial<BrandData>): any {
+  const text = userMessage.toLowerCase();
+  const extractedData: any = {};
+  
+  // 미션 키워드 탐지
+  if (text.includes('미션') || text.includes('목표') || text.includes('이루고') || 
+      text.includes('도움') || text.includes('제공') || text.includes('해결')) {
+    extractedData.mission = userMessage;
+  }
+  
+  // 비전 키워드 탐지
+  if (text.includes('비전') || text.includes('미래') || text.includes('꿈') || 
+      text.includes('되고 싶') || text.includes('만들고 싶') || text.includes('그리는')) {
+    extractedData.vision = userMessage;
+  }
+  
+  // 핵심가치 키워드 탐지
+  if (text.includes('가치') || text.includes('중요') || text.includes('신념') || 
+      text.includes('원칙') || text.includes('추구')) {
+    // 쉼표나 줄바꿈으로 분리된 가치들 추출
+    const values = userMessage.split(/[,\n\r]/).map(v => v.trim()).filter(v => v.length > 0);
+    extractedData.coreValues = values.length > 1 ? values : [userMessage];
+  }
+  
+  // 타깃 오디언스 키워드 탐지
+  if (text.includes('고객') || text.includes('타깃') || text.includes('대상') || 
+      text.includes('사람들') || text.includes('누구') || text.includes('고객층')) {
+    extractedData.targetAudience = userMessage;
+  }
+  
+  // 기존 데이터와 병합
+  const result = {
+    mission: extractedData.mission || currentBrandData.mission || '',
+    vision: extractedData.vision || currentBrandData.vision || '',
+    coreValues: extractedData.coreValues || currentBrandData.coreValues || [],
+    targetAudience: extractedData.targetAudience || currentBrandData.targetAudience || ''
+  };
+  
+  return result;
 }
 
 // Step 0 데이터 업데이트 함수
