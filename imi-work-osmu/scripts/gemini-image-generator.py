@@ -25,7 +25,25 @@ class OSMUImageGenerator:
         self.model_name = "gemini-2.5-flash-image-preview"
         self.base_url = "https://generativelanguage.googleapis.com/v1beta/models"
         
-        # 이미지 사양 정의
+        # 2-Prompt 메타프롬프트 전략 - 이미지 매핑 정의
+        self.prompt_mapping = {
+            "primary": {  # Prompt A - Primary Visual
+                "images": [
+                    {"platform": "ghost", "type": "feature", "width": 1200, "height": 630},
+                    {"platform": "naver", "type": "main", "width": 800, "height": 450},
+                    {"platform": "instagram", "type": "feed", "width": 1080, "height": 1080}
+                ]
+            },
+            "secondary": {  # Prompt B - Secondary Visual
+                "images": [
+                    {"platform": "ghost", "type": "content-1", "width": 800, "height": 450},
+                    {"platform": "naver", "type": "body-1", "width": 800, "height": 450},
+                    {"platform": "instagram", "type": "story", "width": 1080, "height": 1350}
+                ]
+            }
+        }
+        
+        # 기존 코드 호환성을 위한 image_specs 유지
         self.image_specs = {
             "ghost": {
                 "feature": {"width": 1200, "height": 630, "description": "Ghost 블로그 피처 이미지"},
@@ -41,16 +59,9 @@ class OSMUImageGenerator:
             }
         }
         
-        # IMI WORK 브랜드 색상 설정
-        self.brand_colors = {
-            "primary": "#1e3a8a",  # Navy blue
-            "secondary": "#ffffff",  # White
-            "accent": "#f8fafc"     # Light gray
-        }
-        
-        print(f"🤖 OSMU 이미지 생성기 v2.0 초기화 완료")
+        print(f"🤖 OSMU 이미지 생성기 v3.1 초기화 완료")
         print(f"   모델: {self.model_name}")
-        print(f"   브랜드: SENSE & AI | IMI WORK")
+        print(f"   전략: 2-Prompt 메타프롬프트 기반 갤러리급 이미지 생성")
 
     def generate_single_image(self, prompt, width, height, output_path):
         """단일 이미지 생성"""
@@ -126,147 +137,20 @@ class OSMUImageGenerator:
             print(f"❌ 이미지 생성 오류: {e}")
             return False
 
-    def generate_platform_prompts(self, content_title, content_summary):
-        """플랫폼별 이미지 프롬프트 생성"""
-        
-        base_brand = f"""
-        Brand: SENSE & AI | IMI WORK
-        Colors: Navy blue ({self.brand_colors['primary']}) as primary, white ({self.brand_colors['secondary']}) as secondary
-        Style: Professional Korean business infographic
-        Korean text: All Korean text must be clearly visible and readable
-        Quality: Business presentation grade, suitable for professional sharing
-        """
-        
-        prompts = {
-            "ghost": {
-                "feature": f"""Create a photorealistic corporate photography scene representing "{content_title}".
-                
-                Visual concept: Cinematic business leadership photography
-                - A confident business professional in sharp suit (back view or silhouette) facing city skyline at golden hour
-                - Modern glass office building reflections and urban landscape
-                - Natural dramatic lighting with warm golden and cool blue tones
-                - Real corporate environment with authentic architectural details
-                - Professional depth of field with sharp foreground and blurred background
-                
-                Style: High-end commercial photography, not graphic design or illustrations
-                - Photorealistic rendering with natural textures and materials
-                - Cinematic composition suitable for wide blog header (16:9)
-                - Clean space for text overlay without compromising photo quality
-                - Real world lighting and shadows, authentic business environment
-                
-                {base_brand}
-                """,
-                
-                "content-1": f"""Create an artistic photograph representing strategic business thinking for "{content_title}".
-                
-                Visual concept: Abstract artistic photography with business metaphors
-                - Elegant composition showing pathways, stairs, or architectural leading lines
-                - Dramatic shadows and highlights suggesting decision-making crossroads
-                - Professional materials: marble, glass, steel with natural textures
-                - Minimalist aesthetic with strong geometric composition
-                - Moody, contemplative atmosphere suggesting strategic depth
-                
-                Style: Fine art photography with business context
-                - High contrast black and white or muted color palette
-                - Real architectural elements photographed with artistic lighting
-                - Abstract but recognizable business environment details
-                - Clean composition suitable for blog content integration
-                
-                {base_brand}
-                """
-            },
-            
-            "naver": {
-                "main": f"""Create a professional corporate meeting photography for "{content_title}".
-                
-                Visual concept: Realistic Korean business environment
-                - Modern Korean office or conference room with authentic details
-                - Business professionals in meeting or strategic discussion
-                - Natural office lighting through large windows
-                - Seoul cityscape visible in background (optional)
-                - Authentic Korean corporate culture elements
-                
-                Style: Documentary-style business photography
-                - Natural, candid moments capturing real business interaction
-                - Professional but approachable atmosphere
-                - High-quality corporate photography aesthetic
-                - Suitable for Korean business blog context
-                
-                {base_brand}
-                """,
-                
-                "body-1": f"""Create an artistic business photography showing strategic thinking for "{content_title}".
-                
-                Visual concept: Strategic planning environment
-                - Close-up of hands working with documents, charts, or strategic materials
-                - Professional desk setup with authentic business tools
-                - Soft natural lighting creating depth and focus
-                - Subtle business elements: notebooks, pens, digital devices
-                
-                Style: Editorial business photography
-                - Shallow depth of field focusing on key strategic elements
-                - Warm, professional lighting
-                - Real materials and textures, not graphic illustrations
-                - Clean, focused composition
-                
-                {base_brand}
-                """
-            },
-            
-            "instagram": {
-                "feed": f"""Create a stylish lifestyle-business photography for "{content_title}".
-                
-                Visual concept: Modern professional lifestyle square format
-                - Elegant workspace or business setting shot from above (flat lay style)
-                - Premium business accessories: laptop, notebook, coffee, etc.
-                - Clean, minimal aesthetic with excellent natural lighting
-                - Instagram-friendly composition with negative space for text
-                - Contemporary business lifestyle photography
-                
-                Style: High-end lifestyle photography
-                - Bright, clean aesthetic popular on Instagram
-                - Professional yet approachable business environment
-                - Square format optimized for Instagram feed
-                - Natural materials and authentic business props
-                
-                {base_brand}
-                """,
-                
-                "story": f"""Create a dynamic business portrait for Instagram story format about "{content_title}".
-                
-                Visual concept: Vertical professional portrait photography
-                - Business professional in confident pose (3/4 length shot)
-                - Modern urban background or sleek office environment
-                - Natural portrait lighting with subtle depth of field
-                - Strong vertical composition leading eye top to bottom
-                - Professional but Instagram-appropriate aesthetic
-                
-                Style: Contemporary portrait photography
-                - Vertical orientation optimized for mobile viewing
-                - Professional headshot quality with lifestyle elements
-                - Natural lighting and authentic business environment
-                - Clean composition suitable for text overlay areas
-                
-                {base_brand}
-                """
-            }
-        }
-        
-        return prompts
+    def generate_image_from_prompt(self, prompt, width, height, output_path):
+        """서브에이전트로부터 받은 프롬프트를 사용하여 단일 이미지 생성"""
+        return self.generate_single_image(prompt, width, height, output_path)
 
-    def generate_image_package(self, slug, content_title, content_summary=""):
-        """전체 이미지 패키지 생성"""
+    def generate_image_package(self, slug, prompts_dict):
+        """서브에이전트로부터 프롬프트를 받아 전체 이미지 패키지 생성"""
         
         print(f"\n🚀 OSMU 이미지 패키지 생성 시작: {slug}")
-        print(f"   제목: {content_title}")
+        print("   프롬프트: 서브에이전트로부터 수신")
         print("=" * 60)
         
         # 이미지 저장 디렉토리 설정
         base_dir = Path(f"assets/images/{slug}")
         base_dir.mkdir(parents=True, exist_ok=True)
-        
-        # 프롬프트 생성
-        prompts = self.generate_platform_prompts(content_title, content_summary)
         
         # 생성 로그
         generation_log = []
@@ -277,23 +161,30 @@ class OSMUImageGenerator:
         # 이미지 매니페스트 구조
         manifest = {
             "slug": slug,
-            "title": content_title,
             "generated_at": start_time.isoformat(),
-            "generation_method": "Gemini 2.5 Flash Image Preview",
+            "generation_method": "Gemini 2.5 Flash Image Preview + Meta-Prompt Strategy",
             "images": {},
             "generation_log": []
         }
         
         # 플랫폼별 이미지 생성
         for platform, images in self.image_specs.items():
+            if platform not in prompts_dict:
+                print(f"⚠️  {platform} 플랫폼 프롬프트 없음, 건너뜀")
+                continue
+                
             print(f"\n📱 {platform.upper()} 플랫폼 이미지 생성")
             manifest["images"][platform] = {}
             
             for image_type, specs in images.items():
+                if image_type not in prompts_dict[platform]:
+                    print(f"⚠️  {image_type} 프롬프트 없음, 건너뜀")
+                    continue
+                    
                 output_path = base_dir / platform / f"{image_type}.png"
                 
-                # 프롬프트 가져오기
-                prompt = prompts[platform][image_type]
+                # 서브에이전트로부터 받은 프롬프트 사용
+                prompt = prompts_dict[platform][image_type]
                 
                 # 이미지 생성
                 success = self.generate_single_image(
@@ -331,19 +222,18 @@ class OSMUImageGenerator:
             "successful_images": successful_images,
             "failed_images": failed_images,
             "generation_log": generation_log,
-            "brand_settings": {
-                "primary_color": self.brand_colors["primary"],
-                "secondary_color": self.brand_colors["secondary"],
-                "accent_color": self.brand_colors["accent"],
-                "brand_identity": "SENSE & AI",
-                "company": "IMI WORK"
+            "meta_prompt_strategy": {
+                "approach": "Gallery-worthy artistic interpretation",
+                "technique": "Advanced art/design domain terminology",
+                "brand_approach": "Content-driven, no rigid constraints",
+                "artistic_influence": "Museum-quality aesthetic decisions"
             },
             "design_specifications": {
-                "korean_text": "Native Korean text support via Gemini AI",
-                "infographic_style": "Professional AI-generated business infographic",
-                "color_scheme": "Navy blue primary with strategic accent colors",
-                "mobile_optimization": "All images optimized for mobile viewing",
-                "generation_method": "Gemini 2.5 Flash Image Preview API"
+                "creative_freedom": "AI leverages art history mastery",
+                "prompt_sophistication": "Cinematography + Photography + Art movements",
+                "visual_vocabulary": "Chiaroscuro, Golden ratio, Gestalt principles",
+                "typography_approach": "Architectural precision, minimal integration",
+                "generation_method": "Gemini 2.5 Flash + Meta-Prompt Strategy"
             }
         })
         
@@ -437,26 +327,49 @@ class OSMUImageGenerator:
         with open(report_path, 'w', encoding='utf-8') as f:
             f.write(report_content)
 
-def main():
-    """메인 실행 함수"""
+def generate_from_prompts(slug, prompt_a, prompt_b):
+    """서브에이전트로부터 2개 프롬프트를 받아 6개 이미지 생성"""
     try:
         generator = OSMUImageGenerator()
         
-        # Ben Horowitz 콘텐츠용 이미지 생성
-        success = generator.generate_image_package(
-            slug="ben-horowitz-fear-leadership-insights",
-            content_title="$46B가 증명한 진실: 두려움을 향해 달려가는 것이 일을 잘하는 방법인 이유",
-            content_summary="벤 호로위츠의 벤처캐피탈 인사이트를 바탕으로 한 두려움 기반 리더십과 전략적 용기에 대한 통찰"
-        )
+        # 2개 프롬프트를 6개 이미지에 매핑
+        prompts_dict = {
+            "ghost": {
+                "feature": prompt_a,    # Primary visual
+                "content-1": prompt_b   # Secondary visual
+            },
+            "naver": {
+                "main": prompt_a,       # Primary visual
+                "body-1": prompt_b      # Secondary visual
+            },
+            "instagram": {
+                "feed": prompt_a,       # Primary visual
+                "story": prompt_b       # Secondary visual
+            }
+        }
         
-        if success:
-            print("\n🎉 OSMU 이미지 패키지 생성 성공!")
-            print("Ghost 발행 준비 완료 - 고품질 Gemini 이미지 적용")
-        else:
-            print("\n❌ 일부 이미지 생성 실패")
-            
+        return generator.generate_image_package(slug, prompts_dict)
+        
     except Exception as e:
-        print(f"❌ 오류 발생: {e}")
+        print(f"❌ 이미지 생성 오류: {e}")
+        return False
+
+def main():
+    """메인 실행 함수 - 테스트용"""
+    print("🎨 OSMU 이미지 생성기 v3.0 - 메타프롬프트 전략")
+    print("⚠️  이 스크립트는 서브에이전트로부터 프롬프트를 받아 작동합니다.")
+    print("\n올바른 사용법:")
+    print("1. Claude Code: Task osmu-image-generator")
+    print("2. 서브에이전트가 2개 메타프롬프트 생성")
+    print("3. Python 스크립트로 6개 이미지 생성")
+    
+    # 테스트용 기본 구조 확인
+    try:
+        generator = OSMUImageGenerator()
+        print("✅ Python 엔진 초기화 성공")
+        print("🎯 메타프롬프트 대기 중...")
+    except Exception as e:
+        print(f"❌ 초기화 오류: {e}")
 
 if __name__ == "__main__":
     main()

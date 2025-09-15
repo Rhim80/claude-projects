@@ -1,75 +1,83 @@
 {
   "slug": "ai-literacy-gap",
-  "title": "AI 리터러시 격차: 같은 시대, 다른 세상을 살아가는 사람들",
-  "created_at": "2025-09-08T10:00:00Z",
-  "updated_at": "2025-09-08T17:55:00Z",
-  "generator_version": "1.1",
-  "content_summary": "15년차 카페 사장이 경험한 AI 리터러시 격차의 현실과 Claude Code, n8n을 통한 디지털 전환 여정",
-  "platforms": {
+  "generated_at": "2025-09-15T23:41:26.928861",
+  "generation_method": "Gemini 2.5 Flash Image Preview + Meta-Prompt Strategy",
+  "images": {
     "ghost": {
-      "feature": "ghost/feature.png",
-      "content": []
+      "content-1": "ghost/content-1.png"
     },
     "naver": {
-      "main": "naver/main.png",
-      "body": [
-        "naver/body-1.png",
-        "naver/body-2.png", 
-        "naver/body-3.png"
-      ]
+      "main": "naver/main.png"
     },
     "instagram": {
-      "feed": "instagram/feed.png",
-      "story": "instagram/story.png",
-      "carousel": []
+      "feed": "instagram/feed.png"
     }
   },
-  "generation_metadata": {
-    "total_images": 7,
-    "prompts_used": {
-      "ghost_feature": "Professional feature image for AI literacy gap concept",
-      "naver_main": "Split-screen visualization showing traditional vs AI-powered business operations",
-      "naver_body1": "Claude Code terminal environment showcasing CLI-based AI automation tools",
-      "naver_body2": "n8n workflow diagram displaying automated business processes and integrations",
-      "naver_body3": "Productivity transformation visualization with before/after metrics",
-      "instagram_feed": "Square format image symbolizing AI literacy gap with dual-world concept",
-      "instagram_story": "Vertical CTA-focused image encouraging AI adoption with actionable messaging"
+  "generation_log": [
+    {
+      "file": "ghost/feature.png",
+      "platform": "ghost",
+      "image_type": "feature",
+      "size": "1200x630",
+      "success": false,
+      "timestamp": "2025-09-15T23:41:35.721456"
     },
-    "generation_time": "2025-09-08T17:55:00Z",
-    "processing_time_minutes": 45,
-    "api_calls": 0,
-    "generator_agent": "osmu-image-generator",
-    "generation_method": "PIL-based graphics creation"
-  },
-  "brand_settings": {
-    "primary_colors": ["#1e3a8a", "#ffffff", "#f8fafc"],
-    "accent_colors": ["#3b82f6", "#22c55e", "#f97316"],
-    "brand_name": "IMI WORK",
-    "blog_name": "SENSE & AI",
-    "target_audience": ["business professionals", "entrepreneurs", "small business owners", "cafe owners"],
-    "visual_tone": "professional yet approachable, expert credibility, transformation-focused"
-  },
-  "content_themes": [
-    "AI literacy gap",
-    "Digital transformation",
-    "Claude Code automation",
-    "n8n workflows",
-    "Non-developer AI adoption",
-    "Business process automation",
-    "Productivity enhancement",
-    "15-year F&B experience"
+    {
+      "file": "ghost/content-1.png",
+      "platform": "ghost",
+      "image_type": "content-1",
+      "size": "800x450",
+      "success": true,
+      "timestamp": "2025-09-15T23:41:46.412954"
+    },
+    {
+      "file": "naver/main.png",
+      "platform": "naver",
+      "image_type": "main",
+      "size": "800x450",
+      "success": true,
+      "timestamp": "2025-09-15T23:41:58.103502"
+    },
+    {
+      "file": "naver/body-1.png",
+      "platform": "naver",
+      "image_type": "body-1",
+      "size": "800x450",
+      "success": false,
+      "timestamp": "2025-09-15T23:42:07.947337"
+    },
+    {
+      "file": "instagram/feed.png",
+      "platform": "instagram",
+      "image_type": "feed",
+      "size": "1080x1080",
+      "success": true,
+      "timestamp": "2025-09-15T23:42:17.743485"
+    },
+    {
+      "file": "instagram/story.png",
+      "platform": "instagram",
+      "image_type": "story",
+      "size": "1080x1350",
+      "success": false,
+      "timestamp": "2025-09-15T23:42:26.616016"
+    }
   ],
-  "platform_optimization": {
-    "naver": {
-      "dimensions": "800x450px",
-      "format": "PNG",
-      "optimization": "Korean audience, blog-friendly layout"
-    },
-    "instagram": {
-      "feed_dimensions": "1080x1080px",
-      "story_dimensions": "1080x1350px", 
-      "format": "PNG",
-      "optimization": "Mobile-first, high engagement design"
-    }
+  "generation_duration_seconds": 59.687178,
+  "total_images": 6,
+  "successful_images": 3,
+  "failed_images": 3,
+  "meta_prompt_strategy": {
+    "approach": "Gallery-worthy artistic interpretation",
+    "technique": "Advanced art/design domain terminology",
+    "brand_approach": "Content-driven, no rigid constraints",
+    "artistic_influence": "Museum-quality aesthetic decisions"
+  },
+  "design_specifications": {
+    "creative_freedom": "AI leverages art history mastery",
+    "prompt_sophistication": "Cinematography + Photography + Art movements",
+    "visual_vocabulary": "Chiaroscuro, Golden ratio, Gestalt principles",
+    "typography_approach": "Architectural precision, minimal integration",
+    "generation_method": "Gemini 2.5 Flash + Meta-Prompt Strategy"
   }
 }

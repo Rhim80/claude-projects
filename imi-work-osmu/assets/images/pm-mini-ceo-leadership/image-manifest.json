@@ -1,0 +1,118 @@
+{
+  "slug": "pm-mini-ceo-leadership",
+  "title": "미니 CEO라는 말이 던지는 질문: 권한 없이 어떻게 일을 잘할 것인가",
+  "generated_at": "2025-09-14T20:58:35.806806",
+  "generation_method": "Gemini 2.5 Flash Image Preview",
+  "images": {
+    "ghost": {
+      "feature": "ghost/feature.png",
+      "content": [
+        "ghost/content-1.png",
+        "ghost/content-2.png"
+      ]
+    },
+    "naver": {
+      "main": "naver/main.png",
+      "body": [
+        "naver/body-1.png",
+        "naver/body-2.png",
+        "naver/body-3.png"
+      ]
+    },
+    "instagram": {
+      "feed": "instagram/feed.png",
+      "story": "instagram/story.png"
+    }
+  },
+  "generation_log": [
+    {
+      "file": "ghost/feature.png",
+      "platform": "ghost",
+      "image_type": "feature",
+      "size": "1200x630",
+      "success": true,
+      "timestamp": "2025-09-14T20:58:44.537522"
+    },
+    {
+      "file": "ghost/content-1.png",
+      "platform": "ghost",
+      "image_type": "content-1",
+      "size": "800x450",
+      "success": true,
+      "timestamp": "2025-09-14T20:58:53.669383"
+    },
+    {
+      "file": "ghost/content-2.png",
+      "platform": "ghost",
+      "image_type": "content-2",
+      "size": "800x450",
+      "success": true,
+      "timestamp": "2025-09-14T20:59:04.839526"
+    },
+    {
+      "file": "naver/main.png",
+      "platform": "naver",
+      "image_type": "main",
+      "size": "800x450",
+      "success": true,
+      "timestamp": "2025-09-14T20:59:14.386590"
+    },
+    {
+      "file": "naver/body-1.png",
+      "platform": "naver",
+      "image_type": "body-1",
+      "size": "800x450",
+      "success": true,
+      "timestamp": "2025-09-14T20:59:23.929190"
+    },
+    {
+      "file": "naver/body-2.png",
+      "platform": "naver",
+      "image_type": "body-2",
+      "size": "800x450",
+      "success": true,
+      "timestamp": "2025-09-14T20:59:33.484197"
+    },
+    {
+      "file": "naver/body-3.png",
+      "platform": "naver",
+      "image_type": "body-3",
+      "size": "800x450",
+      "success": true,
+      "timestamp": "2025-09-14T20:59:47.443082"
+    },
+    {
+      "file": "instagram/feed.png",
+      "platform": "instagram",
+      "image_type": "feed",
+      "size": "1080x1080",
+      "success": true,
+      "timestamp": "2025-09-14T20:59:56.677979"
+    },
+    {
+      "file": "instagram/story.png",
+      "platform": "instagram",
+      "image_type": "story",
+      "size": "1080x1350",
+      "success": true,
+      "timestamp": "2025-09-14T21:00:06.624146"
+    }
+  ],
+  "generation_duration_seconds": 90.81737,
+  "total_images": 9,
+  "successful_images": 9,
+  "failed_images": 0,
+  "generation_settings": {
+    "approach": "Content-driven photorealism",
+    "brand_constraints": "Removed for creative freedom",
+    "color_strategy": "Content-adaptive palette"
+  },
+  "design_specifications": {
+    "style": "Photorealistic editorial photography",
+    "quality": "Professional photography grade with natural textures",
+    "color_approach": "Content-adaptive color palette",
+    "mobile_optimization": "All images optimized for mobile and social media",
+    "generation_method": "Gemini 2.5 Flash Image Preview API",
+    "prompt_strategy": "Scene description over keyword lists"
+  }
+}

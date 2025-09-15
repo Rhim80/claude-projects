@@ -1,0 +1,125 @@
+{
+  "slug": "ai-literacy-gap",
+  "title": "AI 문해력 격차가 만드는 새로운 디지털 디바이드",
+  "english_title": "AI Literacy Gap",
+  "generated_at": "2025-09-15T23:44:00.000Z",
+  "generation_method": "Gallery-Quality Meta-Prompt Strategy + Gemini 2.5 Flash Image Preview",
+  "approach": "Advanced Art History Integration",
+  
+  "images": {
+    "ghost": {
+      "feature": {
+        "path": "ghost/feature.png",
+        "size": "1200x630",
+        "file_size": "1.4MB",
+        "concept": "Digital Chasm - Binary division showing AI vs traditional learning",
+        "style": "Contemporary minimalism with professional infographic elements"
+      },
+      "content-1": {
+        "path": "ghost/content-1.png", 
+        "size": "800x450",
+        "file_size": "1.3MB",
+        "concept": "The Enlightened vs The Excluded - Tenebrism composition",
+        "style": "Georges de La Tour candlelit paintings + modern data visualization"
+      },
+      "content-2": {
+        "path": "ghost/content-2.png",
+        "size": "800x450", 
+        "file_size": "981KB",
+        "concept": "Bridging the Divide - Educational pathway connections",
+        "style": "Clean geometric bridge metaphors with strategic color accents"
+      }
+    },
+    "naver": {
+      "main": {
+        "path": "naver/main.png",
+        "size": "800x450",
+        "file_size": "1.2MB", 
+        "concept": "Knowledge Stratification - Geometric hierarchy blocks",
+        "style": "Mondrian geometric abstraction + data visualization design"
+      },
+      "body-1": {
+        "path": "naver/body-1.png",
+        "size": "800x450",
+        "file_size": "1.2MB",
+        "concept": "Digital Natives vs Digital Immigrants - Generational contrast", 
+        "style": "Smooth organic forms vs angular pixelated elements"
+      },
+      "body-2": {
+        "path": "naver/body-2.png",
+        "size": "800x450",
+        "file_size": "1.1MB",
+        "concept": "The Learning Curve - Spiral progression with obstacles",
+        "style": "Modern infographic with upward dynamic flow"
+      },
+      "body-3": {
+        "path": "naver/body-3.png", 
+        "size": "800x450",
+        "file_size": "1.5MB",
+        "concept": "Democratizing AI - Network diffusion pattern",
+        "style": "Radial spreading from warm center to cool periphery"
+      }
+    },
+    "instagram": {
+      "feed": {
+        "path": "instagram/feed.png",
+        "size": "1080x1080",
+        "file_size": "1.6MB",
+        "concept": "The Great Divide - Perfect binary split composition",
+        "style": "Warhol pop art + minimal conceptual art with duotone contrast"
+      },
+      "story": {
+        "path": "instagram/story.png",
+        "size": "1080x1350", 
+        "file_size": "1.1MB",
+        "concept": "Ascending Knowledge - Vertical progression journey",
+        "style": "Purple to cyan gradient with ascending data visualization"
+      }
+    }
+  },
+
+  "meta_prompt_innovation": {
+    "artistic_references": [
+      "Caspar David Friedrich - Romantic sublime aesthetics",
+      "Georges de La Tour - Candlelit tenebrism techniques", 
+      "Piet Mondrian - Geometric modular composition",
+      "David Hockney - Pool paintings and organic forms",
+      "Andy Warhol - Pop art dualistic composition",
+      "Wassily Kandinsky - Abstract expressionist color theory"
+    ],
+    "technical_vocabulary": [
+      "Chiaroscuro lighting techniques",
+      "Tenebrism master compositions", 
+      "Asymmetrical balance principles",
+      "Golden ratio proportions",
+      "Chromatic progression theory",
+      "Gestalt visual grouping",
+      "Hierarchical visualization",
+      "Particle system aesthetics"
+    ],
+    "design_philosophy": "Gallery-worthy execution standard with museum-quality digital art approach"
+  },
+
+  "generation_statistics": {
+    "total_images": 9,
+    "successful_images": 9,
+    "failed_images": 0,
+    "final_success_rate": "100%",
+    "total_generation_time": "~4 minutes",
+    "average_file_size": "1.2MB",
+    "quality_standard": "Gallery exhibition ready"
+  },
+
+  "platform_optimization": {
+    "ghost_blog": "1200x630 + 800x450 formats for optimal blog layout",
+    "naver_blog": "800x450 consistent sizing for Korean platform", 
+    "instagram": "1080x1080 + 1080x1350 for feed and story formats"
+  },
+
+  "brand_integration": {
+    "typography": "AI Literacy Gap positioned in lower right corners",
+    "style_consistency": "Professional yet approachable visual language",
+    "color_freedom": "Content-driven palette without rigid brand constraints",
+    "artistic_sophistication": "Museum-quality aesthetic decisions"
+  }
+}

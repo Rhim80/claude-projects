@@ -22,7 +22,7 @@ pydantic>=2.3.0
 # 로깅
 loguru>=0.7.0
 
-# 이미지 처리 (향후 캐러셀 생성용)
+# 이미지 처리
 Pillow>=10.0.0
 
 # HTTP 클라이언트 (Ghost API용)
@@ -34,3 +34,9 @@ python-markdown>=3.4.0
 
 # HTML 처리
 bleach>=6.0.0
+
+# JWT 토큰 (Ghost Admin API용)
+PyJWT>=2.8.0
+
+# 암호화 (JWT용)
+cryptography>=41.0.0

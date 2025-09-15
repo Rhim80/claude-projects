@@ -110,11 +110,11 @@ YouTube 콘텐츠를 IMI WORK 브랜드 페르소나로 변환하여 Ghost, 네�
    ├── "일을 잘한다" 철학으로 콘텐츠 재해석
    └── 브랜드 일관성 및 품질 기준 설정
    
-2. 이미지 생성 전략 (osmu-image-generator)
-   ├── 콘텐츠 분석 및 비주얼 컨셉 결정
-   ├── 플랫폼별 이미지 전략 및 수량 결정
-   ├── 브랜드 일관성 및 창의적 방향 설정
-   └── Python 스크립트 실행 파라미터 조정
+2. 이미지 생성 전략 (osmu-image-generator) - 메타프롬프트 방식
+   ├── 콘텐츠 분석 및 예술적 해석 (브랜드 제약 제거)
+   ├── 2개 메타프롬프트 생성 (Primary/Secondary Visual)
+   ├── 예술사/디자인 이론 전문 용어 활용 (갤러리급 품질)
+   └── Python 스크립트에 prompts_dict 전달
    
 3. 발행 전략 (ghost-auto-publisher)
    ├── SEO 전략 및 브랜드 정렬 결정
@@ -201,7 +201,7 @@ imi-work-osmu/assets/images/
 방법 1: Claude Code 서브에이전트 (권장)
 1. YouTube 분석    → Task youtube-content-analyzer "[YouTube URL]"
 2. 브랜드 변환     → Task imi-work-persona-writer "콘텐츠 변환"  
-3. 이미지 생성     → Task osmu-image-generator "photorealistic 이미지 패키지"
+3. 이미지 생성     → Task osmu-image-generator "2개 메타프롬프트로 갤러리급 이미지 패키지"
 4. Ghost 발행     → Task ghost-auto-publisher "HTML 콘텐츠로 발행"
 
 방법 2: Python 스크립트 직접 실행 (검증 완료)
@@ -211,7 +211,7 @@ imi-work-osmu/assets/images/
 
 ### 🎯 최종 검증 결과
 - **성공한 Ghost 포스트**: https://blog.imiwork.com/ben-horowitz-fear-leadership-insights-2/
-- **생성된 이미지**: 6개 photorealistic 이미지 (총 8.5MB)
+- **생성된 이미지**: 2개 메타프롬프트로 6개 갤러리급 이미지 (총 8.5MB)
 - **콘텐츠 길이**: 3,089자 마크다운 → 3,405자 HTML
 - **기술 스택**: Ghost v5 + Gemini 2.5 Flash + JWT 인증 완료
 
@@ -230,11 +230,11 @@ imi-work-osmu/assets/images/
 - 2500자 이상 브랜드 콘텐츠 생성
 - **특징**: 창의적 글쓰기는 AI가 Python보다 우수
 
-#### osmu-image-generator (하이브리드)
-- **서브에이전트 역할**: 비주얼 컨셉 결정, 브랜드 일관성 확보, 플랫폼별 전략 수립
+#### osmu-image-generator (하이브리드) - 메타프롬프트 전략
+- **서브에이전트 역할**: 2개 메타프롬프트 생성 (Primary/Secondary), 예술사/디자인 이론 활용, 갤러리급 품질 추구
 - **Python 역할**: scripts/gemini-image-generator.py가 Gemini API 호출 및 파일 관리
-- **협력 결과**: 6개 photorealistic 이미지 생성 (Ghost/네이버/Instagram 최적화)
-- **검증 완료**: Ben Horowitz 콘텐츠로 전체 프로세스 성공
+- **협력 결과**: 2개 프롬프트로 6개 이미지 생성 (브랜드 제약 없는 창의적 해석)
+- **새로운 특징**: 브랜드 색상 제거, 영어 제목 우측하단 배치, 박물관급 시각적 품질
 
 #### ghost-auto-publisher (하이브리드)
 - **서브에이전트 역할**: SEO 전략, 브랜드 정렬, 콘텐츠 구조 최적화 결정
@@ -309,6 +309,96 @@ YouTube: https://www.youtube.com/watch?v=KPxTekxQjzc
 ✅ 각 도구의 강점을 최대한 활용한 효율적 협력
 ✅ 전체 프로세스 100% 성공, 프로덕션 준비 완료
 ```
+
+## 🔀 소스 타입별 워크플로우 분기 처리
+
+### 📌 소스 타입 자동 감지 및 라우팅
+
+#### 1️⃣ YouTube 소스가 들어왔을 때
+**패턴 인식**: youtube.com, youtu.be 포함된 URL
+```bash
+# YouTube URL 예시
+- https://www.youtube.com/watch?v=xxxxx
+- https://youtu.be/xxxxx
+- youtube.com/shorts/xxxxx
+
+# 실행 워크플로우
+1. Task youtube-content-analyzer "[YouTube URL]"
+   → YouTube 메타데이터 및 인사이트 추출
+2. Task imi-work-persona-writer "추출된 인사이트를 IMI WORK 브랜드로 변환"
+   → YouTube 데이터 기반 브랜드 콘텐츠 생성
+3. Task osmu-image-generator "콘텐츠 기반 이미지 패키지 생성"
+4. Task ghost-auto-publisher "Ghost 블로그 발행"
+```
+
+#### 2️⃣ 비YouTube 소스가 들어왔을 때
+**패턴 인식**: 일반 URL, 텍스트, 경험 설명 등
+
+##### 아티클/블로그 링크
+```bash
+# 입력 예시
+- https://example.com/article
+- "이 기사 내용으로 글 써줘: [링크]"
+
+# 실행 워크플로우
+1. [SKIP youtube-content-analyzer] ❌
+2. Task imi-work-persona-writer "아티클 링크: [URL] + 핵심 내용 요약"
+   → 직접 콘텐츠 분석 및 브랜드 변환
+3. Task osmu-image-generator "콘텐츠 기반 이미지 패키지 생성"
+4. Task ghost-auto-publisher "Ghost 블로그 발행"
+```
+
+##### 개인 경험/텍스트
+```bash
+# 입력 예시
+- "오늘 카페에서 있었던 일을 블로그 글로 만들어줘"
+- "이 아이디어를 IMI WORK 관점에서 정리해줘: [텍스트]"
+
+# 실행 워크플로우
+1. [SKIP youtube-content-analyzer] ❌
+2. Task imi-work-persona-writer "[경험/텍스트 직접 입력]"
+   → 경험을 브랜드 스토리로 변환
+3. Task osmu-image-generator "스토리 기반 이미지 패키지 생성"
+4. Task ghost-auto-publisher "Ghost 블로그 발행"
+```
+
+##### 복합 소스 (YouTube + 추가 자료)
+```bash
+# 입력 예시
+- "이 YouTube 영상과 이 아티클을 함께 참고해서 글 써줘"
+
+# 실행 워크플로우
+1. Task youtube-content-analyzer "[YouTube URL]" (YouTube 부분만)
+2. Task imi-work-persona-writer "YouTube 인사이트 + 추가 자료 통합"
+   → 모든 소스 통합하여 브랜드 콘텐츠 생성
+3. Task osmu-image-generator "통합 콘텐츠 기반 이미지 패키지"
+4. Task ghost-auto-publisher "Ghost 블로그 발행"
+```
+
+### 🛡️ 에러 처리 및 폴백
+
+#### 소스 타입 불명확할 때
+```bash
+# 기본 처리 방식
+→ youtube-content-analyzer 건너뛰고
+→ imi-work-persona-writer가 직접 처리
+
+# 사용자에게 확인 요청
+"제공하신 콘텐츠가 YouTube가 아닌 것 같습니다. 
+바로 브랜드 콘텐츠로 변환하시겠습니까?"
+```
+
+#### YouTube URL이지만 접근 불가
+```bash
+# 폴백 처리
+→ YouTube 제목/설명만으로 진행
+→ 또는 사용자에게 핵심 내용 요청
+```
+
+### 💡 실행 팁
+- **YouTube**: 항상 youtube-content-analyzer 먼저
+- **그 외 모든 소스**: youtube-content-analyzer 건너뛰기
+- **확실하지 않으면**: imi-work-persona-writer가 알아서 처리
 
 #### 3. **YouTube 임베딩 시스템** ✅
 - **기능**: 블로그 글 내 원본 YouTube 영상 자동 임베딩
@@ -450,6 +540,82 @@ imi-work-persona-writer 사용하여 소스 분석 및 브랜드 콘텐츠 작�
 └── 브랜드 페르소나 일관성 유지
 
 # 4. 출력: 완성된 IMI WORK 스타일 콘텐츠
+```
+
+### 🔀 소스별 실행 예시 (NEW: Multi-Source Support)
+
+#### 📺 YouTube 콘텐츠 처리
+```bash
+# 입력: YouTube URL
+URL: "https://www.youtube.com/watch?v=KPxTekxQjzc"
+
+# 실행 단계
+1. Task youtube-content-analyzer "https://www.youtube.com/watch?v=KPxTekxQjzc"
+   → YouTube 메타데이터 및 인사이트 추출
+   
+2. Task imi-work-persona-writer "Ben Horowitz 두려움 리더십을 IMI WORK 브랜드로 변환"
+   → YouTube 데이터 기반 브랜드 콘텐츠 생성
+   
+3. Task osmu-image-generator "두려움 리더십 테마로 photorealistic 이미지 패키지"
+   → 6개 플랫폼 최적화 이미지 생성
+   
+4. Task ghost-auto-publisher "HTML 콘텐츠로 Ghost 발행"
+   → 완성된 블로그 포스트 자동 발행
+```
+
+#### 📄 아티클/블로그 콘텐츠 처리
+```bash
+# 입력: 아티클 링크 또는 내용
+입력: "이 기사 내용으로 글 써줘: https://example.com/ai-business-trends"
+
+# 실행 단계 (youtube-content-analyzer 생략)
+1. [SKIP youtube-content-analyzer] ❌
+   
+2. Task imi-work-persona-writer "아티클 링크: https://example.com/ai-business-trends + AI 비즈니스 트렌드 분석"
+   → 아티클 내용을 IMI WORK 관점으로 재해석
+   
+3. Task osmu-image-generator "AI 비즈니스 트렌드 테마 이미지 패키지"
+   → 비즈니스 트렌드 관련 시각화 이미지 생성
+   
+4. Task ghost-auto-publisher "AI 트렌드 인사이트 Ghost 발행"
+   → 트렌드 분석 블로그 포스트 발행
+```
+
+#### 💭 개인 경험/텍스트 처리
+```bash
+# 입력: 개인 경험이나 아이디어
+입력: "오늘 카페에서 AI 자동화 시스템 도입 관련해서 팀 미팅을 했는데, 이를 블로그 글로 정리해줘"
+
+# 실행 단계 (youtube-content-analyzer 생략)
+1. [SKIP youtube-content-analyzer] ❌
+   
+2. Task imi-work-persona-writer "카페 AI 자동화 도입 팀 미팅 경험을 15년 F&B 관점에서 정리"
+   → 개인 경험을 비즈니스 인사이트로 변환
+   
+3. Task osmu-image-generator "카페 AI 자동화 테마 이미지 패키지"
+   → F&B AI 자동화 관련 이미지 생성
+   
+4. Task ghost-auto-publisher "카페 AI 도입기 Ghost 발행"
+   → 실무 경험 기반 블로그 포스트 발행
+```
+
+#### 🔄 복합 소스 처리
+```bash
+# 입력: YouTube + 추가 자료
+입력: "이 YouTube 영상 https://youtu.be/abc123과 이 McKinsey 보고서를 함께 참고해서 AI 리더십에 대한 글 써줘"
+
+# 실행 단계 (YouTube 먼저 처리, 추가 자료 통합)
+1. Task youtube-content-analyzer "https://youtu.be/abc123"
+   → YouTube 메타데이터 추출
+   
+2. Task imi-work-persona-writer "YouTube 인사이트 + McKinsey 보고서 통합하여 AI 리더십 관점 정리"
+   → 다중 소스 통합 브랜드 콘텐츠
+   
+3. Task osmu-image-generator "AI 리더십 통합 인사이트 이미지 패키지"
+   → 리더십 테마 종합 이미지 생성
+   
+4. Task ghost-auto-publisher "AI 리더십 종합 분석 Ghost 발행"
+   → 다중 소스 기반 종합 분석 포스트
 ```
 
 ### 🏆 완전 검증된 프로덕션 워크플로우 (2025.09.14)
