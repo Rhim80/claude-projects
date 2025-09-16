@@ -228,25 +228,39 @@ def markdown_to_optimized_html(markdown_content, slug):
         print(f"❌ 마크다운 변환 중 오류: {e}")
         return f"<p>마크다운 변환 오류: {str(e)}</p>"
 
+def extract_meta_from_content(content):
+    """콘텐츠에서 메타 정보 추출"""
+    import re
+    import yaml
+
+    # YAML 메타데이터 블록 찾기
+    yaml_pattern = r'```yaml\n(.*?)\n```'
+    yaml_match = re.search(yaml_pattern, content, re.DOTALL)
+
+    if yaml_match:
+        try:
+            yaml_content = yaml_match.group(1)
+            meta_data = yaml.safe_load(yaml_content)
+            return meta_data
+        except Exception as e:
+            print(f"⚠️ YAML 파싱 오류: {e}")
+            return {}
+
+    return {}
+
 def optimize_for_seo(title, content, slug):
     """SEO 최적화된 메타데이터 생성"""
-    # Ben Horowitz 콘텐츠용 메타데이터
-    meta_title = "$46B가 증명한 진실: 두려움을 향해 달려가는 것이 일을 잘하는 방법인 이유 | IMI WORK"
-    
-    # 메타 설명 최적화 (150자 이내)
-    meta_description = "벤 호로위츠의 460억 달러 투자 경험에서 발견한 핵심: 두려움을 마주하고 불편한 진실을 향해 달려가는 것이 경쟁 우위를 만드는 이유와 실무 적용법"
-    
-    # 커스텀 발췌문 (Ghost 카드 표시용)
-    custom_excerpt = "460억 달러를 투자하면서 발견한 창업자들의 실패 패턴과 성공하는 사람들의 공통점. '두려움을 향해 달려가는 것'이 경쟁 우위를 만드는 구체적 방법론"
-    
-    # 태그 최적화
-    tags = [
-        {'name': '리더십'},
-        {'name': '벤처캐피탈'}, 
-        {'name': '전략적용기'},
-        {'name': '경영전략'},
-        {'name': 'IMI WORK'}
-    ]
+    # 콘텐츠에서 메타 정보 추출
+    meta_data = extract_meta_from_content(content)
+
+    # 기본값 설정
+    meta_title = meta_data.get('meta_title', f"{title} | IMI WORK")
+    meta_description = meta_data.get('meta_description', f"{title}에 대한 IMI WORK의 인사이트")
+    custom_excerpt = meta_data.get('custom_excerpt', f"{title}에 대한 실무 중심의 분석과 적용 방안")
+
+    # 태그 처리
+    tag_list = meta_data.get('tags', ['IMI WORK'])
+    tags = [{'name': tag} for tag in tag_list]
     
     return {
         'meta_title': meta_title,
@@ -266,7 +280,7 @@ def main():
     if not GHOST_API_KEY:
         raise ValueError("GHOST_ADMIN_API_KEY가 환경변수에 설정되지 않았습니다.")
     
-    slug = "ben-horowitz-fear-leadership-insights"
+    slug = "ai-agents-improving-interns"
     content_file = f"contents/{slug}/main.md"
     
     try:
@@ -300,9 +314,9 @@ def main():
         feature_image_url = None
         content_images = []
         
-        if manifest and 'images' in manifest and 'ghost' in manifest['images']:
+        if manifest and 'platform_mappings' in manifest and 'ghost' in manifest['platform_mappings']:
             print("🖼️ OSMU 이미지 업로드 시도 중...")
-            ghost_images = manifest['images']['ghost']
+            ghost_images = manifest['platform_mappings']['ghost']
             base_path = f"assets/images/{slug}/"
             
             # 피처 이미지 업로드

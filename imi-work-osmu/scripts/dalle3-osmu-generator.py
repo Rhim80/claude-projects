@@ -7,6 +7,7 @@ VISUAL_PROMPT v5.5 + OpenAI DALL-E 3 = 갤러리급 이미지
 import os
 import json
 import requests
+import argparse
 from datetime import datetime
 from pathlib import Path
 from dotenv import load_dotenv
@@ -171,27 +172,44 @@ def get_dalle_size(target_size):
         return "1024x1792"  # 세로형
 
 def main():
-    """대화형 테스트 모드"""
+    """커맨드라인 인자 또는 대화형 모드"""
+    parser = argparse.ArgumentParser(description="DALL-E 3 OSMU 이미지 생성기")
+    parser.add_argument("--slug", help="콘텐츠 슬러그")
+    parser.add_argument("--prompt-a", help="Primary 프롬프트")
+    parser.add_argument("--prompt-b", help="Secondary 프롬프트")
+
+    args = parser.parse_args()
+
     print("🎨 DALL-E 3 OSMU 이미지 생성기")
-    print("⚠️  이 스크립트는 서브에이전트와 함께 사용하도록 설계되었습니다.")
-    print()
-    print("테스트 모드:")
-    
-    slug = input("슬러그 입력: ").strip()
-    if not slug:
-        slug = "test-dalle3"
-    
-    prompt_a = input("Primary prompt: ").strip()
-    if not prompt_a:
-        prompt_a = "A minimalist architectural visualization with geometric shapes and golden ratio composition"
-    
-    prompt_b = input("Secondary prompt: ").strip()
-    if not prompt_b:
-        prompt_b = "An abstract data visualization with clean lines and professional aesthetic"
-    
+
+    # 커맨드라인 인자가 있으면 사용, 없으면 대화형 모드
+    if args.slug and args.prompt_a and args.prompt_b:
+        print("📋 커맨드라인 모드")
+        slug = args.slug
+        prompt_a = args.prompt_a
+        prompt_b = args.prompt_b
+        print(f"   슬러그: {slug}")
+        print(f"   Primary: {prompt_a[:50]}...")
+        print(f"   Secondary: {prompt_b[:50]}...")
+    else:
+        print("⚠️  이 스크립트는 서브에이전트와 함께 사용하도록 설계되었습니다.")
+        print("💬 대화형 테스트 모드:")
+
+        slug = input("슬러그 입력: ").strip()
+        if not slug:
+            slug = "test-dalle3"
+
+        prompt_a = input("Primary prompt: ").strip()
+        if not prompt_a:
+            prompt_a = "A minimalist architectural visualization with geometric shapes and golden ratio composition"
+
+        prompt_b = input("Secondary prompt: ").strip()
+        if not prompt_b:
+            prompt_b = "An abstract data visualization with clean lines and professional aesthetic"
+
     print(f"\n🚀 생성 시작...")
     success = generate_from_prompts(slug, prompt_a, prompt_b)
-    
+
     if success:
         print("\n🎯 생성 성공! assets/images/ 폴더를 확인하세요.")
     else:

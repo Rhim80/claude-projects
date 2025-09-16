@@ -124,7 +124,7 @@ Task ghost-auto-publisher "HTML 콘텐츠와 이미지로 Ghost 발행"
 ```
 
 ### Python 헬퍼 스크립트
-- **gemini-image-generator.py**: Gemini API 직접 호출, 6개 이미지 생성
+- **dalle3-osmu-generator.py**: DALL-E 3 API 직접 호출, 6개 이미지 생성
 - **ghost-auto-publish.py**: Ghost Admin API 직접 호출, HTML 발행
 - **ghost-publisher.py**: 검증된 Ghost API 로직 (참조용)
 
@@ -160,7 +160,6 @@ imi-work-osmu/
 │   └── image-manifest.json              # 메타데이터
 └── scripts/
     ├── dalle3-osmu-generator.py         # DALL-E 3 이미지 생성 엔진 (2025.09.16)
-    ├── gemini-image-generator.py        # Gemini 이미지 생성 엔진 (백업용)
     ├── ghost-auto-publish.py            # Ghost 발행 엔진
     └── ghost-publisher.py               # 검증된 Ghost API 로직
 ```
@@ -214,5 +213,5 @@ imi-work-osmu/
 ---
 
 *마지막 업데이트: 2025년 9월 16일*
-*검증 콘텐츠: Ben Horowitz Fear Leadership (Gemini) + AEO DALL-E 3 Test*
-*성공률: 100% (Gemini 6/6, DALL-E 3 4/4, Ghost 발행 1/1)*
+*검증 콘텐츠: Ben Horowitz Fear Leadership + AEO DALL-E 3 Test*
+*성공률: 100% (DALL-E 3 10/10, Ghost 발행 1/1)*

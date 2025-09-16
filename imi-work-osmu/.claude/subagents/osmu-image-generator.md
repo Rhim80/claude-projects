@@ -9,8 +9,8 @@
 - **브랜드 해석**: IMI WORK 철학을 시각적으로 표현
 
 ### 🔧 Python 스크립트 역할 (기술적 실행)
-- **파일 위치**: `scripts/gemini-image-generator.py`
-- **핵심 기능**: Gemini 2.5 Flash API 호출 및 이미지 생성
+- **파일 위치**: `scripts/dalle3-osmu-generator.py`
+- **핵심 기능**: OpenAI DALL-E 3 API 호출 및 이미지 생성
 - **기술적 처리**: 파일 시스템 관리, 오류 처리, 메타데이터 생성
 
 ## 하이브리드 워크플로우
@@ -25,7 +25,7 @@
 ### 2단계: Python 스크립트 실행
 ```
 서브에이전트가 Python 호출 → 6개 이미지 생성 → 결과 검증
-├── scripts/gemini-image-generator.py 자동 실행
+├── scripts/dalle3-osmu-generator.py 자동 실행
 ├── 2개 프롬프트 → 6개 플랫폼 이미지 매핑
 └── assets/images/[slug]/ 디렉토리 구조 생성
 ```
@@ -38,7 +38,7 @@
 ## 기존 시스템 연동
 
 ### Python 스크립트 연동 방식
-- **기존 파일 활용**: `scripts/gemini-image-generator.py` 사용
+- **기존 파일 활용**: `scripts/dalle3-osmu-generator.py` 사용
 - **프롬프트 전달**: 서브에이전트가 생성한 2개 프롬프트를 스크립트에 전달
 - **자동 매핑**: 2개 프롬프트 → 6개 플랫폼 이미지 자동 생성
 
@@ -80,7 +80,11 @@ Task osmu-image-generator "AEO 마케팅 전략 콘텐츠를 위한 photorealist
 
 ### 직접 Python 실행 (디버깅용)
 ```bash
-python3 scripts/gemini-image-generator.py
+# 커맨드라인 모드 (서브에이전트가 사용)
+python3 scripts/dalle3-osmu-generator.py --slug "콘텐츠명" --prompt-a "Primary 프롬프트" --prompt-b "Secondary 프롬프트"
+
+# 대화형 모드 (수동 테스트용)
+python3 scripts/dalle3-osmu-generator.py
 ```
 
 ## 품질 기준
@@ -100,7 +104,7 @@ python3 scripts/gemini-image-generator.py
 
 ### 일반적 문제
 1. **Python 스크립트 인식 못함**: 서브에이전트가 기존 스크립트 존재 확인
-2. **API 키 오류**: `.env` 파일의 `GEMINI_API_KEY` 확인
+2. **API 키 오류**: `.env` 파일의 `OPENAI_API_KEY` 확인
 3. **프롬프트 전달 실패**: 2개 프롬프트 명확히 구분하여 전달
 
 ### 성공 확인 요소
@@ -109,6 +113,22 @@ python3 scripts/gemini-image-generator.py
 - ✅ 각 이미지 1MB 이상 고품질
 - ✅ 콘텐츠 메시지와 시각적 일치도
 
+## DALL-E 3 엔진 사양
+
+### 기술적 사양
+- **모델**: dall-e-3
+- **품질**: HD (고해상도)
+- **스타일**: vivid (생생한 색감)
+- **생성 크기**: 자동 최적화 (1792x1024, 1024x1024, 1024x1792)
+- **후처리**: PIL로 플랫폼별 크기 리사이즈
+
+### 프롬프트 전달 방식
+서브에이전트가 Python 스크립트를 직접 호출하며 프롬프트를 전달:
+```bash
+python3 scripts/dalle3-osmu-generator.py --slug "콘텐츠명" --prompt-a "Primary 프롬프트" --prompt-b "Secondary 프롬프트"
+```
+
 ## 검증된 성공 사례
 - **Ben Horowitz 콘텐츠**: 6개 photorealistic 이미지 성공 (총 8.5MB)
-- **AEO 마케팅 전략**: 현재 진행 중
+- **AEO DALL-E 3 테스트**: 4개 고품질 이미지 성공 (600KB-1.2MB)
+- **DALL-E 3 전환 완료**: 2025.09.16

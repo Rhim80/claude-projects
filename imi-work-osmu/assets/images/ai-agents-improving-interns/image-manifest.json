@@ -1,0 +1,92 @@
+{
+  "slug": "ai-agents-improving-interns",
+  "title": "AI 에이전트는 '개선되고 있는 인턴들'이다 - 일을 제대로 시키려면 감각부터",
+  "generated_at": "2025-09-16T15:08:27.358856",
+  "generation_method": "DALL-E 3 HD + VISUAL_PROMPT v5.5",
+  "model": "dall-e-3",
+  "quality": "hd",
+  "style": "vivid",
+  "content_summary": "AI 에이전트를 활용한 업무 효율성, 감각과 AI의 협력",
+  "target_keywords": [
+    "AI 에이전트",
+    "업무 자동화",
+    "AI 활용법"
+  ],
+  "brand_guidelines": {
+    "colors": [
+      "#1e3a8a",
+      "#ffffff",
+      "#f8fafc"
+    ],
+    "tone": "전문적이면서 친근한",
+    "style": "현실적이고 고품질의 비즈니스 환경"
+  },
+  "platform_mappings": {
+    "ghost": {
+      "feature": "ghost/feature.png",
+      "content-1": "ghost/content-1.png"
+    },
+    "naver": {
+      "main": "naver/main.png",
+      "body-1": "naver/body-1.png"
+    },
+    "instagram": {
+      "feed": "instagram/feed.png",
+      "story": "instagram/story.png"
+    }
+  },
+  "total_images": 6,
+  "successful_images": 6,
+  "failed_images": 0,
+  "generation_duration_seconds": 181.799404,
+  "generation_log": [
+    {
+      "file": "ghost/feature.png",
+      "platform": "ghost",
+      "image_type": "feature",
+      "size": "1200x630",
+      "success": true,
+      "timestamp": "2025-09-16T15:09:01.606595"
+    },
+    {
+      "file": "naver/main.png",
+      "platform": "naver",
+      "image_type": "main",
+      "size": "800x450",
+      "success": true,
+      "timestamp": "2025-09-16T15:09:32.998480"
+    },
+    {
+      "file": "instagram/feed.png",
+      "platform": "instagram",
+      "image_type": "feed",
+      "size": "1080x1080",
+      "success": true,
+      "timestamp": "2025-09-16T15:09:56.408360"
+    },
+    {
+      "file": "ghost/content-1.png",
+      "platform": "ghost",
+      "image_type": "content-1",
+      "size": "800x450",
+      "success": true,
+      "timestamp": "2025-09-16T15:10:26.337949"
+    },
+    {
+      "file": "naver/body-1.png",
+      "platform": "naver",
+      "image_type": "body-1",
+      "size": "800x450",
+      "success": true,
+      "timestamp": "2025-09-16T15:11:00.176721"
+    },
+    {
+      "file": "instagram/story.png",
+      "platform": "instagram",
+      "image_type": "story",
+      "size": "1080x1350",
+      "success": true,
+      "timestamp": "2025-09-16T15:11:29.158248"
+    }
+  ]
+}

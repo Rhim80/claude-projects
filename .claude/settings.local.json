@@ -53,7 +53,15 @@
       "Bash(xargs kill:*)",
       "Bash(open http://localhost:3002)",
       "Bash(xargs -r kill -9)",
-      "Read(//var/folders/41/zwt5l5js0pz5wqrmqq3g8hdc0000gn/T/TemporaryItems/NSIRD_screencaptureui_agm7l2/**)"
+      "Read(//var/folders/41/zwt5l5js0pz5wqrmqq3g8hdc0000gn/T/TemporaryItems/NSIRD_screencaptureui_agm7l2/**)",
+      "Bash(tree:*)",
+      "Read(//Users/rhim/.claude/agents/**)",
+      "Read(//Users/rhim/.claude/projects/**)",
+      "Read(//Users/rhim/.claude/**)",
+      "Bash(sort:*)",
+      "Bash(xargs:*)",
+      "Bash(git log:*)",
+      "Bash(rm:*)"
     ],
     "deny": [],
     "ask": []
