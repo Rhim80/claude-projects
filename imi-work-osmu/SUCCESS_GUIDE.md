@@ -40,8 +40,21 @@ python3 scripts/dalle3-osmu-generator.py
 
 ### 2단계: Ghost 발행
 ```bash
-python3 scripts/ghost-auto-publish.py
+# 기본 사용법
+python3 scripts/ghost-auto-publish.py --slug "your-content-slug"
+
+# 제목과 상태 지정
+python3 scripts/ghost-auto-publish.py --slug "ai-automation-insights" --title "AI 자동화로 업무 혁신하기" --status "published"
+
+# 커스텀 콘텐츠 파일 지정
+python3 scripts/ghost-auto-publish.py --slug "custom-content" --content-file "contents/custom/article.md"
 ```
+
+**개선된 기능 (2025.09.16):**
+- 커맨드라인 인자로 slug, title, status 지정 가능
+- 하드코딩 제거 - 완전한 파라미터화
+- 자동 제목 추출 (마크다운 첫 줄에서)
+- draft/published 상태 선택 가능
 
 **결과:**
 - HTML 콘텐츠 자동 변환 및 최적화

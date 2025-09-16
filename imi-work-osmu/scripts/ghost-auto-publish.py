@@ -271,17 +271,31 @@ def optimize_for_seo(title, content, slug):
 
 def main():
     """메인 실행 함수"""
+    import argparse
+
+    # 커맨드라인 인자 파싱
+    parser = argparse.ArgumentParser(description="Ghost CMS 자동 발행 스크립트")
+    parser.add_argument("--slug", required=True, help="콘텐츠 슬러그 (예: ai-agents-improving-interns)")
+    parser.add_argument("--title", help="포스트 제목 (선택사항, 없으면 마크다운에서 추출)")
+    parser.add_argument("--content-file", help="마크다운 파일 경로 (기본값: contents/{slug}/main.md)")
+    parser.add_argument("--status", default="draft", choices=["draft", "published"], help="발행 상태 (기본값: draft)")
+
+    args = parser.parse_args()
+
     print("🚀 Ghost CMS 자동 발행 시작")
     print("=" * 50)
-    
+    print(f"📋 슬러그: {args.slug}")
+    print(f"📝 제목: {args.title or '마크다운에서 추출'}")
+    print(f"📄 상태: {args.status}")
+
     GHOST_URL = os.getenv('GHOST_API_URL', 'https://blog.imiwork.com')
     GHOST_API_KEY = os.getenv('GHOST_ADMIN_API_KEY')
-    
+
     if not GHOST_API_KEY:
         raise ValueError("GHOST_ADMIN_API_KEY가 환경변수에 설정되지 않았습니다.")
-    
-    slug = "ai-agents-improving-interns"
-    content_file = f"contents/{slug}/main.md"
+
+    slug = args.slug
+    content_file = args.content_file or f"contents/{slug}/main.md"
     
     try:
         # 1. 마크다운 콘텐츠 로드
@@ -346,16 +360,19 @@ def main():
         print(f"   HTML 길이: {len(html_content)} characters")
         print(f"   슬러그: {slug}")
         
+        # 제목 결정: 커맨드라인 인자 > 마크다운 첫 줄 > 기본값
+        final_title = args.title or content_title or slug.replace('-', ' ').title()
+
         # Ghost v5 source=html 사용으로 HTML 직접 전송
         post_data = {
-            'title': "$46B가 증명한 진실: 두려움을 향해 달려가는 것이 일을 잘하는 방법인 이유",
+            'title': final_title,
             'slug': slug,
             'html': html_content,  # 직접 HTML 전송 (source=html 파라미터로)
             'meta_title': seo_data['meta_title'],
             'meta_description': seo_data['meta_description'],
             'custom_excerpt': seo_data['custom_excerpt'],
             'tags': seo_data['tags'],
-            'status': 'draft',
+            'status': args.status,
             'featured': True,
             'visibility': 'public'
         }

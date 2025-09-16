@@ -75,16 +75,22 @@ assets/images/[slug]/
 
 ### 서브에이전트 호출
 ```bash
-Task osmu-image-generator "AEO 마케팅 전략 콘텐츠를 위한 photorealistic 이미지 패키지 생성"
+Task osmu-image-generator "콘텐츠명 또는 테마를 위한 OSMU 이미지 패키지 생성"
 ```
 
-### 직접 Python 실행 (디버깅용)
+### 서브에이전트가 Python 스크립트 호출하는 방식
 ```bash
-# 커맨드라인 모드 (서브에이전트가 사용)
-python3 scripts/dalle3-osmu-generator.py --slug "콘텐츠명" --prompt-a "Primary 프롬프트" --prompt-b "Secondary 프롬프트"
+# 서브에이전트는 2개 프롬프트를 생성한 후 다음과 같이 호출
+python3 scripts/dalle3-osmu-generator.py --slug "content-slug" --prompt-a "Primary VISUAL_PROMPT" --prompt-b "Secondary VISUAL_PROMPT"
+```
 
+### 직접 Python 실행 (테스트/디버깅용)
+```bash
 # 대화형 모드 (수동 테스트용)
 python3 scripts/dalle3-osmu-generator.py
+
+# 커맨드라인 모드
+python3 scripts/dalle3-osmu-generator.py --slug "test-content" --prompt-a "Primary prompt" --prompt-b "Secondary prompt"
 ```
 
 ## 품질 기준
