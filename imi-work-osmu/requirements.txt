@@ -22,6 +22,9 @@ pydantic>=2.3.0
 # 로깅
 loguru>=0.7.0
 
+# AI 이미지 생성
+openai>=1.100.0
+
 # 이미지 처리
 Pillow>=10.0.0
 

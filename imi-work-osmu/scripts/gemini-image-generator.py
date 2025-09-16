@@ -1,16 +1,25 @@
 #!/usr/bin/env python3
 """
-OSMU 이미지 생성기 v2.0 - Gemini 2.5 Flash Image Preview 기반
+OSMU 이미지 생성기 v3.0 - Gemini 2.5 Flash Image Preview 기반
 다중 플랫폼 최적화 이미지 패키지 자동 생성
 """
 
 import os
 import json
-import requests
-import base64
 from datetime import datetime
 from pathlib import Path
 from dotenv import load_dotenv
+from PIL import Image
+from io import BytesIO
+
+# Google GenAI SDK 사용
+try:
+    from google import genai
+    from google.genai import types
+except ImportError:
+    print("❌ Google GenAI SDK가 설치되지 않았습니다.")
+    print("설치 명령: pip install google-genai")
+    exit(1)
 
 # 환경변수 로드
 load_dotenv()
@@ -21,9 +30,9 @@ class OSMUImageGenerator:
         if not self.api_key:
             raise ValueError("GEMINI_API_KEY가 설정되지 않았습니다.")
         
-        # Gemini 2.5 Flash Image Preview 모델 사용
+        # Google GenAI 클라이언트 초기화
+        self.client = genai.Client(api_key=self.api_key)
         self.model_name = "gemini-2.5-flash-image-preview"
-        self.base_url = "https://generativelanguage.googleapis.com/v1beta/models"
         
         # 2-Prompt 메타프롬프트 전략 - 이미지 매핑 정의
         self.prompt_mapping = {
@@ -59,79 +68,45 @@ class OSMUImageGenerator:
             }
         }
         
-        print(f"🤖 OSMU 이미지 생성기 v3.1 초기화 완료")
+        print(f"🤖 OSMU 이미지 생성기 v3.0 초기화 완료")
         print(f"   모델: {self.model_name}")
-        print(f"   전략: 2-Prompt 메타프롬프트 기반 갤러리급 이미지 생성")
+        print(f"   SDK: Google GenAI SDK")
 
     def generate_single_image(self, prompt, width, height, output_path):
-        """단일 이미지 생성"""
-        
-        url = f"{self.base_url}/{self.model_name}:generateContent"
-        
-        headers = {
-            'Content-Type': 'application/json'
-        }
-        
-        # 이미지 생성 요청 페이로드
-        payload = {
-            "contents": [{"parts": [{"text": f"{prompt}\n\nImage specifications: {width}x{height} pixels, high quality, professional design."}]}],
-            "generationConfig": {
-                "temperature": 0.1,
-                "topK": 40,
-                "topP": 0.95,
-                "maxOutputTokens": 8192,
-            },
-            "safetySettings": [
-                {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_MEDIUM_AND_ABOVE"},
-                {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_MEDIUM_AND_ABOVE"},
-                {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_MEDIUM_AND_ABOVE"},
-                {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_MEDIUM_AND_ABOVE"}
-            ]
-        }
+        """단일 이미지 생성 - Google GenAI SDK 사용"""
         
         try:
             print(f"🎨 이미지 생성 중: {os.path.basename(output_path)}")
             print(f"   크기: {width}x{height}")
             
-            # API 호출
-            response = requests.post(
-                f"{url}?key={self.api_key}", 
-                headers=headers, 
-                json=payload,
-                timeout=60
+            # Gemini 2.5 Flash Image Preview로 이미지 생성
+            response = self.client.models.generate_content(
+                model=self.model_name,
+                contents=[f"{prompt}\n\nImage dimensions: {width}x{height}, high quality, professional design."]
             )
             
-            if response.status_code == 200:
-                result = response.json()
-                
-                # 응답에서 이미지 데이터 추출
-                if 'candidates' in result and len(result['candidates']) > 0:
-                    candidate = result['candidates'][0]
+            # 응답에서 이미지 추출
+            for part in response.candidates[0].content.parts:
+                if part.inline_data is not None:
+                    # PIL Image로 변환
+                    image = Image.open(BytesIO(part.inline_data.data))
                     
-                    if 'content' in candidate and 'parts' in candidate['content']:
-                        for part in candidate['content']['parts']:
-                            if 'inlineData' in part:
-                                # Base64 이미지 데이터 저장
-                                image_data = part['inlineData']['data']
-                                image_bytes = base64.b64decode(image_data)
-                                
-                                # 디렉토리 생성
-                                os.makedirs(os.path.dirname(output_path), exist_ok=True)
-                                
-                                with open(output_path, 'wb') as f:
-                                    f.write(image_bytes)
-                                
-                                file_size = len(image_bytes)
-                                print(f"✅ 저장 완료: {file_size:,} bytes")
-                                return True
+                    # 크기 조정 (필요한 경우)
+                    if image.size != (width, height):
+                        image = image.resize((width, height), Image.LANCZOS)
                     
-                print("⚠️ 응답에 이미지 데이터가 없습니다.")
-                return False
+                    # 디렉토리 생성
+                    os.makedirs(os.path.dirname(output_path), exist_ok=True)
                     
-            else:
-                print(f"❌ API 호출 실패: {response.status_code}")
-                print(f"오류 응답: {response.text[:500]}...")
-                return False
+                    # 이미지 저장
+                    image.save(output_path, "PNG", optimize=True)
+                    
+                    file_size = os.path.getsize(output_path)
+                    print(f"✅ 저장 완료: {file_size:,} bytes")
+                    return True
+            
+            print("⚠️ 응답에 이미지 데이터가 없습니다.")
+            return False
                 
         except Exception as e:
             print(f"❌ 이미지 생성 오류: {e}")

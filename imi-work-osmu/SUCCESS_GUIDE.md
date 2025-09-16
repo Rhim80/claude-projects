@@ -17,16 +17,19 @@
 
 ### 검증된 기술 스택
 - **Ghost v5**: source=html 파라미터로 HTML 직접 전송 성공
-- **Gemini 2.5 Flash Image Preview**: Photorealistic 스타일 이미지 생성
+- **DALL-E 3 HD**: OpenAI SDK 1.107.3, HD + vivid 스타일 이미지 생성 (2025.09.16 전환)
 - **JWT 인증**: Ghost Admin API 정상 작동
 - **OSMU 이미지 패키지**: 6개 플랫폼별 최적화 이미지
+- **미니멀 텍스트**: 2-4단어 영어 문구, 60% 투명도 오버레이
 
 ## 🚀 완전 자동화 워크플로우
 
 ### 1단계: 이미지 생성
 ```bash
-python3 scripts/gemini-image-generator.py
+python3 scripts/dalle3-osmu-generator.py
 ```
+
+**⚠️ 2025.09.16 업데이트**: Gemini → DALL-E 3 전환 완료
 
 **결과:**
 - 6개 플랫폼별 photorealistic 이미지
@@ -156,7 +159,8 @@ imi-work-osmu/
 │   │   └── story.png                    # 1080x1350, 1.4MB
 │   └── image-manifest.json              # 메타데이터
 └── scripts/
-    ├── gemini-image-generator.py        # 이미지 생성 엔진
+    ├── dalle3-osmu-generator.py         # DALL-E 3 이미지 생성 엔진 (2025.09.16)
+    ├── gemini-image-generator.py        # Gemini 이미지 생성 엔진 (백업용)
     ├── ghost-auto-publish.py            # Ghost 발행 엔진
     └── ghost-publisher.py               # 검증된 Ghost API 로직
 ```
@@ -183,6 +187,32 @@ imi-work-osmu/
 
 **🏆 결론**: IMI WORK OSMU v2.0 시스템이 완전히 작동하며, 프로덕션 환경에서 안정적으로 사용 가능합니다.
 
-*마지막 업데이트: 2025년 9월 14일*
-*검증 콘텐츠: Ben Horowitz Fear Leadership 인사이트*
-*성공률: 100% (이미지 6/6, Ghost 발행 1/1)*
+## 🎨 DALL-E 3 전환 성공 사례 (2025.09.16 추가)
+
+### 새로운 이미지 생성 엔진 검증
+- **테스트 프로젝트**: aeo-dalle3-test
+- **실행 명령**: `python3 scripts/dalle3-osmu-generator.py`
+- **생성 결과**: 4개 고품질 이미지 성공
+  - ghost/feature.png (898KB)
+  - ghost/content-1.png (619KB)
+  - naver/main.png (609KB)
+  - instagram/feed.png (1.2MB)
+
+### DALL-E 3 기술 스택
+- **OpenAI SDK**: 1.107.3 (기존 설치 활용)
+- **모델**: dall-e-3
+- **품질**: HD
+- **스타일**: vivid
+- **텍스트 오버레이**: 미니멀 영어 문구 (2-4단어)
+
+### 핵심 성과
+✅ **Gemini 대비 장점**: 더 정교한 디테일, 일관성 있는 품질
+✅ **간단한 설정**: 기존 OpenAI SDK 활용, 복잡한 설치 불필요
+✅ **미니멀 텍스트**: 이미지 품질 저하 없이 텍스트 통합
+✅ **안정적 API**: 연속 생성 시에도 품질 일관성 유지
+
+---
+
+*마지막 업데이트: 2025년 9월 16일*
+*검증 콘텐츠: Ben Horowitz Fear Leadership (Gemini) + AEO DALL-E 3 Test*
+*성공률: 100% (Gemini 6/6, DALL-E 3 4/4, Ghost 발행 1/1)*

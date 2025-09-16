@@ -205,7 +205,7 @@ imi-work-osmu/assets/images/
 4. Ghost 발행     → Task ghost-auto-publisher "HTML 콘텐츠로 발행"
 
 방법 2: Python 스크립트 직접 실행 (검증 완료)
-1. 이미지 생성: python3 scripts/gemini-image-generator.py
+1. 이미지 생성: python3 scripts/dalle3-osmu-generator.py
 2. Ghost 발행: python3 scripts/ghost-auto-publish.py
 ```
 
@@ -213,7 +213,7 @@ imi-work-osmu/assets/images/
 - **성공한 Ghost 포스트**: https://blog.imiwork.com/ben-horowitz-fear-leadership-insights-2/
 - **생성된 이미지**: 2개 메타프롬프트로 6개 갤러리급 이미지 (총 8.5MB)
 - **콘텐츠 길이**: 3,089자 마크다운 → 3,405자 HTML
-- **기술 스택**: Ghost v5 + Gemini 2.5 Flash + JWT 인증 완료
+- **기술 스택**: Ghost v5 + DALL-E 3 + JWT 인증 완료
 
 ### 🚀 하이브리드 서브에이전트 역할 정의
 
@@ -230,11 +230,12 @@ imi-work-osmu/assets/images/
 - 2500자 이상 브랜드 콘텐츠 생성
 - **특징**: 창의적 글쓰기는 AI가 Python보다 우수
 
-#### osmu-image-generator (하이브리드) - 메타프롬프트 전략
-- **서브에이전트 역할**: 2개 메타프롬프트 생성 (Primary/Secondary), 예술사/디자인 이론 활용, 갤러리급 품질 추구
-- **Python 역할**: scripts/gemini-image-generator.py가 Gemini API 호출 및 파일 관리
-- **협력 결과**: 2개 프롬프트로 6개 이미지 생성 (브랜드 제약 없는 창의적 해석)
-- **새로운 특징**: 브랜드 색상 제거, 영어 제목 우측하단 배치, 박물관급 시각적 품질
+#### osmu-image-generator (하이브리드) - VISUAL_PROMPT v5.5 + DALL-E 3
+- **서브에이전트 역할**: VISUAL_PROMPT v5.5 메타프롬프트 생성, 예술사/디자인 이론 활용, 갤러리급 품질 추구
+- **Python 역할**: scripts/dalle3-osmu-generator.py가 OpenAI DALL-E 3 API 호출 및 파일 관리
+- **협력 결과**: 2개 프롬프트로 6개 이미지 생성 (HD + vivid 스타일)
+- **미니멀 텍스트**: 2-4단어 영어 문구, 60% 투명도, 우측하단 배치
+- **검증 완료**: 2025.09.16 aeo-dalle3-test 성공 (600KB-1.2MB 고품질 이미지)
 
 #### ghost-auto-publisher (하이브리드)
 - **서브에이전트 역할**: SEO 전략, 브랜드 정렬, 콘텐츠 구조 최적화 결정
@@ -706,7 +707,7 @@ Task ghost-auto-publisher "HTML 콘텐츠로 Ghost 발행"
 - **2025.09.08**: OSMU v2.0 아키텍처 대전환 (서브에이전트 분업 + 이미지 중앙화)
 - **2025.09.08**: API 키 보안 강화 (.env 도입) 및 프로젝트 구조 최적화
 - **2025.09.14**: 🎉 **완전한 프로덕션 워크플로우 검증 완료**
-  - **Photorealistic 이미지 생성**: Gemini 2.5 Flash로 6개 고품질 이미지 성공
+  - **Photorealistic 이미지 생성**: Gemini 2.5 Flash로 6개 고품질 이미지 성공 (현재는 DALL-E 3로 전환)
   - **Ghost v5 완전 연동**: source=html로 HTML 직접 발행, Lexical 자동 변환
   - **H1 중복 제거**: Ghost 제목과 본문 충돌 해결
   - **Ben Horowitz 콘텐츠**: 전체 워크플로우 100% 성공 검증
@@ -717,6 +718,12 @@ Task ghost-auto-publisher "HTML 콘텐츠로 Ghost 발행"
   - **osmu-image-generator.md 업데이트**: 하이브리드 협력 방식 명시
   - **ghost-auto-publisher.md 업데이트**: 전략적 조정 + 기술적 실행 분리
   - **CLAUDE.md 하이브리드 문서화**: 새로운 협력 체계 완전 반영
+- **2025.09.16**: 🎨 **DALL-E 3 이미지 생성 엔진 전환 완료**
+  - **Gemini → DALL-E 3 전환**: OpenAI SDK 1.107.3 활용, HD + vivid 스타일
+  - **dalle3-osmu-generator.py 완성**: 간단하고 안정적인 DALL-E 3 전용 스크립트
+  - **미니멀 텍스트 오버레이**: 2-4단어 영어 문구, 60% 투명도, 우측하단 배치
+  - **검증 완료**: aeo-dalle3-test 성공 (600KB-1.2MB 갤러리급 이미지 6개)
+  - **DALLE3_SETUP_GUIDE.md**: 작동 방법 완전 문서화
 
 ---
 

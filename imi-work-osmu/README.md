@@ -63,7 +63,8 @@ cp .env.template .env
 `.env` 파일에 다음 API 키들을 설정하세요:
 
 - **YOUTUBE_API_KEY**: YouTube Data API v3 키
-- **GEMINI_API_KEY**: Google Gemini 이미지 생성 키
+- **OPENAI_API_KEY**: OpenAI DALL-E 3 이미지 생성 키 (메인)
+- **GEMINI_API_KEY**: Google Gemini 이미지 생성 키 (백업)
 - **GHOST_ADMIN_API_KEY**: Ghost CMS API 키
 - **NOTION_TOKEN**: Notion API 토큰 (선택)
 
@@ -96,7 +97,7 @@ python ghost-auto-publisher.py --slug your-content-slug
 - 브랜딩 전문가 + 자영업자 대상 통찰 제공
 
 ### 3. osmu-image-generator
-- Gemini 2.5 Flash 기반 이미지 생성
+- DALL-E 3 HD + vivid 스타일 이미지 생성 (미니멀 텍스트 오버레이 지원)
 - 다중 플랫폼 최적화 (Ghost/네이버/Instagram)
 - slug 기반 체계적 자산 관리
 

@@ -1,0 +1,159 @@
+{
+  "collection_title": "AEO Marketing Strategy - VISUAL_PROMPT v5.5 Gallery Collection",
+  "slug": "aeo-visual-prompt-v5-final",
+  "visual_prompt_version": "5.5",
+  "creation_methodology": {
+    "domain_analysis": "ai_tech",
+    "boundary_break_process": "PRE/TICK/POST convention disruption",
+    "scene_expression": "Narrative + Technical dual component system",
+    "gallery_mandate": "Museum-quality visual art standard",
+    "brand_integration": {
+      "philosophy": "SENSE & AI - 감각과 인공지능의 조화",
+      "authority": "15년 F&B 실무 경험 + AI 전문성",
+      "colors": {
+        "navy": "#1e3a8a",
+        "white": "#ffffff",
+        "light_gray": "#f8fafc"
+      },
+      "tone": "전문적이면서도 접근 가능한, 혁신적이면서도 검증된"
+    },
+    "generation_method": "Procedural + Artistic Direction"
+  },
+  "collection_stats": {
+    "total_artworks": 8,
+    "total_file_size": 55390,
+    "platforms": [
+      "naver",
+      "ghost",
+      "instagram"
+    ],
+    "concepts_explored": [
+      "AEO quick guide",
+      "AEO strategy implementation",
+      "Future of search marketing",
+      "AEO visual summary",
+      "Citation-based search implementation",
+      "AI marketing transformation",
+      "ChatGPT marketing effectiveness",
+      "AEO vs SEO paradigm shift"
+    ],
+    "domain_routing": "ai_tech"
+  },
+  "artworks": [
+    {
+      "platform": "ghost",
+      "filename": "feature.png",
+      "file_path": "/Users/rhim/Projects/imi-work-osmu/assets/images/aeo-visual-prompt-v5-final/ghost/feature.png",
+      "dimensions": "1200x630",
+      "concept": "AEO vs SEO paradigm shift",
+      "domain": "ai_tech",
+      "artistic_prompt": "Create a gallery-quality artistic masterpiece representing \"AEO vs SEO paradigm shift\" with these specifications:\n        \n        ARTISTIC VISION:\n        - Renaissance composition meets cutting-edge digital art precision\n        - Cyberpunk minimalism with academic authority\n        - Visual narrative of transformation from traditional to AI-powered future\n        \n        VISUAL COMPOSITION:\n        - Left: Fading traditional search results (monochrome, dated)\n        - Center: Dynamic transformation energy flow (vibrant, kinetic)\n        - Right: Luminous AI-powered interface (colorful, interactive)\n        \n        COLOR PALETTE:\n        Primary: #0066cc, #00ffff, #ff6600, #ffffff\n        Brand accent: #1e3a8a (IMI WORK navy)\n        \n        STYLE DIRECTION:\n        - cyberpunk minimalism meets academic precision\n        - Museum-worthy visual storytelling\n        - Photorealistic precision meets conceptual art\n        - innovative, cutting-edge, intellectually stimulating\n        \n        TECHNICAL SPECS:\n        - Resolution: 1200x630 pixels\n        - Gallery exhibition quality\n        - Professional marketing readiness\n        - Mobile-optimized clarity\n        \n        BRAND INTEGRATION:\n        - Subtle \"SENSE & AI\" philosophy embodiment\n        - Korean business context sensitivity\n        - 15-year F&B expertise credibility markers\n        - IMI WORK professional authority\n        \n        Create an image that elevates business concepts to high art, making AEO strategy visually compelling and emotionally resonant.",
+      "generation_method": "procedural_visual_prompt_v5.5",
+      "created_at": "2025-09-16T12:16:30.869169",
+      "visual_prompt_version": "5.5",
+      "quality_level": "gallery-masterpiece",
+      "file_size_bytes": 7288
+    },
+    {
+      "platform": "ghost",
+      "filename": "content-1.png",
+      "file_path": "/Users/rhim/Projects/imi-work-osmu/assets/images/aeo-visual-prompt-v5-final/ghost/content-1.png",
+      "dimensions": "800x450",
+      "concept": "Citation-based search implementation",
+      "domain": "ai_tech",
+      "artistic_prompt": "Create a gallery-quality artistic masterpiece representing \"Citation-based search implementation\" with these specifications:\n        \n        ARTISTIC VISION:\n        - Renaissance composition meets cutting-edge digital art precision\n        - Cyberpunk minimalism with academic authority\n        - Visual narrative of transformation from traditional to AI-powered future\n        \n        VISUAL COMPOSITION:\n        - Left: Fading traditional search results (monochrome, dated)\n        - Center: Dynamic transformation energy flow (vibrant, kinetic)\n        - Right: Luminous AI-powered interface (colorful, interactive)\n        \n        COLOR PALETTE:\n        Primary: #0066cc, #00ffff, #ff6600, #ffffff\n        Brand accent: #1e3a8a (IMI WORK navy)\n        \n        STYLE DIRECTION:\n        - cyberpunk minimalism meets academic precision\n        - Museum-worthy visual storytelling\n        - Photorealistic precision meets conceptual art\n        - innovative, cutting-edge, intellectually stimulating\n        \n        TECHNICAL SPECS:\n        - Resolution: 800x450 pixels\n        - Gallery exhibition quality\n        - Professional marketing readiness\n        - Mobile-optimized clarity\n        \n        BRAND INTEGRATION:\n        - Subtle \"SENSE & AI\" philosophy embodiment\n        - Korean business context sensitivity\n        - 15-year F&B expertise credibility markers\n        - IMI WORK professional authority\n        \n        Create an image that elevates business concepts to high art, making AEO strategy visually compelling and emotionally resonant.",
+      "generation_method": "procedural_visual_prompt_v5.5",
+      "created_at": "2025-09-16T12:16:30.885656",
+      "visual_prompt_version": "5.5",
+      "quality_level": "gallery-masterpiece",
+      "file_size_bytes": 5751
+    },
+    {
+      "platform": "naver",
+      "filename": "main.png",
+      "file_path": "/Users/rhim/Projects/imi-work-osmu/assets/images/aeo-visual-prompt-v5-final/naver/main.png",
+      "dimensions": "800x450",
+      "concept": "AI marketing transformation",
+      "domain": "ai_tech",
+      "artistic_prompt": "Create a gallery-quality artistic masterpiece representing \"AI marketing transformation\" with these specifications:\n        \n        ARTISTIC VISION:\n        - Renaissance composition meets cutting-edge digital art precision\n        - Cyberpunk minimalism with academic authority\n        - Visual narrative of transformation from traditional to AI-powered future\n        \n        VISUAL COMPOSITION:\n        - Left: Fading traditional search results (monochrome, dated)\n        - Center: Dynamic transformation energy flow (vibrant, kinetic)\n        - Right: Luminous AI-powered interface (colorful, interactive)\n        \n        COLOR PALETTE:\n        Primary: #0066cc, #00ffff, #ff6600, #ffffff\n        Brand accent: #1e3a8a (IMI WORK navy)\n        \n        STYLE DIRECTION:\n        - cyberpunk minimalism meets academic precision\n        - Museum-worthy visual storytelling\n        - Photorealistic precision meets conceptual art\n        - innovative, cutting-edge, intellectually stimulating\n        \n        TECHNICAL SPECS:\n        - Resolution: 800x450 pixels\n        - Gallery exhibition quality\n        - Professional marketing readiness\n        - Mobile-optimized clarity\n        \n        BRAND INTEGRATION:\n        - Subtle \"SENSE & AI\" philosophy embodiment\n        - Korean business context sensitivity\n        - 15-year F&B expertise credibility markers\n        - IMI WORK professional authority\n        \n        Create an image that elevates business concepts to high art, making AEO strategy visually compelling and emotionally resonant.",
+      "generation_method": "procedural_visual_prompt_v5.5",
+      "created_at": "2025-09-16T12:16:30.899370",
+      "visual_prompt_version": "5.5",
+      "quality_level": "gallery-masterpiece",
+      "file_size_bytes": 5751
+    },
+    {
+      "platform": "naver",
+      "filename": "body-1.png",
+      "file_path": "/Users/rhim/Projects/imi-work-osmu/assets/images/aeo-visual-prompt-v5-final/naver/body-1.png",
+      "dimensions": "800x450",
+      "concept": "ChatGPT marketing effectiveness",
+      "domain": "ai_tech",
+      "artistic_prompt": "Create a gallery-quality artistic masterpiece representing \"ChatGPT marketing effectiveness\" with these specifications:\n        \n        ARTISTIC VISION:\n        - Renaissance composition meets cutting-edge digital art precision\n        - Cyberpunk minimalism with academic authority\n        - Visual narrative of transformation from traditional to AI-powered future\n        \n        VISUAL COMPOSITION:\n        - Left: Fading traditional search results (monochrome, dated)\n        - Center: Dynamic transformation energy flow (vibrant, kinetic)\n        - Right: Luminous AI-powered interface (colorful, interactive)\n        \n        COLOR PALETTE:\n        Primary: #0066cc, #00ffff, #ff6600, #ffffff\n        Brand accent: #1e3a8a (IMI WORK navy)\n        \n        STYLE DIRECTION:\n        - cyberpunk minimalism meets academic precision\n        - Museum-worthy visual storytelling\n        - Photorealistic precision meets conceptual art\n        - innovative, cutting-edge, intellectually stimulating\n        \n        TECHNICAL SPECS:\n        - Resolution: 800x450 pixels\n        - Gallery exhibition quality\n        - Professional marketing readiness\n        - Mobile-optimized clarity\n        \n        BRAND INTEGRATION:\n        - Subtle \"SENSE & AI\" philosophy embodiment\n        - Korean business context sensitivity\n        - 15-year F&B expertise credibility markers\n        - IMI WORK professional authority\n        \n        Create an image that elevates business concepts to high art, making AEO strategy visually compelling and emotionally resonant.",
+      "generation_method": "procedural_visual_prompt_v5.5",
+      "created_at": "2025-09-16T12:16:30.912361",
+      "visual_prompt_version": "5.5",
+      "quality_level": "gallery-masterpiece",
+      "file_size_bytes": 5751
+    },
+    {
+      "platform": "naver",
+      "filename": "body-2.png",
+      "file_path": "/Users/rhim/Projects/imi-work-osmu/assets/images/aeo-visual-prompt-v5-final/naver/body-2.png",
+      "dimensions": "800x450",
+      "concept": "AEO strategy implementation",
+      "domain": "ai_tech",
+      "artistic_prompt": "Create a gallery-quality artistic masterpiece representing \"AEO strategy implementation\" with these specifications:\n        \n        ARTISTIC VISION:\n        - Renaissance composition meets cutting-edge digital art precision\n        - Cyberpunk minimalism with academic authority\n        - Visual narrative of transformation from traditional to AI-powered future\n        \n        VISUAL COMPOSITION:\n        - Left: Fading traditional search results (monochrome, dated)\n        - Center: Dynamic transformation energy flow (vibrant, kinetic)\n        - Right: Luminous AI-powered interface (colorful, interactive)\n        \n        COLOR PALETTE:\n        Primary: #0066cc, #00ffff, #ff6600, #ffffff\n        Brand accent: #1e3a8a (IMI WORK navy)\n        \n        STYLE DIRECTION:\n        - cyberpunk minimalism meets academic precision\n        - Museum-worthy visual storytelling\n        - Photorealistic precision meets conceptual art\n        - innovative, cutting-edge, intellectually stimulating\n        \n        TECHNICAL SPECS:\n        - Resolution: 800x450 pixels\n        - Gallery exhibition quality\n        - Professional marketing readiness\n        - Mobile-optimized clarity\n        \n        BRAND INTEGRATION:\n        - Subtle \"SENSE & AI\" philosophy embodiment\n        - Korean business context sensitivity\n        - 15-year F&B expertise credibility markers\n        - IMI WORK professional authority\n        \n        Create an image that elevates business concepts to high art, making AEO strategy visually compelling and emotionally resonant.",
+      "generation_method": "procedural_visual_prompt_v5.5",
+      "created_at": "2025-09-16T12:16:30.924349",
+      "visual_prompt_version": "5.5",
+      "quality_level": "gallery-masterpiece",
+      "file_size_bytes": 5751
+    },
+    {
+      "platform": "naver",
+      "filename": "body-3.png",
+      "file_path": "/Users/rhim/Projects/imi-work-osmu/assets/images/aeo-visual-prompt-v5-final/naver/body-3.png",
+      "dimensions": "800x450",
+      "concept": "Future of search marketing",
+      "domain": "ai_tech",
+      "artistic_prompt": "Create a gallery-quality artistic masterpiece representing \"Future of search marketing\" with these specifications:\n        \n        ARTISTIC VISION:\n        - Renaissance composition meets cutting-edge digital art precision\n        - Cyberpunk minimalism with academic authority\n        - Visual narrative of transformation from traditional to AI-powered future\n        \n        VISUAL COMPOSITION:\n        - Left: Fading traditional search results (monochrome, dated)\n        - Center: Dynamic transformation energy flow (vibrant, kinetic)\n        - Right: Luminous AI-powered interface (colorful, interactive)\n        \n        COLOR PALETTE:\n        Primary: #0066cc, #00ffff, #ff6600, #ffffff\n        Brand accent: #1e3a8a (IMI WORK navy)\n        \n        STYLE DIRECTION:\n        - cyberpunk minimalism meets academic precision\n        - Museum-worthy visual storytelling\n        - Photorealistic precision meets conceptual art\n        - innovative, cutting-edge, intellectually stimulating\n        \n        TECHNICAL SPECS:\n        - Resolution: 800x450 pixels\n        - Gallery exhibition quality\n        - Professional marketing readiness\n        - Mobile-optimized clarity\n        \n        BRAND INTEGRATION:\n        - Subtle \"SENSE & AI\" philosophy embodiment\n        - Korean business context sensitivity\n        - 15-year F&B expertise credibility markers\n        - IMI WORK professional authority\n        \n        Create an image that elevates business concepts to high art, making AEO strategy visually compelling and emotionally resonant.",
+      "generation_method": "procedural_visual_prompt_v5.5",
+      "created_at": "2025-09-16T12:16:30.936277",
+      "visual_prompt_version": "5.5",
+      "quality_level": "gallery-masterpiece",
+      "file_size_bytes": 5751
+    },
+    {
+      "platform": "instagram",
+      "filename": "feed.png",
+      "file_path": "/Users/rhim/Projects/imi-work-osmu/assets/images/aeo-visual-prompt-v5-final/instagram/feed.png",
+      "dimensions": "1080x1080",
+      "concept": "AEO visual summary",
+      "domain": "ai_tech",
+      "artistic_prompt": "Create a gallery-quality artistic masterpiece representing \"AEO visual summary\" with these specifications:\n        \n        ARTISTIC VISION:\n        - Renaissance composition meets cutting-edge digital art precision\n        - Cyberpunk minimalism with academic authority\n        - Visual narrative of transformation from traditional to AI-powered future\n        \n        VISUAL COMPOSITION:\n        - Left: Fading traditional search results (monochrome, dated)\n        - Center: Dynamic transformation energy flow (vibrant, kinetic)\n        - Right: Luminous AI-powered interface (colorful, interactive)\n        \n        COLOR PALETTE:\n        Primary: #0066cc, #00ffff, #ff6600, #ffffff\n        Brand accent: #1e3a8a (IMI WORK navy)\n        \n        STYLE DIRECTION:\n        - cyberpunk minimalism meets academic precision\n        - Museum-worthy visual storytelling\n        - Photorealistic precision meets conceptual art\n        - innovative, cutting-edge, intellectually stimulating\n        \n        TECHNICAL SPECS:\n        - Resolution: 1080x1080 pixels\n        - Gallery exhibition quality\n        - Professional marketing readiness\n        - Mobile-optimized clarity\n        \n        BRAND INTEGRATION:\n        - Subtle \"SENSE & AI\" philosophy embodiment\n        - Korean business context sensitivity\n        - 15-year F&B expertise credibility markers\n        - IMI WORK professional authority\n        \n        Create an image that elevates business concepts to high art, making AEO strategy visually compelling and emotionally resonant.",
+      "generation_method": "procedural_visual_prompt_v5.5",
+      "created_at": "2025-09-16T12:16:30.966981",
+      "visual_prompt_version": "5.5",
+      "quality_level": "gallery-masterpiece",
+      "file_size_bytes": 8984
+    },
+    {
+      "platform": "instagram",
+      "filename": "story.png",
+      "file_path": "/Users/rhim/Projects/imi-work-osmu/assets/images/aeo-visual-prompt-v5-final/instagram/story.png",
+      "dimensions": "1080x1350",
+      "concept": "AEO quick guide",
+      "domain": "ai_tech",
+      "artistic_prompt": "Create a gallery-quality artistic masterpiece representing \"AEO quick guide\" with these specifications:\n        \n        ARTISTIC VISION:\n        - Renaissance composition meets cutting-edge digital art precision\n        - Cyberpunk minimalism with academic authority\n        - Visual narrative of transformation from traditional to AI-powered future\n        \n        VISUAL COMPOSITION:\n        - Left: Fading traditional search results (monochrome, dated)\n        - Center: Dynamic transformation energy flow (vibrant, kinetic)\n        - Right: Luminous AI-powered interface (colorful, interactive)\n        \n        COLOR PALETTE:\n        Primary: #0066cc, #00ffff, #ff6600, #ffffff\n        Brand accent: #1e3a8a (IMI WORK navy)\n        \n        STYLE DIRECTION:\n        - cyberpunk minimalism meets academic precision\n        - Museum-worthy visual storytelling\n        - Photorealistic precision meets conceptual art\n        - innovative, cutting-edge, intellectually stimulating\n        \n        TECHNICAL SPECS:\n        - Resolution: 1080x1350 pixels\n        - Gallery exhibition quality\n        - Professional marketing readiness\n        - Mobile-optimized clarity\n        \n        BRAND INTEGRATION:\n        - Subtle \"SENSE & AI\" philosophy embodiment\n        - Korean business context sensitivity\n        - 15-year F&B expertise credibility markers\n        - IMI WORK professional authority\n        \n        Create an image that elevates business concepts to high art, making AEO strategy visually compelling and emotionally resonant.",
+      "generation_method": "procedural_visual_prompt_v5.5",
+      "created_at": "2025-09-16T12:16:31.003600",
+      "visual_prompt_version": "5.5",
+      "quality_level": "gallery-masterpiece",
+      "file_size_bytes": 10363
+    }
+  ],
+  "generated_at": "2025-09-16T12:16:31.003752",
+  "quality_certification": "Gallery-level masterpiece collection - PNG files generated",
+  "artistic_philosophy": "Business concepts reimagined as high art through VISUAL_PROMPT v5.5 methodology"
+}

@@ -279,7 +279,8 @@ def main():
         print("📦 OSMU 이미지 매니페스트 로드 중...")
         try:
             manifest = load_osmu_manifest(slug)
-            print(f"✅ 매니페스트 로드 완료: {manifest['title']}")
+            title = manifest.get('title', slug.replace('-', ' ').title())
+            print(f"✅ 매니페스트 로드 완료: {title}")
         except FileNotFoundError as e:
             print(f"⚠️ 매니페스트 파일을 찾을 수 없습니다: {e}")
             manifest = None
@@ -290,7 +291,10 @@ def main():
         # 4. HTML 변환 및 SEO 최적화
         print("🔧 콘텐츠 최적화 중...")
         html_content = markdown_to_optimized_html(markdown_content, slug)
-        seo_data = optimize_for_seo("Ben Horowitz Fear Leadership", markdown_content, slug)
+        # Extract title from markdown content's first line (H1)
+        lines = markdown_content.strip().split('\n')
+        content_title = lines[0].replace('# ', '') if lines and lines[0].startswith('# ') else title
+        seo_data = optimize_for_seo(content_title, markdown_content, slug)
         
         # 5. 이미지 업로드 (OSMU 패키지가 있는 경우)
         feature_image_url = None
