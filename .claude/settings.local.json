@@ -61,7 +61,8 @@
       "Bash(sort:*)",
       "Bash(xargs:*)",
       "Bash(git log:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(git -C /Users/rhim/Projects/imi-work-osmu status --porcelain)"
     ],
     "deny": [],
     "ask": []
