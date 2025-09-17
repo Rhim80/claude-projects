@@ -85,25 +85,6 @@ def remove_first_h1(self, html_content):
     return modified_html.strip()
 ```
 
-### Photorealistic 이미지 프롬프트
-```python
-# Ghost Feature 이미지
-"""Create a photorealistic corporate photography scene representing "{content_title}".
-
-Visual concept: Cinematic business leadership photography
-- A confident business professional in sharp suit (back view or silhouette) facing city skyline at golden hour
-- Modern glass office building reflections and urban landscape
-- Natural dramatic lighting with warm golden and cool blue tones
-- Real corporate environment with authentic architectural details
-- Professional depth of field with sharp foreground and blurred background
-
-Style: High-end commercial photography, not graphic design or illustrations
-- Photorealistic rendering with natural textures and materials
-- Cinematic composition suitable for wide blog header (16:9)
-- Clean space for text overlay without compromising photo quality
-- Real world lighting and shadows, authentic business environment
-"""
-```
 
 ## 📊 성과 지표
 
@@ -180,7 +161,6 @@ imi-work-osmu/
 ## 🎉 최종 확인 체크리스트
 
 ### ✅ 완료된 항목들
-- [x] Photorealistic 이미지 6개 생성 성공
 - [x] Ghost API 정상 연동 (201 Created)
 - [x] HTML 콘텐츠 실제 전송 확인
 - [x] 피처 이미지 자동 업로드 및 연결
