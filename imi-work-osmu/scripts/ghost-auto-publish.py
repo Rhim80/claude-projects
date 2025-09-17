@@ -353,7 +353,27 @@ def main():
                     if img_url:
                         content_images.append(img_url)
                         print(f"✅ 콘텐츠 이미지 업로드 완료: {img_url}")
-        
+
+        # 5.5. 콘텐츠 이미지 플레이스홀더 교체
+        print(f"🔄 플레이스홀더 교체 중...")
+        for i, img_url in enumerate(content_images, 1):
+            placeholder = f'<!-- CONTENT_IMAGE_{i} -->'
+            img_html = f'<figure class="kg-card kg-image-card"><img src="{img_url}" class="kg-image" alt="콘텐츠 이미지 {i}" loading="lazy" width="800" height="450"></figure>'
+
+            if placeholder in html_content:
+                html_content = html_content.replace(placeholder, img_html)
+                print(f"✅ 플레이스홀더 {placeholder} 교체 완료")
+            else:
+                print(f"⚠️ 플레이스홀더 {placeholder}를 찾을 수 없음")
+
+        # 남은 플레이스홀더 확인
+        import re
+        remaining_placeholders = re.findall(r'<!-- CONTENT_IMAGE_\d+ -->', html_content)
+        if remaining_placeholders:
+            print(f"⚠️ 교체되지 않은 플레이스홀더: {remaining_placeholders}")
+        else:
+            print(f"✅ 모든 플레이스홀더 교체 완료")
+
         # 6. Ghost 포스트 데이터 준비 - 실제 콘텐츠로 발행
         print(f"📝 포스트 데이터 준비 중...")
         print(f"   제목: {seo_data['meta_title']}")
