@@ -13,6 +13,9 @@ from pathlib import Path
 import markdown
 from urllib.parse import urljoin
 import time
+import sys
+import glob
+import tempfile
 from dotenv import load_dotenv
 
 # 환경변수 로드
@@ -177,17 +180,68 @@ class GhostPublisher:
             print(f"❌ 포스트 처리 오류: {e}")
             return None
 
+def find_image_directory(base_slug):
+    """슬러그를 기반으로 이미지 디렉토리를 자동 탐색"""
+    patterns = [
+        f"assets/images/{base_slug}/",
+        f"assets/images/{base_slug}-*/",  # 타임스탬프 포함
+        f"assets/images/{base_slug}_*/",  # 언더스코어 포함
+    ]
+
+    for pattern in patterns:
+        matches = glob.glob(pattern)
+        if matches:
+            # 가장 최근 폴더를 반환 (타임스탬프 기준)
+            return sorted(matches)[-1]
+
+    raise FileNotFoundError(f"OSMU image directory not found for slug: {base_slug}")
+
 def load_osmu_manifest(slug):
-    """OSMU 이미지 매니페스트 로드"""
-    manifest_path = f"assets/images/{slug}/image-manifest.json"
-    
-    if not os.path.exists(manifest_path):
-        raise FileNotFoundError(f"OSMU image manifest not found: {manifest_path}")
-    
-    with open(manifest_path, 'r', encoding='utf-8') as f:
-        manifest = json.load(f)
-    
-    return manifest
+    """OSMU 이미지 매니페스트 로드 - 자동 탐색 지원"""
+    try:
+        # 1. 정확한 경로로 시도
+        manifest_path = f"assets/images/{slug}/image-manifest.json"
+        if os.path.exists(manifest_path):
+            with open(manifest_path, 'r', encoding='utf-8') as f:
+                return json.load(f), f"assets/images/{slug}/"
+    except Exception:
+        pass
+
+    try:
+        # 2. 자동 탐색으로 시도
+        image_dir = find_image_directory(slug)
+        manifest_path = os.path.join(image_dir, "image-manifest.json")
+
+        if os.path.exists(manifest_path):
+            with open(manifest_path, 'r', encoding='utf-8') as f:
+                return json.load(f), image_dir
+    except Exception:
+        pass
+
+    raise FileNotFoundError(f"OSMU image manifest not found for slug: {slug}")
+
+def read_content_from_source(content_source):
+    """다양한 소스에서 콘텐츠 읽기 - stdin, 파일, 직접 텍스트"""
+    if not content_source:
+        return None
+
+    # stdin에서 읽기
+    if content_source == "-":
+        print("📄 stdin에서 콘텐츠 읽는 중...")
+        return sys.stdin.read()
+
+    # 파일에서 읽기
+    if os.path.exists(content_source):
+        print(f"📄 파일에서 콘텐츠 읽는 중: {content_source}")
+        with open(content_source, 'r', encoding='utf-8') as f:
+            return f.read()
+
+    # 직접 텍스트로 간주
+    if len(content_source) > 100:  # 긴 텍스트면 직접 콘텐츠로 간주
+        print("📄 직접 제공된 콘텐츠 사용")
+        return content_source
+
+    return None
 
 def markdown_to_optimized_html(markdown_content, slug):
     """마크다운을 SEO 최적화된 HTML로 변환"""
@@ -277,7 +331,8 @@ def main():
     parser = argparse.ArgumentParser(description="Ghost CMS 자동 발행 스크립트")
     parser.add_argument("--slug", required=True, help="콘텐츠 슬러그 (예: ai-agents-improving-interns)")
     parser.add_argument("--title", help="포스트 제목 (선택사항, 없으면 마크다운에서 추출)")
-    parser.add_argument("--content-file", help="마크다운 파일 경로 (기본값: contents/{slug}/main.md)")
+    parser.add_argument("--content", help="마크다운 콘텐츠 (직접 텍스트, 파일 경로, 또는 '-'로 stdin)")
+    parser.add_argument("--content-file", help="[DEPRECATED] 마크다운 파일 경로 (--content 사용 권장)")
     parser.add_argument("--status", default="draft", choices=["draft", "published"], help="발행 상태 (기본값: draft)")
 
     args = parser.parse_args()
@@ -295,23 +350,32 @@ def main():
         raise ValueError("GHOST_ADMIN_API_KEY가 환경변수에 설정되지 않았습니다.")
 
     slug = args.slug
-    content_file = args.content_file or f"contents/{slug}/main.md"
-    
+
     try:
-        # 1. 마크다운 콘텐츠 로드
+        # 1. 마크다운 콘텐츠 로드 - 유연한 방식 지원
         print("📄 마크다운 콘텐츠 로드 중...")
-        with open(content_file, 'r', encoding='utf-8') as f:
-            markdown_content = f.read()
-        
-        # 2. OSMU 매니페스트 로드
+
+        # 콘텐츠 소스 결정 (우선순위: --content > --content-file > 기본 경로)
+        content_source = args.content or args.content_file or f"contents/{slug}/main.md"
+
+        markdown_content = read_content_from_source(content_source)
+
+        if not markdown_content:
+            raise ValueError(f"콘텐츠를 로드할 수 없습니다: {content_source}")
+
+        print(f"✅ 콘텐츠 로드 완료: {len(markdown_content)} characters")
+
+        # 2. OSMU 매니페스트 로드 - 자동 탐색 지원
         print("📦 OSMU 이미지 매니페스트 로드 중...")
         try:
-            manifest = load_osmu_manifest(slug)
+            manifest, image_base_path = load_osmu_manifest(slug)
             title = manifest.get('title', slug.replace('-', ' ').title())
             print(f"✅ 매니페스트 로드 완료: {title}")
+            print(f"📁 이미지 경로: {image_base_path}")
         except FileNotFoundError as e:
             print(f"⚠️ 매니페스트 파일을 찾을 수 없습니다: {e}")
             manifest = None
+            image_base_path = None
         
         # 3. Ghost 퍼블리셔 초기화
         publisher = GhostPublisher(GHOST_URL, GHOST_API_KEY)
@@ -327,32 +391,55 @@ def main():
         # 5. 이미지 업로드 (OSMU 패키지가 있는 경우)
         feature_image_url = None
         content_images = []
-        
-        if manifest and 'platform_mappings' in manifest and 'ghost' in manifest['platform_mappings']:
+
+        if manifest and image_base_path:
             print("🖼️ OSMU 이미지 업로드 시도 중...")
-            ghost_images = manifest['platform_mappings']['ghost']
-            base_path = f"assets/images/{slug}/"
-            
-            # 피처 이미지 업로드
-            if 'feature' in ghost_images:
-                feature_path = base_path + ghost_images['feature']
-                if os.path.exists(feature_path):
-                    print(f"📸 피처 이미지 업로드: {feature_path}")
-                    feature_image_url = publisher.upload_image(feature_path, 'image')
-                    if feature_image_url:
-                        print(f"✅ 피처 이미지 업로드 완료: {feature_image_url}")
-                else:
-                    print(f"⚠️ 피처 이미지 파일이 존재하지 않습니다: {feature_path}")
-            
-            # 콘텐츠 이미지 업로드
-            if 'content-1' in ghost_images:
-                img_path = base_path + ghost_images['content-1']
-                if os.path.exists(img_path):
-                    print(f"📸 콘텐츠 이미지 업로드: {img_path}")
-                    img_url = publisher.upload_image(img_path, 'image')
-                    if img_url:
-                        content_images.append(img_url)
-                        print(f"✅ 콘텐츠 이미지 업로드 완료: {img_url}")
+
+            # 생성 로그에서 Ghost 이미지 찾기
+            if 'generation_log' in manifest:
+                for img_info in manifest['generation_log']:
+                    if img_info.get('platform') == 'ghost' and img_info.get('success'):
+                        img_file = img_info['file']
+                        img_path = os.path.join(image_base_path, img_file)
+
+                        if os.path.exists(img_path):
+                            print(f"📸 이미지 업로드 중: {img_path}")
+                            uploaded_url = publisher.upload_image(img_path, 'image')
+
+                            if uploaded_url:
+                                if img_info.get('image_type') == 'feature':
+                                    feature_image_url = uploaded_url
+                                    print(f"✅ 피처 이미지 업로드 완료: {uploaded_url}")
+                                else:
+                                    content_images.append(uploaded_url)
+                                    print(f"✅ 콘텐츠 이미지 업로드 완료: {uploaded_url}")
+                        else:
+                            print(f"⚠️ 이미지 파일이 존재하지 않습니다: {img_path}")
+
+            # 기존 방식 폴백 (platform_mappings)
+            elif 'platform_mappings' in manifest and 'ghost' in manifest['platform_mappings']:
+                ghost_images = manifest['platform_mappings']['ghost']
+
+                # 피처 이미지 업로드
+                if 'feature' in ghost_images:
+                    feature_path = os.path.join(image_base_path, ghost_images['feature'])
+                    if os.path.exists(feature_path):
+                        print(f"📸 피처 이미지 업로드: {feature_path}")
+                        feature_image_url = publisher.upload_image(feature_path, 'image')
+                        if feature_image_url:
+                            print(f"✅ 피처 이미지 업로드 완료: {feature_image_url}")
+                    else:
+                        print(f"⚠️ 피처 이미지 파일이 존재하지 않습니다: {feature_path}")
+
+                # 콘텐츠 이미지 업로드
+                if 'content-1' in ghost_images:
+                    img_path = os.path.join(image_base_path, ghost_images['content-1'])
+                    if os.path.exists(img_path):
+                        print(f"📸 콘텐츠 이미지 업로드: {img_path}")
+                        img_url = publisher.upload_image(img_path, 'image')
+                        if img_url:
+                            content_images.append(img_url)
+                            print(f"✅ 콘텐츠 이미지 업로드 완료: {img_url}")
 
         # 5.5. 콘텐츠 이미지 플레이스홀더 교체
         print(f"🔄 플레이스홀더 교체 중...")
