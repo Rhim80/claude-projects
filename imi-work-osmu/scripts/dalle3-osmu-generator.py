@@ -43,9 +43,12 @@ def generate_from_prompts(slug, prompt_a, prompt_b):
     # OpenAI 클라이언트 초기화
     client = OpenAI(api_key=api_key)
     
-    # 출력 디렉토리 설정
-    base_dir = Path("assets/images") / slug
+    # 출력 디렉토리 설정 (절대 경로 사용)
+    script_dir = Path(__file__).parent.parent  # /Users/rhim/Projects/imi-work-osmu
+    base_dir = script_dir / "assets" / "images" / slug
     base_dir.mkdir(parents=True, exist_ok=True)
+
+    print(f"📁 이미지 저장 경로: {base_dir.absolute()}")
     
     # 플랫폼별 이미지 설정
     images_config = [
@@ -104,6 +107,7 @@ def generate_from_prompts(slug, prompt_a, prompt_b):
             image.save(output_path, "PNG", optimize=True)
             
             print(f"   ✅ 저장 완료: {output_path}")
+            print(f"   📁 절대 경로: {output_path.absolute()}")
             successful_images += 1
             
             # 로그 기록
@@ -157,7 +161,19 @@ def generate_from_prompts(slug, prompt_a, prompt_b):
     print(f"❌ 실패: {len(images_config) - successful_images}개")
     print(f"⏱️  소요시간: {duration:.1f}초")
     print(f"📄 매니페스트: {manifest_path}")
-    
+
+    # 생성된 파일 존재 확인
+    print(f"\n📁 생성된 파일 목록:")
+    for config in images_config:
+        platform = config["platform"]
+        image_type = config["type"]
+        file_path = base_dir / platform / f"{image_type}.png"
+        exists = "✅" if file_path.exists() else "❌"
+        size_info = f"({file_path.stat().st_size // 1024}KB)" if file_path.exists() else ""
+        print(f"   {exists} {platform}/{image_type}.png {size_info}")
+
+    print(f"\n🎯 저장 경로: {base_dir.absolute()}")
+
     return successful_images > 0
 
 def get_dalle_size(target_size):

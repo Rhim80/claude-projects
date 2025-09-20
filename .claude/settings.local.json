@@ -62,7 +62,10 @@
       "Bash(xargs:*)",
       "Bash(git log:*)",
       "Bash(rm:*)",
-      "Bash(git -C /Users/rhim/Projects/imi-work-osmu status --porcelain)"
+      "Bash(git -C /Users/rhim/Projects/imi-work-osmu status --porcelain)",
+      "WebFetch(domain:blog.imiwork.com)",
+      "WebFetch(domain:docs.claude.com)",
+      "WebFetch(domain:github.com)"
     ],
     "deny": [],
     "ask": []
