@@ -65,7 +65,10 @@
       "Bash(git -C /Users/rhim/Projects/imi-work-osmu status --porcelain)",
       "WebFetch(domain:blog.imiwork.com)",
       "WebFetch(domain:docs.claude.com)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(git clone:*)",
+      "Bash(alias proj)",
+      "Read(//Users/rhim/Documents/Projects/HFK/**)"
     ],
     "deny": [],
     "ask": []
