@@ -1,0 +1,43 @@
+소경계 카페 메뉴
+
+☕ COFFEE MENU
+
+필터 커피
+타시고맛 ₩7,000
+acidity 1/5 nutty 3/5
+cup note: Dark Chocolate, Spicy, Blue berry, Medium body
+
+딸기와 포도 ₩9,000
+acidity 3/5 nutty 1/5
+cup note: Grapefruit candy, Strawberry milk, Complex Flavor, Juicy Mouthfeel
+
+디카페인 ₩8,000
+acidity 1/5 nutty 3/5
+cup note: Dark Chocolate, Smoky, Round Mouthfeel
+
+콜드브루 메뉴
+콜드브루 ₩6,000
+카페오레 ₩7,500
+크림오레 ₩8,500
+소경계 커피 ₩9,000
+
+🍃 NON-COFFEE MENU
+
+흑임자 호지차 라떼 ₩8,500
+민트 가득 모히또 ₩8,000
+소경계 가든 소다 ₩8,000
+초코 우유 ₩7,000
+바닐라 우유 ₩6,500
+소경계 주스 ₩8,500
+
+🍞 BREAD & DESSERT
+
+캄파뉴
+무화과 타르틴 ₩11,000
+크림치즈 고구마 캄파뉴 ₩6,000
+무화과 가득 캄파뉴 ₩6,000
+
+디저트
+말차 퍼지 ₩7,000
+바스크 치즈케이크 ₩7,500
+로즈마리 스콘 ₩4,000
