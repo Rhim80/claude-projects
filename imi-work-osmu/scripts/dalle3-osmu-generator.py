@@ -19,7 +19,7 @@ from openai import OpenAI
 # 환경변수 로드
 load_dotenv()
 
-def generate_from_prompts(slug, prompt_a, prompt_b):
+def generate_from_prompts(slug, prompt_a, prompt_b, single_mode=False, single_size="1080x1080"):
     """
     VISUAL_PROMPT v5.5 프롬프트로 DALL-E 3 이미지 생성
     
@@ -51,17 +51,27 @@ def generate_from_prompts(slug, prompt_a, prompt_b):
     print(f"📁 이미지 저장 경로: {base_dir.absolute()}")
     
     # 플랫폼별 이미지 설정
-    images_config = [
-        # Primary prompt (prompt_a) 사용
-        {"platform": "ghost", "type": "feature", "size": (1200, 630), "prompt": prompt_a},
-        {"platform": "naver", "type": "main", "size": (800, 450), "prompt": prompt_a},
-        {"platform": "instagram", "type": "feed", "size": (1080, 1080), "prompt": prompt_a},
-        
-        # Secondary prompt (prompt_b) 사용  
-        {"platform": "ghost", "type": "content-1", "size": (800, 450), "prompt": prompt_b},
-        {"platform": "naver", "type": "body-1", "size": (800, 450), "prompt": prompt_b},
-        {"platform": "instagram", "type": "story", "size": (1080, 1350), "prompt": prompt_b},
-    ]
+    if single_mode:
+        # 단일 이미지 모드
+        width, height = parse_size(single_size)
+        images_config = [
+            {"platform": "single", "type": "artwork", "size": (width, height), "prompt": prompt_a}
+        ]
+        print(f"🎨 단일 이미지 모드: {width}x{height}")
+    else:
+        # 기존 6개 이미지 OSMU 모드
+        images_config = [
+            # Primary prompt (prompt_a) 사용
+            {"platform": "ghost", "type": "feature", "size": (1200, 630), "prompt": prompt_a},
+            {"platform": "naver", "type": "main", "size": (800, 450), "prompt": prompt_a},
+            {"platform": "instagram", "type": "feed", "size": (1080, 1080), "prompt": prompt_a},
+
+            # Secondary prompt (prompt_b) 사용
+            {"platform": "ghost", "type": "content-1", "size": (800, 450), "prompt": prompt_b},
+            {"platform": "naver", "type": "body-1", "size": (800, 450), "prompt": prompt_b},
+            {"platform": "instagram", "type": "story", "size": (1080, 1350), "prompt": prompt_b},
+        ]
+        print(f"🎨 OSMU 패키지 모드: 6개 이미지 생성")
     
     successful_images = 0
     generation_log = []
@@ -176,6 +186,20 @@ def generate_from_prompts(slug, prompt_a, prompt_b):
 
     return successful_images > 0
 
+def parse_size(size_string):
+    """크기 문자열을 파싱하여 (width, height) 튜플 반환"""
+    try:
+        if 'x' in size_string:
+            width, height = size_string.split('x')
+            return (int(width), int(height))
+        else:
+            # 정사각형으로 가정
+            size = int(size_string)
+            return (size, size)
+    except ValueError:
+        print(f"⚠️ 잘못된 크기 형식: {size_string}. 기본값 1080x1080 사용")
+        return (1080, 1080)
+
 def get_dalle_size(target_size):
     """타겟 크기에 따른 DALL-E 3 최적 크기 선택"""
     width, height = target_size
@@ -193,20 +217,36 @@ def main():
     parser.add_argument("--slug", help="콘텐츠 슬러그")
     parser.add_argument("--prompt-a", help="Primary 프롬프트")
     parser.add_argument("--prompt-b", help="Secondary 프롬프트")
+    parser.add_argument("--single", action="store_true", help="단일 이미지만 생성 (1080x1080)")
+    parser.add_argument("--size", default="1080x1080", help="단일 이미지 크기 (예: 1080x1080)")
 
     args = parser.parse_args()
 
     print("🎨 DALL-E 3 OSMU 이미지 생성기")
 
     # 커맨드라인 인자가 있으면 사용, 없으면 대화형 모드
-    if args.slug and args.prompt_a and args.prompt_b:
+    if args.slug and args.prompt_a:
         print("📋 커맨드라인 모드")
         slug = args.slug
         prompt_a = args.prompt_a
-        prompt_b = args.prompt_b
+        prompt_b = args.prompt_b or "An abstract artistic composition with elegant visual harmony"
+
         print(f"   슬러그: {slug}")
         print(f"   Primary: {prompt_a[:50]}...")
-        print(f"   Secondary: {prompt_b[:50]}...")
+        if not args.single:
+            print(f"   Secondary: {prompt_b[:50]}...")
+        print(f"   모드: {'단일 이미지' if args.single else 'OSMU 패키지'}")
+
+        # 커맨드라인 모드에서 실행
+        success = generate_from_prompts(slug, prompt_a, prompt_b,
+                                       single_mode=args.single,
+                                       single_size=args.size)
+
+        if success:
+            print("\n🎯 생성 성공!")
+        else:
+            print("\n❌ 생성 실패!")
+        return
     else:
         print("⚠️  이 스크립트는 서브에이전트와 함께 사용하도록 설계되었습니다.")
         print("💬 대화형 테스트 모드:")
@@ -224,7 +264,8 @@ def main():
             prompt_b = "An abstract data visualization with clean lines and professional aesthetic"
 
     print(f"\n🚀 생성 시작...")
-    success = generate_from_prompts(slug, prompt_a, prompt_b)
+    # 대화형 모드에서는 단일 모드 사용하지 않음
+    success = generate_from_prompts(slug, prompt_a, prompt_b, single_mode=False)
 
     if success:
         print("\n🎯 생성 성공! assets/images/ 폴더를 확인하세요.")
