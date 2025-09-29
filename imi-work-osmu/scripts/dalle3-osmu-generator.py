@@ -19,15 +19,19 @@ from openai import OpenAI
 # 환경변수 로드
 load_dotenv()
 
-def generate_from_prompts(slug, prompt_a, prompt_b, single_mode=False, single_size="1080x1080"):
+def generate_from_prompts(slug, prompt_a, prompt_b, single_mode=False, single_size="1080x1080", quality="standard", platforms=None):
     """
     VISUAL_PROMPT v5.5 프롬프트로 DALL-E 3 이미지 생성
-    
+
     Args:
         slug: 콘텐츠 식별자
         prompt_a: Primary visual prompt
         prompt_b: Secondary visual prompt
-    
+        single_mode: 단일 이미지만 생성 (기본: False)
+        single_size: 단일 이미지 크기 (기본: "1080x1080")
+        quality: 이미지 품질 "standard" 또는 "hd" (기본: "standard")
+        platforms: 생성할 플랫폼 리스트 (기본: None, 전체 생성)
+
     Returns:
         bool: 생성 성공 여부
     """
@@ -59,8 +63,8 @@ def generate_from_prompts(slug, prompt_a, prompt_b, single_mode=False, single_si
         ]
         print(f"🎨 단일 이미지 모드: {width}x{height}")
     else:
-        # 기존 6개 이미지 OSMU 모드
-        images_config = [
+        # 전체 OSMU 이미지 설정
+        all_images_config = [
             # Primary prompt (prompt_a) 사용
             {"platform": "ghost", "type": "feature", "size": (1200, 630), "prompt": prompt_a},
             {"platform": "naver", "type": "main", "size": (800, 450), "prompt": prompt_a},
@@ -71,7 +75,15 @@ def generate_from_prompts(slug, prompt_a, prompt_b, single_mode=False, single_si
             {"platform": "naver", "type": "body-1", "size": (800, 450), "prompt": prompt_b},
             {"platform": "instagram", "type": "story", "size": (1080, 1350), "prompt": prompt_b},
         ]
-        print(f"🎨 OSMU 패키지 모드: 6개 이미지 생성")
+
+        # 플랫폼 필터링
+        if platforms:
+            platform_list = [p.strip().lower() for p in platforms.split(',')]
+            images_config = [img for img in all_images_config if img["platform"] in platform_list]
+            print(f"🎨 선택된 플랫폼: {platforms} ({len(images_config)}개 이미지)")
+        else:
+            images_config = all_images_config
+            print(f"🎨 OSMU 패키지 모드: 6개 이미지 생성")
     
     successful_images = 0
     generation_log = []
@@ -92,7 +104,7 @@ def generate_from_prompts(slug, prompt_a, prompt_b, single_mode=False, single_si
                 model="dall-e-3",
                 prompt=prompt,
                 size=get_dalle_size(target_size),
-                quality="hd",
+                quality=quality,
                 style="vivid",
                 n=1
             )
@@ -149,9 +161,9 @@ def generate_from_prompts(slug, prompt_a, prompt_b, single_mode=False, single_si
     manifest = {
         "slug": slug,
         "generated_at": start_time.isoformat(),
-        "generation_method": "DALL-E 3 HD + VISUAL_PROMPT v5.5",
+        "generation_method": f"DALL-E 3 {quality.upper()} + VISUAL_PROMPT v5.5",
         "model": "dall-e-3",
-        "quality": "hd",
+        "quality": quality,
         "style": "vivid",
         "total_images": len(images_config),
         "successful_images": successful_images,
@@ -201,9 +213,13 @@ def parse_size(size_string):
         return (1080, 1080)
 
 def get_dalle_size(target_size):
-    """타겟 크기에 따른 DALL-E 3 최적 크기 선택"""
+    """타겟 크기에 따른 DALL-E 3 최적 크기 선택 (비용 최적화)"""
     width, height = target_size
-    
+
+    # 1080px 이하는 1024x1024로 통일 (비용 절감)
+    if max(width, height) <= 1080:
+        return "1024x1024"
+
     if width > height:
         return "1792x1024"  # 가로형
     elif width == height:
@@ -217,8 +233,11 @@ def main():
     parser.add_argument("--slug", help="콘텐츠 슬러그")
     parser.add_argument("--prompt-a", help="Primary 프롬프트")
     parser.add_argument("--prompt-b", help="Secondary 프롬프트")
-    parser.add_argument("--single", action="store_true", help="단일 이미지만 생성 (1080x1080)")
+    parser.add_argument("--single", action="store_true", help="단일 이미지만 생성 (기본값)")
     parser.add_argument("--size", default="1080x1080", help="단일 이미지 크기 (예: 1080x1080)")
+    parser.add_argument("--quality", default="standard", choices=["standard", "hd"],
+                        help="이미지 품질 (기본: standard, 비용 절약)")
+    parser.add_argument("--platforms", help="생성할 플랫폼 (예: ghost,instagram)")
 
     args = parser.parse_args()
 
@@ -236,11 +255,16 @@ def main():
         if not args.single:
             print(f"   Secondary: {prompt_b[:50]}...")
         print(f"   모드: {'단일 이미지' if args.single else 'OSMU 패키지'}")
+        print(f"   품질: {args.quality}")
+        if args.platforms:
+            print(f"   플랫폼: {args.platforms}")
 
         # 커맨드라인 모드에서 실행
         success = generate_from_prompts(slug, prompt_a, prompt_b,
                                        single_mode=args.single,
-                                       single_size=args.size)
+                                       single_size=args.size,
+                                       quality=args.quality,
+                                       platforms=args.platforms)
 
         if success:
             print("\n🎯 생성 성공!")
@@ -264,8 +288,8 @@ def main():
             prompt_b = "An abstract data visualization with clean lines and professional aesthetic"
 
     print(f"\n🚀 생성 시작...")
-    # 대화형 모드에서는 단일 모드 사용하지 않음
-    success = generate_from_prompts(slug, prompt_a, prompt_b, single_mode=False)
+    # 대화형 모드에서는 기본값으로 단일 모드 사용 (비용 절약)
+    success = generate_from_prompts(slug, prompt_a, prompt_b, single_mode=True, quality="standard")
 
     if success:
         print("\n🎯 생성 성공! assets/images/ 폴더를 확인하세요.")

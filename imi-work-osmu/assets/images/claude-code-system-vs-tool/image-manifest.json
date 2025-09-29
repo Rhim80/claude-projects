@@ -1,0 +1,62 @@
+{
+  "slug": "claude-code-system-vs-tool",
+  "generated_at": "2025-09-26T23:25:06.958560",
+  "generation_method": "DALL-E 3 HD + VISUAL_PROMPT v5.5",
+  "model": "dall-e-3",
+  "quality": "hd",
+  "style": "vivid",
+  "total_images": 6,
+  "successful_images": 6,
+  "failed_images": 0,
+  "generation_duration_seconds": 165.824961,
+  "generation_log": [
+    {
+      "file": "ghost/feature.png",
+      "platform": "ghost",
+      "image_type": "feature",
+      "size": "1200x630",
+      "success": true,
+      "timestamp": "2025-09-26T23:25:38.924436"
+    },
+    {
+      "file": "naver/main.png",
+      "platform": "naver",
+      "image_type": "main",
+      "size": "800x450",
+      "success": true,
+      "timestamp": "2025-09-26T23:26:08.156452"
+    },
+    {
+      "file": "instagram/feed.png",
+      "platform": "instagram",
+      "image_type": "feed",
+      "size": "1080x1080",
+      "success": true,
+      "timestamp": "2025-09-26T23:26:27.162015"
+    },
+    {
+      "file": "ghost/content-1.png",
+      "platform": "ghost",
+      "image_type": "content-1",
+      "size": "800x450",
+      "success": true,
+      "timestamp": "2025-09-26T23:26:56.404117"
+    },
+    {
+      "file": "naver/body-1.png",
+      "platform": "naver",
+      "image_type": "body-1",
+      "size": "800x450",
+      "success": true,
+      "timestamp": "2025-09-26T23:27:25.053910"
+    },
+    {
+      "file": "instagram/story.png",
+      "platform": "instagram",
+      "image_type": "story",
+      "size": "1080x1350",
+      "success": true,
+      "timestamp": "2025-09-26T23:27:52.783514"
+    }
+  ]
+}

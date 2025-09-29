@@ -1,0 +1,22 @@
+{
+  "slug": "claude-code-system-vs-tool-visual-philosophy-202509270004",
+  "generated_at": "2025-09-27T00:04:02.524990",
+  "generation_method": "DALL-E 3 HD + VISUAL_PROMPT v5.5",
+  "model": "dall-e-3",
+  "quality": "hd",
+  "style": "vivid",
+  "total_images": 1,
+  "successful_images": 1,
+  "failed_images": 0,
+  "generation_duration_seconds": 34.46176,
+  "generation_log": [
+    {
+      "file": "single/artwork.png",
+      "platform": "single",
+      "image_type": "artwork",
+      "size": "1080x1080",
+      "success": true,
+      "timestamp": "2025-09-27T00:04:36.986743"
+    }
+  ]
+}
