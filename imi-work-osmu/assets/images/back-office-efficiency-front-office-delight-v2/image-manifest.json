@@ -1,0 +1,46 @@
+{
+  "slug": "back-office-efficiency-front-office-delight-v2",
+  "generated_at": "2025-10-01T00:36:31.317129",
+  "generation_method": "DALL-E 3 STANDARD + VISUAL_PROMPT v5.5",
+  "model": "dall-e-3",
+  "quality": "standard",
+  "style": "vivid",
+  "total_images": 4,
+  "successful_images": 4,
+  "failed_images": 0,
+  "generation_duration_seconds": 146.557847,
+  "generation_log": [
+    {
+      "file": "ghost/feature.png",
+      "platform": "ghost",
+      "image_type": "feature",
+      "size": "1200x630",
+      "success": true,
+      "timestamp": "2025-10-01T00:37:14.367594"
+    },
+    {
+      "file": "instagram/feed.png",
+      "platform": "instagram",
+      "image_type": "feed",
+      "size": "1080x1080",
+      "success": true,
+      "timestamp": "2025-10-01T00:37:50.047953"
+    },
+    {
+      "file": "ghost/content-1.png",
+      "platform": "ghost",
+      "image_type": "content-1",
+      "size": "800x450",
+      "success": true,
+      "timestamp": "2025-10-01T00:38:19.834555"
+    },
+    {
+      "file": "instagram/story.png",
+      "platform": "instagram",
+      "image_type": "story",
+      "size": "1080x1350",
+      "success": true,
+      "timestamp": "2025-10-01T00:38:57.874969"
+    }
+  ]
+}

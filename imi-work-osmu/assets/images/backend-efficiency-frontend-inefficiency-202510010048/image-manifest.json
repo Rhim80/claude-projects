@@ -1,0 +1,22 @@
+{
+  "slug": "backend-efficiency-frontend-inefficiency-202510010048",
+  "generated_at": "2025-10-01T00:48:05.461321",
+  "generation_method": "DALL-E 3 STANDARD + VISUAL_PROMPT v5.5",
+  "model": "dall-e-3",
+  "quality": "standard",
+  "style": "vivid",
+  "total_images": 1,
+  "successful_images": 1,
+  "failed_images": 0,
+  "generation_duration_seconds": 20.310776,
+  "generation_log": [
+    {
+      "file": "single/artwork.png",
+      "platform": "single",
+      "image_type": "artwork",
+      "size": "1080x1080",
+      "success": true,
+      "timestamp": "2025-10-01T00:48:25.772091"
+    }
+  ]
+}
