@@ -2,6 +2,39 @@
 
 WSL 파일시스템에서 Windows Obsidian을 직접 실행하면 "EISDIR: illegal operation on a directory" 에러가 발생합니다.
 
+## 📦 사전 준비: Git 설치
+
+### Git for Windows 설치 (필수)
+
+1. **다운로드**
+   - https://git-scm.com/download/win
+   - Windows 64-bit 버전 다운로드
+
+2. **설치 옵션** (기본값 권장)
+   ```
+   ✅ Git Bash Here
+   ✅ Git from the command line and also from 3rd-party software
+   ✅ Use bundled OpenSSH
+   ✅ Checkout Windows-style, commit Unix-style line endings
+   ✅ Git Credential Manager (인증 자동 저장)
+   ```
+
+3. **설치 확인**
+   ```powershell
+   # PowerShell 또는 CMD에서
+   git --version
+   # git version 2.x.x 출력되면 성공
+   ```
+
+4. **Git 사용자 정보 설정**
+   ```powershell
+   git config --global user.name "Your Name"
+   git config --global user.email "your.email@example.com"
+
+   # 설정 확인
+   git config --global --list
+   ```
+
 ## 🎯 권장 방법: Windows 경로에 Clone
 
 ### 1단계: Windows에 저장소 Clone
@@ -10,8 +43,13 @@ WSL 파일시스템에서 Windows Obsidian을 직접 실행하면 "EISDIR: illeg
 # PowerShell 또는 Git Bash에서
 cd C:\Users\[YourUsername]\Documents
 
-# 저장소 복제
+# 저장소 복제 (첫 실행 시 GitHub 로그인 필요)
 git clone https://github.com/Rhim80/claude-projects.git
+
+# 🔐 GitHub 인증 창이 뜨면:
+#    - "Sign in with your browser" 선택
+#    - GitHub 계정으로 로그인
+#    - 이후 자동으로 인증 정보 저장됨
 
 # pkm 폴더로 이동
 cd claude-projects\pkm
@@ -112,6 +150,29 @@ node_modules/
 ```
 
 ## 🐛 트러블슈팅
+
+### Git 명령어가 작동하지 않음
+```powershell
+# 1. Git 설치 확인
+git --version
+
+# 2. 미설치 시 Git for Windows 설치
+# https://git-scm.com/download/win
+
+# 3. PowerShell 재시작 후 다시 시도
+```
+
+### GitHub 인증 실패
+```powershell
+# 1. Credential Manager 확인
+git config --global credential.helper
+
+# 2. 인증 정보 초기화 후 재시도
+git credential-manager-core erase
+
+# 3. 다시 clone 시도 (브라우저 로그인 창 뜸)
+git clone https://github.com/Rhim80/claude-projects.git
+```
 
 ### "EISDIR" 에러 발생 시
 → WSL 경로(`\\wsl$\...`)가 아닌 Windows 경로(`C:\Users\...`)를 사용하세요
