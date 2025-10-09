@@ -1,0 +1,54 @@
+{
+  "user": {
+    "name": "rhim (hovoo)",
+    "background": {
+      "companies": ["imi coffee", "이미양과자", "IMI WORK"],
+      "roles": ["이미커피 대표", "F&B 브랜딩 컨설턴트", "AI 교육 강사"],
+      "experience": "15년 F&B 경험",
+      "expertise": [
+        "카페 브랜딩 및 운영 (4개 매장)",
+        "오프라인 창업 컨설팅",
+        "AI × 비즈니스 자동화",
+        "n8n 워크플로우 설계",
+        "비개발자 관점 AI 활용"
+      ],
+      "interests": [
+        "고부가가치 시장 진출 (브랜딩, 마케팅)",
+        "비즈니스 프로세스 자동화",
+        "AI 브랜딩 시스템 개발",
+        "GPTers 커뮤니티 운영"
+      ]
+    },
+    "websites": [
+      "blog.imiwork.com",
+      "n8n.imiwork.com"
+    ],
+    "profileSources": [
+      "/Users/rhim/.claude/CLAUDE.md"
+    ],
+    "customContext": "오프라인 비즈니스 × AI 활용 전문가. 실용성 중심, 즉시 활용 가능한 솔루션 선호. 단계별 접근으로 복잡한 프로젝트를 작은 단위로 나누어 진행.",
+    "publicProfile": true
+  },
+  "vaultPath": "/Users/rhim/Projects/pkm",
+  "fileNamingPattern": "YYYY-MM-DD - Topic",
+  "organizationMethod": "PARA",
+  "primaryUses": [
+    "비즈니스 아이디어 수집 및 발전",
+    "AI 학습 및 발견 기록",
+    "브랜딩 인사이트 정리",
+    "프로젝트 관리",
+    "지식 베이스 구축"
+  ],
+  "tools": {
+    "geminiVision": true,
+    "firecrawl": true
+  },
+  "projects": [],
+  "areas": [
+    "F&B 브랜딩",
+    "AI 실무 활용",
+    "교육 및 커뮤니티"
+  ],
+  "importedAt": "2025-10-09",
+  "lastUpdated": "2025-10-09"
+}
