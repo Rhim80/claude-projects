@@ -1,0 +1,108 @@
+﻿제목,Content Preview,Excerpt,Feature Image Alt,Feature Image Prompt,Feature Image URL,Ghost Post ID,Ghost URL,In Long Content,Meta Description,Meta Title,Primary Tag,Processing Log,Published At,Real Time,Slug,Status,Tags,Total Chunks
+Ghost 셀프호스팅 구축기 - n8n 경험을 바탕으로 한 두 번째 도전,"## 수정된 본문
+
+# Ghost 셀프호스팅 구축기 - n8n 경험을 바탕으로 한 두 번째 도전
+
+n8n 셀프호스팅을 성공한 후, 개인 블로그도 직접 운영해보고 싶어졌습니다. n8n 경험이 있어서 이번엔 수월할 줄 알았는데, 예상과 달리 새로운 문제들이 기다리고 있었습니다.
+
+## Ghost 셀프호스팅을 시작하게 된 배경
+
+### n8n 성공 후의 자신감
+- n8n 셀프호스팅 완료: Docker와 CLI에 어느 정도 익숙해짐
+- 블로그 필요성: 개인 브랜드와 콘텐츠 관리를 위한 독립적인 플랫폼 필요
+- 기술적 호기심: ""이제 Docker 좀 아니까 Ghost도 쉽겠지?""
+- 결과: 생각보다 만만치 않았음 😅
+
+### Ghost를 선택한 이유
+Ghost의 장점:
+- 깔끔한 마크다운 에디터
+- SEO 최적화가 잘 되어 있음  
+- 개발자 친화적인 구조
+- 셀프호스팅 가능
+
+vs WordPress:
+- 더 가볍고 빠름
+- 불필요한 플러그인 의존성 없음
+
+## 환경 설정 및 목표
+
+### 기존 인프라 현황
+- OS: Windows 11 + Docker Desktop
+- 네트워크: Cloudflare Tunnel (n8n에서 이미 사용 중)
+- 도메인: imiwork.com (기존 도메인 활용)
+
+### 구축 목표
+- 서브도메인: blog.imiwork.com으로 Ghost 블로그 운영
+- 동시 운영: 기존 n8n 서비스와 함께 안정적 운영
+- 관리 편의성: 하나의 Docker Compose로 통합 관리
+
+## 첫 번째 시도: 기본 설치의 함정
+
+### 기본적인 접근
+n8n처럼 간단할 줄 알고 기본 설정으로 시작했습니다.
+
+yaml
+services:
+  ghost:
+    image: ghost:latest
+    ports:
+      - ""2368:2368""
+
+
+### 첫 번째 벽: 컨테이너 재시작 루프
+# 컨테이너 상태 확인
+docker ps
+# STATUS: Restarting (1) 3 seconds ago
+
+# 로그 확인으로 원인 파악
+docker logs ghost-blog
+Error: connect ECONNREFUSED 127.0.0.1:3306
+
+문제 발견: Ghost는 MySQL 데이터베이스가 기본 설정으로 되어있는데, 이를 설정하지 않아서 발생한 오류였습니다.
+
+n8n vs Ghost의 차이점:
+- n8n: 자체적으로 데이터 저장 (별도 DB 불필요)
+- Ghost: 반드시 데이터베이스 필요 (MySQL, SQLite 등)
+
+## 데이터베이스 설정: SQLite로 해결
+
+### 개인 블로그에는 SQLite가 적합
+MySQL 서버를 별도로 구축하기보다는, 개인 블로그 용도로는 SQLite가 충분하다고 판단했습니다.
+
+yaml
+environment:
+  database__client: sqlite3
+  database__connection__filename: /var/lib/ghost/content/data/ghost.db
+  database__useNullAsDefault: 'true'
+
+
+**결과: 컨테이너가 정상 실행되기 시작했습니다! 🎉**
+
+### SQLite 선택 이유
+MySQL vs SQLite 비교:
+- MySQL: 고성능, 복잡한 설정, 별도 컨테이너 필요
+- SQLite: 설정 간단, 파일 기반, 개인 블로그에 충분한 성능
+
+개인 블로그 특성상 SQLite로 충분하다고 판단
+
+## 네트워크 접속 문제 해결
+
+Rhim Lee, [2025-08-12 오후 1:49]
+### localhost 접속 실패
+컨테이너는 실행되는데 `localhost:2368`로 접속할 수 없는 문제가 발생했습니다.
+
+### 원인 분석: IPv6 바인딩 문제
+컨테이너 내부 설정을 확인해보니:
+
+
+{
+  ""server"": {
+    ""host"": ""::""  // IPv6만 바인딩되어 있음
+  }
+}
+
+
+### 해결: 설정 파일 직접 수정",n8n 셀프호스팅 후 Ghost 블로그를 구축하며 겪은 경험과 문제 해결 과정을 공유합니다.,,Ghost self-hosting setup with n8n experience,,689ca4bb7fbdba0001527782,https://blog.imiwork.com/p/174094e6-f07e-4814-9733-6a1cb2642af3/,No,n8n 경험을 바탕으로 Ghost 블로그를 셀프호스팅하며 겪은 문제와 해결 방법을 공유합니다.,Ghost 셀프호스팅 구축기,Ghost,=Ghost Draft 생성 완료: 2025-08-13T14:48:44.488Z,2025년 8월 13일 오후 11:48,8,ghost-----------n8n-------------------,published,"Docker, Ghost, n8n, 블로그, 셀프호스팅",
+Understanding the Basics of Quantum Computing,"# Understanding the Basics of Quantum Computing
+
+Quantum computing is a revolutionary technology that leverages the principles of quantum mechanics...","This blog post explores the fundamental concepts of quantum computing, its significance, and its potential impact on technology and society.",,,,,,No,"Dive into the world of quantum computing with our comprehensive guide. Learn about its principles, applications, and future implications.",Basics of Quantum Computing - A Comprehensive Guide,Quantum Computing,,2025년 8월 14일 오후 11:59,7,https-www-example-com-understanding-basics-quantum-computing,generating,"Innovation, Quantum Computing, Science, Technology",
