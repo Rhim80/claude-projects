@@ -34,3 +34,9 @@ Thumbs.db
 # Claude Code local settings
 .claude/settings.local.json
 *.local.json
+
+# Git submodule prevention
+# If a directory has its own .git, it should be a proper submodule listed in .gitmodules
+# This prevents accidental submodule creation when copying git repositories
+# **/.git/ would ignore all .git directories, but we only want to prevent accidental ones
+# Instead, rely on: check for .git before adding new directories
