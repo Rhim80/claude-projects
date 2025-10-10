@@ -12,18 +12,17 @@ Resources are **reference materials** that:
 
 ## What Belongs Here
 
-### Categories to Consider
+### Simplified Structure (2025-10)
 ```
 03_Resources/
-├── Articles/          # Saved web content
-├── Books/            # Book notes and summaries
-├── Concepts/         # Evergreen idea notes
-├── People/           # Notable people and thinkers
-├── Tools/            # Software, methods, frameworks
-├── Quotes/           # Memorable quotes
-├── Examples/         # Case studies, references
-└── Learning/         # Course notes, tutorials
+├── 💡 insights/       # 아이디어, 인사이트, 메모 (구 ideas + inspirations + notes)
+├── 📚 knowledge/      # 책, 스터디, 워크숍, 강의 (구 books + study-notes + workshops)
+├── 🎯 business/       # 비즈니스 전략, 프레임워크 (구 business-strategy)
+├── 🛠 tools/          # AI 도구, 기술, 방법론 (구 ai-tools + ai-insights)
+└── 🍴 recipes/        # 레시피, 메뉴 개발
 ```
+
+**원칙**: 머리속에서 떠올릴 수 있는 단순함 - 5개 핵심 폴더로 통합
 
 ### Good Resources
 - Tutorial on Python decorators
