@@ -41,14 +41,17 @@ fi
 For each URL:
 
 ```bash
+# Create downloads folder if it doesn't exist
+mkdir -p "00-inbox/downloads"
+
 # Sanitize filename to prevent path traversal
 # Remove ../ and other dangerous characters
 filename=$(basename "$url" | sed 's/[^a-zA-Z0-9._-]/_/g')
 
 # Use wget or curl to download with timeout
-wget --timeout=30 -O "05_Attachments/$filename" "$url"
+wget --timeout=30 -O "00-inbox/downloads/$filename" "$url"
 # or
-curl --max-time 30 -L "$url" -o "05_Attachments/$filename"
+curl --max-time 30 -L "$url" -o "00-inbox/downloads/$filename"
 ```
 
 ### Step 3: Verify Downloads
@@ -56,7 +59,7 @@ curl --max-time 30 -L "$url" -o "05_Attachments/$filename"
 Check that files were downloaded successfully:
 
 ```bash
-ls -la "05_Attachments/"
+ls -la "00-inbox/downloads/"
 ```
 
 ### Step 4: Organize Files
@@ -75,13 +78,15 @@ For Images:
   `mcp__gemini-vision__analyze_multiple`
 - Generate descriptive filename based on content
 
-### Step 5: Move to Organized
+### Step 5: Move to Organized (Optional)
 
-Move renamed files to `05_Attachments/Organized/` with descriptive names
+If needed, move renamed files to appropriate project folders with descriptive names:
+- `10-projects/[project-name]/attachments/`
+- Keep in `00-inbox/downloads/` for weekly review processing
 
-### Step 6: Update Index
+### Step 6: Update Index (Optional)
 
-Add entries to `05_Attachments/00_Index.md`
+Can add entries to project documentation or keep in downloads for weekly processing
 
 ### Step 7: Commit Changes
 
@@ -109,17 +114,18 @@ git push
    - Handle download failures gracefully
 
 4. **Organization**:
-   - Downloaded files go to `05_Attachments/`
-   - After renaming, move to `05_Attachments/Organized/`
+   - Downloaded files go to `00-inbox/downloads/`
+   - After renaming, optionally move to project folders
+   - Keep in downloads for weekly review processing
    - Update links across vault if needed
 
 ## Workflow
 
-1. Download file(s) from provided URL(s)
+1. Download file(s) from provided URL(s) to `00-inbox/downloads/`
 2. Identify file type and analyze content
 3. Generate descriptive filename
-4. Move to Organized folder
-5. Update index and references
+4. Keep in downloads folder for weekly review
+5. (Weekly review: move to appropriate project folders)
 6. Commit and push changes
 
 ## Tips

@@ -21,10 +21,11 @@ The Inbox is a **temporary** holding area designed for:
 
 ### Weekly Processing
 Every week, review your inbox and:
-- Move project-related notes to `01_Projects/`
-- Move ongoing topics to `02_Areas/`
-- Move reference material to `03_Resources/`
-- Archive completed items to `04_Archive/`
+- Move project-related notes to `10-projects/`
+- Move ongoing topics to `20-operations/`
+- Move reference material to `30-knowledge/`
+- Move ideas to `40-personal/43-ideas/`
+- Archive completed items to `90-archive/`
 - Delete what's no longer relevant
 
 ## Claude Code Commands

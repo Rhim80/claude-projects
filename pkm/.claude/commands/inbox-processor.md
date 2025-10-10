@@ -1,15 +1,15 @@
 # Inbox Processor
 
-Help organize and process items in the 00_Inbox folder according to the PARA
+Help organize and process items in the 00-inbox folder according to the Johnny Decimal
 method.
 
 ## Task
 
-Review all notes in `00_Inbox/` and help categorize them:
+Review all notes in `00-inbox/` and help categorize them:
 
 1. **Scan the Inbox**
-   - List all files currently in 00_Inbox
-   - Exclude README.md and Welcome.md
+   - List all files currently in 00-inbox
+   - Exclude README.md, Welcome.md, and downloads/ folder
 
 2. **Analyze Each Item**
    - Read the content
@@ -17,10 +17,11 @@ Review all notes in `00_Inbox/` and help categorize them:
    - Suggest appropriate destination
 
 3. **Categorization Rules**
-   - **→ 01_Projects**: Has deadline, specific outcome
-   - **→ 02_Areas**: Ongoing responsibility, no end date
-   - **→ 03_Resources**: Reference material, knowledge
-   - **→ 04_Archive**: Old/completed, no longer active
+   - **→ 10-projects**: Has deadline, specific outcome
+   - **→ 20-operations**: Ongoing responsibility, operations
+   - **→ 30-knowledge**: Reference material, knowledge, frameworks
+   - **→ 40-personal**: Personal notes, ideas, daily notes
+   - **→ 90-archive**: Old/completed, no longer active
    - **→ Delete**: No value, redundant, or temporary
 
 4. **Suggest Actions**
@@ -49,6 +50,7 @@ Provide a clear action plan:
 
 ## Remember
 
-- Some items legitimately belong in the Inbox (daily notes, quick captures)
+- Some items legitimately belong in the Inbox (temporary captures, downloads folder)
 - Don't over-organize - sometimes "good enough" is perfect
 - Look for opportunities to connect ideas, not just file them
+- downloads/ folder is managed separately (weekly review)
