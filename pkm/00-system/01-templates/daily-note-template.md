@@ -24,17 +24,22 @@
 
 ## 💼 프로젝트 업데이트
 
-### GPTers AI 브랜딩 스터디
+### 교육 사업 (12-education)
+- GPTers 스터디:
+- Insight Platform:
+- 기타:
+
+### IMI WORK (13-imi-work)
+- OSMU 시스템:
+- 콘텐츠:
+
+### Brand Identity Builder (14-brand-identity)
 -
 
-### Archimedes Bath Lecture
--
-
-### IMI WORK OSMU
--
-
-### 카페 운영
--
+### 카페 운영 (21-cafe-operations)
+- 매장:
+- 커머스:
+- 특별 프로젝트:
 
 ---
 
