@@ -117,12 +117,3 @@ published: false
    * 음료를 제공하며 어떤 의도로, 어떻게 만들었는지 스토리를 함께 전달하여 경험의 가치를 높입니다.
 4. **기록**
    * 비스포크 커피의 레시피는 더욱 특별하게, 상세한 내용과 함께 10번째 기록지에 작성하여 파일에 보관합니다. 비고란에 **'10th Bespoke'** 라고 표기합니다.
-
-## Related Notes
-- [[Note Coffee House Project]] - 높은 연관성
-- [[NOTE COFFEE HOUSE 카페 오픈을 위한 주요 작업 리스트]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[imi coffee - second stage]] - 높은 연관성
-- [[카페-인테리어-가이드]] - 높은 연관성
-- [[imi-coffee-consulting-proposal-template]] - 높은 연관성
-- [[Dessert Menu]] - 높은 연관성

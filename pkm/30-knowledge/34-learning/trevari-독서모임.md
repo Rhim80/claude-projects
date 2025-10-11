@@ -142,10 +142,9 @@ source: workflowy
 ###
 
 ## Related Notes
-- [[솔로프리너_생산성_치트키_AI_강의안]] - 높은 연관성
-- [[proposal-explanation]] - 높은 연관성
-- [[06_앙떼떼페레_Entetepere]] - 높은 연관성
-- [[CUSTOM_GPT_INSTRUCTIONS]] - 높은 연관성
-- [[19th-proposal-simple]] - 높은 연관성
-- [[golden-brown-proposal-quote]] - 높은 연관성
-- [[gangneung-cafe-proposal-quote]] - 높은 연관성
+
+- [[30-knowledge/34-learning/34.04-reading-groups/trevari-offline-business]] - ai_automation 관련; '시즌 2 시작 인스타 글' 개념 공유
+- [[10-projects/12-education/12.03-insight-platform/01_planning/program-proposal]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/11-consulting/11.04-portfolio/03_리버헤드_Riverhead]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/content-analysis-revised]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/guides/IMI_WORK_PERSONA_GUIDE]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

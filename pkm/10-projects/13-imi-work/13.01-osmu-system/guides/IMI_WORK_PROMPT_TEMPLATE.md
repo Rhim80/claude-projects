@@ -267,10 +267,9 @@ JSON 형태로 출력해주세요:
 이 프롬프트 템플릿들을 순차적으로 사용하면 YouTube 영상을 IMI WORK 브랜드 정체성에 완벽히 부합하는 고품질 블로그 콘텐츠로 변환할 수 있습니다.
 
 ## Related Notes
-- [[system-vs-tool-master]] - 높은 연관성
-- [[22 10]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[naver-seo-version]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/gmail-classifier/gmail-classifier-분석]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[00-inbox/2025-08-30]] - ai_automation 관련; 10-projects ↔ 00-inbox 연결
+- [[30-knowledge/34-learning/hfk-공간브랜딩]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결

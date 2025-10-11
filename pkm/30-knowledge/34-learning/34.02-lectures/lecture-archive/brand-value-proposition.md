@@ -90,10 +90,9 @@ migrated: 2025-10-10
 - 만약 돈을 벌려면 오히려 포기해야 하는 것들도 생긴다
 
 ## Related Notes
-- [[template-specs]] - 높은 연관성
-- [[19th-proposal-simple]] - 높은 연관성
-- [[19th-gpters-submission]] - 높은 연관성
-- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
-- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성
-- [[positioning]] - 높은 연관성
-- [[19th-working-backwards-final]] - 높은 연관성
+
+- [[30-knowledge/34-learning/34.02-lectures/lectures/브랜드-가치제안]] - business_strategy, ai_automation 관련; 'brand value proposition' 개념 공유
+- [[30-knowledge/34-learning/34.02-lectures/lectures/창업교육-전체과정]] - business_strategy, ai_automation 관련; '1. 창업' 개념 공유
+- [[10-projects/12-education/12.04-insighter/인사이터 AI 강의/문의 답변]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[40-personal/사진-취미와-배움]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/temp-content-back-office-efficiency]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

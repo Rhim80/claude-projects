@@ -51,10 +51,9 @@ migrated: 2025-10-10
 - [[문화 상품 마케팅]]
 
 ## Related Notes
-- [[hit-makers]] - 관련 주제
-- [[ANALYSIS_SUMMARY]] - 참고
-- [[AI시대_학습의_새로운_패러다임]] - 참고
-- [[AI 강의 6월8일1-1_original]] - 참고
-- [[ai-creator-collaboration-content]] - 참고
-- [[IMPROVEMENT_ROADMAP]] - 참고
-- [[advertising-guide]] - 참고
+
+- [[10-projects/13-imi-work/13.01-osmu-system/CLAUDE]] - ai_automation 관련; '핵심 질문' 개념 공유
+- [[10-projects/12-education/12.02-gpters-ai-branding/archives/18th-cohort/gpters-final-presentation-beyond-ai-novelty]] - ai_automation 관련; '핵심 인사이트' 개념 공유
+- [[10-projects/12-education/12.02-gpters-ai-branding/18th-cohort/GPTERS 18기 브랜딩 STUDY]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[40-personal/사진-취미와-배움]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[00-system/01-templates/daily-note-template]] - ai_automation 관련; 30-knowledge ↔ 00-system 연결

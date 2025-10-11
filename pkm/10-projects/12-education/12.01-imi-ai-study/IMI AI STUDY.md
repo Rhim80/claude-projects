@@ -66,10 +66,9 @@ published: false
 [YouTube 영상 아카이브](IMI%20AI%20STUDY/YouTube%20%EC%98%81%EC%83%81%20%EC%95%84%EC%B9%B4%EC%9D%B4%EB%B8%8C.csv)
 
 ## Related Notes
-- [[ai-automation-hub]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
+
+- [[30-knowledge/31-business/31.01-imi/consulting/Seminar/스페셜티 커피업계 대표들을 위한 브랜딩 세미나]] - ai_automation 관련; '*' 개념 공유
+- [[30-knowledge/31-business/31.01-imi/hr/내부 워크숍 및 회의/이미 워크숍/23 01]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[40-personal/41-daily/2025-10-09]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/34-learning/34.02-lectures/lectures/startup/창업-강의-마스터-인덱스]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/31-business/31.01-imi/hr/이미 커피 직원/직원-관리-DB]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결

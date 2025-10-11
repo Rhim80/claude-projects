@@ -24,10 +24,9 @@
 *상세 내용은 상위 폴더의 wrap-up 문서 참조*
 
 ## Related Notes
-- [[human-sense-importance]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
+
+- [[40-personal/45-strategy/2025-10_비즈니스_재구조화_전략]] - ai_automation 관련; '💡 핵심 인사이트' 개념 공유
+- [[00-system/01-templates/daily-note-template]] - ai_automation 관련; 10-projects ↔ 00-system 연결
+- [[30-knowledge/36-ai-tools/human-sense-importance]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/34-learning/34.01-books/book-notes/invitation-jon-levy]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결

@@ -43,10 +43,9 @@ AI 시대에 리더십이 바뀌어야 할 것 같다는 생각이 요즘 자주
 *Tags: #트위터스레드 #리더십변화 #AI시대 #플레잉코치 #조직문화*
 
 ## Related Notes
-- [[IMPROVED_GPT_STEP1_GUIDE]] - 높은 연관성
-- [[platform-strategy]] - 높은 연관성
-- [[platform-concept]] - 높은 연관성
-- [[strategy]] - 높은 연관성
-- [[detailed-plan]] - 높은 연관성
-- [[2025-10_비즈니스_재구조화_전략]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
+
+- [[10-projects/13-imi-work/13.01-osmu-system/standalone-art/spring_melancholy_20250917_005322_info]] - ai_automation 관련; '주제' 개념 공유
+- [[10-projects/13-imi-work/13.01-osmu-system/tracking/notion-content-db-schema]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/tracking/notion-setup-guide]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/tracking/notion-page-setup-instructions]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/archives/18th-cohort/gpters-final-presentation-beyond-ai-novelty]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

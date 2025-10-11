@@ -68,10 +68,9 @@
 - YouTube API 연동 기반 마련
 
 ## Related Notes
-- [[system-vs-tool-master]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[naver-seo-version]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[ai-automation-hub]] - 높은 연관성
+
+- [[40-personal/41-daily/2025-10-09]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/gmail-classifier/gmail-classifier-분석]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/payroll-systems/payroll-a-분석]] - ai_automation 관련; 10-projects ↔ 20-operations 연결

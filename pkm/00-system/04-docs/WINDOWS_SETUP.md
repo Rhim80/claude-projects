@@ -231,3 +231,11 @@ Windows: C:\Users\[You]\Documents\claude-projects
 ## 📚 관련 문서
 - [Mac-Windows Git 동기화 가이드](../.github/SYNC_GUIDE.md)
 - [Obsidian 동기화 가이드](./OBSIDIAN_SYNC_GUIDE.md)
+
+## Related Notes
+
+- [[.claude/mcp-servers/GEMINI_VISION_QUICK_START]] - pkm_systems, ai_automation 관련; 00-system ↔ .claude 연결
+- [[.claude/commands/download-attachment]] - pkm_systems, ai_automation 관련; 00-system ↔ .claude 연결
+- [[.claude/commands/pull-request]] - ai_automation 관련; 00-system ↔ .claude 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/create-worktrees/create-worktrees]] - ai_automation 관련; 00-system ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/.github/PULL_REQUEST_TEMPLATE]] - ai_automation 관련; 00-system ↔ 30-knowledge 연결

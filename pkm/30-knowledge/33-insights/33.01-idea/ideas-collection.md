@@ -193,10 +193,9 @@ source: workflowy-txt.txt
 - [[커뮤니티-비즈니스-아이디어]]
 
 ## Related Notes
-- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
-- [[01_고요새_제주]] - 높은 연관성
-- [[ai-creator-collaboration-content]] - 높은 연관성
-- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
-- [[워크플로우_개발_가이드]] - 높은 연관성
-- [[prompt-templates]] - 높은 연관성
-- [[소경계_1편_첫만남부터_2차PT]] - 높은 연관성
+
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/planning-session-notes]] - ai_automation 관련; '팀 구성' 개념 공유
+- [[40-personal/사진-취미와-배움]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-cohort-proposal]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-working-backwards-final]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/archives/18th-cohort/claude-code-writing-guide]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

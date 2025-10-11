@@ -177,3 +177,11 @@ Follow conventional commits:
 - If already on feature branch: Ask if should create PR from current branch
 - If PR exists: Show existing PR URL
 - If push fails: Check permissions and remote settings
+
+## Related Notes
+
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/claude-files/TPL/CLAUDE]] - ai_automation 관련; 'testing' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/husky/husky]] - ai_automation 관련; 'summary' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/analyze-project]] - ai_automation 관련; 'process' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/update-architecture]] - ai_automation 관련; 'process' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/claude-files/EDSL/CLAUDE]] - ai_automation 관련; 'testing' 개념 공유

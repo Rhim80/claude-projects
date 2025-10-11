@@ -195,11 +195,16 @@
 **대상**: GPTers 19기 창업 스터디
 **작성자**: 이림 (이미커피 대표)
 
+- [[40-personal/41-daily/2025-10-11]] - GPTers 19기 스터디 관련
+- [[40-personal/41-daily/2025-10-10]] - GPTers 19기 스터디 관련
+- [[30-knowledge/36-ai-tools/ai-automation-hub]] - GPTers AI 브랜딩 스터디
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-gpters-submission]] - GPTers 19기 스터디 관련
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/planning-session-notes]] - GPTers 19기 스터디 관련
+
 ## Related Notes
-- [[learning-roadmap]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/vs-gpts-comparison]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[40-personal/41-daily/2025-10-09]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/33-insights/33.01-idea/ideas-collection]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결

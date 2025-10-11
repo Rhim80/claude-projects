@@ -25,12 +25,3 @@ note: "매장매뉴얼-서비스가이드, 매장운영-룰-프로세스, 로스
 
 
 ---
-
-## Related Notes
-- [[imi-coffee-consulting-proposal-template]] - 관련 주제
-- [[IMPROVEMENT_ROADMAP]] - 관련 주제
-- [[AI 워크숍 기획안]] - 관련 주제
-- [[부스_구조_분석]] - 관련 주제
-- [[인사이트 플랫폼 AI 강의]] - 관련 주제
-- [[이미커피_컨설팅_워크플로우]] - 관련 주제
-- [[setup-guide]] - 관련 주제

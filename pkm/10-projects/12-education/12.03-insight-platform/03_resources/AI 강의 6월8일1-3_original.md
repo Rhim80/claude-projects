@@ -1512,10 +1512,9 @@ YouTube 보고 아 좀 배우는 거 있잖아요. 그거 할 때가 진짜 좋�
 진짜? 근데 진짜 돈 많이 되지 않나요? 저 이거 진짜 내 내 2년간의 기록인데.
 
 ## Related Notes
-- [[system-vs-tool-master]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
-- [[WIEE-세미나-노트]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
+
+- [[30-knowledge/34-learning/34.02-lectures/lectures/lgu-강연-오프라인-생존전략]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/34-learning/34.02-lectures/lecture-archive/WIEE-세미나-노트]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/34-learning/34.02-lectures/lecture-archive/모모스-세미나-분석]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/31-business/오프라인-비즈니스-운영-프로세스]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/31-business/market-entry-framework]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결

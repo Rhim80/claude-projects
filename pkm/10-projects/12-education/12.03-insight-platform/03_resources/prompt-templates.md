@@ -335,10 +335,9 @@ SWOT 분석을 활용하여 다음 상황을 분석해주세요:
 사용 경험을 바탕으로 지속적으로 개선해나가세요!**
 
 ## Related Notes
-- [[learning-roadmap]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[창업교육-커리큘럼]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/anthropic-non-developer-workflows]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[20-operations/21-cafe-operations/ecommerce/strategy/competitor-analysis]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[20-operations/21-cafe-operations/ecommerce/strategy/market-research]] - ai_automation 관련; 10-projects ↔ 20-operations 연결

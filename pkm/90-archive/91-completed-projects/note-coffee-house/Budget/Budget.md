@@ -13,6 +13,3 @@ published: false
 **우선 총액 : 약 1억원으로 진행.**
 
 [ 전체 예산](Budget/%EC%A0%84%EC%B2%B4%20%EC%98%88%EC%82%B0.csv)
-
-## Related Notes
-- [[Budget]] - 높은 연관성

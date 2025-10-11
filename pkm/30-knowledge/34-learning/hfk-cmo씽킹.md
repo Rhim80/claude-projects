@@ -754,10 +754,9 @@ source: workflowy
 -
 
 ## Related Notes
-- [[IMPROVED_GPT_STEP1_GUIDE]] - 높은 연관성
-- [[platform-concept]] - 높은 연관성
-- [[2025-10_비즈니스_재구조화_전략]] - 높은 연관성
-- [[detailed-plan]] - 높은 연관성
-- [[CUSTOM_GPT_INSTRUCTIONS]] - 높은 연관성
-- [[19th-gpters-submission]] - 높은 연관성
-- [[advertising-guide]] - 높은 연관성
+
+- [[30-knowledge/34-learning/34.02-lectures/lecture-archive/WIEE-세미나-노트]] - ai_automation 관련; 'yes' 개념 공유
+- [[10-projects/13-imi-work/13.01-osmu-system/guides/IMI_WORK_PERSONA_GUIDE]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/templates/brand-wheel-canvas/IMPROVED_TEMPLATE_V1.1]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/blog-content/aeo-ai-search-marketing-strategy]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/temp-content-back-office-efficiency]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

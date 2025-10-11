@@ -586,10 +586,9 @@ function adjustBudgetBasedOnPerformance() {
 *"구글의 강력한 검색 생태계를 활용하여 구매 의도가 명확한 고객을 효율적으로 유치합니다."*
 
 ## Related Notes
-- [[human-sense-importance]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[창업교육-커리큘럼]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 20-operations ↔ 40-personal 연결
+- [[10-projects/14-brand-identity/14.01-brand-builder/brand-identity-ai/brand-identity-builder-prd]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/templates/brand-wheel-canvas/BRAND_FRAMEWORK_ANALYSIS]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 20-operations ↔ 40-personal 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/prompt-templates]] - ai_automation 관련; 20-operations ↔ 10-projects 연결

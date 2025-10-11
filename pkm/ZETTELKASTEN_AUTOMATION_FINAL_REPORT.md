@@ -508,3 +508,11 @@ The vault is now in a **clean, well-organized state** ready for manual link addi
 ---
 
 *"A Zettelkasten is never finished. It grows with you, one connection at a time."*
+
+## Related Notes
+
+- [[.claude/commands/install-claudesidian-command]] - pkm_systems, ai_automation 관련; ZETTELKASTEN_AUTOMATION_FINAL_REPORT.md ↔ .claude 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/husky/husky]] - ai_automation 관련; ZETTELKASTEN_AUTOMATION_FINAL_REPORT.md ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/resume-mission]] - ai_automation 관련; ZETTELKASTEN_AUTOMATION_FINAL_REPORT.md ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/create-pull-request/create-pull-request]] - ai_automation 관련; ZETTELKASTEN_AUTOMATION_FINAL_REPORT.md ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/update-docs/update-docs]] - ai_automation 관련; ZETTELKASTEN_AUTOMATION_FINAL_REPORT.md ↔ 30-knowledge 연결

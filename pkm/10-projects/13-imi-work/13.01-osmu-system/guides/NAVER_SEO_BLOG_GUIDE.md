@@ -227,10 +227,9 @@
 네이버 블로그 SEO는 단순한 기술이 아닌, 독자에게 진정한 가치를 전달하는 소통의 방법입니다. 검색 알고리즘을 이해하되, 결국 사람이 읽고 도움을 받는 콘텐츠를 만드는 것이 가장 중요합니다.
 
 ## Related Notes
-- [[human-sense-importance]] - 높은 연관성
-- [[트리니타스 브랜딩 미팅]] - 높은 연관성
-- [[ai-automation-hub]] - 높은 연관성
-- [[창업-강의-마스터-인덱스]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
-- [[2기]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+
+- [[20-operations/21-cafe-operations/ecommerce/marketing/channels/naver/optimization-guide]] - content_creation 관련; 10-projects ↔ 20-operations 연결
+- [[20-operations/21-cafe-operations/ecommerce/marketing/channels/google/advertising-guide]] - content_creation 관련; 10-projects ↔ 20-operations 연결
+- [[30-knowledge/36-ai-tools/human-sense-importance]] - content_creation 관련; 10-projects ↔ 30-knowledge 연결
+- [[40-personal/45-strategy/2025-10_비즈니스_재구조화_전략]] - content_creation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/archived-versions/naver-seo-version]] - content_creation 관련; 10-projects ↔ 30-knowledge 연결

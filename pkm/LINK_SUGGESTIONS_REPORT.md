@@ -179,3 +179,10 @@ Showing first 20 files with suggestions:
 
 - [0.62] [[GPTERS 18기 브랜딩 STUDY]] - `10-projects/12-education/12.02-gpters-ai-branding/18th-cohort/GPTERS 18기 브랜딩 STUDY.md`
 
+## Related Notes
+
+- [[00-inbox/Welcome]] - pkm_systems, ai_automation 관련; LINK_SUGGESTIONS_REPORT.md ↔ 00-inbox 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/CONTRIBUTING]] - ai_automation 관련; LINK_SUGGESTIONS_REPORT.md ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/claude-files/AVS-Vibe-Developer-Guide/CLAUDE]] - ai_automation 관련; LINK_SUGGESTIONS_REPORT.md ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/utils/backend-mission]] - ai_automation 관련; LINK_SUGGESTIONS_REPORT.md ↔ 30-knowledge 연결
+- [[.claude/commands/de-ai-ify]] - ai_automation 관련; LINK_SUGGESTIONS_REPORT.md ↔ .claude 연결

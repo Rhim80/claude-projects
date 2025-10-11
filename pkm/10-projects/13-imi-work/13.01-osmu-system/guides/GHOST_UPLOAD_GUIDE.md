@@ -271,10 +271,9 @@ python3 -c "import markdown; print(len(markdown.markdown(open('content/your-file
 *이 가이드를 따르면 Ghost v5에서 발생할 수 있는 모든 업로드 문제를 해결할 수 있습니다.*
 
 ## Related Notes
-- [[human-sense-importance]] - 참고
-- [[leadership-transformation]] - 참고
-- [[트리니타스 브랜딩 미팅]] - 참고
-- [[창업-인테리어-가이드]] - 참고
-- [[ideas-collection]] - 참고
-- [[hfk-쇼핑의-미래-Sun,-Aug-4,-2024]] - 참고
-- [[창업-운영준비-실무]] - 참고
+
+- [[CLAUDE]] - content_creation 관련; 10-projects ↔ CLAUDE.md 연결
+- [[MIGRATION_VALIDATION_REPORT]] - content_creation 관련; 10-projects ↔ MIGRATION_VALIDATION_REPORT.md 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/add-to-changelog/add-to-changelog]] - content_creation 관련; 10-projects ↔ 30-knowledge 연결
+- [[00-system/04-docs/NOTION_MIGRATION_GUIDE]] - content_creation 관련; 10-projects ↔ 00-system 연결
+- [[00-system/04-docs/CONTRIBUTING]] - content_creation 관련; 10-projects ↔ 00-system 연결

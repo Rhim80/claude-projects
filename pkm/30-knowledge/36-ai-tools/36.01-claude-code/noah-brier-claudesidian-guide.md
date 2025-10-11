@@ -1194,3 +1194,14 @@ Current Projects: GPTers 스터디, archimedes-bath-lecture, 카페 운영
 
 *"AI를 단순한 생성 도구가 아닌, Unix 철학에 기반한 사고 파트너로 활용하라."*
 — Noah Brier, 2025
+
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-working-backwards-final]] - Noah Brier의 Claudesidian PKM 시스템
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/template-specs]] - Noah Brier의 Claudesidian PKM 시스템
+
+## Related Notes
+
+- [[00-system/04-docs/WINDOWS_SETUP]] - pkm_systems, ai_automation 관련; 30-knowledge ↔ 00-system 연결
+- [[.claude/commands/install-claudesidian-command]] - pkm_systems, ai_automation 관련; 30-knowledge ↔ .claude 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/guides/IMI_WORK_PERSONA_GUIDE]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결

@@ -44,12 +44,3 @@ Fit. 균형
 이정도 충분해. enough
 
 비어있는 이미지
-
-## Related Notes
-- [[step-5-brand-execution]] - 관련 주제
-- [[brand-identity-builder-prd]] - 관련 주제
-- [[step-4-brand-validation]] - 관련 주제
-- [[step-3-brand-language]] - 관련 주제
-- [[brand-identity-builder-prd]] - 관련 주제
-- [[step-2-brand-naming]] - 관련 주제
-- [[brand-identity-builder-prd-v2]] - 관련 주제

@@ -39,3 +39,8 @@
 
 ---
 *Tags: #트위터스레드 #소셜미디어 #콘텐츠*
+
+## Related Notes
+
+- [[30-knowledge/36-ai-tools/education-paradigm]] - '💡 핵심 메시지' 개념 공유; 00-system ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/playing-coach-leadership]] - '💡 핵심 메시지' 개념 공유; 00-system ↔ 30-knowledge 연결

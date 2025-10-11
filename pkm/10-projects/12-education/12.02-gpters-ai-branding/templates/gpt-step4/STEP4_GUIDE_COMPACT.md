@@ -199,12 +199,3 @@
 **금지**: 일반 마케팅 조언, 예산 무시한 계획, 측정 불가능한 목표, 브랜드 시스템 불일치
 
 목표: 완성된 브랜드 시스템이 모든 접점에서 일관된 차별적 경험으로 구현
-
-## Related Notes
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[ai-automation-hub]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[naver-seo-version]] - 높은 연관성

@@ -880,10 +880,9 @@ AI를 잘 쓰는 방법 중에 하나가 구분자를 명확하게 쓰는 게 �
 이게 기본 이론 교육만 알면은 그다음부터는 실제 사례를 가지고 어떻게 활용할 수 있는지를 다 보여드릴 거예요.
 
 ## Related Notes
-- [[hfk-cmo씽킹]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[WIEE-세미나-노트]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
+
+- [[30-knowledge/34-learning/34.02-lectures/lectures/lgu-강연-오프라인-생존전략]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/34-learning/34.02-lectures/lecture-archive/WIEE-세미나-노트]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/34-learning/34.02-lectures/lecture-archive/모모스-세미나-분석]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/31-business/market-entry-framework]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/31-business/오프라인-비즈니스-운영-프로세스]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결

@@ -193,12 +193,3 @@ published: false
   * 6. 키워드, 코어밸류, 무드보드, 컨셉, 메시지의 일관성과 통일성, 맥락 체크
 
   [실천반 워크시트\_231009\_123118.pdf](실천반 zero 8040dad7cf064ba28ab8cb7b7796284d/%EC%8B%A4%EC%B2%9C%EB%B0%98\_%EC%9B%8C%ED%81%AC%EC%8B%9C%ED%8A%B8\_231009\_123118.pdf)
-
-## Related Notes
-- [[gangneung-cafe-proposal-quote]] - 높은 연관성
-- [[gangneung-cafe-proposal-quote]] - 높은 연관성
-- [[imi-coffee-consulting-proposal-template]] - 높은 연관성
-- [[이미커피_컨설팅_워크플로우]] - 높은 연관성
-- [[proposal-explanation]] - 높은 연관성
-- [[AI 강의 6월8일1-3_original]] - 높은 연관성
-- [[IMPROVED_TEMPLATE_V1.1]] - 높은 연관성

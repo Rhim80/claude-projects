@@ -66,12 +66,3 @@ source: book-notes
 -  요즘 인상깊게 본 제품 또는 컨텐츠가 있나요? 그 이유는 무엇인가요?
 
   - 그렇다면 해당 제품은 어떤 방식으로 히트했거나? 또는 성공할 것이라고 예측하시나요?
-
-## Related Notes
-- [[step-4-brand-validation]] - 관련 주제
-- [[step-2-brand-naming]] - 관련 주제
-- [[NESEO_BLOG_WRITER_PRO]] - 관련 주제
-- [[NEUTRAL_AI_GUIDE]] - 관련 주제
-- [[2025-10-2_줌미팅_핵심내용]] - 관련 주제
-- [[IMPROVEMENT_ROADMAP]] - 관련 주제
-- [[step-6-branding-wheel]] - 관련 주제

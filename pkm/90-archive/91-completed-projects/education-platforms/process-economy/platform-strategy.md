@@ -181,12 +181,3 @@
 ---
 *Tags: #프로젝트기반성장 #사이드프로젝트 #플랫폼검증 #팀빌딩 #성장플랫폼*
 *최종 업데이트: 2025-08-30*
-
-## Related Notes
-- [[platform-concept]] - 높은 연관성
-- [[2025-10_비즈니스_재구조화_전략]] - 높은 연관성
-- [[detailed-plan]] - 높은 연관성
-- [[IMPROVED_GPT_STEP1_GUIDE]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
-- [[strategy]] - 높은 연관성
-- [[persuasion-strategy]] - 높은 연관성

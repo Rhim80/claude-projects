@@ -211,12 +211,3 @@ Week 7-8:   브랜딩 협력 가이드 완성
 ---
 
 **"15년 디저트 경험과 전문 음료 개발로 골든브라운만의 독특한 브랜드를 완성합니다"**
-
-## Related Notes
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[gangneung-cafe-proposal-quote]] - 높은 연관성
-- [[gangneung-cafe-proposal-quote]] - 높은 연관성
-- [[2기]] - 높은 연관성
-- [[일을-잘한다는-것]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성

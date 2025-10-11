@@ -444,3 +444,11 @@ and this project adheres to
 [0.2.1]: https://github.com/heyitsnoah/claudesidian/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/heyitsnoah/claudesidian/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/heyitsnoah/claudesidian/releases/tag/v0.1.0
+
+## Related Notes
+
+- [[.claude/commands/install-claudesidian-command]] - pkm_systems, ai_automation 관련; 00-system ↔ .claude 연결
+- [[.claude/commands/upgrade]] - pkm_systems, content_creation, ai_automation 관련; 00-system ↔ .claude 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/create-pull-request/create-pull-request]] - ai_automation 관련; 00-system ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/add-to-changelog/add-to-changelog]] - content_creation 관련; 'security' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.claude/agents/playwright-e2e-tester]] - ai_automation 관련; 00-system ↔ 30-knowledge 연결

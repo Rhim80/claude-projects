@@ -40,12 +40,3 @@ published: false
 곡선 보다는 직선
 
 * 어설프게 들어간 곡선보다는 직선 형태로 통일하는 것
-
-## Related Notes
-- [[04_꼬따꼬뜨_수원]] - 관련 주제
-- [[08_NOTE_COFFEE_HOUSE_컨설팅_프로젝트]] - 관련 주제
-- [[imi-coffee-consulting-proposal-template]] - 관련 주제
-- [[IMPROVEMENT_ROADMAP]] - 관련 주제
-- [[소경계_1편_첫만남부터_2차PT]] - 관련 주제
-- [[인사이트 플랫폼 AI 강의]] - 관련 주제
-- [[BRAND_FRAMEWORK_ANALYSIS]] - 관련 주제

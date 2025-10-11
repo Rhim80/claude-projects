@@ -430,11 +430,13 @@ BrandIdentityBuilder.tsx      // 메인 컨테이너
 ## 연락처
 - 프로젝트 매니저: hovoo@imiwork.com
 
+- [[10-projects/14-brand-identity/14.01-brand-builder/brand-identity-builder-prd]] - Brand Identity Builder 시스템
+- [[10-projects/14-brand-identity/14.01-brand-builder/brand-identity-ai/brand-identity-builder-prd]] - Brand Identity Builder 시스템
+
 ## Related Notes
-- [[brand-identity-builder-prd]] - 높은 연관성
-- [[naver-seo-version]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[ai-automation-hub]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[스페셜티 커피업계 대표들을 위한 브랜딩 세미나]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/resume-mission]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/claude-files/Giselle/CLAUDE]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[.claude/commands/release]] - ai_automation 관련; 10-projects ↔ .claude 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결

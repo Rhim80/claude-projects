@@ -159,9 +159,6 @@ source: notion-migration
 **Required Improvements**:
 - Fix PARA/Notion metadata
 - Add Johnny Decimal category tags
-- Add "## Related Notes" section (Phase 3)
-- Extract key concepts for linking
-
 ---
 
 ## Part 4: SPLIT Candidates (TBD)
@@ -327,3 +324,11 @@ consulting → [consulting, branding] (context-dependent)
 **Report Generated**: 2025-10-11
 **Agent**: Zettelkasten Vault Curator
 **Status**: Awaiting user approval to proceed
+
+## Related Notes
+
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/husky/husky]] - ai_automation 관련; ZETTELKASTEN_QUALITY_ASSESSMENT_REPORT.md ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/create-pull-request/create-pull-request]] - ai_automation 관련; ZETTELKASTEN_QUALITY_ASSESSMENT_REPORT.md ↔ 30-knowledge 연결
+- [[.claude/commands/install-claudesidian-command]] - pkm_systems, ai_automation 관련; ZETTELKASTEN_QUALITY_ASSESSMENT_REPORT.md ↔ .claude 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/resume-mission]] - ai_automation 관련; ZETTELKASTEN_QUALITY_ASSESSMENT_REPORT.md ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/update-docs/update-docs]] - ai_automation 관련; ZETTELKASTEN_QUALITY_ASSESSMENT_REPORT.md ↔ 30-knowledge 연결

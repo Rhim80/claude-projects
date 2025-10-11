@@ -285,10 +285,9 @@ Step 1(정체성)과 Step 2(네이밍) 결과를 바탕으로 **브랜드가 세
 🎊 언어 시스템 완성! 다음 단계에서 실제 테스트하세요!
 
 ## Related Notes
-- [[pkm-sustainability]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[40-personal/45-strategy/2025-10_비즈니스_재구조화_전략]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[20-operations/21-cafe-operations/ecommerce/marketing/channels/naver/optimization-guide]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/vs-gpts-comparison]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[20-operations/21-cafe-operations/ecommerce/marketing/channels/cafe24/setup-guide]] - ai_automation 관련; 10-projects ↔ 20-operations 연결

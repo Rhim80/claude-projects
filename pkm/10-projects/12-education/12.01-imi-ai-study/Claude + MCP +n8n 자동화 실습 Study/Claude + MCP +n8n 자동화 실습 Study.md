@@ -91,3 +91,11 @@ published: false
     [[design-guide]]
 
   ###
+
+## Related Notes
+
+- [[30-knowledge/31-business/31.01-imi/consulting/Seminar/스페셜티 커피업계 대표들을 위한 브랜딩 세미나]] - ai_automation 관련; '*' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/클로드 코드 사용]] - education, ai_automation 관련; '' 개념 공유
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/claude-integration/워크플로우_개발_가이드]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[40-personal/41-daily/2025-10-09]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/youtube-rss-bot/youtube-rss-bot-분석]] - ai_automation 관련; 10-projects ↔ 20-operations 연결

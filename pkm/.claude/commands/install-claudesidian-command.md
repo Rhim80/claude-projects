@@ -341,3 +341,11 @@ end
 3. `; or claude` - If resume fails (no session), starts new session (Fish
    syntax)
 4. `cd -` - Returns to previous directory after Claude exits
+
+## Related Notes
+
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/analyze-project]] - ai_automation 관련; 'process' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/resume-mission]] - ai_automation 관련; 'process' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/create-worktrees/create-worktrees]] - ai_automation 관련; 'example output' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/create-task]] - ai_automation 관련; 'process' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/create-mission]] - ai_automation 관련; 'process' 개념 공유

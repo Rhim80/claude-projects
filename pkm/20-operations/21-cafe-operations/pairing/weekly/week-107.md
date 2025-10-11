@@ -41,10 +41,9 @@ Crème brûlée Earl Grey
 - **주차**: WEEK 107
 
 ## Related Notes
-- [[announcements]] - 높은 연관성
-- [[창업교육-커리큘럼]] - 높은 연관성
-- [[23 01]] - 높은 연관성
-- [[이미 커피 직원]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
+
+- [[20-operations/21-cafe-operations/pairing/monthly/2025-04]] - cafe_operations, ai_automation 관련; '특징' 개념 공유
+- [[20-operations/21-cafe-operations/pairing/monthly/2025-10]] - cafe_operations, ai_automation 관련; '특징' 개념 공유
+- [[30-knowledge/34-learning/34.02-lectures/lectures/브랜드-가치제안]] - ai_automation 관련; 20-operations ↔ 30-knowledge 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/content-analysis-revised]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[30-knowledge/34-learning/북토크-강연-오프라인-비즈니스-생존기]] - ai_automation 관련; 20-operations ↔ 30-knowledge 연결

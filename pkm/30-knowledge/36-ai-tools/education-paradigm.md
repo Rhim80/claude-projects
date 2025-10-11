@@ -38,10 +38,9 @@ AI가 이렇게 도와주는 시대에, 결국 차별화는 '실행 경험'에 �
 *Tags: #교육혁신 #AI학습 #프로젝트기반학습 #스타트업 #협업*
 
 ## Related Notes
-- [[AI시대_학습의_새로운_패러다임]] - 높은 연관성
-- [[AI시대_학습_패러다임_강연요약본]] - 높은 연관성
-- [[사이드프로젝트_교육혁신_전략]] - 높은 연관성
-- [[gmail-classifier-분석]] - 높은 연관성
-- [[사례 발표]] - 높은 연관성
-- [[AI 강의 6월8일1-2_original]] - 높은 연관성
-- [[golden-brown-partnership-inquiry]] - 높은 연관성
+
+- [[10-projects/13-imi-work/13.01-osmu-system/archive/content-prompt-insight-0914]] - ai_automation 관련; '조회수' 개념 공유
+- [[10-projects/13-imi-work/13.01-osmu-system/standalone-art/spring_melancholy_20250917_005322_info]] - ai_automation 관련; '주제' 개념 공유
+- [[10-projects/13-imi-work/13.01-osmu-system/tracking/notion-content-db-schema]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/guides/INSTAGRAM_THREADS_OPTIMIZER]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.04-insighter/솔로프리너_생산성_치트키_AI_강의안]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

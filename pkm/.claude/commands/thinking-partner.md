@@ -42,3 +42,11 @@ When engaged as a thinking partner:
 
 The goal is not to have answers but to help discover them. Your value is in the
 quality of exploration, not the speed of resolution.
+
+## Related Notes
+
+- [[00-inbox/Welcome]] - ai_automation 관련; 'remember' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/resume-task]] - ai_automation 관련; 'remember' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/update-architecture]] - ai_automation 관련; 'remember' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/resume-mission]] - ai_automation 관련; 'remember' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/utils/frontend-mission]] - ai_automation 관련; 'remember' 개념 공유

@@ -446,12 +446,3 @@ created: 2025-10-10
 
 
 ## 실제로 적을 수 있도록.
-
-## Related Notes
-- [[imi-old-mansion-project]] - 높은 연관성
-- [[imi-hr-organization]] - 높은 연관성
-- [[Note Coffee House Project]] - 높은 연관성
-- [[imi-coffee-consulting-proposal-template]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
-- [[경탁주-프로젝트-기획]] - 높은 연관성
-- [[platform-concept]] - 높은 연관성

@@ -65,10 +65,9 @@ AI와 자동화는 바로 이 전략적 배치를 가능하게 한다. 감각적
 당신의 비즈니스에서는 어떤 부분을 비효율로 남겨야 할까? 그리고 어떤 부분을 효율화해서 그 비효율을 지킬 여유를 만들어야 할까?
 
 ## Related Notes
-- [[back-office-efficiency-front-office-delight]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[naver-seo-version]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
+
+- [[10-projects/13-imi-work/13.01-osmu-system/content/back-office-efficiency-front-office-delight]] - ai_automation 관련; '이건 시스템이 처리해도 돼' 개념 공유
+- [[30-knowledge/34-learning/34.01-books/book-notes/doing-work-well]] - ai_automation 관련; '일을 잘한다는 것' 개념 공유
+- [[30-knowledge/34-learning/hfk-공간브랜딩]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/31-business/ai-business-maturity]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/34-learning/롱블랙-일본트립]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결

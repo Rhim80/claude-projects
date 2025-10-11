@@ -72,11 +72,14 @@ AI와의 심층 대화를 통해 완성한 '브랜딩 휠 캔버스'를 기반�
 **원본 제출일**: 2025년 GPTers 18기 스터디장 신청 시점
 **작성자**: 이림 (이미커피 대표)
 
+- [[30-knowledge/36-ai-tools/ai-automation-hub]] - GPTers AI 브랜딩 스터디
+- [[40-personal/41-daily/2025-10-11]] - GPTers AI 브랜딩 스터디
+- [[40-personal/41-daily/2025-10-10]] - GPTers AI 브랜딩 스터디
+
 ## Related Notes
-- [[learning-roadmap]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[19th-cohort-proposal]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
+
+- [[10-projects/12-education/12.02-gpters-ai-branding/18th-cohort/GPTERS 18기 브랜딩 STUDY]] - content_creation, education, ai_automation 관련; '4주간의 스터디와 더불어, '컨셉, 감각, 기획, 브랜딩'에 대한 인사이트 세션이 별도로 진행됩니다.' 개념 공유
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-gpters-submission]] - education, ai_automation 관련; '🚀 4주 후 만들어낼 결과물' 개념 공유
+- [[20-operations/21-cafe-operations/ecommerce/strategy/competitor-analysis]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/vs-gpts-comparison]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결

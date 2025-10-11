@@ -210,10 +210,9 @@ imi-work-osmu/
 *성공률: 100% (DALL-E 3 10/10, Ghost 발행 1/1)*
 
 ## Related Notes
-- [[ai-automation-hub]] - 높은 연관성
-- [[2025-10_비즈니스_재구조화_전략]] - 높은 연관성
-- [[detailed-plan]] - 높은 연관성
-- [[naver-seo-version]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
+
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/gmail-classifier/gmail-classifier-분석]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[LINK_QUALITY_SPOT_CHECK]] - ai_automation 관련; 10-projects ↔ LINK_QUALITY_SPOT_CHECK.md 연결
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/receipt-processor/receipt-processor-분석]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결

@@ -136,3 +136,11 @@ git stash pop
 - [Obsidian 공식 문서](https://help.obsidian.md/)
 - [PARA 시스템 가이드](./README.md)
 - [Git 동기화 가이드](../.github/SYNC_GUIDE.md)
+
+## Related Notes
+
+- [[40-personal/41-daily/2025-10-09]] - pkm_systems 관련; 00-system ↔ 40-personal 연결
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/CLAUDE]] - pkm_systems 관련; 00-system ↔ 20-operations 연결
+- [[MIGRATION_VALIDATION_REPORT]] - pkm_systems 관련; 00-system ↔ MIGRATION_VALIDATION_REPORT.md 연결
+- [[CLAUDE]] - pkm_systems 관련; 00-system ↔ CLAUDE.md 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-working-backwards-final]] - pkm_systems 관련; 00-system ↔ 10-projects 연결

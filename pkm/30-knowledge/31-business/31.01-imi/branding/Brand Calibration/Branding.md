@@ -178,10 +178,9 @@ published: false
 * 제품/서비스를 어떻게 부를지에 필요한 네이밍 작업, 로고, 웹사이트, 홍보물 등에 해당하는 비주얼 아이덴티티 작업, 또한, 어떤 말투로 통일성 있게 소통할 것인지도 정해야 합니다.
 
 ## Related Notes
-- [[ai-creator-collaboration-content]] - 높은 연관성
-- [[문의 답변]] - 높은 연관성
-- [[05_아뜰리에스미다_Atelier_Smida]] - 높은 연관성
-- [[AI 강의 6월8일1-2_original]] - 높은 연관성
-- [[positioning]] - 높은 연관성
-- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성
-- [[CUSTOM_GPT_INSTRUCTIONS]] - 높은 연관성
+
+- [[30-knowledge/31-business/31.01-imi/stores/imi dessert lab/imi dessert lab]] - business_strategy 관련; '*' 개념 공유
+- [[10-projects/11-consulting/11.01-gangneung-cafe-2025/proposal-explanation]] - business_strategy 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/11-consulting/11.05-templates/imi-coffee-consulting-proposal-template]] - business_strategy 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/14-brand-identity/14.01-brand-builder/brand-identity-system/step-3-brand-language]] - business_strategy 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-working-backwards-final]] - business_strategy 관련; 30-knowledge ↔ 10-projects 연결

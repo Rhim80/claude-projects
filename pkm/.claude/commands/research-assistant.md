@@ -69,3 +69,11 @@ findings.
 - Look for surprising connections
 - Don't ignore contradictions - they're often where insights live
 - Always suggest concrete next actions
+
+## Related Notes
+
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/resume-task]] - ai_automation 관련; 'process' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/update-architecture]] - ai_automation 관련; 'process' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/resume-mission]] - ai_automation 관련; 'process' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/analyze-project]] - ai_automation 관련; 'process' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/analyze-frontend]] - ai_automation 관련; 'process' 개념 공유

@@ -163,10 +163,9 @@
 *Tags: #partnership #consulting #franchise #dessert-cafe #business-opportunity*
 
 ## Related Notes
-- [[business-operations-hub]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
+
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/gmail-classifier/gmail-classifier-분석]] - business_strategy 관련; '기본 정보' 개념 공유
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/receipt-processor/receipt-processor-분석]] - business_strategy 관련; '기본 정보' 개념 공유
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/youtube-rss-bot/youtube-rss-bot-분석]] - business_strategy 관련; '기본 정보' 개념 공유
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/payroll-systems/payroll-b-분석]] - business_strategy 관련; '기본 정보' 개념 공유
+- [[CLAUDE]] - cafe_operations, business_strategy 관련; '기본 정보' 개념 공유

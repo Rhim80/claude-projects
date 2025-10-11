@@ -238,3 +238,11 @@ pnpm attachments:update-links # Update links after moving
 ---
 
 _This is a bootstrap template. Customize based on your workflow and needs._
+
+## Related Notes
+
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/claude-files/AVS-Vibe-Developer-Guide/CLAUDE]] - ai_automation 관련; 'naming conventions' 개념 공유
+- [[CLAUDE]] - pkm_systems, content_creation, ai_automation 관련; 'resources (03)' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/claude-files/Giselle/CLAUDE]] - ai_automation 관련; 'naming conventions' 개념 공유
+- [[.claude/commands/release]] - ai_automation 관련; 00-system ↔ .claude 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/update-docs/update-docs]] - ai_automation 관련; 00-system ↔ 30-knowledge 연결

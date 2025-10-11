@@ -899,10 +899,9 @@
 *연결고리 시스템 + 완성도 기준 + 업종별 질문 + 마이크로 스텝 적용*
 
 ## Related Notes
-- [[learning-roadmap]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
+
+- [[10-projects/12-education/12.02-gpters-ai-branding/templates/custom-gpt-instructions/CUSTOM_GPT_INSTRUCTIONS]] - ai_automation 관련; 'q7. 한 문장 정체성' 개념 공유
+- [[30-knowledge/31-business/오프라인-비즈니스-운영-프로세스]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/34-learning/hfk-cmo씽킹]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/34-learning/hfk-공간브랜딩]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[40-personal/45-strategy/2025-10_비즈니스_재구조화_전략]] - ai_automation 관련; 10-projects ↔ 40-personal 연결

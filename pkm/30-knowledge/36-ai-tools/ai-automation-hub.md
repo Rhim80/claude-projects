@@ -171,11 +171,21 @@
 
 *"비개발자도 AI와 자동화로 비즈니스를 최적화할 수 있다. 중요한 건 기술이 아니라 문제 해결 능력이다."*
 
+- [[40-personal/41-daily/2025-10-11]] - Noah Brier의 Claudesidian PKM 시스템
+- [[40-personal/41-daily/2025-10-10]] - Noah Brier의 Claudesidian PKM 시스템
+- [[10-projects/12-education/12.02-gpters-ai-branding/archives/18th-cohort/claude-code-writing-guide]] - GPTers AI 브랜딩 스터디
+- [[10-projects/12-education/12.02-gpters-ai-branding/archives/18th-cohort/18th-cohort-original-proposal]] - GPTers AI 브랜딩 스터디
+- [[10-projects/12-education/12.02-gpters-ai-branding/18th-cohort/GPTERS 18기 브랜딩 STUDY]] - GPTers AI 브랜딩 스터디
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-cohort-proposal]] - GPTers AI 브랜딩 스터디
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-gpters-submission]] - GPTers AI 브랜딩 스터디
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/planning-session-notes]] - GPTers AI 브랜딩 스터디
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-proposal-simple]] - GPTers AI 브랜딩 스터디
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-working-backwards-final]] - Noah Brier의 Claudesidian PKM 시스템
+
 ## Related Notes
-- [[2025-10_비즈니스_재구조화_전략]] - 높은 연관성
-- [[detailed-plan]] - 높은 연관성
-- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
-- [[19th-working-backwards-final]] - 높은 연관성
-- [[PROJECT_HISTORY]] - 높은 연관성
-- [[19th-proposal-simple]] - 높은 연관성
-- [[19th-gpters-submission]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/content-analysis]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[10-projects/12-education/12.03-insight-platform/01_planning/program-proposal]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[00-system/04-docs/WINDOWS_SETUP]] - pkm_systems, ai_automation 관련; 30-knowledge ↔ 00-system 연결

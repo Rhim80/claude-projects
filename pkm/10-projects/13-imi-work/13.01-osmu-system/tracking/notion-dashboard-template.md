@@ -80,10 +80,9 @@
 *마지막 업데이트: 2025.08.27*
 
 ## Related Notes
-- [[클로드 코드 사용]] - 관련 주제
-- [[naver-seo-version]] - 관련 주제
-- [[모모스-세미나-분석]] - 관련 주제
-- [[ai-automation-hub]] - 관련 주제
-- [[프로세스-이코노미]] - 관련 주제
-- [[일을-잘한다는-것]] - 관련 주제
-- [[human-sense-importance]] - 관련 주제
+
+- [[LINK_QUALITY_SPOT_CHECK]] - business_strategy 관련; 10-projects ↔ LINK_QUALITY_SPOT_CHECK.md 연결
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/CLAUDE]] - business_strategy, content_creation 관련; 10-projects ↔ 20-operations 연결
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/payroll-systems/payroll-a-분석]] - business_strategy 관련; 10-projects ↔ 20-operations 연결
+- [[30-knowledge/34-learning/education-hub]] - business_strategy 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/education-paradigm]] - business_strategy 관련; 10-projects ↔ 30-knowledge 연결

@@ -660,10 +660,9 @@ MAYA, Most Advanced Yet Acceptable : 가장 진보적이면서도 수용할 수 
 즉, 공유할 가치가 있는 무언가를 만들어내야 한다는 의미다.
 
 ## Related Notes
-- [[19th-proposal-simple]] - 높은 연관성
-- [[19th-gpters-submission]] - 높은 연관성
-- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
-- [[CUSTOM_GPT_INSTRUCTIONS]] - 높은 연관성
-- [[ai-creator-collaboration-content]] - 높은 연관성
-- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성
-- [[market-research]] - 높은 연관성
+
+- [[30-knowledge/34-learning/34.02-lectures/lectures/창업컨설팅-프로세스]] - ai_automation 관련; '예시:' 개념 공유
+- [[30-knowledge/34-learning/hfk-cmo씽킹]] - ai_automation 관련; 'yes' 개념 공유
+- [[10-projects/12-education/12.03-insight-platform/03_resources/AI 강의 6월8일1-2_original]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/AI 강의 6월8일1-3_original]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/AI 강의 6월8일1-1_original]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

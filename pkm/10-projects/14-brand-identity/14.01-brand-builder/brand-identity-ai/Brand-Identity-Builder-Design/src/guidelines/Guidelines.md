@@ -61,10 +61,9 @@ or initiating processes. They communicate interactivity and should have clear, a
 -->
 
 ## Related Notes
-- [[guidelines]] - 높은 연관성
-- [[pr-review]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
-- [[WIEE-세미나-노트]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[창업교육-커리큘럼]] - 높은 연관성
-- [[code-of-conduct]] - 높은 연관성
+
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.claude/commands/create-mission]] - ai_automation 관련; 'usage' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/claude-files/Network-Chronicles/CLAUDE]] - ai_automation 관련; 'usage' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.claude/commands/create-task]] - ai_automation 관련; 'usage' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.claude/commands/ab-master]] - ai_automation 관련; 'usage' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.claude/commands/analyze-frontend]] - ai_automation 관련; 'usage' 개념 공유

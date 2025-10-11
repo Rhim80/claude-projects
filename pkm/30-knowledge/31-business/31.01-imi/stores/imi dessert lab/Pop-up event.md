@@ -83,12 +83,3 @@ pop-up 한달에 한 번
 * 멘션 얻어내기.
 
 포스팅 요청?
-
-## Related Notes
-- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
-- [[imi-coffee-consulting-proposal-template]] - 높은 연관성
-- [[advertising-guide]] - 높은 연관성
-- [[proposal-explanation]] - 높은 연관성
-- [[golden-brown-meeting-summary]] - 높은 연관성
-- [[AI 워크숍 기획안]] - 높은 연관성
-- [[ga4-setup]] - 높은 연관성

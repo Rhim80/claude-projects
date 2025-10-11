@@ -170,12 +170,3 @@ created: 2025-10-10
 
 
 ## 추가 주문?
-
-## Related Notes
-- [[setup-guide]] - 높은 연관성
-- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
-- [[바리스타 세미나]] - 높은 연관성
-- [[PKM-RESTRUCTURE-PLAN]] - 높은 연관성
-- [[소경계 카페 오픈을 위한 주요 작업 리스트]] - 높은 연관성
-- [[golden-brown-meeting-summary]] - 높은 연관성
-- [[persuasion-strategy]] - 높은 연관성

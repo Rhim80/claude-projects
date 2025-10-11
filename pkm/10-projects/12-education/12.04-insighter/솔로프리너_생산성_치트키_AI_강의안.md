@@ -205,10 +205,9 @@ AI를 활용한 체계적 리서치부터 콘텐츠 아카이빙까지, 브랜�
 *AI 활용능력을 얻기 위해 중요한 것은 '이론'을 넘어 '직접 해보는 것'입니다. 이 시간을 통해 AI 파도에 휩쓸리지 말고, 멋지게 파도를 타는 법을 배워 가세요!*
 
 ## Related Notes
-- [[learning-roadmap]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
+
+- [[30-knowledge/34-learning/북토크-강연-오프라인-비즈니스-생존기]] - ai_automation 관련; '대상' 개념 공유
+- [[30-knowledge/34-learning/hfk-공간브랜딩]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/vs-gpts-comparison]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/31-business/오프라인-비즈니스-운영-프로세스]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결

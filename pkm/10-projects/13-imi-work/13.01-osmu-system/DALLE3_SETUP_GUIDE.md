@@ -131,10 +131,9 @@ python3 scripts/dalle3-osmu-generator.py
 **결론**: 복잡하게 생각할 필요 없이, 이미 있는 것들로 완벽하게 작동합니다.
 
 ## Related Notes
-- [[vs-gpts-comparison]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[ai-business-maturity]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[스페셜티 커피업계 대표들을 위한 브랜딩 세미나]] - 높은 연관성
+
+- [[.claude/commands/release]] - ai_automation 관련; 10-projects ↔ .claude 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/official-documentation/Anthropic-Quickstarts/CLAUDE]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/create-worktrees/create-worktrees]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/claude-files/SPy/CLAUDE]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[00-system/04-docs/WINDOWS_SETUP]] - ai_automation 관련; 10-projects ↔ 00-system 연결

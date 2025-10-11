@@ -193,10 +193,9 @@ migrated: 2025-10-10
 - [[인사이드 아웃]]
 
 ## Related Notes
-- [[SENSE_AI_SEO_STRATEGY]] - 높은 연관성
-- [[AI 강의 6월8일1-2_original]] - 높은 연관성
-- [[temp-content-back-office-efficiency]] - 높은 연관성
-- [[back-office-efficiency-front-office-delight]] - 높은 연관성
-- [[소경계_1편_첫만남부터_2차PT]] - 높은 연관성
-- [[05_아뜰리에스미다_Atelier_Smida]] - 높은 연관성
-- [[imi-coffee-consulting-proposal-template]] - 높은 연관성
+
+- [[10-projects/13-imi-work/13.01-osmu-system/temp-content-back-office-efficiency]] - ai_automation 관련; '일을 잘한다는 것' 개념 공유
+- [[10-projects/13-imi-work/13.01-osmu-system/content/back-office-efficiency-front-office-delight]] - ai_automation 관련; '일을 잘한다는 것' 개념 공유
+- [[10-projects/13-imi-work/13.01-osmu-system/guides/IMI_WORK_PERSONA_GUIDE]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/blog-content/aeo-ai-search-marketing-strategy]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/CLAUDE]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

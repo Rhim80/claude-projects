@@ -168,3 +168,11 @@ Help me develop this into something more concrete.
 - It can create, edit, and organize files
 - Use it as a thinking partner, not just a tool
 - The best prompts emerge from your specific needs
+
+## Related Notes
+
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/workflows-knowledge-guides/Blogging-Platform-Instructions/view_commands]] - leadership, ai_automation 관련; 'project management' 개념 공유
+- [[.claude/commands/research-assistant]] - ai_automation 관련; 00-system ↔ .claude 연결
+- [[00-inbox/Welcome]] - ai_automation 관련; 00-system ↔ 00-inbox 연결
+- [[.claude/commands/thinking-partner]] - ai_automation 관련; 00-system ↔ .claude 연결
+- [[.claude/commands/upgrade]] - ai_automation 관련; 00-system ↔ .claude 연결

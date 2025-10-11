@@ -280,10 +280,9 @@
 *"경쟁을 분석하고, 차별화를 만들고, 고객에게 선택받는 브랜드가 되겠습니다."*
 
 ## Related Notes
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[창업교육-커리큘럼]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[WIEE-세미나-노트]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
+
+- [[40-personal/45-strategy/2025-10_비즈니스_재구조화_전략]] - ai_automation 관련; 20-operations ↔ 40-personal 연결
+- [[10-projects/12-education/12.03-insight-platform/2024-09_첫번째_교육_wrap-up]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/prompt-templates]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 20-operations ↔ 40-personal 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/archives/18th-cohort/ANALYSIS_SUMMARY]] - ai_automation 관련; 20-operations ↔ 10-projects 연결

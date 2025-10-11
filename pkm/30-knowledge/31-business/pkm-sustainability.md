@@ -124,11 +124,14 @@
 
 #knowledge #pkm #sustainability #framework
 
+- [[10-projects/11-consulting/11.01-gangneung-cafe-2025/proposal-explanation]] - 강릉 카페 프로젝트 관련
+- [[10-projects/11-consulting/11.01-gangneung-cafe-2025/gangneung-cafe-proposal-quote]] - 강릉 카페 프로젝트 관련
+- [[10-projects/11-consulting/11.05-templates/gangneung-cafe-proposal-quote]] - 강릉 카페 프로젝트 관련
+
 ## Related Notes
-- [[19th-gpters-submission]] - 높은 연관성
-- [[솔로프리너_생산성_치트키_AI_강의안]] - 높은 연관성
-- [[IMPROVED_TEMPLATE_V1.1]] - 높은 연관성
-- [[문의 답변]] - 높은 연관성
-- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성
-- [[gmail-classifier-분석]] - 높은 연관성
-- [[19th-cohort-proposal]] - 높은 연관성
+
+- [[00-inbox/PKM-RESTRUCTURE-PLAN]] - cafe_operations, pkm_systems, content_creation, ai_automation, business_strategy, education 관련; '적용 사례' 개념 공유
+- [[00-inbox/Welcome]] - pkm_systems, ai_automation 관련; 30-knowledge ↔ 00-inbox 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/content-analysis]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

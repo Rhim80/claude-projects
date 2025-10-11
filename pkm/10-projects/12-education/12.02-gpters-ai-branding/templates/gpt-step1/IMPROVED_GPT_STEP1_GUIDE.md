@@ -432,12 +432,3 @@
 
 💪 당신의 브랜드, 정말 기대됩니다!
 ```
-
-## Related Notes
-- [[hfk-cmo씽킹]] - 높은 연관성
-- [[platform-concept]] - 높은 연관성
-- [[2025-10_비즈니스_재구조화_전략]] - 높은 연관성
-- [[detailed-plan]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성

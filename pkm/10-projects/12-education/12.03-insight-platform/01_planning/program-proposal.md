@@ -145,10 +145,9 @@
 - 창의적 기획 과정에서의 AI 협업 능력 향상
 
 ## Related Notes
-- [[인사이트 플랫폼 AI 강의]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[창업교육-커리큘럼]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
+
+- [[30-knowledge/31-business/모모스-제안서]] - ai_automation 관련; '기대 효과' 개념 공유
+- [[10-projects/12-education/12.03-insight-platform/인사이트 플랫폼 AI 강의]] - ai_automation 관련
+- [[40-personal/45-strategy/2025-10_비즈니스_재구조화_전략]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/31-business/ai-business-maturity]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결

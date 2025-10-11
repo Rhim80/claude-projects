@@ -47,10 +47,9 @@ migrated: 2025-10-10
 - [[호스피탈리티]]
 
 ## Related Notes
-- [[당신을-초대합니다---존-리비-20220207]] - 높은 연관성
-- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
-- [[01_고요새_제주]] - 높은 연관성
-- [[ai-creator-collaboration-content]] - 높은 연관성
-- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
-- [[golden-brown-meeting-summary]] - 높은 연관성
-- [[2024-09_첫번째_교육_wrap-up]] - 높은 연관성
+
+- [[10-projects/13-imi-work/13.01-osmu-system/tracking/notion-content-db-schema]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.01-imi-ai-study/IMI AI STUDY]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/archives/18th-cohort/ANALYSIS_SUMMARY]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[00-inbox/2025-08-30]] - ai_automation 관련; 30-knowledge ↔ 00-inbox 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/templates/custom-gpt-instructions/CUSTOM_GPT_INSTRUCTIONS]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

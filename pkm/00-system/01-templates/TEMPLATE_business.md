@@ -63,3 +63,11 @@
 
 ---
 *Tags: #business #[카테고리] #[우선순위]*
+
+## Related Notes
+
+- [[10-projects/11-consulting/11.03-so-gyeong-gye/이미커피_컨설팅_워크플로우]] - business_strategy 관련; 00-system ↔ 10-projects 연결
+- [[10-projects/11-consulting/11.02-golden-brown/golden-brown-partnership-inquiry]] - business_strategy 관련; 00-system ↔ 10-projects 연결
+- [[10-projects/14-brand-identity/14.01-brand-builder/brand-identity-system/step-1-identity-wheel]] - business_strategy 관련; 00-system ↔ 10-projects 연결
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/gmail-classifier/gmail-classifier-분석]] - business_strategy 관련; 00-system ↔ 20-operations 연결
+- [[30-knowledge/36-ai-tools/human-sense-importance]] - business_strategy 관련; 00-system ↔ 30-knowledge 연결

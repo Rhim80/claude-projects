@@ -235,3 +235,11 @@
 **핵심 메시지**: 진짜 경험에서 나오는 자연스러운 성찰이 가장 울림이 크다.
 
 거창한 문학적 장치보다는 솔직하고 구체적인 일상의 순간들을 통해 독자와 진정으로 연결되는 글을 써보세요.
+
+## Related Notes
+
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/36-ai-tools/human-sense-importance]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[40-personal/44-reflections/learning/anthropic-non-developer-workflows]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[40-personal/45-strategy/2025-10_비즈니스_재구조화_전략]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[CLAUDE_MD_AUDIT_CHECKLIST]] - ai_automation 관련; 10-projects ↔ CLAUDE_MD_AUDIT_CHECKLIST.md 연결

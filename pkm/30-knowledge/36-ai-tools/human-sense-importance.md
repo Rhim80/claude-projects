@@ -73,10 +73,9 @@
 *Tags: #branding #AI #sense #differentiation #content*
 
 ## Related Notes
-- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
-- [[사이드프로젝트_교육혁신_전략]] - 높은 연관성
-- [[ai-creator-collaboration-content]] - 높은 연관성
-- [[19th-gpters-submission]] - 높은 연관성
-- [[CUSTOM_GPT_INSTRUCTIONS]] - 높은 연관성
-- [[advertising-guide]] - 높은 연관성
-- [[19th-cohort-proposal]] - 높은 연관성
+
+- [[00-system/01-templates/TEMPLATE_insight]] - business_strategy, education 관련; '🔍 관찰/발견 배경' 개념 공유
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/guides/IMI_WORK_PERSONA_GUIDE]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/prompt-templates]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

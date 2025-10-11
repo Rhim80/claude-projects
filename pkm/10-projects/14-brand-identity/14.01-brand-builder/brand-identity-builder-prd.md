@@ -521,11 +521,13 @@ PROMPT_STEP_6="[Step 6 프롬프트 내용]"
 - 기술 문의: dev@imiwork.com
 - 비즈니스 문의: biz@imiwork.com
 
+- [[10-projects/14-brand-identity/14.01-brand-builder/brand-identity-builder-prd-v2]] - Brand Identity Builder 시스템
+- [[10-projects/14-brand-identity/14.01-brand-builder/brand-identity-ai/brand-identity-builder-prd]] - Brand Identity Builder 시스템
+
 ## Related Notes
-- [[system-vs-tool-master]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[ai-automation-hub]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[naver-seo-version]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
+
+- [[.claude/commands/release]] - ai_automation 관련; 10-projects ↔ .claude 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/claude-files/Giselle/CLAUDE]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/resume-mission]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[.claude/commands/install-claudesidian-command]] - ai_automation 관련; 10-projects ↔ .claude 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결

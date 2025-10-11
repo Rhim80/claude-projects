@@ -40,10 +40,9 @@ migrated: 2025-10-10
 - [[시대 읽기]]
 
 ## Related Notes
-- [[시대예보--호명사회]] - 참고
-- [[IMI_WORK_PROMPT_TEMPLATE]] - 참고
-- [[proposal-explanation]] - 참고
-- [[NAVER_SEO_BLOG_GUIDE]] - 참고
-- [[AI 강의 6월8일1-1_original]] - 참고
-- [[NESEO_BLOG_WRITER_PRO]] - 참고
-- [[소경계_1편_첫만남부터_2차PT]] - 참고
+
+- [[10-projects/13-imi-work/13.01-osmu-system/tracking/notion-content-db-schema]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.01-imi-ai-study/IMI AI STUDY]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/18th-cohort/GPTERS 18기 브랜딩 STUDY]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[40-personal/사진-취미와-배움]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[10-projects/12-education/12.01-imi-ai-study/Claude + MCP +n8n 자동화 실습 Study/Claude + MCP +n8n 자동화 실습 Study]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

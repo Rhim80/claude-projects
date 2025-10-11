@@ -105,10 +105,9 @@
 *본 메뉴는 2025년 9월 30일 정식 오픈을 위한 최종 구성입니다.*
 
 ## Related Notes
-- [[Menu]] - 높은 연관성
-- [[창업교육-커리큘럼]] - 높은 연관성
-- [[매장을 하기위해 알아야할 필수 교육]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
-- [[Seminar]] - 높은 연관성
-- [[스페셜티 커피업계 대표들을 위한 브랜딩 세미나]] - 높은 연관성
-- [[(주) 음]] - 높은 연관성
+
+- [[30-knowledge/31-business/31.01-imi/stores/imi old mansion/Menu]] - cafe_operations 관련; 10-projects ↔ 30-knowledge 연결
+- [[20-operations/21-cafe-operations/ecommerce/strategy/competitor-analysis]] - cafe_operations 관련; 10-projects ↔ 20-operations 연결
+- [[30-knowledge/35-recipes/menu-development-hub]] - cafe_operations 관련; 10-projects ↔ 30-knowledge 연결
+- [[20-operations/21-cafe-operations/pairing/monthly/2025-04]] - cafe_operations 관련; 10-projects ↔ 20-operations 연결
+- [[20-operations/21-cafe-operations/pairing/guidelines]] - cafe_operations 관련; 10-projects ↔ 20-operations 연결

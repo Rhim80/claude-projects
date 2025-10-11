@@ -268,11 +268,16 @@
 
 **"강릉에서 기억에 남는 카페를 함께 만들어갑니다"**
 
+- [[30-knowledge/34-learning/34.01-books/books/일을-잘한다는-것]] - 강릉 카페 프로젝트 관련
+- [[30-knowledge/34-learning/34.02-lectures/lectures/startup/창업-강의-마스터-인덱스]] - 강릉 카페 프로젝트 관련
+- [[30-knowledge/31-business/pkm-sustainability]] - 강릉 카페 프로젝트 관련
+- [[30-knowledge/31-business/business-operations-hub]] - 강릉 카페 프로젝트 관련
+- [[30-knowledge/31-business/오프라인-비즈니스-운영-프로세스]] - 강릉 카페 프로젝트 관련
+
 ## Related Notes
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[일을-잘한다는-것]] - 높은 연관성
-- [[2기]] - 높은 연관성
-- [[창업컨설팅-프로세스]] - 높은 연관성
-- [[실천반 zero]] - 높은 연관성
-- [[트리니타스 브랜딩 미팅]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[20-operations/21-cafe-operations/ecommerce/strategy/market-research]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[30-knowledge/31-business/31.01-imi/hr/이미 커피 직원/이미 커피 직원]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/31-business/모모스-제안서]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/34-learning/북토크-강연-오프라인-비즈니스-생존기]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결

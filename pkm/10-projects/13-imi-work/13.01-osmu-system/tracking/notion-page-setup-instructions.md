@@ -200,10 +200,9 @@ Threads 스레드: ⏳예정
 설정 완료 후 OSMU 워크스페이스가 완벽하게 구동될 준비가 됩니다! 🚀
 
 ## Related Notes
-- [[naver-seo-version]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[ai-automation-hub]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
+
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/gmail-classifier/gmail-classifier-분석]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/payroll-systems/payroll-a-분석]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[30-knowledge/31-business/31.01-imi/hr/이미 커피 직원/직원-관리-DB]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[40-personal/41-daily/2025-10-09]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[LINK_QUALITY_SPOT_CHECK]] - ai_automation 관련; 10-projects ↔ LINK_QUALITY_SPOT_CHECK.md 연결

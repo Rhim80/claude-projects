@@ -33,10 +33,9 @@ The goal isn't to create perfect notes - it's to enhance your thinking. This sys
 *Move this to Archive once you're comfortable with the system*
 
 ## Related Notes
-- [[act]] - 높은 연관성
-- [[CONTRIBUTING]] - 높은 연관성
-- [[commit]] - 높은 연관성
-- [[BADGE_AUTOMATION_SETUP]] - 높은 연관성
-- [[announcements]] - 높은 연관성
-- [[HOW_IT_WORKS]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
+
+- [[.claude/commands/thinking-partner]] - ai_automation 관련; 'remember' 개념 공유
+- [[.claude/commands/inbox-processor]] - pkm_systems, ai_automation 관련; 'remember' 개념 공유
+- [[.claude/commands/daily-review]] - ai_automation 관련; 'capture insights' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/update-architecture]] - ai_automation 관련; 'remember' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/resume-task]] - ai_automation 관련; 'remember' 개념 공유

@@ -612,10 +612,9 @@ fbq('track', 'Purchase', {
 *"메타의 강력한 타겟팅과 시각적 스토리텔링으로 홈카페족의 마음을 사로잡겠습니다."*
 
 ## Related Notes
-- [[advertising-guide]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[2기]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[일을-잘한다는-것]] - 높은 연관성
+
+- [[10-projects/11-consulting/11.01-gangneung-cafe-2025/proposal-explanation]] - cafe_operations 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/14-brand-identity/14.01-brand-builder/brand-identity-system/step-5-brand-execution]] - content_creation 관련; 20-operations ↔ 10-projects 연결
+- [[40-personal/45-strategy/2025-10_비즈니스_재구조화_전략]] - content_creation 관련; 20-operations ↔ 40-personal 연결
+- [[10-projects/12-education/12.04-insighter/사이드프로젝트_교육혁신_전략]] - cafe_operations, content_creation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/archive/SENSE_AI_SEO_STRATEGY]] - cafe_operations, content_creation 관련; 20-operations ↔ 10-projects 연결

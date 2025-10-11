@@ -204,10 +204,9 @@ Telegram 알림 발송
 #n8n #YouTube #AI #자동화 #정보관리 #워크플로우
 
 ## Related Notes
-- [[system-vs-tool-master]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[WIEE-세미나-노트]] - 높은 연관성
+
+- [[30-knowledge/33-insights/33.03-writing/전자음악과-발효커피-비유]] - ai_automation 관련; '결론' 개념 공유
+- [[10-projects/12-education/12.04-insighter/AI시대_학습의_새로운_패러다임]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[00-inbox/2025-08-30]] - ai_automation 관련; 20-operations ↔ 00-inbox 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/templates/brand-wheel-canvas/IMPROVEMENT_ROADMAP]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/guides/IMI_WORK_PERSONA_GUIDE]] - ai_automation 관련; 20-operations ↔ 10-projects 연결

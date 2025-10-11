@@ -94,10 +94,9 @@ AI가 제 폴더 구조를 이해하고, 파일들의 관계를 알고, 작업�
 - 모바일 가독성 최적화
 
 ## Related Notes
-- [[19th-proposal-simple]] - 높은 연관성
-- [[gmail-classifier-분석]] - 높은 연관성
-- [[워크플로우_개발_가이드]] - 높은 연관성
-- [[19th-gpters-submission]] - 높은 연관성
-- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성
-- [[19th-cohort-proposal]] - 높은 연관성
-- [[IMPROVED_TEMPLATE_V1.1]] - 높은 연관성
+
+- [[10-projects/12-education/12.03-insight-platform/01_planning/program-proposal]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/인사이트 플랫폼 AI 강의]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[00-inbox/2025-08-30]] - ai_automation 관련; 30-knowledge ↔ 00-inbox 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/guides/IMI_WORK_PERSONA_GUIDE]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

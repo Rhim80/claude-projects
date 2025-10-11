@@ -1712,10 +1712,9 @@ PDF로 부탁해 했는데 이게 되게 작년만 해도 PDF 정리해달라고
 그쵸? 옛날에 인기 입을 수도 있는데 인기 쓰다가 핸드폰.
 
 ## Related Notes
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[창업교육-커리큘럼]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
+
+- [[30-knowledge/34-learning/34.02-lectures/lectures/lgu-강연-오프라인-생존전략]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/34-learning/34.02-lectures/lecture-archive/WIEE-세미나-노트]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/34-learning/34.02-lectures/lecture-archive/모모스-세미나-분석]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/31-business/market-entry-framework]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/31-business/오프라인-비즈니스-운영-프로세스]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결

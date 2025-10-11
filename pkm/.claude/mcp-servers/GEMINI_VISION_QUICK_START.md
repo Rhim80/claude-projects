@@ -312,3 +312,11 @@ Then open a new Claude window and test.
 ---
 
 _Last tested: September 2025_
+
+## Related Notes
+
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/claude-files/Perplexity-MCP/CLAUDE]] - ai_automation 관련; 'troubleshooting' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/create-pull-request/create-pull-request]] - ai_automation 관련; .claude ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/husky/husky]] - ai_automation 관련; .claude ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/create-worktrees/create-worktrees]] - ai_automation 관련; .claude ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/resume-mission]] - ai_automation 관련; .claude ↔ 30-knowledge 연결

@@ -465,11 +465,13 @@ $ claude code
 *"파일시스템은 AI의 장기 기억이다. 복잡한 멀티 에이전트보다 간단한 도구 체인이 강력하다."*
 — Noah Brier, 2025
 
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-working-backwards-final]] - Noah Brier의 Claudesidian PKM 시스템
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/template-specs]] - Noah Brier의 Claudesidian PKM 시스템
+
 ## Related Notes
-- [[19th-gpters-submission]] - 높은 연관성
-- [[gmail-classifier-분석]] - 높은 연관성
-- [[19th-cohort-proposal]] - 높은 연관성
-- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성
-- [[19th-proposal-simple]] - 높은 연관성
-- [[솔로프리너_생산성_치트키_AI_강의안]] - 높은 연관성
-- [[IMPROVED_TEMPLATE_V1.1]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[00-system/04-docs/WINDOWS_SETUP]] - pkm_systems, ai_automation 관련; 30-knowledge ↔ 00-system 연결
+- [[00-inbox/Welcome]] - pkm_systems, ai_automation 관련; 30-knowledge ↔ 00-inbox 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/content-analysis]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

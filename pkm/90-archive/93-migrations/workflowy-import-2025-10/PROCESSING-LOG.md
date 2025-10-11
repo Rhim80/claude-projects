@@ -210,12 +210,3 @@
 
 **Processing Completed**: 2025-10-10
 **Next Steps**: Review README.md in `01_Projects/consulting/` for project overview
-
-## Related Notes
-- [[PKM-RESTRUCTURE-PLAN]] - 높은 연관성
-- [[VAULT_QUALITY_ANALYSIS]] - 높은 연관성
-- [[anthropic-non-developer-workflows]] - 높은 연관성
-- [[2025-10-10]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[솔로프리너_생산성_치트키_AI_강의안]] - 높은 연관성
-- [[19th-gpters-submission]] - 높은 연관성

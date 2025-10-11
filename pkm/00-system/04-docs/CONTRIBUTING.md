@@ -91,3 +91,11 @@ Use these categories:
 ## Questions?
 
 Feel free to open an issue for discussion before making large changes.
+
+## Related Notes
+
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/add-to-changelog/add-to-changelog]] - content_creation 관련; 'removed' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/claude-files/DroidconKotlin/CLAUDE]] - ai_automation 관련; 'code style' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/claude-files/TPL/CLAUDE]] - ai_automation 관련; 'code style' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/claude-files/Comm/CLAUDE]] - ai_automation 관련; 'code style' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/official-documentation/Anthropic-Quickstarts/CLAUDE]] - ai_automation 관련; 'code style' 개념 공유

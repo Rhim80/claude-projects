@@ -332,3 +332,11 @@ After:  /Users/rhim/Projects/pkm/10-projects/13-imi-work/13.01-osmu-system
 ---
 
 *마지막 업데이트: 2025-10-11 21:05*
+
+## Related Notes
+
+- [[00-system/04-docs/OBSIDIAN_SYNC_GUIDE]] - pkm_systems 관련; MIGRATION_VALIDATION_REPORT.md ↔ 00-system 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; MIGRATION_VALIDATION_REPORT.md ↔ 40-personal 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/CONTRIBUTING]] - ai_automation 관련; MIGRATION_VALIDATION_REPORT.md ↔ 30-knowledge 연결
+- [[00-system/04-docs/WINDOWS_SETUP]] - pkm_systems, ai_automation 관련; MIGRATION_VALIDATION_REPORT.md ↔ 00-system 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; MIGRATION_VALIDATION_REPORT.md ↔ 40-personal 연결

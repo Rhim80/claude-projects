@@ -161,10 +161,9 @@
 *세 번째 컨설팅 프로젝트로서 '낭독 서비스'라는 혁신적 아이디어를 통해 카페 공간의 새로운 가능성을 제시한 의미 있는 도전이었습니다.*
 
 ## Related Notes
-- [[현오]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[이미 커피 직원]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
+
+- [[30-knowledge/34-learning/hfk-공간브랜딩]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/gmail-classifier/gmail-classifier-분석]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/31-business/31.01-imi/hr/이미 커피 직원/이미 커피 직원]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결

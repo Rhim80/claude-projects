@@ -231,10 +231,9 @@ AI가 내 폴더 구조를 이해하고, 파일들의 관계를 알고, 작업�
 #ClaudeCode #AI시스템 #비개발자AI #서브에이전트 #업무자동화 #망치에서작업대로 #연속성있는업무환경 #도구에서시스템으로
 
 ## Related Notes
-- [[19th-proposal-simple]] - 높은 연관성
-- [[gmail-classifier-분석]] - 높은 연관성
-- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
-- [[19th-gpters-submission]] - 높은 연관성
-- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성
-- [[솔로프리너_생산성_치트키_AI_강의안]] - 높은 연관성
-- [[19th-cohort-proposal]] - 높은 연관성
+
+- [[30-knowledge/36-ai-tools/36.01-claude-code/system-vs-tool-master]] - cafe_operations, business_strategy, ai_automation 관련; '나중에 정리하지 뭐' 개념 공유
+- [[10-projects/12-education/12.03-insight-platform/01_planning/program-proposal]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/guides/IMI_WORK_PERSONA_GUIDE]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/인사이트 플랫폼 AI 강의]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[40-personal/44-reflections/learning/anthropic-non-developer-workflows]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결

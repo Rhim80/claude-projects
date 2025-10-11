@@ -28,10 +28,9 @@
 - **제작 방식**: 브랜드 제약 없는 자유로운 예술적 표현
 
 ## Related Notes
-- [[business-operations-hub]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[naver-seo-version]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
+
+- [[30-knowledge/36-ai-tools/education-paradigm]] - ai_automation 관련; '주제' 개념 공유
+- [[30-knowledge/34-learning/34.04-reading-groups/trevari-offline-business]] - ai_automation 관련; '주제' 개념 공유
+- [[30-knowledge/34-learning/북토크-강연-오프라인-비즈니스-생존기]] - ai_automation 관련; '주제' 개념 공유
+- [[30-knowledge/36-ai-tools/playing-coach-leadership]] - ai_automation 관련; '주제' 개념 공유
+- [[30-knowledge/34-learning/34.02-lectures/lectures/startup/창업-강의-마스터-인덱스]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결

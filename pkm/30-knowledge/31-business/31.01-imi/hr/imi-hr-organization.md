@@ -85,10 +85,9 @@ note: "직원교육-성과관리, 직원채용-공고-철학, 브랜드캘린더
 ---
 
 ## Related Notes
-- [[imi-coffee-consulting-proposal-template]] - 높은 연관성
-- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
-- [[advertising-guide]] - 높은 연관성
-- [[ai-creator-collaboration-content]] - 높은 연관성
-- [[이미커피_컨설팅_워크플로우]] - 높은 연관성
-- [[GPT_STEP1_COMPACT]] - 높은 연관성
-- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성
+
+- [[40-personal/사진-취미와-배움]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[10-projects/12-education/12.01-imi-ai-study/AI 워크숍 기획안]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/인사이트 플랫폼 AI 강의]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/11-consulting/11.04-portfolio/03_리버헤드_Riverhead]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/tracking/notion-page-setup-instructions]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

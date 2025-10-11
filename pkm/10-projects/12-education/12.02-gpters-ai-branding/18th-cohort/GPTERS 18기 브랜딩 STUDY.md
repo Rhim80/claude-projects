@@ -76,11 +76,14 @@ AI와의 심층 대화를 통해 완성한 '브랜딩 휠 캔버스'를 기반�
 
 (과제 없음)
 
+- [[30-knowledge/36-ai-tools/ai-automation-hub]] - GPTers AI 브랜딩 스터디
+- [[40-personal/41-daily/2025-10-11]] - GPTers AI 브랜딩 스터디
+- [[40-personal/41-daily/2025-10-10]] - GPTers AI 브랜딩 스터디
+
 ## Related Notes
-- [[18th-cohort-original-proposal]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[ai-automation-hub]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
+
+- [[10-projects/12-education/12.02-gpters-ai-branding/archives/18th-cohort/18th-cohort-original-proposal]] - content_creation, education, ai_automation 관련; '4주간의 스터디와 더불어, '컨셉, 감각, 기획, 브랜딩'에 대한 인사이트 세션이 별도로 진행됩니다.' 개념 공유
+- [[30-knowledge/31-business/31.01-imi/hr/내부 워크숍 및 회의/이미 워크숍/23 01]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/vs-gpts-comparison]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[20-operations/21-cafe-operations/ecommerce/strategy/competitor-analysis]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결

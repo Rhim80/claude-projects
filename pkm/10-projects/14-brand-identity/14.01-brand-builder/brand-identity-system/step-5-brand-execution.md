@@ -341,10 +341,9 @@ Step 0~4에서 완성된 **브랜드 시스템을 실제 고객 경험으로 구
 🎊 브랜드 시스템 완성! 실행 시작하세요!
 
 ## Related Notes
-- [[learning-roadmap]] - 높은 연관성
-- [[naver-seo-version]] - 높은 연관성
-- [[ai-automation-hub]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/vs-gpts-comparison]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[00-inbox/2025-08-30]] - ai_automation 관련; 10-projects ↔ 00-inbox 연결
+- [[40-personal/41-daily/2025-10-09]] - ai_automation 관련; 10-projects ↔ 40-personal 연결

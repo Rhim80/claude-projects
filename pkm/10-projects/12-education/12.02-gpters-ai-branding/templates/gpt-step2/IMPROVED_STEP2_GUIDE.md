@@ -229,12 +229,3 @@
 - 감각적 표현만, 전략 근거 부재, 실무 적용성 부족, 일관성 결여
 
 목표는 브랜드가 세상과 소통하는 모든 순간에 일관되고 차별적인 언어로 정체성을 구현하는 것입니다.
-
-## Related Notes
-- [[pkm-sustainability]] - 높은 연관성
-- [[창업교육-커리큘럼]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성

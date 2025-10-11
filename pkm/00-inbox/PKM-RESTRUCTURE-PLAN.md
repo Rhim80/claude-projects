@@ -100,10 +100,9 @@
 - ✅ 00-inbox/README 업데이트 (Johnny Decimal 경로)
 
 ## Related Notes
-- [[pkm-sustainability]] - 높은 연관성
-- [[detailed-plan]] - 높은 연관성
-- [[git-repository-study-plan]] - 높은 연관성
-- [[2025-10-11]] - 높은 연관성
-- [[작업-진행상황]] - 높은 연관성
-- [[2025-10-10]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
+
+- [[30-knowledge/31-business/pkm-sustainability]] - cafe_operations, pkm_systems, content_creation, ai_automation, business_strategy, education 관련; '적용 사례' 개념 공유
+- [[.claude/commands/research-assistant]] - ai_automation 관련; 00-inbox ↔ .claude 연결
+- [[00-system/04-docs/OBSIDIAN_SYNC_GUIDE]] - pkm_systems 관련; 00-inbox ↔ 00-system 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/vs-gpts-comparison]] - ai_automation 관련; 00-inbox ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/claude-files/AVS-Vibe-Developer-Guide/CLAUDE]] - ai_automation 관련; 00-inbox ↔ 30-knowledge 연결

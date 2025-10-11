@@ -27,12 +27,3 @@ no coffee, yes experience.
 * 영상용 구성
 * 편지 슬리브
 * 원두 납품용
-
-## Related Notes
-- [[program-proposal]] - 관련 주제
-- [[01-dialogue-program]] - 참고
-- [[NOTE Coffee House – Coffee Record Program 운영 가이드]] - 참고
-- [[Communication]] - 참고
-- [[음료 개발 세미나]] - 참고
-- [[imi coffee roasters]] - 참고
-- [[소경계 카페 오픈을 위한 주요 작업 리스트]] - 참고

@@ -135,3 +135,11 @@ git push
 - Extract meaningful context from PDFs before renaming
 - Preserve original file extensions
 - Keep filenames concise but descriptive (max 60 chars)
+
+## Related Notes
+
+- [[10-projects/14-brand-identity/14.01-brand-builder/brand-identity-ai/Brand-Identity-Builder-Design/src/guidelines/Guidelines]] - ai_automation 관련; 'usage' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/update-docs/update-docs]] - ai_automation 관련; 'implementation' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.claude/commands/update-architecture]] - ai_automation 관련; 'usage' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.claude/commands/create-task]] - ai_automation 관련; 'usage' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.claude/commands/analyze-project]] - ai_automation 관련; 'usage' 개념 공유

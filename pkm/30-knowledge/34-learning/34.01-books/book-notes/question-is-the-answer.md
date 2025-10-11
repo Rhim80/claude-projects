@@ -38,10 +38,9 @@ migrated: 2025-10-10
 - [[질문의 힘]]
 
 ## Related Notes
-- [[THE WATERMELON 강의]] - 참고
-- [[STEP5_BRAND_WHEEL_COMPACT]] - 참고
-- [[IMI_WORK_PROMPT_TEMPLATE]] - 참고
-- [[STEP4_GUIDE_COMPACT]] - 참고
-- [[ANALYSIS_SUMMARY]] - 참고
-- [[인사이트 플랫폼 AI 강의]] - 참고
-- [[content-analysis-revised]] - 참고
+
+- [[10-projects/12-education/12.01-imi-ai-study/IMI AI STUDY]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[00-system/01-templates/Project Template]] - ai_automation 관련; 30-knowledge ↔ 00-system 연결
+- [[40-personal/사진-취미와-배움]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/tracking/notion-content-db-schema]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[.claude/commands/add-frontmatter]] - ai_automation 관련; 30-knowledge ↔ .claude 연결

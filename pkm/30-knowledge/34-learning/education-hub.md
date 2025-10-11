@@ -181,10 +181,9 @@
 *"구글에 없는 정보" - 15년 실무 경험과 AI 전문성을 결합한 차별화된 교육 콘텐츠*
 
 ## Related Notes
-- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성
-- [[19th-gpters-submission]] - 높은 연관성
-- [[19th-proposal-simple]] - 높은 연관성
-- [[솔로프리너_생산성_치트키_AI_강의안]] - 높은 연관성
-- [[19th-cohort-proposal]] - 높은 연관성
-- [[문의 답변]] - 높은 연관성
-- [[gmail-classifier-분석]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[10-projects/12-education/12.03-insight-platform/01_planning/program-proposal]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/CHANGELOG]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/content-analysis-revised]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

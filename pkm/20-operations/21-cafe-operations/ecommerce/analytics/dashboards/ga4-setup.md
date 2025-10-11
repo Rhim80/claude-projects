@@ -409,10 +409,9 @@ function testEvents() {
 *정확한 데이터 추적을 통해 이미커피의 성공적인 이커머스 운영을 지원합니다.*
 
 ## Related Notes
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[22 10]] - 높은 연관성
-- [[창업교육-커리큘럼]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 20-operations ↔ 40-personal 연결
+- [[00-system/04-docs/WINDOWS_SETUP]] - ai_automation 관련; 20-operations ↔ 00-system 연결
+- [[10-projects/12-education/12.01-imi-ai-study/Claude + MCP +n8n 자동화 실습 Study/Claude + MCP +n8n 자동화 실습 Study]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/2024-09_첫번째_교육_wrap-up]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/vs-gpts-comparison]] - ai_automation 관련; 20-operations ↔ 30-knowledge 연결

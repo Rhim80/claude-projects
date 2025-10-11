@@ -265,12 +265,3 @@ Week 9-12: 실제 런칭 + 매출 달성 (최종 검증)
 ---
 
 *Tags: #설득논리 #교육혁신 #실전학습 #AI시대차별화 #제품구현학습*
-
-## Related Notes
-- [[persuasion-strategy]] - 높은 연관성
-- [[ai-business-maturity]] - 높은 연관성
-- [[planning-session-notes]] - 높은 연관성
-- [[platform-strategy]] - 높은 연관성
-- [[education-paradigm]] - 높은 연관성
-- [[19th-cohort-proposal]] - 높은 연관성
-- [[strategy]] - 높은 연관성

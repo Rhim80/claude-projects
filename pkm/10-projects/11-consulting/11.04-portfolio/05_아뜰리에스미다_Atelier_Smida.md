@@ -207,10 +207,9 @@ Hope Your Sweet Season.
 *다섯 번째 컨설팅 프로젝트이자 첫 번째 리브랜딩 프로젝트로서, 9년간의 시행착오를 바탕으로 사회적 가치와 지속가능성을 추구하는 성숙한 브랜딩 사례였습니다.*
 
 ## Related Notes
-- [[프로세스-이코노미]] - 높은 연관성
-- [[imi-hr-organization]] - 높은 연관성
-- [[실천반 zero]] - 높은 연관성
-- [[일을-잘한다는-것]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[imi-branding-philosophy]] - 높은 연관성
+
+- [[30-knowledge/34-learning/34.03-workshops/imi-workshop/브랜드 질문지/강지훈]] - cafe_operations 관련; 10-projects ↔ 30-knowledge 연결
+- [[20-operations/21-cafe-operations/ecommerce/strategy/competitor-analysis]] - cafe_operations 관련; 10-projects ↔ 20-operations 연결
+- [[30-knowledge/34-learning/education-hub]] - cafe_operations 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/31-business/오프라인-비즈니스-운영-프로세스]] - cafe_operations 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/33-insights/33.01-idea/Project 717]] - cafe_operations 관련; 10-projects ↔ 30-knowledge 연결

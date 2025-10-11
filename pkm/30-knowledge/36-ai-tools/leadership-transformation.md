@@ -100,10 +100,9 @@
 *Tags: #리더십변화 #AI시대 #플레잉코치 #교육혁신 #미래일터*
 
 ## Related Notes
-- [[IMPROVED_GPT_STEP1_GUIDE]] - 높은 연관성
-- [[platform-concept]] - 높은 연관성
-- [[platform-strategy]] - 높은 연관성
-- [[detailed-plan]] - 높은 연관성
-- [[2025-10_비즈니스_재구조화_전략]] - 높은 연관성
-- [[strategy]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
+
+- [[10-projects/13-imi-work/13.01-osmu-system/guides/INSTAGRAM_THREADS_OPTIMIZER]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[40-personal/41-daily/2025-10-09]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/CHANGELOG]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/guides/IMI_WORK_PERSONA_GUIDE]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결

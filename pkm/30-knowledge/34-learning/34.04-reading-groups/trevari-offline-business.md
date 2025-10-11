@@ -140,10 +140,9 @@ migrated: 2025-10-10
 - **모임**: 셋째 주 수요일
 
 ## Related Notes
-- [[trevari-독서모임]] - 높은 연관성
-- [[솔로프리너_생산성_치트키_AI_강의안]] - 높은 연관성
-- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
-- [[19th-proposal-simple]] - 높은 연관성
-- [[exp-001-product-images]] - 높은 연관성
-- [[exp-003-free-shipping-threshold]] - 높은 연관성
-- [[19th-gpters-submission]] - 높은 연관성
+
+- [[30-knowledge/34-learning/trevari-독서모임]] - ai_automation 관련; '시즌 2 시작 인스타 글' 개념 공유
+- [[10-projects/13-imi-work/13.01-osmu-system/standalone-art/spring_melancholy_20250917_005322_info]] - ai_automation 관련; '주제' 개념 공유
+- [[10-projects/12-education/12.03-insight-platform/인사이트 플랫폼 AI 강의]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/01_planning/program-proposal]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.04-insighter/인사이터 AI 강의/문의 답변]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

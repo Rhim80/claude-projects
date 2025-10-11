@@ -54,3 +54,11 @@ Provide a clear action plan:
 - Don't over-organize - sometimes "good enough" is perfect
 - Look for opportunities to connect ideas, not just file them
 - downloads/ folder is managed separately (weekly review)
+
+## Related Notes
+
+- [[00-inbox/Welcome]] - pkm_systems, ai_automation 관련; 'remember' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/resume-task]] - ai_automation 관련; 'remember' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/resume-mission]] - ai_automation 관련; 'remember' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/utils/backend-mission]] - ai_automation 관련; 'remember' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/utils/frontend-mission]] - ai_automation 관련; 'remember' 개념 공유

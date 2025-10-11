@@ -247,10 +247,9 @@
 **핵심 메시지**: 이론이 아닌 **실제 경험에서 검증된 내용**으로 구성하여 수강생의 신뢰와 학습 효과를 극대화
 
 ## Related Notes
-- [[learning-roadmap]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/gmail-classifier/gmail-classifier-분석]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[20-operations/21-cafe-operations/ecommerce/strategy/competitor-analysis]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/payroll-systems/payroll-a-분석]] - ai_automation 관련; 10-projects ↔ 20-operations 연결

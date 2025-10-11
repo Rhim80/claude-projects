@@ -124,10 +124,9 @@ AI 시대의 학습은 완벽한 이해 후 실행이 아니라, **실행을 통
 *"AI는 도구가 아니라 파트너입니다. 함께 성장하는 여정을 즐기세요."*
 
 ## Related Notes
-- [[system-vs-tool-master]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/vs-gpts-comparison]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/youtube-rss-bot/youtube-rss-bot-분석]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/claude-integration/워크플로우_개발_가이드]] - ai_automation 관련; 10-projects ↔ 20-operations 연결

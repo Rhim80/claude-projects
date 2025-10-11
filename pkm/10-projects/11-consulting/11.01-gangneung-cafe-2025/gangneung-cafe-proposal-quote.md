@@ -257,11 +257,16 @@ Week 19-20:  최종 완성 및 오픈 지원
 
 **"강릉의 특색을 담은 차별화된 카페 브랜드를 완성합니다"**
 
+- [[30-knowledge/34-learning/34.01-books/books/일을-잘한다는-것]] - 강릉 카페 프로젝트 관련
+- [[30-knowledge/34-learning/34.02-lectures/lectures/startup/창업-강의-마스터-인덱스]] - 강릉 카페 프로젝트 관련
+- [[30-knowledge/31-business/pkm-sustainability]] - 강릉 카페 프로젝트 관련
+- [[30-knowledge/31-business/business-operations-hub]] - 강릉 카페 프로젝트 관련
+- [[30-knowledge/31-business/오프라인-비즈니스-운영-프로세스]] - 강릉 카페 프로젝트 관련
+
 ## Related Notes
-- [[gangneung-cafe-proposal-quote]] - 높은 연관성
-- [[실천반 zero]] - 높은 연관성
-- [[창업교육-커리큘럼]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[golden-brown-proposal-quote]] - 높은 연관성
-- [[일을-잘한다는-것]] - 높은 연관성
-- [[트리니타스 브랜딩 미팅]] - 높은 연관성
+
+- [[10-projects/11-consulting/11.05-templates/gangneung-cafe-proposal-quote]] - cafe_operations, pkm_systems, ai_automation, business_strategy, education 관련; '전체 일정: 20주 (약 5개월)' 개념 공유
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[20-operations/21-cafe-operations/ecommerce/strategy/market-research]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[20-operations/21-cafe-operations/ecommerce/marketing/channels/cafe24/setup-guide]] - ai_automation 관련; 10-projects ↔ 20-operations 연결

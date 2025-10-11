@@ -176,10 +176,9 @@ Crème brûlée Earl Grey
 ```
 
 ## Related Notes
-- [[pkm-sustainability]] - 높은 연관성
-- [[23 01]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[이미 커피 직원]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[22 10]] - 높은 연관성
+
+- [[10-projects/13-imi-work/13.01-osmu-system/guides/NESEO_BLOG_WRITER_PRO]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[30-knowledge/34-learning/34.02-lectures/lectures/브랜드-가치제안]] - ai_automation 관련; 20-operations ↔ 30-knowledge 연결
+- [[30-knowledge/34-learning/34.02-lectures/lecture-archive/brand-value-proposition]] - ai_automation 관련; 20-operations ↔ 30-knowledge 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/content-analysis-revised]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/guides/INSTAGRAM_THREADS_OPTIMIZER]] - ai_automation 관련; 20-operations ↔ 10-projects 연결

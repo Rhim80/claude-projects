@@ -147,12 +147,3 @@ C) 추천으로 (친근한)  D) 새 경험 (혁신적)
 **금지**: 감정적 네이밍만, 근거 없는 추천, 일괄 진행, 선택 강요
 
 목표: 전략적 정체성을 구현하면서 인간 인지시스템에 최적화된 이름 설계
-
-## Related Notes
-- [[learning-roadmap]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[ai-automation-hub]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[창업교육-커리큘럼]] - 높은 연관성

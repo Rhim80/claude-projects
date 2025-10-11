@@ -458,10 +458,9 @@ ${items[0].json.alerts.join('\n')}
 *자동화된 데이터 수집으로 실시간 비즈니스 인사이트를 확보하세요.*
 
 ## Related Notes
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[창업교육-커리큘럼]] - 높은 연관성
-- [[naver-seo-version]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
+
+- [[10-projects/12-education/12.01-imi-ai-study/Claude + MCP +n8n 자동화 실습 Study/Claude + MCP +n8n 자동화 실습 Study]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 20-operations ↔ 40-personal 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/analyze-backend]] - ai_automation 관련; 20-operations ↔ 30-knowledge 연결
+- [[00-system/04-docs/WINDOWS_SETUP]] - ai_automation 관련; 20-operations ↔ 00-system 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/CONTRIBUTING]] - ai_automation 관련; 20-operations ↔ 30-knowledge 연결

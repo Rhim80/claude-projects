@@ -227,10 +227,9 @@ Step 1에서 완성한 브랜드 정체성을 바탕으로 **심리학과 언어
 🎊 완성! 다음 단계에서 강력한 메시지를 만들어보세요!
 
 ## Related Notes
-- [[learning-roadmap]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[naver-seo-version]] - 높은 연관성
-- [[ai-automation-hub]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[20-operations/21-cafe-operations/ecommerce/marketing/channels/naver/optimization-guide]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[40-personal/44-reflections/learning/anthropic-non-developer-workflows]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[20-operations/21-cafe-operations/ecommerce/marketing/channels/cafe24/setup-guide]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[40-personal/41-daily/2025-10-09]] - ai_automation 관련; 10-projects ↔ 40-personal 연결

@@ -201,10 +201,9 @@ Discord/포럼에서 경험 공유
 *"4주 후에는 Claude Code 생태계의 고수가 되어 IMI 비즈니스 전반을 혁신적으로 자동화할 수 있을 것입니다!"* 🚀
 
 ## Related Notes
-- [[PKM-RESTRUCTURE-PLAN]] - 높은 연관성
-- [[detailed-plan]] - 높은 연관성
-- [[19th-proposal-simple]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[19th-gpters-submission]] - 높은 연관성
-- [[gmail-classifier-분석]] - 높은 연관성
-- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성
+
+- [[10-projects/12-education/12.02-gpters-ai-branding/archives/18th-cohort/ANALYSIS_SUMMARY]] - ai_automation 관련; '🎯 핵심 발견사항' 개념 공유
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-proposal-simple]] - ai_automation 관련; 40-personal ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-cohort-proposal]] - ai_automation 관련; 40-personal ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-gpters-submission]] - ai_automation 관련; 40-personal ↔ 10-projects 연결
+- [[30-knowledge/36-ai-tools/ai-automation-hub]] - ai_automation 관련; 40-personal ↔ 30-knowledge 연결

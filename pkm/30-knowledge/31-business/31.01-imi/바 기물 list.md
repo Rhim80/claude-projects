@@ -78,12 +78,3 @@ published: false
 * 테이크아웃컵 디스펜서
   편의성은 좋지만 매장 무드와 인테리어에 따라서 하지 않는 것이 좋을 수도 있습니다.
   냅킨 디스펜서, 스트로우 디스펜서 등도 마찬가지로 전용제품보다는 무드에 맞는 것을 구비해서 사용하시는 것을 권합니다.
-
-## Related Notes
-- [[template-specs]] - 관련 주제
-- [[golden-brown-proposal-quote]] - 관련 주제
-- [[week-107]] - 관련 주제
-- [[week-119]] - 관련 주제
-- [[AI 강의 6월8일1-1_original]] - 관련 주제
-- [[guidelines]] - 관련 주제
-- [[ai-creator-collaboration-content]] - 관련 주제

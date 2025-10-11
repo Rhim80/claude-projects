@@ -461,10 +461,9 @@ Step 0~5에서 완성한 **모든 브랜드 자산을 하나의 브랜딩 휠로
 🎊 브랜드 아이덴티티 시스템 완성! 세상을 향해 런칭하세요!
 
 ## Related Notes
-- [[ai-automation-hub]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[naver-seo-version]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/vs-gpts-comparison]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[00-inbox/2025-08-30]] - ai_automation 관련; 10-projects ↔ 00-inbox 연결
+- [[30-knowledge/34-learning/hfk-판매플래닝]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결

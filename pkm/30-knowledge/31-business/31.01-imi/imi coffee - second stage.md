@@ -39,10 +39,9 @@ published: false
 매월 원두 or 커피 제공 (금액 산정)
 
 ## Related Notes
-- [[imi-coffee-consulting-proposal-template]] - 높은 연관성
-- [[09_소경계_컨설팅_프로젝트]] - 높은 연관성
-- [[06_앙떼떼페레_Entetepere]] - 높은 연관성
-- [[05_아뜰리에스미다_Atelier_Smida]] - 높은 연관성
-- [[GPT_STEP1_COMPACT]] - 높은 연관성
-- [[07_카페_에이닐_컨설팅_프로젝트]] - 높은 연관성
-- [[01_고요새_제주]] - 높은 연관성
+
+- [[10-projects/12-education/12.01-imi-ai-study/AI 워크숍 기획안]] - cafe_operations 관련; 30-knowledge ↔ 10-projects 연결
+- [[ZETTELKASTEN_QUALITY_ASSESSMENT_REPORT]] - cafe_operations 관련; 30-knowledge ↔ ZETTELKASTEN_QUALITY_ASSESSMENT_REPORT.md 연결
+- [[40-personal/41-daily/2025-10-09]] - cafe_operations 관련; 30-knowledge ↔ 40-personal 연결
+- [[00-system/01-templates/daily-note-template]] - cafe_operations 관련; 30-knowledge ↔ 00-system 연결
+- [[40-personal/41-daily/2025-10-11]] - cafe_operations 관련; 30-knowledge ↔ 40-personal 연결

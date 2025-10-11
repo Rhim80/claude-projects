@@ -117,10 +117,9 @@ source: workflowy-txt.txt
 - [[창업론-생존의-철학]]
 
 ## Related Notes
-- [[ai-creator-collaboration-content]] - 관련 주제
-- [[사례 발표]] - 관련 주제
-- [[NAVER_SEO_BLOG_GUIDE]] - 관련 주제
-- [[gpters-final-presentation-beyond-ai-novelty]] - 관련 주제
-- [[AI 강의 6월8일1-1_original]] - 관련 주제
-- [[lesson-learned]] - 관련 주제
-- [[guidelines]] - 관련 주제
+
+- [[10-projects/12-education/12.03-insight-platform/01_planning/program-proposal]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/인사이트 플랫폼 AI 강의]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[40-personal/사진-취미와-배움]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/guides/IMI_WORK_PERSONA_GUIDE]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/archives/18th-cohort/claude-code-osmu-completion-case-study]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

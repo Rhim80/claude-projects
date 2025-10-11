@@ -176,12 +176,3 @@
 **금지**: 감각적 표현만, 전략근거 부재, 적용성 부족, 일관성 결여
 
 목표: 모든 소통 순간에 일관되고 차별적인 언어로 정체성 구현
-
-## Related Notes
-- [[business-operations-hub]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[창업교육-커리큘럼]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[ai-automation-hub]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성

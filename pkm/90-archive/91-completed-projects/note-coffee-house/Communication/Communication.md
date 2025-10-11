@@ -15,12 +15,3 @@ published: false
 [[Note Coffee House Menu 설명]]
 
 [[NOTE Coffee House – Coffee Record Program 운영 가이드]]
-
-## Related Notes
-- [[NOTE COFFEE HOUSE 프로젝트]] - 참고
-- [[imi-operations-manual]] - 참고
-- [[NOTE COFFEE HOUSE 카페 오픈을 위한 주요 작업 리스트]] - 참고
-- [[imi coffee roasters]] - 참고
-- [[program]] - 참고
-- [[Menu]] - 참고
-- [[소경계 카페 오픈을 위한 주요 작업 리스트]] - 참고

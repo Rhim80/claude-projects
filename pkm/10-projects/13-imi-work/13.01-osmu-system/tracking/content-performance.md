@@ -37,10 +37,9 @@
 *마지막 업데이트: 2025.08.27*
 
 ## Related Notes
-- [[창업교육-커리큘럼]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[naver-seo-version]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
+
+- [[LINK_QUALITY_SPOT_CHECK]] - ai_automation 관련; 10-projects ↔ LINK_QUALITY_SPOT_CHECK.md 연결
+- [[20-operations/21-cafe-operations/pairing/weekly/week-119]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[30-knowledge/34-learning/34.02-lectures/lectures/카페-인테리어-가이드]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[40-personal/41-daily/2025-10-09]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[00-inbox/2025-08-30]] - ai_automation 관련; 10-projects ↔ 00-inbox 연결

@@ -649,10 +649,9 @@ note: "일상의틈 LGU+ 프로젝트 강연 내용 추출"
           - 7. 결론
 
 ## Related Notes
-- [[19th-proposal-simple]] - 높은 연관성
-- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
-- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
-- [[competitor-analysis]] - 높은 연관성
-- [[19th-gpters-submission]] - 높은 연관성
-- [[솔로프리너_생산성_치트키_AI_강의안]] - 높은 연관성
-- [[ai-creator-collaboration-content]] - 높은 연관성
+
+- [[10-projects/12-education/12.03-insight-platform/03_resources/AI 강의 6월8일1-2_original]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/AI 강의 6월8일1-3_original]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/AI 강의 6월8일1-1_original]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/blog-content/aeo-ai-search-marketing-strategy]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/templates/brand-wheel-canvas/IMPROVED_TEMPLATE_V1.1]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

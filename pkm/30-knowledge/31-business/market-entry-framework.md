@@ -201,10 +201,9 @@ Color 팀은 곧 그들의 기본적인 가정이 틀렸다는 것을 깨달았�
 - 기존 업체들이 제공하지 못하는 "오프라인 + AI" 융합 지점을 쐐기로 활용
 
 ## Related Notes
-- [[market-research]] - 높은 연관성
-- [[19th-cohort-proposal]] - 높은 연관성
-- [[19th-gpters-submission]] - 높은 연관성
-- [[19th-proposal-simple]] - 높은 연관성
-- [[advertising-guide]] - 높은 연관성
-- [[사이드프로젝트_교육혁신_전략]] - 높은 연관성
-- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
+
+- [[10-projects/12-education/12.03-insight-platform/03_resources/AI 강의 6월8일1-1_original]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/AI 강의 6월8일1-3_original]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/guides/IMI_WORK_PERSONA_GUIDE]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/AI 강의 6월8일1-2_original]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/temp-content-back-office-efficiency]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

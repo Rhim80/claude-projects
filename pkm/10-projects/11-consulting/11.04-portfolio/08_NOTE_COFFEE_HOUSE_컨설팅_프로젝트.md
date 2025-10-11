@@ -150,10 +150,9 @@
 *서울에서 진주까지, 새벽 기차를 타고 만들어낸 조용하지만 깊이 있는 공간*
 
 ## Related Notes
-- [[(주) 음]] - 높은 연관성
-- [[일을-잘한다는-것]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[Seminar]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[모모스-세미나-분석]] - 높은 연관성
+
+- [[20-operations/21-cafe-operations/ecommerce/strategy/competitor-analysis]] - cafe_operations 관련; 10-projects ↔ 20-operations 연결
+- [[30-knowledge/34-learning/34.02-lectures/lectures/startup/창업-강의-마스터-인덱스]] - cafe_operations 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/31-business/오프라인-비즈니스-운영-프로세스]] - cafe_operations 관련; 10-projects ↔ 30-knowledge 연결
+- [[40-personal/41-daily/2025-10-10]] - cafe_operations 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/31-business/business-operations-hub]] - cafe_operations 관련; 10-projects ↔ 30-knowledge 연결

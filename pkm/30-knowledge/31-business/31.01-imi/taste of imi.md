@@ -42,12 +42,3 @@ published: false
 | 핫워터 디스펜서 |  |  |  | 급 |
 | 테이블 냉장고 |  |  |  |  |
 | 피처린서 |  |  |  |  |
-
-## Related Notes
-- [[IMI AI STUDY]] - 참고
-- [[imi-coffee-consulting-proposal-template]] - 참고
-- [[ai-creator-collaboration-content]] - 참고
-- [[파주2차PT_2_converted]] - 참고
-- [[AI 강의 6월8일1-2_original]] - 참고
-- [[AI 강의 6월8일1-3_original]] - 참고
-- [[19th-gpters-submission]] - 참고

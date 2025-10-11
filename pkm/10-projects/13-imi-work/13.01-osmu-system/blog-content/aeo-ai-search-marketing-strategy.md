@@ -79,10 +79,9 @@ AI 시대의 마케팅은 더 이상 일방적인 홍보가 아닙니다. 고객
 *이 글은 Ethan Smith의 "AEO & AI Search: How to Win at Answer Engine Optimization" 영상에서 받은 인사이트를 바탕으로 작성되었습니다.*
 
 ## Related Notes
-- [[system-vs-tool-master]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[naver-seo-version]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
+
+- [[30-knowledge/33-insights/33.03-writing/감각과-기술]] - ai_automation 관련; '감각' 개념 공유
+- [[30-knowledge/34-learning/hfk-공간브랜딩]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/31-business/ai-business-maturity]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/31-business/오프라인-비즈니스-운영-프로세스]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/34-learning/hfk-cmo씽킹]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결

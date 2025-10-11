@@ -232,10 +232,7 @@
 **승인자**: [승인자 이름] - YYYY-MM-DD
 
 ## Related Notes
-- [[learning-roadmap]] - 높은 연관성
-- [[창업교육-커리큘럼]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
-- [[트리니타스 브랜딩 미팅]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
+
+- [[20-operations/21-cafe-operations/ecommerce/ab-testing/experiments/exp-001-product-images]] - '📅 실험 일정' 개념 공유
+- [[20-operations/21-cafe-operations/ecommerce/ab-testing/experiments/exp-002-pricing-display]] - '📅 실험 일정' 개념 공유
+- [[20-operations/21-cafe-operations/ecommerce/ab-testing/experiments/exp-003-free-shipping-threshold]] - '📅 실험 일정' 개념 공유

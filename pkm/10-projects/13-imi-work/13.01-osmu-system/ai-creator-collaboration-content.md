@@ -59,10 +59,9 @@ AI의 장점(속도, 정보 처리)과 인간의 장점(창의성, 감정, 경�
 **IMI WORK | 일을 잘한다는 것에 대한 진지한 고민**
 
 ## Related Notes
-- [[human-sense-importance]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+
+- [[30-knowledge/36-ai-tools/36.01-claude-code/archived-versions/final-seo-version]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/31-business/31.01-imi/consulting/Seminar/스페셜티 커피업계 대표들을 위한 브랜딩 세미나]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/archived-versions/personal-tone-version]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/34-learning/34.01-books/book-notes/doing-work-well]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/vs-gpts-comparison]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결

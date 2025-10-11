@@ -32,10 +32,9 @@ AI가 2022년에 정말로 도약하기 시작하고 "생성형 AI"가 화두가
 의미 있는 것을 창조하는 것은 아름답고, 그렇다, 무섭고 고통스러운 일이다. 그리고 당신이 과도하게 하지 않는다면, 당신은 부족하게 하고 있는 것이다.
 
 ## Related Notes
-- [[IMPROVED_GPT_STEP1_GUIDE]] - 높은 연관성
-- [[SUCCESS_GUIDE]] - 높은 연관성
-- [[content-prompt-insight-0914]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
-- [[playing-coach-leadership]] - 높은 연관성
-- [[ai-automation-hub]] - 높은 연관성
-- [[leadership-transformation]] - 높은 연관성
+
+- [[10-projects/12-education/12.02-gpters-ai-branding/archives/18th-cohort/gpters-final-presentation-beyond-ai-novelty]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/temp-content-back-office-efficiency]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/content/back-office-efficiency-front-office-delight]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/blog-content/aeo-ai-search-marketing-strategy]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.04-insighter/인사이터 AI 강의/문의 답변]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

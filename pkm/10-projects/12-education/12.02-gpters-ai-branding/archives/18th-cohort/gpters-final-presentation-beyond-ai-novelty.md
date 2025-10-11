@@ -302,10 +302,9 @@ A: 지금 가장 관심 있는 것부터 시작하세요. 중요한 건 "딸깍 
 ### 발표 시간: 15-20분 + Q&A 10분
 
 ## Related Notes
-- [[final-seo-version]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
+
+- [[30-knowledge/34-learning/34.01-books/book-notes/hit-makers]] - ai_automation 관련; '핵심 인사이트' 개념 공유
+- [[30-knowledge/33-insights/do-too-much-alexandr-wang]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/vs-gpts-comparison]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결

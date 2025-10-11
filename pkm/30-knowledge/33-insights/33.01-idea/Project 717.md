@@ -173,10 +173,9 @@ Easy & Fantasy
    2. editor
 
 ## Related Notes
-- [[gmail-classifier-분석]] - 높은 연관성
-- [[2024-09_첫번째_교육_wrap-up]] - 높은 연관성
-- [[사이드프로젝트_교육혁신_전략]] - 높은 연관성
-- [[소경계_프로젝트_회고록]] - 높은 연관성
-- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
-- [[advertising-guide]] - 높은 연관성
-- [[인사이트 플랫폼 AI 강의]] - 높은 연관성
+
+- [[10-projects/12-education/12.04-insighter/인사이터 AI 강의/문의 답변]] - education 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/인사이트 플랫폼 AI 강의]] - education 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/11-consulting/11.05-templates/imi-coffee-consulting-proposal-template]] - business_strategy 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/archives/18th-cohort/claude-code-osmu-completion-case-study]] - business_strategy, education 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/archives/18th-cohort/gpters-final-presentation-beyond-ai-novelty]] - business_strategy, education 관련; 30-knowledge ↔ 10-projects 연결

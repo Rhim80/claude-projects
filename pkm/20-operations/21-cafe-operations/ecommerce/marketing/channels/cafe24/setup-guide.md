@@ -448,10 +448,9 @@ gtag('event', 'add_to_cart', {
 *"고객 중심의 브랜드 경험으로 자사몰을 성장의 핵심 엔진으로 만들어갑니다."*
 
 ## Related Notes
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[naver-seo-version]] - 높은 연관성
-- [[optimization-guide]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
-- [[창업교육-커리큘럼]] - 높은 연관성
+
+- [[10-projects/12-education/12.02-gpters-ai-branding/templates/brand-wheel-canvas/BRAND_FRAMEWORK_ANALYSIS]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/templates/brand-wheel-canvas/IMPROVEMENT_ROADMAP]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/14-brand-identity/14.01-brand-builder/brand-identity-ai/brand-identity-builder-prd]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/11-consulting/11.01-gangneung-cafe-2025/gangneung-cafe-proposal-quote]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/11-consulting/11.05-templates/gangneung-cafe-proposal-quote]] - ai_automation 관련; 20-operations ↔ 10-projects 연결

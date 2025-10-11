@@ -167,10 +167,9 @@
 완료 후 스터디 참여를 자연스럽게 유도할 수 있습니다! 🎯
 
 ## Related Notes
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[WIEE-세미나-노트]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
+
+- [[10-projects/12-education/12.02-gpters-ai-branding/templates/brand-wheel-canvas/IMPROVED_TEMPLATE_V1.1]] - ai_automation 관련; 'q7. 한 문장 정체성' 개념 공유
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/31-business/오프라인-비즈니스-운영-프로세스]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[20-operations/21-cafe-operations/ecommerce/strategy/competitor-analysis]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/vs-gpts-comparison]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결

@@ -126,11 +126,16 @@ Claude Code + Obsidian 기반의 개인 맞춤형 비즈니스 시스템
 
 **제출일**: 2025년 10월 10일
 
+- [[40-personal/41-daily/2025-10-11]] - GPTers 19기 스터디 관련
+- [[40-personal/41-daily/2025-10-10]] - GPTers 19기 스터디 관련
+- [[30-knowledge/36-ai-tools/ai-automation-hub]] - GPTers AI 브랜딩 스터디
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-cohort-proposal]] - GPTers 19기 스터디 관련
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-gpters-submission]] - GPTers 19기 스터디 관련
+
 ## Related Notes
-- [[system-vs-tool-master]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/vs-gpts-comparison]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[00-system/04-docs/NOTION_MIGRATION_GUIDE]] - pkm_systems, ai_automation 관련; 10-projects ↔ 00-system 연결
+- [[40-personal/46-todos/active-todos]] - ai_automation 관련; 10-projects ↔ 40-personal 연결

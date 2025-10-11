@@ -78,10 +78,9 @@
 - [2060 words] **long_content**: `30-knowledge/34-learning/34.01-books/books/비즈니스의-미래.md`
 
 ## Related Notes
-- [[SPLIT_SUMMARY]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[persuasion-strategy]] - 높은 연관성
-- [[2025-10-11]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
-- [[PKM-RESTRUCTURE-PLAN]] - 높은 연관성
-- [[2025-10-10]] - 높은 연관성
+
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/husky/husky]] - ai_automation 관련; 'summary' 개념 공유
+- [[.claude/commands/pull-request]] - ai_automation 관련; 'summary' 개념 공유
+- [[10-projects/12-education/12.03-insight-platform/03_resources/content-analysis]] - ai_automation 관련; VAULT_QUALITY_ANALYSIS.md ↔ 10-projects 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/vs-gpts-comparison]] - ai_automation 관련; VAULT_QUALITY_ANALYSIS.md ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/CONTRIBUTING]] - ai_automation 관련; VAULT_QUALITY_ANALYSIS.md ↔ 30-knowledge 연결

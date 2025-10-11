@@ -22,10 +22,9 @@ published: false
 3. 창의성 증가 : 새로운 것을 경험하면 창의성과 혁신에 영감을 줄 수 있다. 다양한 문화, 아이디어 및 관점에 대한 노출은 개인이 새로운 관점에서 문제와 도전에 접근하고 새로운 솔루션을 개발하는 데 도움이 될 수 있다.
 
 ## Related Notes
-- [[step-5-brand-execution]] - 관련 주제
-- [[step-4-brand-validation]] - 관련 주제
-- [[step-3-brand-language]] - 관련 주제
-- [[brand-identity-builder-prd]] - 관련 주제
-- [[brand-identity-builder-prd]] - 관련 주제
-- [[step-2-brand-naming]] - 관련 주제
-- [[brand-identity-builder-prd-v2]] - 관련 주제
+
+- [[00-system/01-templates/TEMPLATE_insight]] - business_strategy 관련; 30-knowledge ↔ 00-system 연결
+- [[00-system/01-templates/TEMPLATE_business]] - business_strategy 관련; 30-knowledge ↔ 00-system 연결
+- [[00-system/01-templates/daily-note-template]] - business_strategy 관련; 30-knowledge ↔ 00-system 연결
+- [[40-personal/41-daily/2025-10-11]] - business_strategy 관련; 30-knowledge ↔ 40-personal 연결
+- [[ZETTELKASTEN_QUALITY_ASSESSMENT_REPORT]] - business_strategy 관련; 30-knowledge ↔ ZETTELKASTEN_QUALITY_ASSESSMENT_REPORT.md 연결

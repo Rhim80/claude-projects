@@ -22,12 +22,3 @@ published: false
 2030년
 
 2040년
-
-## Related Notes
-- [[content-performance]] - 참고
-- [[IMPROVED_STEP4_GUIDE]] - 참고
-- [[IMPROVED_STEP3_GUIDE]] - 참고
-- [[STEP5_BRAND_WHEEL_GUIDE]] - 참고
-- [[IMPROVEMENT_ROADMAP]] - 참고
-- [[optimization-guide]] - 참고
-- [[AI시대_학습_패러다임_강연요약본]] - 참고

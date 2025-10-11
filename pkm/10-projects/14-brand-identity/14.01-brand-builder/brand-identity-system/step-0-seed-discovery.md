@@ -163,10 +163,9 @@
 ⚠️ **중요**: 7개 질문이 모두 완료되면 더 이상 추가 질문하지 말고 반드시 위 안내 메시지 출력
 
 ## Related Notes
-- [[pkm-sustainability]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[naver-seo-version]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[20-operations/21-cafe-operations/ecommerce/strategy/competitor-analysis]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[30-knowledge/34-learning/hfk-공간브랜딩]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[20-operations/21-cafe-operations/ecommerce/strategy/market-research]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[30-knowledge/34-learning/롱블랙-일본트립]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결

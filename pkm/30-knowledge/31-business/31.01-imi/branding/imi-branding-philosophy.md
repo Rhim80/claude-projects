@@ -122,10 +122,9 @@ note: "이미워크숍-브랜드철학, 성장과-브랜딩, 창업론-생존의
 ---
 
 ## Related Notes
-- [[imi-coffee-consulting-proposal-template]] - 높은 연관성
-- [[SENSE_AI_SEO_STRATEGY]] - 높은 연관성
-- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
-- [[02_워커샵_대전]] - 높은 연관성
-- [[aeo-ai-search-marketing-strategy]] - 높은 연관성
-- [[ai-creator-collaboration-content]] - 높은 연관성
-- [[19th-gpters-submission]] - 높은 연관성
+
+- [[10-projects/11-consulting/11.04-portfolio/03_리버헤드_Riverhead]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/temp-content-back-office-efficiency]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/content/back-office-efficiency-front-office-delight]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/blog-content/aeo-ai-search-marketing-strategy]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/인사이트 플랫폼 AI 강의]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

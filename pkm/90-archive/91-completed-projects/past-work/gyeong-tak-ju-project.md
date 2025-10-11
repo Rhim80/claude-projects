@@ -96,12 +96,3 @@ migrated: 2025-10-10
 
 ## Communication
 (추가 내용 필요)
-
-## Related Notes
-- [[imi-old-mansion-project]] - 높은 연관성
-- [[Project 717]] - 높은 연관성
-- [[경탁주-프로젝트-기획]] - 높은 연관성
-- [[WORK_FILE_SPLIT_SUMMARY]] - 높은 연관성
-- [[2기]] - 높은 연관성
-- [[일상의틈-lgu-프로젝트]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성

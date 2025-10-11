@@ -142,3 +142,11 @@ git push
 ---
 
 **준비 완료! 이제 Notion에서 Export하고 스크립트를 실행하세요.** 🚀
+
+## Related Notes
+
+- [[40-personal/41-daily/2025-10-09]] - pkm_systems, ai_automation 관련; 00-system ↔ 40-personal 연결
+- [[10-projects/12-education/12.01-imi-ai-study/Claude + MCP +n8n 자동화 실습 Study/Claude + MCP +n8n 자동화 실습 Study]] - ai_automation 관련; 00-system ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/template-specs]] - pkm_systems, ai_automation 관련; 00-system ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-gpters-submission]] - pkm_systems, ai_automation 관련; 00-system ↔ 10-projects 연결
+- [[.claude/commands/pull-request]] - ai_automation 관련; 00-system ↔ .claude 연결

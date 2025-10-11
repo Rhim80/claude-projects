@@ -482,10 +482,9 @@
 *"네이버의 강력한 플랫폼 파워를 활용하여 더 많은 고객에게 검증된 맛을 전달합니다."*
 
 ## Related Notes
-- [[setup-guide]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[naver-seo-version]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
+
+- [[10-projects/12-education/12.02-gpters-ai-branding/templates/brand-wheel-canvas/IMPROVEMENT_ROADMAP]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/prompt-templates]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/2024-09_첫번째_교육_wrap-up]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/templates/brand-wheel-canvas/BRAND_FRAMEWORK_ANALYSIS]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/content-analysis]] - ai_automation 관련; 20-operations ↔ 10-projects 연결

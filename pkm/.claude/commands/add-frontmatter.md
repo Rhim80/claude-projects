@@ -198,3 +198,11 @@ Had a great meeting with the team about Q1 planning...
 
 Remember: Properties should enhance organization, not clutter. Only add what
 provides value for finding and connecting notes.
+
+## Related Notes
+
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/claude-files/AVS-Vibe-Developer-Guide/CLAUDE]] - ai_automation 관련; 'naming conventions' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/claude-files/Giselle/CLAUDE]] - ai_automation 관련; 'naming conventions' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.claude/commands/update-architecture]] - ai_automation 관련; 'examples' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.claude/commands/analyze-project]] - ai_automation 관련; 'examples' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.claude/commands/create-task]] - ai_automation 관련; 'examples' 개념 공유

@@ -269,10 +269,9 @@ try {
 *이 워크플로우는 현재 IMI WORK의 핵심 생산성 도구로, 하루 평균 50-100개의 이메일을 11개 카테고리로 자동 분류하고 중요한 내용만 Telegram으로 실시간 알림하여 업무 효율성을 극대화하고 있습니다.*
 
 ## Related Notes
-- [[learning-roadmap]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
+
+- [[10-projects/13-imi-work/13.01-osmu-system/CLAUDE]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 20-operations ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 20-operations ↔ 40-personal 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/CHANGELOG]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/SUCCESS_GUIDE]] - ai_automation 관련; 20-operations ↔ 10-projects 연결

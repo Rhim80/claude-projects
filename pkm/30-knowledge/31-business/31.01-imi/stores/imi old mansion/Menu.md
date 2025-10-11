@@ -52,10 +52,9 @@ published: false
 3. 칠리 콘 카르네
 
 ## Related Notes
-- [[Menu]] - 높은 연관성
-- [[menu_final_2025]] - 높은 연관성
-- [[01_고요새_제주]] - 높은 연관성
-- [[09_소경계_컨설팅_프로젝트]] - 높은 연관성
-- [[02_워커샵_대전]] - 높은 연관성
-- [[06_앙떼떼페레_Entetepere]] - 높은 연관성
-- [[07_카페_에이닐_컨설팅_프로젝트]] - 높은 연관성
+
+- [[10-projects/12-education/12.01-imi-ai-study/AI 워크숍 기획안]] - cafe_operations 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/11-consulting/11.03-so-gyeong-gye/menu_final_2025]] - cafe_operations 관련; 30-knowledge ↔ 10-projects 연결
+- [[ZETTELKASTEN_QUALITY_ASSESSMENT_REPORT]] - cafe_operations 관련; 30-knowledge ↔ ZETTELKASTEN_QUALITY_ASSESSMENT_REPORT.md 연결
+- [[VAULT_QUALITY_ANALYSIS]] - cafe_operations 관련; 30-knowledge ↔ VAULT_QUALITY_ANALYSIS.md 연결
+- [[00-system/01-templates/daily-note-template]] - cafe_operations 관련; 30-knowledge ↔ 00-system 연결

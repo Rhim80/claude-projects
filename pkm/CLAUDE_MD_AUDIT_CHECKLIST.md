@@ -215,3 +215,11 @@ cat /Users/rhim/Projects/pkm/PKM_FINAL_VALIDATION_REPORT.md
 
 **생성일**: 2025-10-11
 **다음 작업**: Context clear 후 이 파일 참조하여 CLAUDE.md 심층 분석 시작
+
+## Related Notes
+
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; CLAUDE_MD_AUDIT_CHECKLIST.md ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; CLAUDE_MD_AUDIT_CHECKLIST.md ↔ 40-personal 연결
+- [[10-projects/14-brand-identity/14.01-brand-builder/brand-identity-ai/brand-identity-builder-prd]] - ai_automation 관련; CLAUDE_MD_AUDIT_CHECKLIST.md ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/templates/custom-gpt-instructions/NEUTRAL_AI_GUIDE]] - ai_automation 관련; CLAUDE_MD_AUDIT_CHECKLIST.md ↔ 10-projects 연결
+- [[00-system/04-docs/OBSIDIAN_SYNC_GUIDE]] - pkm_systems 관련; CLAUDE_MD_AUDIT_CHECKLIST.md ↔ 00-system 연결

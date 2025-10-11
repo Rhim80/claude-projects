@@ -767,11 +767,16 @@ npm-debug.log*
 
 **문서 위치**: `/Users/rhim/Projects/education/gpters-ai-branding-study/19th-cohort/template-specs.md`
 
+- [[40-personal/41-daily/2025-10-11]] - Noah Brier의 Claudesidian PKM 시스템
+- [[40-personal/41-daily/2025-10-10]] - Noah Brier의 Claudesidian PKM 시스템
+- [[30-knowledge/36-ai-tools/ai-automation-hub]] - Noah Brier의 Claudesidian PKM 시스템
+- [[30-knowledge/36-ai-tools/36.01-claude-code/noah-brier-claudesidian-guide]] - Noah Brier의 Claudesidian PKM 시스템
+- [[30-knowledge/36-ai-tools/36.01-claude-code/learning-roadmap]] - Noah Brier의 Claudesidian PKM 시스템
+
 ## Related Notes
-- [[learning-roadmap]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[00-system/04-docs/NOTION_MIGRATION_GUIDE]] - pkm_systems, ai_automation 관련; 10-projects ↔ 00-system 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[00-system/04-docs/WINDOWS_SETUP]] - pkm_systems, ai_automation 관련; 10-projects ↔ 00-system 연결
+- [[00-system/04-docs/CLAUDE-BOOTSTRAP]] - pkm_systems, ai_automation 관련; 10-projects ↔ 00-system 연결

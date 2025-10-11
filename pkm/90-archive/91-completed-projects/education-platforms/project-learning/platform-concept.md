@@ -288,12 +288,3 @@
 ---
 *Tags: #교육혁신 #프로젝트학습 #AI활용 #비즈니스모델 #플레이잉코치*
 *최종 업데이트: 2025-08-30*
-
-## Related Notes
-- [[detailed-plan]] - 높은 연관성
-- [[2025-10_비즈니스_재구조화_전략]] - 높은 연관성
-- [[IMPROVED_GPT_STEP1_GUIDE]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
-- [[platform-strategy]] - 높은 연관성
-- [[persuasion-strategy]] - 높은 연관성
-- [[사이드프로젝트_교육혁신_전략]] - 높은 연관성

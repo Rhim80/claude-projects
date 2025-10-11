@@ -217,10 +217,9 @@ Telegram 알림 발송
 *5개 사업장의 영수증을 10분마다 자동으로 처리하여 회계 업무를 완전 자동화하는 차세대 시스템입니다. GPT-4o OCR + AI 분류로 정확도를 높이고, Claude Code 연동으로 더욱 지능적인 처리가 가능해집니다.*
 
 ## Related Notes
-- [[learning-roadmap]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/anthropic-non-developer-workflows]] - ai_automation 관련; 20-operations ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 20-operations ↔ 40-personal 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/CLAUDE]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/guides/OSMU_STRATEGY]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/CHANGELOG]] - ai_automation 관련; 20-operations ↔ 10-projects 연결

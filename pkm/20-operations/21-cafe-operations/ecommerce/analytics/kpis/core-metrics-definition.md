@@ -215,10 +215,9 @@ ROAS
 *명확한 지표 정의를 통해 일관된 성과 측정과 개선을 실현합니다.*
 
 ## Related Notes
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[스페셜티 커피업계 대표들을 위한 브랜딩 세미나]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 20-operations ↔ 40-personal 연결
+- [[10-projects/14-brand-identity/14.01-brand-builder/brand-identity-ai/brand-identity-builder-prd]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/prompt-templates]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/templates/brand-wheel-canvas/IMPROVEMENT_ROADMAP]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 20-operations ↔ 40-personal 연결

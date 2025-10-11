@@ -317,11 +317,13 @@ Code (실제 구현)
 
 *"비개발자도 Claude Code를 통해 체계적이고 전문적인 업무 환경을 구축할 수 있다는 가능성을 확인했습니다. 이는 단순한 도구 활용을 넘어 업무 방식 자체의 혁신을 의미합니다."*
 
+- [[30-knowledge/36-ai-tools/ai-automation-hub]] - Claude Code와 MCP 활용법
+- [[30-knowledge/36-ai-tools/36.01-claude-code/system-vs-tool-master]] - Claude Code와 MCP 활용법
+
 ## Related Notes
-- [[19th-cohort-proposal]] - 높은 연관성
-- [[19th-gpters-submission]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[persuasion-strategy]] - 높은 연관성
-- [[작업-진행상황]] - 높은 연관성
-- [[gmail-classifier-분석]] - 높은 연관성
-- [[ideas-analysis]] - 높은 연관성
+
+- [[10-projects/14-brand-identity/14.01-brand-builder/brand-identity-ai/brand-identity-builder-prd]] - ai_automation 관련; 40-personal ↔ 10-projects 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/vs-gpts-comparison]] - ai_automation 관련; 40-personal ↔ 30-knowledge 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/prompt-templates]] - ai_automation 관련; 40-personal ↔ 10-projects 연결
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/receipt-processor/receipt-processor-분석]] - ai_automation 관련; 40-personal ↔ 20-operations 연결
+- [[00-system/04-docs/WINDOWS_SETUP]] - ai_automation 관련; 40-personal ↔ 00-system 연결

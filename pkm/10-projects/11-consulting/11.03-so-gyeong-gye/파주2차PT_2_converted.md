@@ -282,10 +282,9 @@
 *변환 완료: 파주2차PT_2.pdf → Markdown 형식*
 
 ## Related Notes
-- [[menu-development-hub]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[imi-hr-organization]] - 높은 연관성
-- [[Branding]] - 높은 연관성
-- [[(주) 음]] - 높은 연관성
-- [[imi-branding-philosophy]] - 높은 연관성
+
+- [[30-knowledge/34-learning/34.02-lectures/lectures/startup/창업-운영준비-실무]] - cafe_operations 관련; '목차' 개념 공유
+- [[20-operations/21-cafe-operations/ecommerce/strategy/competitor-analysis]] - cafe_operations 관련; 10-projects ↔ 20-operations 연결
+- [[30-knowledge/35-recipes/menu-development-hub]] - cafe_operations 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/34-learning/education-hub]] - cafe_operations 관련; 10-projects ↔ 30-knowledge 연결
+- [[20-operations/21-cafe-operations/ecommerce/marketing/channels/meta/advertising-guide]] - cafe_operations 관련; 10-projects ↔ 20-operations 연결

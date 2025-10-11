@@ -86,10 +86,9 @@ migrated: 2025-10-10
 다음 주는 사장인 제가 바를 운영할 예정입니다.
 
 ## Related Notes
-- [[01_고요새_제주]] - 높은 연관성
-- [[02_워커샵_대전]] - 높은 연관성
-- [[ai-creator-collaboration-content]] - 높은 연관성
-- [[19th-proposal-simple]] - 높은 연관성
-- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
-- [[AI 강의 6월8일1-3_original]] - 높은 연관성
-- [[AI 강의 6월8일1-1_original]] - 높은 연관성
+
+- [[30-knowledge/31-business/31.01-imi/stores/남구로-매장-이야기]] - ai_automation 관련; '긴 방학을 합니다 (남구로 이미 커피 로스터스)' 개념 공유
+- [[10-projects/11-consulting/11.01-gangneung-cafe-2025/proposal-explanation]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/11-consulting/11.04-portfolio/03_리버헤드_Riverhead]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/인사이트 플랫폼 AI 강의]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/temp-content-back-office-efficiency]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

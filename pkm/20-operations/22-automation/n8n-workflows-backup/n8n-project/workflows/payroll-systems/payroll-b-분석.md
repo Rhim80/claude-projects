@@ -241,10 +241,9 @@ AND 직원명 = '{파싱된 직원명}'
 *Google Drive 파일 업로드만으로 급여명세서가 자동으로 직원들에게 발송되는 완전 자동화 시스템입니다. 파일명 파싱, HR DB 매칭, 이메일 발송, 로그 기록, 파일 정리까지 모든 과정이 무인으로 처리되어 관리자의 업무 부담을 획기적으로 줄여줍니다.*
 
 ## Related Notes
-- [[personal-tone-version]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
-- [[receipt-processor-분석]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 20-operations ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 20-operations ↔ 40-personal 연결
+- [[00-inbox/2025-08-30]] - ai_automation 관련; 20-operations ↔ 00-inbox 연결
+- [[30-knowledge/31-business/31.01-imi/hr/이미 커피 직원/직원-관리-DB]] - ai_automation 관련; 20-operations ↔ 30-knowledge 연결
+- [[40-personal/41-daily/2025-10-09]] - ai_automation 관련; 20-operations ↔ 40-personal 연결

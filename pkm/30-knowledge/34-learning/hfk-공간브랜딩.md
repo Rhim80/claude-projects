@@ -402,10 +402,9 @@ source: workflowy
 - 실제 스몰브랜드 운영
 
 ## Related Notes
-- [[imi-coffee-consulting-proposal-template]] - 높은 연관성
-- [[GPT_STEP1_COMPACT]] - 높은 연관성
-- [[문의 답변]] - 높은 연관성
-- [[이미커피_컨설팅_워크플로우]] - 높은 연관성
-- [[IMPROVED_GPT_STEP1_GUIDE]] - 높은 연관성
-- [[ai-creator-collaboration-content]] - 높은 연관성
-- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
+
+- [[10-projects/13-imi-work/13.01-osmu-system/blog-content/aeo-ai-search-marketing-strategy]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/temp-content-back-office-efficiency]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/content/back-office-efficiency-front-office-delight]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.04-insighter/솔로프리너_생산성_치트키_AI_강의안]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/01_planning/program-proposal]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

@@ -255,12 +255,3 @@ C) 독창성 강조 - 개성과 차별화
 - 사용자 선택 강요
 
 목표는 브랜드의 전략적 정체성을 정확히 구현하면서도 인간의 인지 시스템에 최적화된 이름을 만드는 것입니다.
-
-## Related Notes
-- [[learning-roadmap]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[WIEE-세미나-노트]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성

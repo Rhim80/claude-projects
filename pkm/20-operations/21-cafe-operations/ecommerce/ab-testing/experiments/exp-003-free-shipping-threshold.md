@@ -308,10 +308,9 @@ if (threshold - cartTotal < 10000) {
 **예상 투자대비 효과**: 개발 비용 50만원, 예상 월 매출 증가 600만원 (ROI 1,200%)
 
 ## Related Notes
-- [[learning-roadmap]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[창업교육-커리큘럼]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[모모스-세미나-분석]] - 높은 연관성
-- [[Branding]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
+
+- [[30-knowledge/35-recipes/menu-development-hub]] - cafe_operations 관련; 20-operations ↔ 30-knowledge 연결
+- [[10-projects/11-consulting/11.01-gangneung-cafe-2025/gangneung-cafe-proposal-quote]] - cafe_operations 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/11-consulting/11.05-templates/gangneung-cafe-proposal-quote]] - cafe_operations 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/archive/SENSE_AI_SEO_STRATEGY]] - cafe_operations 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-gpters-submission]] - cafe_operations 관련; 20-operations ↔ 10-projects 연결

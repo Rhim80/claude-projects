@@ -150,10 +150,9 @@
 **결론**: 기존에 작성한 커리큘럼은 이론적으로는 완성도가 높았지만, 실제 강의 내용에는 **검증된 실제 사례와 구체적인 실행 과정**이 모두 담겨있어 교육 효과를 극대화할 수 있습니다. 특히 4주차의 이미북페어링 사례는 **가상이 아닌 실제 프로젝트**로서 엄청난 가치를 가집니다.
 
 ## Related Notes
-- [[learning-roadmap]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[WIEE-세미나-노트]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/34-learning/education-hub]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/gmail-classifier/gmail-classifier-분석]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/payroll-systems/payroll-a-분석]] - ai_automation 관련; 10-projects ↔ 20-operations 연결

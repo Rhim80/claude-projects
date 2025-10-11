@@ -158,10 +158,9 @@ Step 0에서 발굴한 브랜드 씨앗을 바탕으로 전문적인 브랜딩 �
 🎊 축하합니다! 브랜딩 휠의 핵심 요소가 모두 완성되었습니다!
 
 ## Related Notes
-- [[business-operations-hub]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[20-operations/22-automation/n8n-workflows-backup/youtube-rss-automation-blog-post]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[40-personal/44-reflections/learning/anthropic-non-developer-workflows]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[00-system/04-docs/WINDOWS_SETUP]] - ai_automation 관련; 10-projects ↔ 00-system 연결

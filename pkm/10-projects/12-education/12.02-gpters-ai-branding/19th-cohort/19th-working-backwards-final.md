@@ -410,11 +410,16 @@ PR/FAQ 기반 역순 TODO 로드맵 생성
 
 Made with ❤️ by hovoo & 진여진
 
+- [[40-personal/41-daily/2025-10-11]] - Noah Brier의 Claudesidian PKM 시스템
+- [[40-personal/41-daily/2025-10-10]] - Noah Brier의 Claudesidian PKM 시스템
+- [[30-knowledge/36-ai-tools/ai-automation-hub]] - Noah Brier의 Claudesidian PKM 시스템
+- [[30-knowledge/36-ai-tools/36.01-claude-code/noah-brier-claudesidian-guide]] - Noah Brier의 Claudesidian PKM 시스템
+- [[30-knowledge/36-ai-tools/36.01-claude-code/learning-roadmap]] - Noah Brier의 Claudesidian PKM 시스템
+
 ## Related Notes
-- [[final-seo-version]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/vs-gpts-comparison]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[40-personal/41-daily/2025-10-09]] - pkm_systems, ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[00-system/04-docs/OBSIDIAN_SYNC_GUIDE]] - pkm_systems 관련; 10-projects ↔ 00-system 연결
+- [[00-system/04-docs/WINDOWS_SETUP]] - pkm_systems, ai_automation 관련; 10-projects ↔ 00-system 연결

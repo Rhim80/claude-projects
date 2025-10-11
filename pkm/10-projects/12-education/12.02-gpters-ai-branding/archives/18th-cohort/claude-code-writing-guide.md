@@ -250,3 +250,15 @@ Claude Code로 글쓰기는 완벽하지 않습니다. 하지만 다음 원칙�
 
 **참고**: 이 가이드는 실제 테스트를 거친 방법만 포함합니다.
 **문의**: 실제 사용 중 문제 발생시 공유 부탁드립니다.
+
+- [[30-knowledge/36-ai-tools/ai-automation-hub]] - GPTers AI 브랜딩 스터디
+- [[40-personal/41-daily/2025-10-11]] - GPTers AI 브랜딩 스터디
+- [[40-personal/41-daily/2025-10-10]] - GPTers AI 브랜딩 스터디
+
+## Related Notes
+
+- [[30-knowledge/36-ai-tools/36.01-claude-code/vs-gpts-comparison]] - ai_automation 관련; '들어가며' 개념 공유
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[.claude/commands/create-command]] - ai_automation 관련; 10-projects ↔ .claude 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/archived-versions/final-seo-version]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결

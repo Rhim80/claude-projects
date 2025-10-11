@@ -96,11 +96,12 @@ Claude Code는 작업대입니다. 망치도 있고, 톱도 있고, 만든 결�
 
 이게 제가 경험한, AI를 도구로 쓰는 것과 시스템으로 만드는 것의 차이입니다.
 
+- [[40-personal/44-reflections/learning/anthropic-non-developer-workflows]] - Claude Code와 MCP 활용법
+
 ## Related Notes
-- [[19th-proposal-simple]] - 높은 연관성
-- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
-- [[19th-gpters-submission]] - 높은 연관성
-- [[gmail-classifier-분석]] - 높은 연관성
-- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성
-- [[19th-cohort-proposal]] - 높은 연관성
-- [[문의 답변]] - 높은 연관성
+
+- [[30-knowledge/36-ai-tools/36.01-claude-code/archived-versions/personal-tone-version]] - cafe_operations, business_strategy, ai_automation 관련; '나중에 정리하지 뭐' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/archived-versions/final-seo-version]] - cafe_operations, business_strategy, ai_automation 관련; '나중에 정리하지 뭐' 개념 공유
+- [[10-projects/12-education/12.03-insight-platform/01_planning/program-proposal]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/guides/IMI_WORK_PERSONA_GUIDE]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결

@@ -65,10 +65,9 @@
 *다음 작업: 개선된 브랜딩 프레임워크 v2.0 설계*
 
 ## Related Notes
-- [[human-sense-importance]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[스미다 미팅]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; '🎯 핵심 발견사항' 개념 공유
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[20-operations/21-cafe-operations/ecommerce/strategy/competitor-analysis]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[20-operations/21-cafe-operations/ecommerce/strategy/market-research]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[30-knowledge/34-learning/34.02-lectures/lectures/startup/창업-강의-마스터-인덱스]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결

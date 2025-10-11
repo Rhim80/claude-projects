@@ -113,11 +113,16 @@
 **상태**: 기본 방향 확정, 세부 커리큘럼 논의 예정
 **다음 작업**: 선발 질문지 및 4주차 커리큘럼 구체화
 
+- [[40-personal/41-daily/2025-10-11]] - GPTers 19기 스터디 관련
+- [[40-personal/41-daily/2025-10-10]] - GPTers 19기 스터디 관련
+- [[30-knowledge/36-ai-tools/ai-automation-hub]] - GPTers AI 브랜딩 스터디
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-cohort-proposal]] - GPTers 19기 스터디 관련
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-gpters-submission]] - GPTers 19기 스터디 관련
+
 ## Related Notes
-- [[learning-roadmap]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
+
+- [[30-knowledge/33-insights/33.01-idea/ideas-collection]] - ai_automation 관련; '팀 구성' 개념 공유
+- [[20-operations/21-cafe-operations/ecommerce/strategy/market-research]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[40-personal/41-daily/2025-10-09]] - ai_automation 관련; 10-projects ↔ 40-personal 연결

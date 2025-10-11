@@ -199,10 +199,9 @@ Threads:
 *블로그의 깊이 있는 통찰을 각 플랫폼에서 최적의 형태로 전달하여 IMI WORK 브랜드 영향력을 확산시키세요*
 
 ## Related Notes
-- [[human-sense-importance]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[naver-seo-version]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/34-learning/education-hub]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/36-ai-tools/leadership-transformation]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[20-operations/21-cafe-operations/ecommerce/strategy/competitor-analysis]] - ai_automation 관련; 10-projects ↔ 20-operations 연결

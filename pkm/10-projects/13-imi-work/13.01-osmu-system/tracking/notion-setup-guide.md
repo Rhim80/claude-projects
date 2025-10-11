@@ -146,10 +146,9 @@ Threads 스레드: ⏳ 예정
 *이 가이드를 따라서 체계적인 OSMU 관리 시스템을 구축하세요!*
 
 ## Related Notes
-- [[클로드 코드 사용]] - 관련 주제
-- [[직원-관리-DB]] - 관련 주제
-- [[learning-roadmap]] - 관련 주제
-- [[setup-guide]] - 관련 주제
-- [[human-sense-importance]] - 관련 주제
-- [[system-vs-tool-master]] - 관련 주제
-- [[1차_미팅_ 스미다]] - 관련 주제
+
+- [[40-personal/41-daily/2025-10-09]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/gmail-classifier/gmail-classifier-분석]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/payroll-systems/payroll-a-분석]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[00-inbox/2025-08-30]] - ai_automation 관련; 10-projects ↔ 00-inbox 연결

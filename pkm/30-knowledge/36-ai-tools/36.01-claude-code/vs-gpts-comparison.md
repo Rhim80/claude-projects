@@ -241,10 +241,9 @@ claude "이번 주 marketing/ 폴더의 모든 데이터로
 그것이 GPTs와 Claude Code의 차이입니다."*
 
 ## Related Notes
-- [[워크플로우_개발_가이드]] - 높은 연관성
-- [[19th-gpters-submission]] - 높은 연관성
-- [[AI시대_학습_패러다임_강연요약본]] - 높은 연관성
-- [[step-5-brand-execution]] - 높은 연관성
-- [[NEUTRAL_AI_GUIDE]] - 높은 연관성
-- [[19th-working-backwards-final]] - 높은 연관성
-- [[AI시대_학습의_새로운_패러다임]] - 높은 연관성
+
+- [[10-projects/12-education/12.02-gpters-ai-branding/archives/18th-cohort/claude-code-writing-guide]] - ai_automation 관련; '들어가며' 개념 공유
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-working-backwards-final]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[40-personal/44-reflections/learning/anthropic-non-developer-workflows]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-gpters-submission]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[40-personal/41-daily/2025-10-10]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결

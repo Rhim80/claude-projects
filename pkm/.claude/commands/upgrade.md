@@ -642,3 +642,11 @@ Choice (1/2/3) > 1
 This intelligent upgrade system leverages Claude's semantic understanding to
 provide the smoothest possible upgrade experience while ensuring no user
 customizations are lost.
+
+## Related Notes
+
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/create-mission]] - ai_automation 관련; 'process' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/resume-mission]] - ai_automation 관련; 'process' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/claude-files/claude-code-mcp-enhanced/CLAUDE]] - ai_automation 관련; .claude ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/CONTRIBUTING]] - ai_automation 관련; .claude ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/husky/husky]] - ai_automation 관련; .claude ↔ 30-knowledge 연결

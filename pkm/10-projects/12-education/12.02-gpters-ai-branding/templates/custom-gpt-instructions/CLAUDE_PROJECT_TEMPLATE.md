@@ -209,3 +209,11 @@
 - `내 브랜드 만들어줘`
 
 **이 템플릿을 복사해서 바로 Claude Project에 붙여넣으면 완성된 AI 브랜딩 컨설턴트가 됩니다!** 🚀
+
+## Related Notes
+
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/claude-integration/워크플로우_개발_가이드]] - ai_automation 관련; '📊 성과 측정' 개념 공유
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[20-operations/21-cafe-operations/ecommerce/strategy/competitor-analysis]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[20-operations/21-cafe-operations/ecommerce/strategy/market-research]] - ai_automation 관련; 10-projects ↔ 20-operations 연결

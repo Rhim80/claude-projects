@@ -68,3 +68,11 @@
 
 ---
 *Tags: #branding #insight #[구체적태그]*
+
+## Related Notes
+
+- [[30-knowledge/36-ai-tools/human-sense-importance]] - business_strategy, education 관련; '🔍 관찰/발견 배경' 개념 공유
+- [[10-projects/11-consulting/11.03-so-gyeong-gye/이미커피_컨설팅_워크플로우]] - business_strategy 관련; 00-system ↔ 10-projects 연결
+- [[10-projects/11-consulting/11.02-golden-brown/golden-brown-partnership-inquiry]] - business_strategy 관련; 00-system ↔ 10-projects 연결
+- [[00-inbox/2025-08-30]] - education 관련; 00-system ↔ 00-inbox 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/planning-session-notes]] - business_strategy, education 관련; 00-system ↔ 10-projects 연결

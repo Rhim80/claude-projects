@@ -228,10 +228,9 @@
 *"대체 불가능한 브랜드를 만드는 일을 돕습니다"*
 
 ## Related Notes
-- [[imi-hr-organization]] - 높은 연관성
-- [[실천반 zero]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[hfk-공간브랜딩]] - 높은 연관성
-- [[2기]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
+
+- [[10-projects/11-consulting/11.01-gangneung-cafe-2025/gangneung-cafe-proposal-quote]] - business_strategy 관련; '프로젝트 개요' 개념 공유
+- [[30-knowledge/31-business/pkm-sustainability]] - business_strategy 관련; '프로젝트 개요' 개념 공유
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/payroll-systems/payroll-b-분석]] - business_strategy 관련; '전체 프로세스 플로우' 개념 공유
+- [[20-operations/21-cafe-operations/ecommerce/strategy/competitor-analysis]] - business_strategy 관련; 10-projects ↔ 20-operations 연결
+- [[30-knowledge/34-learning/education-hub]] - business_strategy 관련; 10-projects ↔ 30-knowledge 연결

@@ -309,10 +309,9 @@
 *"체계적인 계획과 지속적인 실행으로 이미커피의 온라인 성장을 이루어갑니다."*
 
 ## Related Notes
-- [[learning-roadmap]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
-- [[WIEE-세미나-노트]] - 높은 연관성
+
+- [[40-personal/45-strategy/2025-10_비즈니스_재구조화_전략]] - content_creation 관련; 20-operations ↔ 40-personal 연결
+- [[10-projects/14-brand-identity/14.01-brand-builder/brand-identity-system/step-5-brand-execution]] - content_creation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/archive/SENSE_AI_SEO_STRATEGY]] - content_creation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-cohort-proposal]] - content_creation 관련; 20-operations ↔ 10-projects 연결
+- [[40-personal/44-reflections/learning/anthropic-non-developer-workflows]] - content_creation 관련; 20-operations ↔ 40-personal 연결

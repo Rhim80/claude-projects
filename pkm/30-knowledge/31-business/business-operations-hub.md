@@ -122,11 +122,14 @@
 
 *이 허브는 15년 F&B 경험의 집약체입니다. 실무 중심의 운영 노하우와 AI 자동화가 결합된 현대적 비즈니스 운영 시스템을 담고 있습니다.*
 
+- [[10-projects/11-consulting/11.01-gangneung-cafe-2025/proposal-explanation]] - 강릉 카페 프로젝트 관련
+- [[10-projects/11-consulting/11.01-gangneung-cafe-2025/gangneung-cafe-proposal-quote]] - 강릉 카페 프로젝트 관련
+- [[10-projects/11-consulting/11.05-templates/gangneung-cafe-proposal-quote]] - 강릉 카페 프로젝트 관련
+
 ## Related Notes
-- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성
-- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
-- [[IMPROVED_TEMPLATE_V1.1]] - 높은 연관성
-- [[19th-gpters-submission]] - 높은 연관성
-- [[문의 답변]] - 높은 연관성
-- [[19th-proposal-simple]] - 높은 연관성
-- [[솔로프리너_생산성_치트키_AI_강의안]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[10-projects/12-education/12.03-insight-platform/01_planning/program-proposal]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[00-inbox/Welcome]] - ai_automation 관련; 30-knowledge ↔ 00-inbox 연결
+- [[00-system/01-templates/Project Template]] - ai_automation 관련; 30-knowledge ↔ 00-system 연결

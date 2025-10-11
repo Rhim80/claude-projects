@@ -110,10 +110,9 @@ source: workflowy
 -
 
 ## Related Notes
-- [[인사이트 플랫폼 AI 강의]] - 높은 연관성
-- [[program-proposal]] - 높은 연관성
-- [[소경계_프로젝트_회고록]] - 높은 연관성
-- [[brand-identity-builder-prd-v2]] - 높은 연관성
-- [[ai-creator-collaboration-content]] - 높은 연관성
-- [[advertising-guide]] - 높은 연관성
-- [[이미커피_컨설팅_워크플로우]] - 높은 연관성
+
+- [[20-operations/21-cafe-operations/ecommerce/strategy/market-research]] - ai_automation 관련; 30-knowledge ↔ 20-operations 연결
+- [[40-personal/사진-취미와-배움]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[20-operations/21-cafe-operations/ecommerce/strategy/competitor-analysis]] - ai_automation 관련; 30-knowledge ↔ 20-operations 연결
+- [[20-operations/21-cafe-operations/ecommerce/marketing/channels/cafe24/setup-guide]] - ai_automation 관련; 30-knowledge ↔ 20-operations 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/SUCCESS_GUIDE]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

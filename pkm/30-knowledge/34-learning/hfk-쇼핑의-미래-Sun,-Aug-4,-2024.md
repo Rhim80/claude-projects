@@ -40,12 +40,3 @@ source: workflowy
 - 개인화된 컨텐츠를 만드는 방식.
 
 - 챌린지.
-
-## Related Notes
-- [[step-4-brand-validation]] - 참고
-- [[2024-09_첫번째_교육_wrap-up]] - 참고
-- [[readme]] - 참고
-- [[core-metrics-definition]] - 참고
-- [[readme]] - 참고
-- [[readme]] - 참고
-- [[IMI_WORK_PERSONA_GUIDE]] - 참고

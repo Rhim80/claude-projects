@@ -204,10 +204,9 @@
 **이 지침서를 Claude Project에 붙여넣으면 순수하게 템플릿만 진행하는 중립적 AI 가이드가 완성됩니다.**
 
 ## Related Notes
-- [[pkm-sustainability]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[ai-automation-hub]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
+
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/claude-integration/워크플로우_개발_가이드]] - ai_automation 관련; '📊 성과 측정' 개념 공유
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[CLAUDE_MD_AUDIT_CHECKLIST]] - ai_automation 관련; 10-projects ↔ CLAUDE_MD_AUDIT_CHECKLIST.md 연결
+- [[PKM_FINAL_VALIDATION_REPORT]] - ai_automation 관련; 10-projects ↔ PKM_FINAL_VALIDATION_REPORT.md 연결

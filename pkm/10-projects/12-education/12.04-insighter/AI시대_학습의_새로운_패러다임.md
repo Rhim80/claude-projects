@@ -301,10 +301,9 @@ AI 시대의 학습은 **완벽한 이해 후 실행**이 아니라, **실행을
 - 후속 학습 가이드
 
 ## Related Notes
-- [[system-vs-tool-master]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[20-operations/22-automation/n8n-workflows-backup/youtube-rss-automation-blog-post]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/vs-gpts-comparison]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[20-operations/21-cafe-operations/ecommerce/strategy/market-research]] - ai_automation 관련; 10-projects ↔ 20-operations 연결

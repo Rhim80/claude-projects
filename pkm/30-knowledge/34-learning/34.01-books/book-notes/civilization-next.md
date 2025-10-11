@@ -95,10 +95,9 @@ migrated: 2025-10-10
 - [[소셜 비즈니스]]
 
 ## Related Notes
-- [[SENSE_AI_SEO_STRATEGY]] - 높은 연관성
-- [[AI시대_학습_패러다임_강연요약본]] - 높은 연관성
-- [[week1-slide-sources]] - 높은 연관성
-- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
-- [[02_워커샵_대전]] - 높은 연관성
-- [[gangneung-cafe-proposal-quote]] - 높은 연관성
-- [[gangneung-cafe-proposal-quote]] - 높은 연관성
+
+- [[10-projects/13-imi-work/13.01-osmu-system/CLAUDE]] - ai_automation 관련; '핵심 질문' 개념 공유
+- [[10-projects/13-imi-work/13.01-osmu-system/blog-content/aeo-ai-search-marketing-strategy]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/18th-cohort/사례 발표/사례 발표]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[40-personal/사진-취미와-배움]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[10-projects/12-education/12.03-insight-platform/인사이트 플랫폼 AI 강의]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

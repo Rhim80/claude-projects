@@ -74,3 +74,11 @@ Create or update a daily note with:
 - Update project status notes
 - Link related discoveries
 - Flag items needing attention
+
+## Related Notes
+
+- [[00-inbox/Welcome]] - ai_automation 관련; 'capture insights' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/resume-task]] - ai_automation 관련; .claude ↔ 30-knowledge 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/update-docs/update-docs]] - ai_automation 관련; .claude ↔ 30-knowledge 연결
+- [[00-system/01-templates/Project Template]] - ai_automation 관련; .claude ↔ 00-system 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/update-architecture]] - ai_automation 관련; .claude ↔ 30-knowledge 연결

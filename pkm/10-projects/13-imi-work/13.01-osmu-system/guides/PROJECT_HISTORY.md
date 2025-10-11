@@ -352,10 +352,9 @@ imi-work-osmu/
 *"서브에이전트 분업과 OSMU 전략으로 구현된 효율적이고 확장 가능한 AI 콘텐츠 자동화 시스템 - 2025.09.08 완성"*
 
 ## Related Notes
-- [[system-vs-tool-master]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[ai-automation-hub]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[40-personal/41-daily/2025-10-09]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/36-ai-tools/36.01-claude-code/vs-gpts-comparison]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[00-system/04-docs/WINDOWS_SETUP]] - ai_automation 관련; 10-projects ↔ 00-system 연결

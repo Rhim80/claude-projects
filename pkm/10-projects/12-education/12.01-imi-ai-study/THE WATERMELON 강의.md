@@ -13,12 +13,3 @@ published: false
 1. OPENNING  - [AI 파트너십: 실전 기록](https://flo.host/uwmNnUo/)
 2. MAIN - [실전 AI 활용법: PART 1 & 2](https://flo.host/6NrKVif/)
 3. ENDING - https://flo.host/-gexo8Y/
-
-## Related Notes
-- [[load-llms-txt]] - 관련 주제
-- [[update-branch-name]] - 관련 주제
-- [[donations]] - 관련 주제
-- [[클로드 코드 사용]] - 관련 주제
-- [[act]] - 관련 주제
-- [[fix-github-issue]] - 관련 주제
-- [[view_commands]] - 관련 주제

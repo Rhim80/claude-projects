@@ -73,3 +73,11 @@ Brief description of what this command does.
 - List needed tools in frontmatter
 
 Let me help you create your command!
+
+## Related Notes
+
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.claude/agents/shadcn-ui-adapter]] - ai_automation 관련; 'best practices' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/analyze-frontend]] - ai_automation 관련; 'process' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/analyze-backend]] - ai_automation 관련; 'process' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/resume-task]] - ai_automation 관련; 'process' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/test-mission]] - ai_automation 관련; 'process' 개념 공유

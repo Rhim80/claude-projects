@@ -319,12 +319,3 @@
 **금지**: 단계 누락, 단순 나열, 일관성 미검증, 실용성 무시
 
 목표: 모든 브랜드 활동의 나침반이 되는 완성된 브랜딩 휠 시스템
-
-## Related Notes
-- [[pkm-sustainability]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[ai-automation-hub]] - 높은 연관성
-- [[스미다 미팅]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성

@@ -223,10 +223,9 @@ AB 철학 활용:
 **핵심 메시지: 복잡한 도구 없이도 체계적 사고만으로 충분히 효과적인 프로젝트 관리가 가능하다.**
 
 ## Related Notes
-- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[platform-concept]] - 높은 연관성
-- [[경탁주-프로젝트-기획]] - 높은 연관성
-- [[advertising-guide]] - 높은 연관성
-- [[19th-gpters-submission]] - 높은 연관성
-- [[19th-cohort-proposal]] - 높은 연관성
+
+- [[10-projects/14-brand-identity/14.01-brand-builder/brand-identity-ai/brand-identity-builder-prd]] - ai_automation 관련; 40-personal ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/archives/18th-cohort/ANALYSIS_SUMMARY]] - ai_automation 관련; 40-personal ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/archives/18th-cohort/claude-code-writing-guide]] - ai_automation 관련; 40-personal ↔ 10-projects 연결
+- [[10-projects/12-education/12.02-gpters-ai-branding/templates/brand-wheel-canvas/IMPROVEMENT_ROADMAP]] - ai_automation 관련; 40-personal ↔ 10-projects 연결
+- [[CLAUDE]] - ai_automation 관련; 40-personal ↔ CLAUDE.md 연결

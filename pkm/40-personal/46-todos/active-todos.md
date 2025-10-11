@@ -43,10 +43,9 @@
 *Last updated: {{date}}*
 
 ## Related Notes
-- [[NEUTRAL_AI_GUIDE]] - 참고
-- [[payroll-b-분석]] - 참고
-- [[template-specs]] - 참고
-- [[2025-10-11]] - 참고
-- [[PKM-RESTRUCTURE-PLAN]] - 참고
-- [[step-6-branding-wheel]] - 참고
-- [[learning-roadmap]] - 참고
+
+- [[00-system/01-templates/daily-note-template]] - ai_automation 관련; 40-personal ↔ 00-system 연결
+- [[.claude/commands/daily-review]] - ai_automation 관련; 40-personal ↔ .claude 연결
+- [[LINK_QUALITY_SPOT_CHECK]] - ai_automation 관련; 40-personal ↔ LINK_QUALITY_SPOT_CHECK.md 연결
+- [[00-system/01-templates/Project Template]] - ai_automation 관련; 40-personal ↔ 00-system 연결
+- [[00-inbox/PKM-RESTRUCTURE-PLAN]] - ai_automation 관련; 40-personal ↔ 00-inbox 연결

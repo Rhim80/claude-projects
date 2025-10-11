@@ -146,12 +146,3 @@ source: book-notes
 - 내가 나에게 기대하는 것이 무엇인지를 묻는 중요한 질문
 
 -
-
-## Related Notes
-- [[AI 강의 6월8일1-2_original]] - 높은 연관성
-- [[AI 강의 6월8일1-3_original]] - 높은 연관성
-- [[01_고요새_제주]] - 높은 연관성
-- [[ai-creator-collaboration-content]] - 높은 연관성
-- [[step-0-seed-discovery]] - 높은 연관성
-- [[09_소경계_컨설팅_프로젝트]] - 높은 연관성
-- [[소경계_1편_첫만남부터_2차PT]] - 높은 연관성

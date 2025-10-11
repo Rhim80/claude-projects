@@ -61,10 +61,9 @@ published: false
 집게, 서버, 빵칼 등등 |  |
 
 ## Related Notes
-- [[소경계_1편_첫만남부터_2차PT]] - 높은 연관성
-- [[이미커피_컨설팅_워크플로우]] - 높은 연관성
-- [[proposal-explanation]] - 높은 연관성
-- [[golden-brown-meeting-summary]] - 높은 연관성
-- [[gangneung-cafe-proposal-quote]] - 높은 연관성
-- [[gangneung-cafe-proposal-quote]] - 높은 연관성
-- [[00_컨설팅_포트폴리오_진행상황]] - 높은 연관성
+
+- [[00-system/01-templates/TEMPLATE_insight]] - business_strategy 관련; 30-knowledge ↔ 00-system 연결
+- [[10-projects/11-consulting/11.01-gangneung-cafe-2025/gangneung-cafe-proposal-quote]] - business_strategy 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/11-consulting/11.05-templates/gangneung-cafe-proposal-quote]] - business_strategy 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/11-consulting/11.03-so-gyeong-gye/이미커피_컨설팅_워크플로우]] - business_strategy 관련; 30-knowledge ↔ 10-projects 연결
+- [[ZETTELKASTEN_QUALITY_ASSESSMENT_REPORT]] - business_strategy 관련; 30-knowledge ↔ ZETTELKASTEN_QUALITY_ASSESSMENT_REPORT.md 연결

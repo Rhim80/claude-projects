@@ -39,12 +39,3 @@ published: false
     * 무슨 효용을 원하는가
     * 라이프스타일 브랜드를 꿈꾸는가?
       * 브랜드는 뒤의 사람이 보인다는 것.
-
-## Related Notes
-- [[proposal-explanation]] - 높은 연관성
-- [[04_꼬따꼬뜨_수원]] - 높은 연관성
-- [[00_컨설팅_포트폴리오_진행상황]] - 높은 연관성
-- [[AI 강의 6월8일1-2_original]] - 높은 연관성
-- [[golden-brown-partnership-inquiry]] - 높은 연관성
-- [[AI 강의 6월8일1-3_original]] - 높은 연관성
-- [[01_고요새_제주]] - 높은 연관성

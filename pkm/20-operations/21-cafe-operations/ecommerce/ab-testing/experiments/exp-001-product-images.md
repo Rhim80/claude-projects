@@ -234,10 +234,5 @@
 **승인자**: -
 
 ## Related Notes
-- [[learning-roadmap]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[창업교육-커리큘럼]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[모모스-세미나-분석]] - 높은 연관성
-- [[Branding]] - 높은 연관성
+
+- [[20-operations/21-cafe-operations/ecommerce/ab-testing/templates/experiment-template]] - '📅 실험 일정' 개념 공유

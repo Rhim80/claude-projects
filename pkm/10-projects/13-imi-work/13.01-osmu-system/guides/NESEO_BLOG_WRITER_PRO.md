@@ -234,10 +234,9 @@ Ghost 블로그의 고품질 콘텐츠를 네이버 블로그 생태계에 최�
 네이버 검색 알고리즘의 특성을 완벽히 이해하고, IMI WORK의 브랜드 정체성을 유지하면서도 한국 독자들이 선호하는 형태로 콘텐츠를 최적화합니다.
 
 ## Related Notes
-- [[human-sense-importance]] - 높은 연관성
-- [[naver-seo-version]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[hfk-cmo씽킹]] - 높은 연관성
-- [[ai-automation-hub]] - 높은 연관성
-- [[personal-tone-version]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
+
+- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/gmail-classifier/gmail-classifier-분석]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/34-learning/hfk-공간브랜딩]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[20-operations/21-cafe-operations/ecommerce/strategy/competitor-analysis]] - ai_automation 관련; 10-projects ↔ 20-operations 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 10-projects ↔ 40-personal 연결

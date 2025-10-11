@@ -206,10 +206,9 @@
 *"시장을 이해하고, 고객을 알고, 경쟁에서 이기는 전략을 수립합니다."*
 
 ## Related Notes
-- [[창업교육-커리큘럼]] - 높은 연관성
-- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
-- [[WIEE-세미나-노트]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[pkm-sustainability]] - 높은 연관성
-- [[menu-development-hub]] - 높은 연관성
+
+- [[10-projects/12-education/12.03-insight-platform/2024-09_첫번째_교육_wrap-up]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/11-consulting/11.01-gangneung-cafe-2025/gangneung-cafe-proposal-quote]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[10-projects/11-consulting/11.05-templates/gangneung-cafe-proposal-quote]] - ai_automation 관련; 20-operations ↔ 10-projects 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 20-operations ↔ 40-personal 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/prompt-templates]] - ai_automation 관련; 20-operations ↔ 10-projects 연결

@@ -519,10 +519,9 @@
 *여섯 번째 컨설팅 프로젝트로서 현실적 제약 조건 하에서의 창의적 문제 해결과 지속가능성에 대한 체계적 접근을 보여준 성숙한 프로젝트였습니다.*
 
 ## Related Notes
-- [[일을-잘한다는-것]] - 높은 연관성
-- [[창업-강의-마스터-인덱스]] - 높은 연관성
-- [[창업컨설팅-프로세스]] - 높은 연관성
-- [[창업교육-커리큘럼]] - 높은 연관성
-- [[2기]] - 높은 연관성
-- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
-- [[human-sense-importance]] - 높은 연관성
+
+- [[30-knowledge/31-business/31.01-imi/consulting/Seminar/fm coffee 세미나]] - cafe_operations 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/34-learning/34.02-lectures/lecture-archive/모모스-세미나-분석]] - cafe_operations 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/34-learning/34.01-books/books/일을-잘한다는-것]] - cafe_operations 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/34-learning/34.03-workshops/imi-workshop/브랜드 질문지/강지훈]] - cafe_operations 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/33-insights/33.01-idea/Project 717]] - cafe_operations 관련; 10-projects ↔ 30-knowledge 연결

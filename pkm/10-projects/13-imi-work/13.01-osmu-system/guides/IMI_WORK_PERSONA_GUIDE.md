@@ -374,10 +374,9 @@
 각 콘텐츠의 고유한 매력을 최대한 살리면서, IMI WORK의 관점을 자연스럽게 녹여내어 독자에게 진짜 가치를 제공하는 글을 만들어보세요. 템플릿에 갇히지 말고, 매번 새로운 시도를 통해 브랜드의 다양성과 깊이를 보여주세요.
 
 ## Related Notes
-- [[personal-tone-version]] - 높은 연관성
-- [[system-vs-tool-master]] - 높은 연관성
-- [[final-seo-version]] - 높은 연관성
-- [[naver-seo-version]] - 높은 연관성
-- [[learning-roadmap]] - 높은 연관성
-- [[business-operations-hub]] - 높은 연관성
-- [[education-hub]] - 높은 연관성
+
+- [[30-knowledge/36-ai-tools/human-sense-importance]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/31-business/31.01-imi/consulting/Seminar/스페셜티 커피업계 대표들을 위한 브랜딩 세미나]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[40-personal/45-strategy/2025-10_비즈니스_재구조화_전략]] - ai_automation 관련; 10-projects ↔ 40-personal 연결
+- [[30-knowledge/34-learning/hfk-공간브랜딩]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결
+- [[30-knowledge/34-learning/hfk-cmo씽킹]] - ai_automation 관련; 10-projects ↔ 30-knowledge 연결

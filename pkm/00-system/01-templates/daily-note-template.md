@@ -105,3 +105,11 @@
 ## 🏷️ Tags
 
 #daily-note #{{date}}
+
+## Related Notes
+
+- [[40-personal/41-daily/2025-10-11]] - cafe_operations, content_creation, ai_automation, business_strategy, education 관련; '📋 오늘의 우선순위' 개념 공유
+- [[40-personal/41-daily/2025-10-10]] - cafe_operations, content_creation, ai_automation, business_strategy, education 관련; '브랜딩' 개념 공유
+- [[40-personal/41-daily/2025-10-09]] - cafe_operations, ai_automation 관련; '📋 오늘의 우선순위' 개념 공유
+- [[40-personal/46-todos/active-todos]] - ai_automation 관련; 00-system ↔ 40-personal 연결
+- [[10-projects/12-education/12.03-insight-platform/04_results/2024-09_first-batch/lesson-learned]] - ai_automation 관련; 00-system ↔ 10-projects 연결

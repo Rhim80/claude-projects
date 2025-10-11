@@ -303,12 +303,3 @@ E - Experience (커피를 통해 기억되는 특별한 경험)
 ### NOTE COFFEE HOUSE
 
 "A note of your everyday coffee." 당신의 일상 커피에 남기는 노트
-
-## Related Notes
-- [[imi-old-mansion-project]] - 높은 연관성
-- [[Project-imi]] - 높은 연관성
-- [[imi-coffee-consulting-proposal-template]] - 높은 연관성
-- [[소경계 카페 오픈을 위한 주요 작업 리스트]] - 높은 연관성
-- [[08_NOTE_COFFEE_HOUSE_컨설팅_프로젝트]] - 높은 연관성
-- [[경탁주-프로젝트-기획]] - 높은 연관성
-- [[Seminar]] - 높은 연관성

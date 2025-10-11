@@ -234,10 +234,9 @@ Color 창업자의 통찰:
 *Tags: #AI활용전략 #비즈니스깊이 #실행력 #시장검증 #고객이해*
 
 ## Related Notes
-- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
-- [[인사이트 플랫폼 AI 강의]] - 높은 연관성
-- [[AI 강의 6월8일1-1_original]] - 높은 연관성
-- [[ai-creator-collaboration-content]] - 높은 연관성
-- [[AI 강의 6월8일1-3_original]] - 높은 연관성
-- [[AI 강의 6월8일1-2_original]] - 높은 연관성
-- [[planning-session-notes]] - 높은 연관성
+
+- [[10-projects/12-education/12.03-insight-platform/01_planning/program-proposal]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/blog-content/aeo-ai-search-marketing-strategy]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/temp-content-back-office-efficiency]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/13-imi-work/13.01-osmu-system/content/back-office-efficiency-front-office-delight]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결

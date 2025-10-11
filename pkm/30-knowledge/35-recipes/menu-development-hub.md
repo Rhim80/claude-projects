@@ -183,10 +183,9 @@
 *"메뉴는 브랜드의 언어다. 맛과 경험을 통해 우리의 철학을 전달한다."*
 
 ## Related Notes
-- [[gmail-classifier-분석]] - 높은 연관성
-- [[19th-proposal-simple]] - 높은 연관성
-- [[19th-cohort-proposal]] - 높은 연관성
-- [[IMPROVED_TEMPLATE_V1.1]] - 높은 연관성
-- [[문의 답변]] - 높은 연관성
-- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성
-- [[19th-gpters-submission]] - 높은 연관성
+
+- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/prompt-templates]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[10-projects/12-education/12.03-insight-platform/03_resources/content-analysis]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[00-system/04-docs/OBSIDIAN_SYNC_GUIDE]] - pkm_systems 관련; 30-knowledge ↔ 00-system 연결

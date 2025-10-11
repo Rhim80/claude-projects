@@ -852,3 +852,11 @@ Assistant: Excellent! Here's how to get your API key:
 3. Copy the key (starts with AIzaSy...)
 
 Once you have it, paste it here and I'll configure everything for you.
+
+## Related Notes
+
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/workflows-knowledge-guides/Blogging-Platform-Instructions/view_commands]] - leadership, content_creation, ai_automation 관련; 'project management' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/analyze-project]] - ai_automation 관련; 'process' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/create-worktrees/create-worktrees]] - ai_automation 관련; 'example output' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/ab-method/.ab-method/core/resume-mission]] - ai_automation 관련; 'process' 개념 공유
+- [[30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/claude-files/Perplexity-MCP/CLAUDE]] - ai_automation 관련; 'quick start' 개념 공유
