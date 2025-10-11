@@ -112,3 +112,12 @@
 **저장일**: 2025년 9월 29일
 **상태**: 기본 방향 확정, 세부 커리큘럼 논의 예정
 **다음 작업**: 선발 질문지 및 4주차 커리큘럼 구체화
+
+## Related Notes
+- [[learning-roadmap]] - 높은 연관성
+- [[education-hub]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성

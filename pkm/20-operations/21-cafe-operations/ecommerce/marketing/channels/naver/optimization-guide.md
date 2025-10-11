@@ -480,3 +480,12 @@
 ---
 
 *"네이버의 강력한 플랫폼 파워를 활용하여 더 많은 고객에게 검증된 맛을 전달합니다."*
+
+## Related Notes
+- [[setup-guide]] - 높은 연관성
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[naver-seo-version]] - 높은 연관성
+- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
+- [[human-sense-importance]] - 높은 연관성
+- [[hfk-cmo씽킹]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성

@@ -348,3 +348,12 @@ created: 2025-10-10
 "Isn't it nice to think that tomorrow is a new day with no mistakes in it yet?"
 
 ## 내일은 아직 아무 실수도 저지르지 않은 새로운 날이라니, 근사하지 않나요?
+
+## Related Notes
+- [[lovable-aynil-project]] - 높은 연관성
+- [[Project-imi]] - 높은 연관성
+- [[imi-old-mansion-project]] - 높은 연관성
+- [[Note Coffee House Project]] - 높은 연관성
+- [[프로젝트-자극-리버헤드]] - 높은 연관성
+- [[카페-인테리어-가이드]] - 높은 연관성
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성

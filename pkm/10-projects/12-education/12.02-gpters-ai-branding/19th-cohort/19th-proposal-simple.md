@@ -125,3 +125,12 @@ Claude Code + Obsidian 기반의 개인 맞춤형 비즈니스 시스템
 ---
 
 **제출일**: 2025년 10월 10일
+
+## Related Notes
+- [[system-vs-tool-master]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성
+- [[education-hub]] - 높은 연관성
+- [[menu-development-hub]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성

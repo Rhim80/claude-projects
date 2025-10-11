@@ -208,3 +208,12 @@ imi-work-osmu/
 *마지막 업데이트: 2025년 9월 16일*
 *검증 콘텐츠: Ben Horowitz Fear Leadership + AEO DALL-E 3 Test*
 *성공률: 100% (DALL-E 3 10/10, Ghost 발행 1/1)*
+
+## Related Notes
+- [[ai-automation-hub]] - 높은 연관성
+- [[2025-10_비즈니스_재구조화_전략]] - 높은 연관성
+- [[detailed-plan]] - 높은 연관성
+- [[naver-seo-version]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성

@@ -306,3 +306,12 @@ if (threshold - cartTotal < 10000) {
 **승인자**: -
 
 **예상 투자대비 효과**: 개발 비용 50만원, 예상 월 매출 증가 600만원 (ROI 1,200%)
+
+## Related Notes
+- [[learning-roadmap]] - 높은 연관성
+- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
+- [[창업교육-커리큘럼]] - 높은 연관성
+- [[human-sense-importance]] - 높은 연관성
+- [[모모스-세미나-분석]] - 높은 연관성
+- [[Branding]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성

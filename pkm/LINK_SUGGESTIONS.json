@@ -1,9 +1,9 @@
 {
   "statistics": {
     "total_files": 479,
-    "files_with_links": 30,
-    "total_links": 32,
-    "avg_links_per_file": 1.0666666666666667,
+    "files_with_links": 74,
+    "total_links": 94,
+    "avg_links_per_file": 1.2702702702702702,
     "hub_candidates": 0
   },
   "suggestions": {
@@ -19,6 +19,54 @@
         0.3972602739726027
       ]
     ],
+    "10-projects/14-brand-identity/14.01-brand-builder/brand-identity-system/step-4-brand-validation.md": [
+      [
+        "10-projects/12-education/12.02-gpters-ai-branding/templates/gpt-step3/STEP3_GUIDE_COMPACT.md",
+        0.22807017543859648
+      ]
+    ],
+    "10-projects/12-education/12.02-gpters-ai-branding/templates/gpt-step3/STEP3_GUIDE_COMPACT.md": [
+      [
+        "10-projects/14-brand-identity/14.01-brand-builder/brand-identity-system/step-4-brand-validation.md",
+        0.22807017543859648
+      ]
+    ],
+    "10-projects/14-brand-identity/14.01-brand-builder/brand-identity-system/step-5-brand-execution.md": [
+      [
+        "10-projects/12-education/12.02-gpters-ai-branding/templates/gpt-step4/STEP4_GUIDE_COMPACT.md",
+        0.16666666666666666
+      ]
+    ],
+    "10-projects/12-education/12.02-gpters-ai-branding/templates/gpt-step4/STEP4_GUIDE_COMPACT.md": [
+      [
+        "10-projects/14-brand-identity/14.01-brand-builder/brand-identity-system/step-5-brand-execution.md",
+        0.16666666666666666
+      ],
+      [
+        "10-projects/12-education/12.02-gpters-ai-branding/templates/gpt-step5/STEP5_BRAND_WHEEL_COMPACT.md",
+        0.16129032258064516
+      ]
+    ],
+    "10-projects/14-brand-identity/14.01-brand-builder/brand-identity-system/step-3-brand-language.md": [
+      [
+        "10-projects/12-education/12.02-gpters-ai-branding/templates/gpt-step2/STEP2_GUIDE_COMPACT.md",
+        0.16666666666666666
+      ]
+    ],
+    "10-projects/12-education/12.02-gpters-ai-branding/templates/gpt-step2/STEP2_GUIDE_COMPACT.md": [
+      [
+        "10-projects/14-brand-identity/14.01-brand-builder/brand-identity-system/step-3-brand-language.md",
+        0.16666666666666666
+      ],
+      [
+        "10-projects/12-education/12.02-gpters-ai-branding/templates/gpt-step1.5/NAMING_GUIDE_COMPACT.md",
+        0.16216216216216217
+      ],
+      [
+        "10-projects/12-education/12.02-gpters-ai-branding/templates/gpt-step5/STEP5_BRAND_WHEEL_COMPACT.md",
+        0.15625
+      ]
+    ],
     "10-projects/12-education/12.02-gpters-ai-branding/archives/18th-cohort/18th-cohort-original-proposal.md": [
       [
         "10-projects/12-education/12.02-gpters-ai-branding/18th-cohort/GPTERS 18기 브랜딩 STUDY.md",
@@ -29,6 +77,30 @@
       [
         "10-projects/12-education/12.02-gpters-ai-branding/archives/18th-cohort/18th-cohort-original-proposal.md",
         0.6206896551724138
+      ]
+    ],
+    "10-projects/12-education/12.02-gpters-ai-branding/templates/gpt-step5/STEP5_BRAND_WHEEL_COMPACT.md": [
+      [
+        "10-projects/12-education/12.02-gpters-ai-branding/templates/gpt-step1.5/NAMING_GUIDE_COMPACT.md",
+        0.1724137931034483
+      ],
+      [
+        "10-projects/12-education/12.02-gpters-ai-branding/templates/gpt-step4/STEP4_GUIDE_COMPACT.md",
+        0.16129032258064516
+      ],
+      [
+        "10-projects/12-education/12.02-gpters-ai-branding/templates/gpt-step2/STEP2_GUIDE_COMPACT.md",
+        0.15625
+      ]
+    ],
+    "10-projects/12-education/12.02-gpters-ai-branding/templates/gpt-step1.5/NAMING_GUIDE_COMPACT.md": [
+      [
+        "10-projects/12-education/12.02-gpters-ai-branding/templates/gpt-step5/STEP5_BRAND_WHEEL_COMPACT.md",
+        0.1724137931034483
+      ],
+      [
+        "10-projects/12-education/12.02-gpters-ai-branding/templates/gpt-step2/STEP2_GUIDE_COMPACT.md",
+        0.16216216216216217
       ]
     ],
     "10-projects/12-education/12.04-insighter/솔로프리너_생산성_치트키_AI_강의안.md": [
@@ -59,12 +131,22 @@
       [
         "10-projects/11-consulting/11.05-templates/gangneung-cafe-proposal-quote.md",
         1.0
+      ],
+      [
+        "10-projects/11-consulting/11.05-templates/imi-coffee-consulting-proposal-template.md",
+        0.22093023255813954
       ]
     ],
     "10-projects/11-consulting/11.05-templates/gangneung-cafe-proposal-quote.md": [
       [
         "10-projects/11-consulting/11.01-gangneung-cafe-2025/gangneung-cafe-proposal-quote.md",
         1.0
+      ]
+    ],
+    "10-projects/11-consulting/11.05-templates/imi-coffee-consulting-proposal-template.md": [
+      [
+        "10-projects/11-consulting/11.01-gangneung-cafe-2025/gangneung-cafe-proposal-quote.md",
+        0.22093023255813954
       ]
     ],
     "10-projects/13-imi-work/13.01-osmu-system/temp-content-back-office-efficiency.md": [
@@ -91,6 +173,18 @@
         0.6785714285714286
       ]
     ],
+    "30-knowledge/34-learning/34.01-books/book-notes/invitation-jon-levy.md": [
+      [
+        "30-knowledge/34-learning/34.01-books/books/당신을-초대합니다---존-리비-20220207.md",
+        0.17142857142857143
+      ]
+    ],
+    "30-knowledge/34-learning/34.01-books/books/당신을-초대합니다---존-리비-20220207.md": [
+      [
+        "30-knowledge/34-learning/34.01-books/book-notes/invitation-jon-levy.md",
+        0.17142857142857143
+      ]
+    ],
     "30-knowledge/34-learning/34.01-books/book-notes/doing-work-well.md": [
       [
         "30-knowledge/34-learning/34.01-books/books/일을-잘한다는-것.md",
@@ -101,6 +195,30 @@
       [
         "30-knowledge/34-learning/34.01-books/book-notes/doing-work-well.md",
         0.40397350993377484
+      ]
+    ],
+    "30-knowledge/34-learning/34.02-lectures/lectures/lgu-강연-오프라인-생존전략.md": [
+      [
+        "90-archive/91-completed-projects/91.01-consulting/ilsangui-teum-lgu/일상의틈-lgu-프로젝트.md",
+        0.29280397022332505
+      ]
+    ],
+    "90-archive/91-completed-projects/91.01-consulting/ilsangui-teum-lgu/일상의틈-lgu-프로젝트.md": [
+      [
+        "30-knowledge/34-learning/34.02-lectures/lectures/lgu-강연-오프라인-생존전략.md",
+        0.29280397022332505
+      ]
+    ],
+    "30-knowledge/34-learning/34.02-lectures/lectures/창업교육-전체과정.md": [
+      [
+        "30-knowledge/34-learning/34.02-lectures/lecture-archive/brand-value-proposition.md",
+        0.23728813559322035
+      ]
+    ],
+    "30-knowledge/34-learning/34.02-lectures/lecture-archive/brand-value-proposition.md": [
+      [
+        "30-knowledge/34-learning/34.02-lectures/lectures/창업교육-전체과정.md",
+        0.23728813559322035
       ]
     ],
     "30-knowledge/34-learning/34.02-lectures/lectures/음료-메뉴-개발.md": [
@@ -115,16 +233,212 @@
         0.359375
       ]
     ],
+    "30-knowledge/34-learning/34.02-lectures/lectures/startup/창업-강의-마스터-인덱스.md": [
+      [
+        "90-archive/91-completed-projects/91.01-consulting/paju-cafe/파주-카페-프로젝트.md",
+        0.22641509433962265
+      ]
+    ],
+    "90-archive/91-completed-projects/91.01-consulting/paju-cafe/파주-카페-프로젝트.md": [
+      [
+        "30-knowledge/34-learning/34.02-lectures/lectures/startup/창업-강의-마스터-인덱스.md",
+        0.22641509433962265
+      ]
+    ],
+    "30-knowledge/34-learning/34.02-lectures/lecture-archive/WIEE-세미나-노트.md": [
+      [
+        "30-knowledge/31-business/31.01-imi/consulting/Seminar/바리스타 세미나.md",
+        0.16880341880341881
+      ]
+    ],
+    "30-knowledge/31-business/31.01-imi/consulting/Seminar/바리스타 세미나.md": [
+      [
+        "30-knowledge/34-learning/34.02-lectures/lecture-archive/WIEE-세미나-노트.md",
+        0.16880341880341881
+      ]
+    ],
+    "30-knowledge/33-insights/33.01-idea/idea.md": [
+      [
+        "30-knowledge/33-insights/33.01-idea/보헤미안 프로젝트/보헤미안 프로젝트.md",
+        0.25
+      ]
+    ],
+    "30-knowledge/33-insights/33.01-idea/보헤미안 프로젝트/보헤미안 프로젝트.md": [
+      [
+        "30-knowledge/33-insights/33.01-idea/idea.md",
+        0.25
+      ],
+      [
+        "30-knowledge/31-business/31.01-imi/Community Project.md",
+        0.2
+      ],
+      [
+        "90-archive/91-completed-projects/starfield-popup/스타필드-팝업-프로젝트.md",
+        0.16666666666666666
+      ]
+    ],
+    "30-knowledge/31-business/31.01-imi/Community Project.md": [
+      [
+        "90-archive/91-completed-projects/starfield-popup/스타필드-팝업-프로젝트.md",
+        0.25
+      ],
+      [
+        "30-knowledge/33-insights/33.01-idea/보헤미안 프로젝트/보헤미안 프로젝트.md",
+        0.2
+      ],
+      [
+        "90-archive/91-completed-projects/91.03-business/imi/2022-weekly-meetings/2022 회의/9월 3주차 회의.md",
+        0.2
+      ]
+    ],
+    "90-archive/91-completed-projects/starfield-popup/스타필드-팝업-프로젝트.md": [
+      [
+        "30-knowledge/31-business/31.01-imi/Community Project.md",
+        0.25
+      ],
+      [
+        "30-knowledge/33-insights/33.01-idea/보헤미안 프로젝트/보헤미안 프로젝트.md",
+        0.16666666666666666
+      ],
+      [
+        "90-archive/91-completed-projects/91.03-business/imi-coffee/starfield-popup-2023.md",
+        0.16666666666666666
+      ],
+      [
+        "90-archive/91-completed-projects/91.03-business/imi/2022-weekly-meetings/2022 회의/9월 3주차 회의.md",
+        0.16666666666666666
+      ]
+    ],
     "30-knowledge/33-insights/33.03-writing/startup-reality-check.md": [
       [
         "30-knowledge/31-business/31.01-imi/stores/남구로-매장-이야기.md",
         0.3469387755102041
+      ],
+      [
+        "30-knowledge/31-business/31.01-imi/branding/imi-branding-philosophy.md",
+        0.1875
+      ]
+    ],
+    "30-knowledge/31-business/31.01-imi/branding/imi-branding-philosophy.md": [
+      [
+        "30-knowledge/33-insights/33.03-writing/startup-reality-check.md",
+        0.1875
       ]
     ],
     "30-knowledge/31-business/31.01-imi/stores/남구로-매장-이야기.md": [
       [
         "30-knowledge/33-insights/33.03-writing/startup-reality-check.md",
         0.3469387755102041
+      ]
+    ],
+    "30-knowledge/36-ai-tools/36.01-claude-code/system-vs-tool-master.md": [
+      [
+        "30-knowledge/36-ai-tools/36.01-claude-code/archived-versions/personal-tone-version.md",
+        0.26732673267326734
+      ],
+      [
+        "30-knowledge/36-ai-tools/36.01-claude-code/archived-versions/final-seo-version.md",
+        0.24107142857142858
+      ]
+    ],
+    "30-knowledge/36-ai-tools/36.01-claude-code/archived-versions/final-seo-version.md": [
+      [
+        "30-knowledge/36-ai-tools/36.01-claude-code/system-vs-tool-master.md",
+        0.24107142857142858
+      ]
+    ],
+    "30-knowledge/36-ai-tools/36.01-claude-code/archived-versions/personal-tone-version.md": [
+      [
+        "30-knowledge/36-ai-tools/36.01-claude-code/system-vs-tool-master.md",
+        0.26732673267326734
+      ]
+    ],
+    "30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/create-jtbd/create-jtbd.md": [
+      [
+        "30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/create-prd/create-prd.md",
+        0.2
+      ]
+    ],
+    "30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/create-prd/create-prd.md": [
+      [
+        "30-knowledge/36-ai-tools/36.01-claude-code/ab-method-study/awesome-claude-code/resources/slash-commands/create-jtbd/create-jtbd.md",
+        0.2
+      ]
+    ],
+    "90-archive/91-completed-projects/91.03-business/imi/2022-weekly-meetings/2022 회의/9월 3주차 회의.md": [
+      [
+        "30-knowledge/31-business/31.01-imi/Community Project.md",
+        0.2
+      ],
+      [
+        "90-archive/91-completed-projects/starfield-popup/스타필드-팝업-프로젝트.md",
+        0.16666666666666666
+      ]
+    ],
+    "30-knowledge/31-business/31.01-imi/stores/imi old mansion/Menu.md": [
+      [
+        "90-archive/91-completed-projects/91.03-business/imi/starfield-suwon-popup/스타필드 수원 pop-up/Menu.md",
+        0.16666666666666666
+      ]
+    ],
+    "90-archive/91-completed-projects/91.03-business/imi/starfield-suwon-popup/스타필드 수원 pop-up/Menu.md": [
+      [
+        "30-knowledge/31-business/31.01-imi/stores/imi old mansion/Menu.md",
+        0.16666666666666666
+      ]
+    ],
+    "30-knowledge/31-business/31.01-imi/hr/내부 워크숍 및 회의/내부 워크숍 및 회의.md": [
+      [
+        "30-knowledge/31-business/31.01-imi/hr/내부 워크숍 및 회의/사무실 주간 회의/사무실 주간 회의.md",
+        0.2
+      ]
+    ],
+    "30-knowledge/31-business/31.01-imi/hr/내부 워크숍 및 회의/사무실 주간 회의/사무실 주간 회의.md": [
+      [
+        "30-knowledge/31-business/31.01-imi/hr/내부 워크숍 및 회의/내부 워크숍 및 회의.md",
+        0.2
+      ]
+    ],
+    "90-archive/91-completed-projects/91.03-business/imi-coffee/starfield-popup-2023.md": [
+      [
+        "90-archive/91-completed-projects/starfield-popup/스타필드-팝업-프로젝트.md",
+        0.16666666666666666
+      ]
+    ],
+    "90-archive/91-completed-projects/91.03-business/imi/2022-cafe-show/2022 카페쇼/2022 카페쇼.md": [
+      [
+        "90-archive/91-completed-projects/91.03-business/imi/2022-weekly-meetings/2022 회의/9월 2주차 회의.md",
+        0.16666666666666666
+      ]
+    ],
+    "90-archive/91-completed-projects/91.03-business/imi/2022-weekly-meetings/2022 회의/9월 2주차 회의.md": [
+      [
+        "90-archive/91-completed-projects/91.03-business/imi/2022-cafe-show/2022 카페쇼/2022 카페쇼.md",
+        0.16666666666666666
+      ]
+    ],
+    "90-archive/91-completed-projects/sokyungkye/소경계 프로젝트.md": [
+      [
+        "90-archive/91-completed-projects/note-coffee-house/NOTE COFFEE HOUSE 프로젝트.md",
+        0.26666666666666666
+      ]
+    ],
+    "90-archive/91-completed-projects/note-coffee-house/NOTE COFFEE HOUSE 프로젝트.md": [
+      [
+        "90-archive/91-completed-projects/sokyungkye/소경계 프로젝트.md",
+        0.26666666666666666
+      ]
+    ],
+    "90-archive/91-completed-projects/sokyungkye/소경계 카페 오픈을 위한 주요 작업 리스트.md": [
+      [
+        "90-archive/91-completed-projects/note-coffee-house/Note Coffee House Project/NOTE COFFEE HOUSE 카페 오픈을 위한 주요 작업 리스트.md",
+        0.1875
+      ]
+    ],
+    "90-archive/91-completed-projects/note-coffee-house/Note Coffee House Project/NOTE COFFEE HOUSE 카페 오픈을 위한 주요 작업 리스트.md": [
+      [
+        "90-archive/91-completed-projects/sokyungkye/소경계 카페 오픈을 위한 주요 작업 리스트.md",
+        0.1875
       ]
     ],
     "90-archive/91-completed-projects/sokyungkye/음료 메뉴/음료 메뉴.md": [
@@ -161,6 +475,28 @@
       [
         "90-archive/91-completed-projects/91.01-consulting/lotte-christmas-market-2024/롯데-크리스마스-마켓-2024.md",
         0.6956521739130435
+      ]
+    ],
+    "20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/receipt-processor/receipt-processor-분석.md": [
+      [
+        "20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/payroll-systems/payroll-a-분석.md",
+        0.1927710843373494
+      ],
+      [
+        "20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/payroll-systems/payroll-b-분석.md",
+        0.15853658536585366
+      ]
+    ],
+    "20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/payroll-systems/payroll-a-분석.md": [
+      [
+        "20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/receipt-processor/receipt-processor-분석.md",
+        0.1927710843373494
+      ]
+    ],
+    "20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/payroll-systems/payroll-b-분석.md": [
+      [
+        "20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/receipt-processor/receipt-processor-분석.md",
+        0.15853658536585366
       ]
     ],
     "20-operations/21-cafe-operations/ecommerce/ab-testing/experiments/exp-001-product-images.md": [

@@ -372,3 +372,12 @@
 **핵심 메시지**: 콘텐츠가 왕이다. 브랜드는 양념이다.
 
 각 콘텐츠의 고유한 매력을 최대한 살리면서, IMI WORK의 관점을 자연스럽게 녹여내어 독자에게 진짜 가치를 제공하는 글을 만들어보세요. 템플릿에 갇히지 말고, 매번 새로운 시도를 통해 브랜드의 다양성과 깊이를 보여주세요.
+
+## Related Notes
+- [[personal-tone-version]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성
+- [[naver-seo-version]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[education-hub]] - 높은 연관성

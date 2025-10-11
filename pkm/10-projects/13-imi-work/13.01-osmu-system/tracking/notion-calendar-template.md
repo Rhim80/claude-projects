@@ -121,3 +121,12 @@
 ---
 
 *이 템플릿을 Notion 캘린더 뷰와 함께 활용하여 체계적인 일정 관리를 진행하세요.*
+
+## Related Notes
+- [[learning-roadmap]] - 높은 연관성
+- [[클로드 코드 사용]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[human-sense-importance]] - 높은 연관성
+- [[창업교육-커리큘럼]] - 높은 연관성
+- [[naver-seo-version]] - 높은 연관성
+- [[ai-automation-hub]] - 높은 연관성

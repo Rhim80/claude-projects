@@ -204,3 +204,12 @@
 ---
 
 *"시장을 이해하고, 고객을 알고, 경쟁에서 이기는 전략을 수립합니다."*
+
+## Related Notes
+- [[창업교육-커리큘럼]] - 높은 연관성
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[human-sense-importance]] - 높은 연관성
+- [[WIEE-세미나-노트]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[menu-development-hub]] - 높은 연관성

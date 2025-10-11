@@ -33,3 +33,12 @@ published: false
 단순 매장이 아닌 그리고 한국이 아닌 세계 최대의 커피 마케팅 회사 및 운영 회사.
 
 커피 전문 마케팅 브랜딩 총괄 기획 회사.
+
+## Related Notes
+- [[competitor-analysis]] - 높은 연관성
+- [[exp-004-tasigomas-marketing]] - 높은 연관성
+- [[AI 강의 6월8일1-1_original]] - 높은 연관성
+- [[부스_구조_분석]] - 높은 연관성
+- [[golden-brown-proposal-quote]] - 높은 연관성
+- [[ga4-setup]] - 높은 연관성
+- [[roadmap]] - 높은 연관성

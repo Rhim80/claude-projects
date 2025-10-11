@@ -139,4 +139,13 @@ source: workflowy
 - “신뢰”를 받는다는게 전부이구나.
 - 허들
 
-### 
+###
+
+## Related Notes
+- [[솔로프리너_생산성_치트키_AI_강의안]] - 높은 연관성
+- [[proposal-explanation]] - 높은 연관성
+- [[06_앙떼떼페레_Entetepere]] - 높은 연관성
+- [[CUSTOM_GPT_INSTRUCTIONS]] - 높은 연관성
+- [[19th-proposal-simple]] - 높은 연관성
+- [[golden-brown-proposal-quote]] - 높은 연관성
+- [[gangneung-cafe-proposal-quote]] - 높은 연관성

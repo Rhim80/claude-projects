@@ -199,3 +199,12 @@ Color 팀은 곧 그들의 기본적인 가정이 틀렸다는 것을 깨달았�
 **적용 포인트**:
 - 고급 컨설팅 시장 진입 시 "제품(서비스) 구축을 통한 학습" 접근법 활용
 - 기존 업체들이 제공하지 못하는 "오프라인 + AI" 융합 지점을 쐐기로 활용
+
+## Related Notes
+- [[market-research]] - 높은 연관성
+- [[19th-cohort-proposal]] - 높은 연관성
+- [[19th-gpters-submission]] - 높은 연관성
+- [[19th-proposal-simple]] - 높은 연관성
+- [[advertising-guide]] - 높은 연관성
+- [[사이드프로젝트_교육혁신_전략]] - 높은 연관성
+- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성

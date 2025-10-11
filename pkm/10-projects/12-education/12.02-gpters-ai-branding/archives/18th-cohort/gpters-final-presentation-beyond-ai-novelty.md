@@ -300,3 +300,12 @@ A: 지금 가장 관심 있는 것부터 시작하세요. 중요한 건 "딸깍 
 - "오늘 저녁부터 시작할 것" 명확히 제안
 
 ### 발표 시간: 15-20분 + Q&A 10분
+
+## Related Notes
+- [[final-seo-version]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[menu-development-hub]] - 높은 연관성

@@ -199,3 +199,12 @@ Discord/포럼에서 경험 공유
 ---
 
 *"4주 후에는 Claude Code 생태계의 고수가 되어 IMI 비즈니스 전반을 혁신적으로 자동화할 수 있을 것입니다!"* 🚀
+
+## Related Notes
+- [[PKM-RESTRUCTURE-PLAN]] - 높은 연관성
+- [[detailed-plan]] - 높은 연관성
+- [[19th-proposal-simple]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[19th-gpters-submission]] - 높은 연관성
+- [[gmail-classifier-분석]] - 높은 연관성
+- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성

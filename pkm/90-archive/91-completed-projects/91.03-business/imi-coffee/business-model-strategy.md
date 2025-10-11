@@ -77,3 +77,12 @@ migrated: 2025-10-10
 ### 협업
 - 우리가 할 수 있는 건 무엇인가?
 - 정리?
+
+## Related Notes
+- [[business-operations-hub]] - 높은 연관성
+- [[persuasion-strategy]] - 높은 연관성
+- [[aeo-ai-search-marketing-strategy]] - 높은 연관성
+- [[일을-잘한다는-것]] - 높은 연관성
+- [[일상의틈-lgu-프로젝트]] - 높은 연관성
+- [[프로세스-이코노미]] - 높은 연관성
+- [[golden-brown-proposal-quote]] - 높은 연관성

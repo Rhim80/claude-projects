@@ -64,3 +64,12 @@ published: false
 [n8n](IMI%20AI%20STUDY/n8n.csv)
 
 [YouTube 영상 아카이브](IMI%20AI%20STUDY/YouTube%20%EC%98%81%EC%83%81%20%EC%95%84%EC%B9%B4%EC%9D%B4%EB%B8%8C.csv)
+
+## Related Notes
+- [[ai-automation-hub]] - 높은 연관성
+- [[education-hub]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성

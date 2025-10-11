@@ -17,3 +17,12 @@ created: 2025-10-10
 
 
 ## 와인 골라주세요.
+
+## Related Notes
+- [[23 03]] - 참고
+- [[22 11]] - 참고
+- [[PROCESSING-LOG]] - 참고
+- [[양평-Kant-Haus]] - 참고
+- [[VAULT_QUALITY_ANALYSIS]] - 참고
+- [[PKM-RESTRUCTURE-PLAN]] - 참고
+- [[step-0-seed-discovery]] - 참고

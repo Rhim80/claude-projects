@@ -35,3 +35,12 @@
 ---
 
 *마지막 업데이트: 2025.08.27*
+
+## Related Notes
+- [[창업교육-커리큘럼]] - 높은 연관성
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[human-sense-importance]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[naver-seo-version]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성

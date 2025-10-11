@@ -937,3 +937,12 @@ Perfect Storm:
 *"The future belongs to individuals empowered by AI. We're building the platform where these AI-powered supersolos meet the companies that need their superpowers."*
 
 **Next Step**: 상우와 미팅 → MVP 검증 시작 → 본엔젤스 제안서 완성
+
+## Related Notes
+- [[2025-10_비즈니스_재구조화_전략]] - 높은 연관성
+- [[PKM-RESTRUCTURE-PLAN]] - 높은 연관성
+- [[git-repository-study-plan]] - 높은 연관성
+- [[platform-concept]] - 높은 연관성
+- [[ideas-analysis]] - 높은 연관성
+- [[persuasion-strategy]] - 높은 연관성
+- [[19th-gpters-submission]] - 높은 연관성

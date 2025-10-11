@@ -407,3 +407,12 @@ function testEvents() {
 ---
 
 *정확한 데이터 추적을 통해 이미커피의 성공적인 이커머스 운영을 지원합니다.*
+
+## Related Notes
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[human-sense-importance]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[22 10]] - 높은 연관성
+- [[창업교육-커리큘럼]] - 높은 연관성
+- [[hfk-cmo씽킹]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성

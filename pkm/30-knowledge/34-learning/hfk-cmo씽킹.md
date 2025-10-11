@@ -751,4 +751,13 @@ source: workflowy
 
   - Long for : 시도해보고 싶은 것 - 말하기. 글쓰기.
 
-- 
+-
+
+## Related Notes
+- [[IMPROVED_GPT_STEP1_GUIDE]] - 높은 연관성
+- [[platform-concept]] - 높은 연관성
+- [[2025-10_비즈니스_재구조화_전략]] - 높은 연관성
+- [[detailed-plan]] - 높은 연관성
+- [[CUSTOM_GPT_INSTRUCTIONS]] - 높은 연관성
+- [[19th-gpters-submission]] - 높은 연관성
+- [[advertising-guide]] - 높은 연관성

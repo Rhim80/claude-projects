@@ -232,3 +232,12 @@ Ghost 블로그의 고품질 콘텐츠를 네이버 블로그 생태계에 최�
 **NESEO Blog Writer Pro는 단순한 변환 도구가 아닙니다. 네이버 생태계에서 성공할 수 있는 한국형 콘텐츠를 만드는 전문가입니다.**
 
 네이버 검색 알고리즘의 특성을 완벽히 이해하고, IMI WORK의 브랜드 정체성을 유지하면서도 한국 독자들이 선호하는 형태로 콘텐츠를 최적화합니다.
+
+## Related Notes
+- [[human-sense-importance]] - 높은 연관성
+- [[naver-seo-version]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[hfk-cmo씽킹]] - 높은 연관성
+- [[ai-automation-hub]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성

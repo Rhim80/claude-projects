@@ -63,3 +63,12 @@
 
 *분석 완료일: 2025.08.27*  
 *다음 작업: 개선된 브랜딩 프레임워크 v2.0 설계*
+
+## Related Notes
+- [[human-sense-importance]] - 높은 연관성
+- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[education-hub]] - 높은 연관성
+- [[스미다 미팅]] - 높은 연관성

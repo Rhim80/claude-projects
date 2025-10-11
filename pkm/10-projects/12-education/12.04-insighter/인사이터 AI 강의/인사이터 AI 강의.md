@@ -11,3 +11,12 @@ published: false
 # 인사이터 AI 강의
 
 [[문의 답변|문의 답변.]]
+
+## Related Notes
+- [[ai-automation-hub]] - 높은 연관성
+- [[ai-business-maturity]] - 높은 연관성
+- [[클로드 코드 사용]] - 관련 주제
+- [[education-hub]] - 관련 주제
+- [[hfk-cmo씽킹]] - 관련 주제
+- [[시대예보--호명사회]] - 관련 주제
+- [[현오]] - 관련 주제

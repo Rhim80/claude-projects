@@ -105,3 +105,12 @@ published: false
 | `reviewGPT` | 리뷰 유형 분류 / 금기 표현 | “불친절 리뷰에 대응하는 정중한 응답문” |
 
 ***
+
+## Related Notes
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
+- [[창업교육-커리큘럼]] - 높은 연관성
+- [[human-sense-importance]] - 높은 연관성
+- [[menu-development-hub]] - 높은 연관성
+- [[education-hub]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성

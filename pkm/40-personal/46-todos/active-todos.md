@@ -41,3 +41,12 @@
 ---
 
 *Last updated: {{date}}*
+
+## Related Notes
+- [[NEUTRAL_AI_GUIDE]] - 참고
+- [[payroll-b-분석]] - 참고
+- [[template-specs]] - 참고
+- [[2025-10-11]] - 참고
+- [[PKM-RESTRUCTURE-PLAN]] - 참고
+- [[step-6-branding-wheel]] - 참고
+- [[learning-roadmap]] - 참고

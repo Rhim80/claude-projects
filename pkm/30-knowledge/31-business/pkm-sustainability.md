@@ -123,3 +123,12 @@
 ## 🏷️ Tags
 
 #knowledge #pkm #sustainability #framework
+
+## Related Notes
+- [[19th-gpters-submission]] - 높은 연관성
+- [[솔로프리너_생산성_치트키_AI_강의안]] - 높은 연관성
+- [[IMPROVED_TEMPLATE_V1.1]] - 높은 연관성
+- [[문의 답변]] - 높은 연관성
+- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성
+- [[gmail-classifier-분석]] - 높은 연관성
+- [[19th-cohort-proposal]] - 높은 연관성

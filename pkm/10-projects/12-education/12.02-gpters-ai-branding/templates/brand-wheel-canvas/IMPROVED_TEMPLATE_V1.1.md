@@ -897,3 +897,12 @@
 
 *개선 템플릿 v1.1 완성*  
 *연결고리 시스템 + 완성도 기준 + 업종별 질문 + 마이크로 스텝 적용*
+
+## Related Notes
+- [[learning-roadmap]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성
+- [[menu-development-hub]] - 높은 연관성
+- [[education-hub]] - 높은 연관성

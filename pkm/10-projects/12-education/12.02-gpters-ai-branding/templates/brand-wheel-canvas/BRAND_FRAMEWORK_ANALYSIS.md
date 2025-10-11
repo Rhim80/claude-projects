@@ -183,3 +183,12 @@
 
 *분석 일자: 2025.08.27*  
 *분석자: Claude (with 이림 브랜딩 전문성)*
+
+## Related Notes
+- [[learning-roadmap]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[education-hub]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성

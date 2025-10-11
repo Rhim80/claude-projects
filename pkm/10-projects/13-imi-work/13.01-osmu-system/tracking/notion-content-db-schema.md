@@ -85,3 +85,12 @@
 ---
 
 *이 스키마를 기반으로 Notion에서 데이터베이스를 생성하세요.*
+
+## Related Notes
+- [[learning-roadmap]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[human-sense-importance]] - 높은 연관성
+- [[pr-review]] - 높은 연관성
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[naver-seo-version]] - 높은 연관성

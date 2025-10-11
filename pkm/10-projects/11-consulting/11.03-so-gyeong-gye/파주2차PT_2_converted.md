@@ -280,3 +280,12 @@
 ---
 
 *변환 완료: 파주2차PT_2.pdf → Markdown 형식*
+
+## Related Notes
+- [[menu-development-hub]] - 높은 연관성
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[imi-hr-organization]] - 높은 연관성
+- [[Branding]] - 높은 연관성
+- [[(주) 음]] - 높은 연관성
+- [[imi-branding-philosophy]] - 높은 연관성

@@ -24,3 +24,12 @@ published: false
 기여 : 커뮤니티를 강화할 수 있는 방안 -
 
 심볼 :
+
+## Related Notes
+- [[IMI_WORK_PROMPT_TEMPLATE]] - 참고
+- [[proposal-explanation]] - 참고
+- [[소경계_2편_일곱번째_이름]] - 참고
+- [[사례 발표]] - 참고
+- [[NEUTRAL_AI_GUIDE]] - 참고
+- [[imi-coffee-consulting-proposal-template]] - 참고
+- [[PROJECT_HISTORY]] - 참고

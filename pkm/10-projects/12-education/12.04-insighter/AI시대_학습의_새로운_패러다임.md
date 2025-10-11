@@ -299,3 +299,12 @@ AI 시대의 학습은 **완벽한 이해 후 실행**이 아니라, **실행을
 - AI 도구 리스트
 - 실습 워크시트
 - 후속 학습 가이드
+
+## Related Notes
+- [[system-vs-tool-master]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[education-hub]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성
+- [[menu-development-hub]] - 높은 연관성

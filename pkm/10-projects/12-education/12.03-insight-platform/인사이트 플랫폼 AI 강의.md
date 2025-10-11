@@ -88,3 +88,12 @@ published: false
   * 장소: 신사동 인사이트플랫폼 강연장
   * 참가자 수: 실습 중심 워크숍이므로 20명 내외 권장
   * 기타: 참가자들이 개인 노트북을 필참하고, 유료 ChatGPT 계정(Plus) 사용을 권장할 수 있도록 사전 안내 필요
+
+## Related Notes
+- [[program-proposal]] - 높은 연관성
+- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[human-sense-importance]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성

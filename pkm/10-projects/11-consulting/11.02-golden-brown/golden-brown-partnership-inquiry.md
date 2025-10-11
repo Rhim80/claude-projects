@@ -161,3 +161,12 @@
 
 ---
 *Tags: #partnership #consulting #franchise #dessert-cafe #business-opportunity*
+
+## Related Notes
+- [[business-operations-hub]] - 높은 연관성
+- [[human-sense-importance]] - 높은 연관성
+- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
+- [[menu-development-hub]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성

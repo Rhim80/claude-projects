@@ -456,3 +456,12 @@ ${items[0].json.alerts.join('\n')}
 ---
 
 *자동화된 데이터 수집으로 실시간 비즈니스 인사이트를 확보하세요.*
+
+## Related Notes
+- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[human-sense-importance]] - 높은 연관성
+- [[창업교육-커리큘럼]] - 높은 연관성
+- [[naver-seo-version]] - 높은 연관성
+- [[hfk-cmo씽킹]] - 높은 연관성

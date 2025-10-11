@@ -197,3 +197,12 @@ Threads:
 ---
 
 *블로그의 깊이 있는 통찰을 각 플랫폼에서 최적의 형태로 전달하여 IMI WORK 브랜드 영향력을 확산시키세요*
+
+## Related Notes
+- [[human-sense-importance]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[naver-seo-version]] - 높은 연관성
+- [[hfk-cmo씽킹]] - 높은 연관성

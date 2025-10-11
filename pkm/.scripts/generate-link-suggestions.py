@@ -21,8 +21,9 @@ from collections import defaultdict, Counter
 import json
 
 PKM_ROOT = Path("/Users/rhim/Projects/pkm")
-MIN_CONFIDENCE = 0.3  # Lowered to get more suggestions
-MAX_SUGGESTIONS = 5
+MIN_CONFIDENCE = 0.15  # Lower threshold for more connections
+MAX_SUGGESTIONS = 7    # Allow more links per file
+MIN_WORD_COUNT = 30    # Lower minimum word count
 
 # Korean stopwords and common words to filter
 KOREAN_STOPWORDS = {

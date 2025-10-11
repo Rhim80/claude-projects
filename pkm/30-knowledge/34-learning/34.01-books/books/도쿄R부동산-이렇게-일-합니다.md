@@ -59,4 +59,11 @@ source: book-notes
 
 - 팀의 일원과 회사 직원의 차이.
 
-
+## Related Notes
+- [[aeo-ai-search-marketing-strategy]] - 관련 주제
+- [[proposal-explanation]] - 관련 주제
+- [[IMPROVED_STEP3_GUIDE]] - 관련 주제
+- [[소경계_1편_첫만남부터_2차PT]] - 관련 주제
+- [[STEP2_GUIDE_COMPACT]] - 관련 주제
+- [[INSTAGRAM_THREADS_OPTIMIZER]] - 관련 주제
+- [[CUSTOM_GPT_INSTRUCTIONS]] - 관련 주제

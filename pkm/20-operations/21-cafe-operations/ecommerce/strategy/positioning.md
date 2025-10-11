@@ -263,3 +263,12 @@
 ---
 
 *"명확한 포지셔닝으로 고객의 마음에 확실한 자리를 만들어갑니다."*
+
+## Related Notes
+- [[business-operations-hub]] - 높은 연관성
+- [[2기]] - 높은 연관성
+- [[menu-development-hub]] - 높은 연관성
+- [[일을-잘한다는-것]] - 높은 연관성
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[human-sense-importance]] - 높은 연관성
+- [[imi-hr-organization]] - 높은 연관성

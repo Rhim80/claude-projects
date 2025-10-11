@@ -49,3 +49,12 @@ migrated: 2025-10-10
 - [[MAYA 원칙]]
 - [[아이디어 전파 방식]]
 - [[문화 상품 마케팅]]
+
+## Related Notes
+- [[hit-makers]] - 관련 주제
+- [[ANALYSIS_SUMMARY]] - 참고
+- [[AI시대_학습의_새로운_패러다임]] - 참고
+- [[AI 강의 6월8일1-1_original]] - 참고
+- [[ai-creator-collaboration-content]] - 참고
+- [[IMPROVEMENT_ROADMAP]] - 참고
+- [[advertising-guide]] - 참고

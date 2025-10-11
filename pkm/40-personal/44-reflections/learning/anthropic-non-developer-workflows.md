@@ -316,3 +316,12 @@ Code (실제 구현)
 ---
 
 *"비개발자도 Claude Code를 통해 체계적이고 전문적인 업무 환경을 구축할 수 있다는 가능성을 확인했습니다. 이는 단순한 도구 활용을 넘어 업무 방식 자체의 혁신을 의미합니다."*
+
+## Related Notes
+- [[19th-cohort-proposal]] - 높은 연관성
+- [[19th-gpters-submission]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[persuasion-strategy]] - 높은 연관성
+- [[작업-진행상황]] - 높은 연관성
+- [[gmail-classifier-분석]] - 높은 연관성
+- [[ideas-analysis]] - 높은 연관성

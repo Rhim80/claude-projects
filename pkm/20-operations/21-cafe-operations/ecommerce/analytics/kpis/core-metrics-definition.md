@@ -213,3 +213,12 @@ ROAS
 ---
 
 *명확한 지표 정의를 통해 일관된 성과 측정과 개선을 실현합니다.*
+
+## Related Notes
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[education-hub]] - 높은 연관성
+- [[스페셜티 커피업계 대표들을 위한 브랜딩 세미나]] - 높은 연관성

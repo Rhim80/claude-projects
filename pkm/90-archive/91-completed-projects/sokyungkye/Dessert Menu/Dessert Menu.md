@@ -168,3 +168,12 @@ published: false
 | **열린 경계, 타르틴**
 (Open Boundary Tartine) | **철학/영감:** 한 조각의 빵 위에서 단맛, 짠맛, 신선함이 공존하며 **맛의 경계를 허무는 경험**을 선사합니다. 이는 상반된 요소들이 조화를 이루는 '소경계'의 핵심 가치를 반영합니다.
 **콘셉트:** 구운 깜빠뉴 위에 루꼴라, 프로슈토, 구운 복숭아(또는 무화과)를 올리고 발사믹 글레이즈와 꿀을 함께 뿌려 완성하는 오픈 샌드위치 스타일의 브런치 메뉴입니다. |
+
+## Related Notes
+- [[menu-development-hub]] - 높은 연관성
+- [[VAULT_QUALITY_ANALYSIS]] - 높은 연관성
+- [[CUSTOM_GPT_INSTRUCTIONS]] - 높은 연관성
+- [[IMPROVED_GPT_STEP1_GUIDE]] - 높은 연관성
+- [[hfk-cmo씽킹]] - 높은 연관성
+- [[프로젝트-자극-리버헤드]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성

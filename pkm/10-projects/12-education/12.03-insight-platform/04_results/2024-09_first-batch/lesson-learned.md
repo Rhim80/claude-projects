@@ -22,3 +22,12 @@
 - 지속 학습 커뮤니티 구축
 
 *상세 내용은 상위 폴더의 wrap-up 문서 참조*
+
+## Related Notes
+- [[human-sense-importance]] - 높은 연관성
+- [[hfk-cmo씽킹]] - 높은 연관성
+- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성

@@ -77,3 +77,12 @@ AI 시대의 마케팅은 더 이상 일방적인 홍보가 아닙니다. 고객
 ---
 
 *이 글은 Ethan Smith의 "AEO & AI Search: How to Win at Answer Engine Optimization" 영상에서 받은 인사이트를 바탕으로 작성되었습니다.*
+
+## Related Notes
+- [[system-vs-tool-master]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[education-hub]] - 높은 연관성
+- [[naver-seo-version]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성

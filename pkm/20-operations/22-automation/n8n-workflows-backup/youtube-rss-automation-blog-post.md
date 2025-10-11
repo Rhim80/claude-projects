@@ -202,3 +202,12 @@ Telegram 알림 발송
 *이 포스트는 실제 운영 중인 n8n 워크플로우를 바탕으로 작성되었습니다. 궁금한 점이나 개선 아이디어가 있으시면 언제든 공유해주세요!*
 
 #n8n #YouTube #AI #자동화 #정보관리 #워크플로우
+
+## Related Notes
+- [[system-vs-tool-master]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[human-sense-importance]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성
+- [[WIEE-세미나-노트]] - 높은 연관성

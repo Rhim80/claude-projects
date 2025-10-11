@@ -107,4 +107,13 @@ source: workflowy
 
 - 
 
-- 
+-
+
+## Related Notes
+- [[인사이트 플랫폼 AI 강의]] - 높은 연관성
+- [[program-proposal]] - 높은 연관성
+- [[소경계_프로젝트_회고록]] - 높은 연관성
+- [[brand-identity-builder-prd-v2]] - 높은 연관성
+- [[ai-creator-collaboration-content]] - 높은 연관성
+- [[advertising-guide]] - 높은 연관성
+- [[이미커피_컨설팅_워크플로우]] - 높은 연관성

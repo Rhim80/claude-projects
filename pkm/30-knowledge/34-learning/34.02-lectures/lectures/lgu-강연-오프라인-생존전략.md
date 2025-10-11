@@ -647,3 +647,12 @@ note: "일상의틈 LGU+ 프로젝트 강연 내용 추출"
             - 단계별 실행 전략: 공간 기획, 서비스 체험 요소 도입, 인테리어 및 VMD, 운영 관리까지의 단계별 실행 계획을 나열합니다.
             - 프로젝트 일정: 프로젝트 진행 예상 일정을 제시하여 실현 가능성을 보여줍니다.
           - 7. 결론
+
+## Related Notes
+- [[19th-proposal-simple]] - 높은 연관성
+- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
+- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
+- [[competitor-analysis]] - 높은 연관성
+- [[19th-gpters-submission]] - 높은 연관성
+- [[솔로프리너_생산성_치트키_AI_강의안]] - 높은 연관성
+- [[ai-creator-collaboration-content]] - 높은 연관성

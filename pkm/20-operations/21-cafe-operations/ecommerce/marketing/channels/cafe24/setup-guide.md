@@ -446,3 +446,12 @@ gtag('event', 'add_to_cart', {
 ---
 
 *"고객 중심의 브랜드 경험으로 자사몰을 성장의 핵심 엔진으로 만들어갑니다."*
+
+## Related Notes
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
+- [[naver-seo-version]] - 높은 연관성
+- [[optimization-guide]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[menu-development-hub]] - 높은 연관성
+- [[창업교육-커리큘럼]] - 높은 연관성

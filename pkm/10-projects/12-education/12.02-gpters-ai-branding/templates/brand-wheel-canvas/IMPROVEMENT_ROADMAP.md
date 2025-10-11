@@ -200,3 +200,12 @@
 ---
 
 *로드맵 작성일: 2025.08.27*
+
+## Related Notes
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[human-sense-importance]] - 높은 연관성
+- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[WIEE-세미나-노트]] - 높은 연관성

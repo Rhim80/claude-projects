@@ -409,3 +409,12 @@ PR/FAQ 기반 역순 TODO 로드맵 생성
 **문서 위치**: `/Users/rhim/Projects/education/gpters-ai-branding-study/19th-cohort/19th-working-backwards-final.md`
 
 Made with ❤️ by hovoo & 진여진
+
+## Related Notes
+- [[final-seo-version]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[education-hub]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성

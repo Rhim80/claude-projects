@@ -59,3 +59,12 @@ published: false
 매장 규모에 따른 수용인원, 판매할 디저트의 종류와 하루 목표 판매량에 따라 |  |
 | 2 | 필요한 도구
 집게, 서버, 빵칼 등등 |  |
+
+## Related Notes
+- [[소경계_1편_첫만남부터_2차PT]] - 높은 연관성
+- [[이미커피_컨설팅_워크플로우]] - 높은 연관성
+- [[proposal-explanation]] - 높은 연관성
+- [[golden-brown-meeting-summary]] - 높은 연관성
+- [[gangneung-cafe-proposal-quote]] - 높은 연관성
+- [[gangneung-cafe-proposal-quote]] - 높은 연관성
+- [[00_컨설팅_포트폴리오_진행상황]] - 높은 연관성

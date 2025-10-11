@@ -18,3 +18,12 @@ published: false
 [[Soupnice]]
 
 [[오마카세]]
+
+## Related Notes
+- [[NEUTRAL_AI_GUIDE]] - 참고
+- [[05_아뜰리에스미다_Atelier_Smida]] - 참고
+- [[LICENSE]] - 참고
+- [[LICENSE]] - 참고
+- [[파주2차PT_2_converted]] - 참고
+- [[01_고요새_제주]] - 참고
+- [[prompt-templates]] - 참고

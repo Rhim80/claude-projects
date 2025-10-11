@@ -191,3 +191,12 @@ migrated: 2025-10-10
 - [[전략적 사고]]
 - [[인간에 대한 통찰]]
 - [[인사이드 아웃]]
+
+## Related Notes
+- [[SENSE_AI_SEO_STRATEGY]] - 높은 연관성
+- [[AI 강의 6월8일1-2_original]] - 높은 연관성
+- [[temp-content-back-office-efficiency]] - 높은 연관성
+- [[back-office-efficiency-front-office-delight]] - 높은 연관성
+- [[소경계_1편_첫만남부터_2차PT]] - 높은 연관성
+- [[05_아뜰리에스미다_Atelier_Smida]] - 높은 연관성
+- [[imi-coffee-consulting-proposal-template]] - 높은 연관성

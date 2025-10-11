@@ -71,3 +71,12 @@
 
 ---
 *Tags: #branding #AI #sense #differentiation #content*
+
+## Related Notes
+- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
+- [[사이드프로젝트_교육혁신_전략]] - 높은 연관성
+- [[ai-creator-collaboration-content]] - 높은 연관성
+- [[19th-gpters-submission]] - 높은 연관성
+- [[CUSTOM_GPT_INSTRUCTIONS]] - 높은 연관성
+- [[advertising-guide]] - 높은 연관성
+- [[19th-cohort-proposal]] - 높은 연관성

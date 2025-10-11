@@ -35,3 +35,12 @@ published: false
 이미커피가 추구하지 않는 방법으로 팀
 
 큰 방향성 안에서 일을 하고 있지만, 확인을 해보는 시간.
+
+## Related Notes
+- [[AI 강의 6월8일1-2_original]] - 높은 연관성
+- [[proposal-explanation]] - 높은 연관성
+- [[AI 강의 6월8일1-3_original]] - 높은 연관성
+- [[인사이트 플랫폼 AI 강의]] - 높은 연관성
+- [[이미커피_컨설팅_워크플로우]] - 높은 연관성
+- [[aeo-ai-search-marketing-strategy]] - 높은 연관성
+- [[planning-session-notes]] - 높은 연관성

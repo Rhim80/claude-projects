@@ -339,3 +339,12 @@ Step 0~4에서 완성된 **브랜드 시스템을 실제 고객 경험으로 구
 
 ---
 🎊 브랜드 시스템 완성! 실행 시작하세요!
+
+## Related Notes
+- [[learning-roadmap]] - 높은 연관성
+- [[naver-seo-version]] - 높은 연관성
+- [[ai-automation-hub]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[menu-development-hub]] - 높은 연관성

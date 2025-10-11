@@ -171,3 +171,12 @@ Easy & Fantasy
    1. 기록
 
    2. editor
+
+## Related Notes
+- [[gmail-classifier-분석]] - 높은 연관성
+- [[2024-09_첫번째_교육_wrap-up]] - 높은 연관성
+- [[사이드프로젝트_교육혁신_전략]] - 높은 연관성
+- [[소경계_프로젝트_회고록]] - 높은 연관성
+- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
+- [[advertising-guide]] - 높은 연관성
+- [[인사이트 플랫폼 AI 강의]] - 높은 연관성

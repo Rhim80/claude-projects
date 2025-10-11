@@ -156,3 +156,12 @@ Theme : 맑고 투명한 물과 미지의 불투명함을 표현한 모히또
 설탕시럽 12g
 흑임자크림 30g
 순서: 호지차가루 물에 풀기 -> 시럽 -> 우유 -> 얼음 -> 흑임자크림
+
+## Related Notes
+- [[menu-development-hub]] - 높은 연관성
+- [[anthropic-non-developer-workflows]] - 높은 연관성
+- [[imi coffee - second stage]] - 높은 연관성
+- [[Note Coffee House Project]] - 높은 연관성
+- [[imi-coffee-consulting-proposal-template]] - 높은 연관성
+- [[소경계 카페 오픈을 위한 주요 작업 리스트]] - 높은 연관성
+- [[NOTE Coffee House – Coffee Record Program 운영 가이드]] - 높은 연관성

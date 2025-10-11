@@ -265,3 +265,12 @@ JSON 형태로 출력해주세요:
 ---
 
 이 프롬프트 템플릿들을 순차적으로 사용하면 YouTube 영상을 IMI WORK 브랜드 정체성에 완벽히 부합하는 고품질 블로그 콘텐츠로 변환할 수 있습니다.
+
+## Related Notes
+- [[system-vs-tool-master]] - 높은 연관성
+- [[22 10]] - 높은 연관성
+- [[human-sense-importance]] - 높은 연관성
+- [[naver-seo-version]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성
+- [[hfk-cmo씽킹]] - 높은 연관성

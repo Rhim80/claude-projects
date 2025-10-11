@@ -153,3 +153,12 @@
 
 *분석일: 2024년 9월 5일*  
 *분석자: AI Business Architect (Claude Code)*
+
+## Related Notes
+- [[ideas-analysis]] - 높은 연관성
+- [[19th-cohort-proposal]] - 높은 연관성
+- [[gmail-classifier-분석]] - 높은 연관성
+- [[19th-gpters-submission]] - 높은 연관성
+- [[persuasion-strategy]] - 높은 연관성
+- [[git-repository-study-plan]] - 높은 연관성
+- [[2025-10_비즈니스_재구조화_전략]] - 높은 연관성

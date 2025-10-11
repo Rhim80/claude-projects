@@ -122,3 +122,12 @@ AI 시대의 학습은 완벽한 이해 후 실행이 아니라, **실행을 통
 이것이 AI 시대를 살아가는 우리의 새로운 학습법입니다.
 
 *"AI는 도구가 아니라 파트너입니다. 함께 성장하는 여정을 즐기세요."*
+
+## Related Notes
+- [[system-vs-tool-master]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성
+- [[education-hub]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성

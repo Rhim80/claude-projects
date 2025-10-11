@@ -429,3 +429,12 @@ BrandIdentityBuilder.tsx      // 메인 컨테이너
 
 ## 연락처
 - 프로젝트 매니저: hovoo@imiwork.com
+
+## Related Notes
+- [[brand-identity-builder-prd]] - 높은 연관성
+- [[naver-seo-version]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[ai-automation-hub]] - 높은 연관성
+- [[human-sense-importance]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[스페셜티 커피업계 대표들을 위한 브랜딩 세미나]] - 높은 연관성

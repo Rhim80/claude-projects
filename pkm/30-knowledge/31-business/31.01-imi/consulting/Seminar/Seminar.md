@@ -22,3 +22,12 @@ published: false
 [[Momos Seminar]]
 
 [[음료 개발 세미나]]
+
+## Related Notes
+- [[06_앙떼떼페레_Entetepere]] - 높은 연관성
+- [[이미커피_컨설팅_워크플로우]] - 높은 연관성
+- [[CUSTOM_GPT_INSTRUCTIONS]] - 높은 연관성
+- [[gangneung-cafe-proposal-quote]] - 높은 연관성
+- [[gangneung-cafe-proposal-quote]] - 높은 연관성
+- [[사이드프로젝트_교육혁신_전략]] - 높은 연관성
+- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성

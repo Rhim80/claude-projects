@@ -176,3 +176,12 @@ published: false
 * 브랜드 커뮤니케이션 아이덴티티는 미션, 프라미스, 스토리, 가치와 같은 무형적 아이덴티티를 가시화하는 과정입니다.
 
 * 제품/서비스를 어떻게 부를지에 필요한 네이밍 작업, 로고, 웹사이트, 홍보물 등에 해당하는 비주얼 아이덴티티 작업, 또한, 어떤 말투로 통일성 있게 소통할 것인지도 정해야 합니다.
+
+## Related Notes
+- [[ai-creator-collaboration-content]] - 높은 연관성
+- [[문의 답변]] - 높은 연관성
+- [[05_아뜰리에스미다_Atelier_Smida]] - 높은 연관성
+- [[AI 강의 6월8일1-2_original]] - 높은 연관성
+- [[positioning]] - 높은 연관성
+- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성
+- [[CUSTOM_GPT_INSTRUCTIONS]] - 높은 연관성

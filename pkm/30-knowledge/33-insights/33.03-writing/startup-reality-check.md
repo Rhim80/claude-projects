@@ -84,3 +84,12 @@ migrated: 2025-10-10
 **그래서 다음 주 한 주는 당분간 이별을 인사하는 시간을 갖으려 합니다.**
 남구로의 많은 추억들과 인사하고 싶은 분들이 계시다면 잠깐씩 들러서 인사 나눠주세요.
 다음 주는 사장인 제가 바를 운영할 예정입니다.
+
+## Related Notes
+- [[01_고요새_제주]] - 높은 연관성
+- [[02_워커샵_대전]] - 높은 연관성
+- [[ai-creator-collaboration-content]] - 높은 연관성
+- [[19th-proposal-simple]] - 높은 연관성
+- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
+- [[AI 강의 6월8일1-3_original]] - 높은 연관성
+- [[AI 강의 6월8일1-1_original]] - 높은 연관성

@@ -59,3 +59,12 @@ or initiating processes. They communicate interactivity and should have clear, a
   * Visual Style : Text-only with no border, using primary color
   * Usage : For actions that should be available but not emphasized
 -->
+
+## Related Notes
+- [[guidelines]] - 높은 연관성
+- [[pr-review]] - 높은 연관성
+- [[hfk-cmo씽킹]] - 높은 연관성
+- [[WIEE-세미나-노트]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[창업교육-커리큘럼]] - 높은 연관성
+- [[code-of-conduct]] - 높은 연관성

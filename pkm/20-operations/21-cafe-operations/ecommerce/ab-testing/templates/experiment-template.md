@@ -230,3 +230,12 @@
 **실험 담당자**: [이름]  
 **최종 업데이트**: YYYY-MM-DD  
 **승인자**: [승인자 이름] - YYYY-MM-DD
+
+## Related Notes
+- [[learning-roadmap]] - 높은 연관성
+- [[창업교육-커리큘럼]] - 높은 연관성
+- [[human-sense-importance]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[menu-development-hub]] - 높은 연관성
+- [[트리니타스 브랜딩 미팅]] - 높은 연관성
+- [[lgu-강연-오프라인-생존전략]] - 높은 연관성

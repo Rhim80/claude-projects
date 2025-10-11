@@ -312,3 +312,12 @@ hovoo의 사고 패턴:
 
 *작성일: 2024년 9월 7일*  
 *기록자: Claude Code + Hovoo의 4일간 사고 여정*
+
+## Related Notes
+- [[detailed-plan]] - 높은 연관성
+- [[ideas-analysis]] - 높은 연관성
+- [[19th-gpters-submission]] - 높은 연관성
+- [[19th-cohort-proposal]] - 높은 연관성
+- [[19th-proposal-simple]] - 높은 연관성
+- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성

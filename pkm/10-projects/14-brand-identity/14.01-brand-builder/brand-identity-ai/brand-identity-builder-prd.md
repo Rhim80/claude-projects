@@ -275,3 +275,12 @@ Brand Identity Builder는 GPT 구독 없이도 체계적인 브랜드 구축이 
 **문서 작성일**: 2024년 9월 14일  
 **마지막 업데이트**: 프롬프트 시스템 검증 로직 통합 완료  
 **다음 업데이트**: 실사용자 테스트 결과 반영 예정
+
+## Related Notes
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[human-sense-importance]] - 높은 연관성
+- [[hfk-cmo씽킹]] - 높은 연관성
+- [[menu-development-hub]] - 높은 연관성

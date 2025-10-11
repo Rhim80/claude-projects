@@ -112,3 +112,12 @@ published: false
 * 인플루언서 초대행사 정리
 
 > > 지금부터 시작.
+
+## Related Notes
+- [[Project 717]] - 높은 연관성
+- [[imi-old-mansion-project]] - 높은 연관성
+- [[NOTE COFFEE HOUSE 카페 오픈을 위한 주요 작업 리스트]] - 높은 연관성
+- [[education-paradigm]] - 높은 연관성
+- [[클로드 코드 사용]] - 높은 연관성
+- [[성장의-세-가지-갈래]] - 높은 연관성
+- [[persuasion-arguments]] - 높은 연관성

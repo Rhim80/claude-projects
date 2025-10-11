@@ -24,3 +24,12 @@ published: false
 동교동
 
 * 전원 3,000
+
+## Related Notes
+- [[IMI AI STUDY]] - 참고
+- [[imi-coffee-consulting-proposal-template]] - 참고
+- [[3주차 사례 발표]] - 참고
+- [[롯데백화점 크리스마스 마켓 참여 관련 종합 제안]] - 참고
+- [[IMI_WORK_PROMPT_TEMPLATE]] - 참고
+- [[01_고요새_제주]] - 참고
+- [[ai-creator-collaboration-content]] - 참고

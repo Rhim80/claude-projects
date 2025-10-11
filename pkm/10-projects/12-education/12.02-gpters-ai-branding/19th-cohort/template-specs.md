@@ -766,3 +766,12 @@ npm-debug.log*
 ---
 
 **문서 위치**: `/Users/rhim/Projects/education/gpters-ai-branding-study/19th-cohort/template-specs.md`
+
+## Related Notes
+- [[learning-roadmap]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성
+- [[menu-development-hub]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성

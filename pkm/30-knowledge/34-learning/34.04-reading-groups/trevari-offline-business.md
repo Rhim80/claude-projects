@@ -138,3 +138,12 @@ migrated: 2025-10-10
 
 - **기간**: 2~5월 4달간
 - **모임**: 셋째 주 수요일
+
+## Related Notes
+- [[trevari-독서모임]] - 높은 연관성
+- [[솔로프리너_생산성_치트키_AI_강의안]] - 높은 연관성
+- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
+- [[19th-proposal-simple]] - 높은 연관성
+- [[exp-001-product-images]] - 높은 연관성
+- [[exp-003-free-shipping-threshold]] - 높은 연관성
+- [[19th-gpters-submission]] - 높은 연관성

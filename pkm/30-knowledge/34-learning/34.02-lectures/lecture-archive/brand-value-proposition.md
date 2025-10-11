@@ -88,3 +88,12 @@ migrated: 2025-10-10
 - 창업자금 부족으로 10평 이하의 공간을 계획한다면 처음부터 많은 돈을 벌 수 있는가?
 - 그리고 여태까지 계속 스페셜티 커피쪽에서 일하던 사람이 돈을 많이 벌려면 본인의 가치인 스페셜티 커피를 한 게 정말 가능할까?
 - 만약 돈을 벌려면 오히려 포기해야 하는 것들도 생긴다
+
+## Related Notes
+- [[template-specs]] - 높은 연관성
+- [[19th-proposal-simple]] - 높은 연관성
+- [[19th-gpters-submission]] - 높은 연관성
+- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
+- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성
+- [[positioning]] - 높은 연관성
+- [[19th-working-backwards-final]] - 높은 연관성

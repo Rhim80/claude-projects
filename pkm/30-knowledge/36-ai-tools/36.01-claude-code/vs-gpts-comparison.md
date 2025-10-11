@@ -239,3 +239,12 @@ claude "이번 주 marketing/ 폴더의 모든 데이터로
 
 *"AI를 쓰는 것과 AI로 시스템을 만드는 것의 차이,
 그것이 GPTs와 Claude Code의 차이입니다."*
+
+## Related Notes
+- [[워크플로우_개발_가이드]] - 높은 연관성
+- [[19th-gpters-submission]] - 높은 연관성
+- [[AI시대_학습_패러다임_강연요약본]] - 높은 연관성
+- [[step-5-brand-execution]] - 높은 연관성
+- [[NEUTRAL_AI_GUIDE]] - 높은 연관성
+- [[19th-working-backwards-final]] - 높은 연관성
+- [[AI시대_학습의_새로운_패러다임]] - 높은 연관성

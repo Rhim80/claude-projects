@@ -63,3 +63,12 @@ AI와 자동화는 바로 이 전략적 배치를 가능하게 한다. 감각적
 뒷단의 효율이 앞단의 기쁨을 만든다. 급여 자동화가 고객 대화 시간을 만들고, 영수증 자동 분류가 페어링 연구 시간을 만든다.
 
 당신의 비즈니스에서는 어떤 부분을 비효율로 남겨야 할까? 그리고 어떤 부분을 효율화해서 그 비효율을 지킬 여유를 만들어야 할까?
+
+## Related Notes
+- [[temp-content-back-office-efficiency]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성
+- [[naver-seo-version]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[education-hub]] - 높은 연관성

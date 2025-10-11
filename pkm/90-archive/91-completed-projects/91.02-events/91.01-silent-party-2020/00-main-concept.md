@@ -86,3 +86,12 @@ Christmas Silent Party는 3일간 한 타임에 5명, 하루에 10명, 총 30인
 10년이나 된 오래된 매장임에도 매력적인 공간으로 바꿔준 @boryring 감사합니다.
 
 ## @cafeimi 크루들과 @peaberry__ 덕분에 잘 준비했습니다.
+
+## Related Notes
+- [[platform-concept]] - 높은 연관성
+- [[22 10]] - 높은 연관성
+- [[PKM-RESTRUCTURE-PLAN]] - 높은 연관성
+- [[이미 커피 직원]] - 높은 연관성
+- [[menu-development-hub]] - 높은 연관성
+- [[ai-creator-collaboration-content]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성

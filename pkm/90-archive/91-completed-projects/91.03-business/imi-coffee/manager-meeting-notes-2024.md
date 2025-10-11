@@ -229,3 +229,12 @@ migrated: 2025-10-10
 #### 크리스마스 사일런트 파티
 - 파티 준비 과정 공유
 - 공간 데코레이션
+
+## Related Notes
+- [[2024-09-10월-일일업무노트]] - 높은 연관성
+- [[planning-session-notes]] - 높은 연관성
+- [[golden-brown-meeting-summary]] - 높은 연관성
+- [[2024-09_첫번째_교육_wrap-up]] - 높은 연관성
+- [[imi-hr-organization]] - 높은 연관성
+- [[(주) 음]] - 높은 연관성
+- [[23 01]] - 높은 연관성

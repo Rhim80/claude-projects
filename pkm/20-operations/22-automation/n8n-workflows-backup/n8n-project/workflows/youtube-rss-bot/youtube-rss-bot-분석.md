@@ -205,3 +205,12 @@ Notion 저장 → imi-work-youtube-blogger → Ghost 자동 포스팅 → OSMU �
 ---
 
 *이 워크플로우는 현재 IMI WORK의 핵심 자동화 시스템으로, Claude Code 연동을 통해 단순한 RSS 수집을 넘어선 지능적 콘텐츠 생성 플랫폼으로 진화할 예정입니다.*
+
+## Related Notes
+- [[learning-roadmap]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[ai-automation-hub]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[education-hub]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성

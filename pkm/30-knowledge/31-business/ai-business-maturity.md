@@ -232,3 +232,12 @@ Color 창업자의 통찰:
 ---
 
 *Tags: #AI활용전략 #비즈니스깊이 #실행력 #시장검증 #고객이해*
+
+## Related Notes
+- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
+- [[인사이트 플랫폼 AI 강의]] - 높은 연관성
+- [[AI 강의 6월8일1-1_original]] - 높은 연관성
+- [[ai-creator-collaboration-content]] - 높은 연관성
+- [[AI 강의 6월8일1-3_original]] - 높은 연관성
+- [[AI 강의 6월8일1-2_original]] - 높은 연관성
+- [[planning-session-notes]] - 높은 연관성

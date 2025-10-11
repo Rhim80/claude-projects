@@ -54,3 +54,12 @@ published: false
    ![CE8FBE4F-241A-4DD7-89D4-05563567F063.jpeg](Soupnice 500d6fd51f834cf58df3457c9573d599/CE8FBE4F-241A-4DD7-89D4-05563567F063.jpeg)
 
    ![4718D2BD-5B4C-4A1A-8F4B-B003B2DA35D0.jpeg](Soupnice 500d6fd51f834cf58df3457c9573d599/4718D2BD-5B4C-4A1A-8F4B-B003B2DA35D0.jpeg)
+
+## Related Notes
+- [[01_고요새_제주]] - 높은 연관성
+- [[SENSE_AI_SEO_STRATEGY]] - 높은 연관성
+- [[ANALYSIS_SUMMARY]] - 높은 연관성
+- [[인사이트 플랫폼 AI 강의]] - 높은 연관성
+- [[setup-guide]] - 높은 연관성
+- [[proposal-explanation]] - 높은 연관성
+- [[golden-brown-meeting-summary]] - 높은 연관성

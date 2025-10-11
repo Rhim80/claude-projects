@@ -36,3 +36,12 @@ migrated: 2025-10-10
 - [[실패의 재정의]]
 - [[주도적 선택]]
 - [[질문의 힘]]
+
+## Related Notes
+- [[THE WATERMELON 강의]] - 참고
+- [[STEP5_BRAND_WHEEL_COMPACT]] - 참고
+- [[IMI_WORK_PROMPT_TEMPLATE]] - 참고
+- [[STEP4_GUIDE_COMPACT]] - 참고
+- [[ANALYSIS_SUMMARY]] - 참고
+- [[인사이트 플랫폼 AI 강의]] - 참고
+- [[content-analysis-revised]] - 참고

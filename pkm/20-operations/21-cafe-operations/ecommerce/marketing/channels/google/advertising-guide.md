@@ -584,3 +584,12 @@ function adjustBudgetBasedOnPerformance() {
 ---
 
 *"구글의 강력한 검색 생태계를 활용하여 구매 의도가 명확한 고객을 효율적으로 유치합니다."*
+
+## Related Notes
+- [[human-sense-importance]] - 높은 연관성
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[hfk-cmo씽킹]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[창업교육-커리큘럼]] - 높은 연관성

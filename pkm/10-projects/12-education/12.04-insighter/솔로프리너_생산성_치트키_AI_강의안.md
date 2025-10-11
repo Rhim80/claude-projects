@@ -203,3 +203,12 @@ AI를 활용한 체계적 리서치부터 콘텐츠 아카이빙까지, 브랜�
 ---
 
 *AI 활용능력을 얻기 위해 중요한 것은 '이론'을 넘어 '직접 해보는 것'입니다. 이 시간을 통해 AI 파도에 휩쓸리지 말고, 멋지게 파도를 타는 법을 배워 가세요!*
+
+## Related Notes
+- [[learning-roadmap]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성
+- [[education-hub]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성

@@ -198,3 +198,12 @@ Threads 스레드: ⏳예정
 - [ ] 7단계: 첫 번째 콘텐츠 데이터 입력
 
 설정 완료 후 OSMU 워크스페이스가 완벽하게 구동될 준비가 됩니다! 🚀
+
+## Related Notes
+- [[naver-seo-version]] - 높은 연관성
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[human-sense-importance]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[ai-automation-hub]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성

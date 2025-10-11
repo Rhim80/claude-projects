@@ -225,3 +225,12 @@ Business Model
 * not too much
 * 감칠맛 = 땡기는 맛
 * 설탕 때문에 맛있는게 아니라 잘 만들어서 맛있는거야
+
+## Related Notes
+- [[imi-coffee-consulting-proposal-template]] - 높은 연관성
+- [[19th-gpters-submission]] - 높은 연관성
+- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
+- [[golden-brown-meeting-summary]] - 높은 연관성
+- [[positioning]] - 높은 연관성
+- [[19th-proposal-simple]] - 높은 연관성
+- [[golden-brown-proposal-quote]] - 높은 연관성

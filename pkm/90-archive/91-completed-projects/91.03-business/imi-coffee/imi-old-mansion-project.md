@@ -372,3 +372,12 @@ imi old mansion은 일상의 루틴에서 벗어나 삶을 풍부하게 만드�
 - 문선배, 승림
 - 정균 부부, 윤하, 창호
 - 건물주: 송기하 부부
+
+## Related Notes
+- [[경탁주-프로젝트-기획]] - 높은 연관성
+- [[menu-development-hub]] - 높은 연관성
+- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성
+- [[SPLIT_SUMMARY]] - 높은 연관성
+- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
+- [[창업교육-커리큘럼]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성

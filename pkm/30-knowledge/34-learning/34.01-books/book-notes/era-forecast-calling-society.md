@@ -38,3 +38,12 @@ migrated: 2025-10-10
 - [[사회 트렌드]]
 - [[데이터 분석]]
 - [[시대 읽기]]
+
+## Related Notes
+- [[시대예보--호명사회]] - 참고
+- [[IMI_WORK_PROMPT_TEMPLATE]] - 참고
+- [[proposal-explanation]] - 참고
+- [[NAVER_SEO_BLOG_GUIDE]] - 참고
+- [[AI 강의 6월8일1-1_original]] - 참고
+- [[NESEO_BLOG_WRITER_PRO]] - 참고
+- [[소경계_1편_첫만남부터_2차PT]] - 참고

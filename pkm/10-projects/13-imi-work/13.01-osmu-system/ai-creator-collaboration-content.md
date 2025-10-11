@@ -57,3 +57,12 @@ AI의 장점(속도, 정보 처리)과 인간의 장점(창의성, 감정, 경�
 *"AI가 발전할수록 인간만의 고유한 가치가 더욱 빛납니다. 두려워하지 말고, 협력하세요."*
 
 **IMI WORK | 일을 잘한다는 것에 대한 진지한 고민**
+
+## Related Notes
+- [[human-sense-importance]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성
+- [[lgu-강연-오프라인-생존전략]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성

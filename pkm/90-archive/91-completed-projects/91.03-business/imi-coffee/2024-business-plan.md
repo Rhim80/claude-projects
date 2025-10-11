@@ -287,3 +287,12 @@ migrated: 2025-10-10
 1. 지금 하고 있는 일 + 내부 지원 업무
 2. 디저트랩과의 관계
 3. 인지도의 상승
+
+## Related Notes
+- [[detailed-plan]] - 높은 연관성
+- [[PKM-RESTRUCTURE-PLAN]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[git-repository-study-plan]] - 높은 연관성
+- [[2024-09-10월-일일업무노트]] - 높은 연관성
+- [[일상의틈-lgu-프로젝트]] - 높은 연관성
+- [[golden-brown-meeting-summary]] - 높은 연관성

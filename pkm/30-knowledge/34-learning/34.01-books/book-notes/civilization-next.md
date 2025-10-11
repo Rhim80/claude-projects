@@ -93,3 +93,12 @@ migrated: 2025-10-10
 - [[야마구치 슈]]
 - [[얼굴이 보이는 관계]]
 - [[소셜 비즈니스]]
+
+## Related Notes
+- [[SENSE_AI_SEO_STRATEGY]] - 높은 연관성
+- [[AI시대_학습_패러다임_강연요약본]] - 높은 연관성
+- [[week1-slide-sources]] - 높은 연관성
+- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
+- [[02_워커샵_대전]] - 높은 연관성
+- [[gangneung-cafe-proposal-quote]] - 높은 연관성
+- [[gangneung-cafe-proposal-quote]] - 높은 연관성

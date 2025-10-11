@@ -194,3 +194,12 @@
 **문서 생성일**: 2025년 9월 29일
 **대상**: GPTers 19기 창업 스터디
 **작성자**: 이림 (이미커피 대표)
+
+## Related Notes
+- [[learning-roadmap]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[education-hub]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[menu-development-hub]] - 높은 연관성

@@ -185,3 +185,12 @@
 **금지**: 무조건 긍정, 추상적 제안, 일률적 기준, 액션없는 피드백
 
 목표: 시장에서 실제 통할 수 있는 브랜드 시스템 완성
+
+## Related Notes
+- [[오프라인-비즈니스-운영-프로세스]] - 높은 연관성
+- [[naver-seo-version]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[ai-automation-hub]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[창업교육-커리큘럼]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성

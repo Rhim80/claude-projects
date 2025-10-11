@@ -269,3 +269,12 @@ python3 -c "import markdown; print(len(markdown.markdown(open('content/your-file
 ---
 
 *이 가이드를 따르면 Ghost v5에서 발생할 수 있는 모든 업로드 문제를 해결할 수 있습니다.*
+
+## Related Notes
+- [[human-sense-importance]] - 참고
+- [[leadership-transformation]] - 참고
+- [[트리니타스 브랜딩 미팅]] - 참고
+- [[창업-인테리어-가이드]] - 참고
+- [[ideas-collection]] - 참고
+- [[hfk-쇼핑의-미래-Sun,-Aug-4,-2024]] - 참고
+- [[창업-운영준비-실무]] - 참고

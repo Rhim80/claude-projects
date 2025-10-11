@@ -245,3 +245,12 @@
 3. **week1/README.md**: 최종 정리된 커리큘럼 구조
 
 **핵심 메시지**: 이론이 아닌 **실제 경험에서 검증된 내용**으로 구성하여 수강생의 신뢰와 학습 효과를 극대화
+
+## Related Notes
+- [[learning-roadmap]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[education-hub]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성

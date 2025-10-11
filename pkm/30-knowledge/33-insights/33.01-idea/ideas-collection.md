@@ -191,3 +191,12 @@ source: workflowy-txt.txt
 - [[테이크아웃-홀더-아이디어]]
 - [[월간-공간-구독-아이디어]]
 - [[커뮤니티-비즈니스-아이디어]]
+
+## Related Notes
+- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
+- [[01_고요새_제주]] - 높은 연관성
+- [[ai-creator-collaboration-content]] - 높은 연관성
+- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
+- [[워크플로우_개발_가이드]] - 높은 연관성
+- [[prompt-templates]] - 높은 연관성
+- [[소경계_1편_첫만남부터_2차PT]] - 높은 연관성

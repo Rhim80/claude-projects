@@ -92,3 +92,12 @@ AI가 제 폴더 구조를 이해하고, 파일들의 관계를 알고, 작업�
 - 전체 1,847자 (네이버 최소 기준 충족)
 - 개인 경험 기반의 스토리텔링 톤 유지
 - 모바일 가독성 최적화
+
+## Related Notes
+- [[19th-proposal-simple]] - 높은 연관성
+- [[gmail-classifier-분석]] - 높은 연관성
+- [[워크플로우_개발_가이드]] - 높은 연관성
+- [[19th-gpters-submission]] - 높은 연관성
+- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성
+- [[19th-cohort-proposal]] - 높은 연관성
+- [[IMPROVED_TEMPLATE_V1.1]] - 높은 연관성

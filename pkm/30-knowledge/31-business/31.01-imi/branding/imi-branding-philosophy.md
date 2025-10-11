@@ -121,4 +121,11 @@ note: "이미워크숍-브랜드철학, 성장과-브랜딩, 창업론-생존의
 
 ---
 
-
+## Related Notes
+- [[imi-coffee-consulting-proposal-template]] - 높은 연관성
+- [[SENSE_AI_SEO_STRATEGY]] - 높은 연관성
+- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
+- [[02_워커샵_대전]] - 높은 연관성
+- [[aeo-ai-search-marketing-strategy]] - 높은 연관성
+- [[ai-creator-collaboration-content]] - 높은 연관성
+- [[19th-gpters-submission]] - 높은 연관성

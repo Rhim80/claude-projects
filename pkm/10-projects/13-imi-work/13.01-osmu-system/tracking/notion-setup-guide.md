@@ -144,3 +144,12 @@ Threads 스레드: ⏳ 예정
 ---
 
 *이 가이드를 따라서 체계적인 OSMU 관리 시스템을 구축하세요!*
+
+## Related Notes
+- [[클로드 코드 사용]] - 관련 주제
+- [[직원-관리-DB]] - 관련 주제
+- [[learning-roadmap]] - 관련 주제
+- [[setup-guide]] - 관련 주제
+- [[human-sense-importance]] - 관련 주제
+- [[system-vs-tool-master]] - 관련 주제
+- [[1차_미팅_ 스미다]] - 관련 주제

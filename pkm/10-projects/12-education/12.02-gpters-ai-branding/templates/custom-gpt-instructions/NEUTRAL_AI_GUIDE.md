@@ -202,3 +202,12 @@
 - `브랜딩 시작`
 
 **이 지침서를 Claude Project에 붙여넣으면 순수하게 템플릿만 진행하는 중립적 AI 가이드가 완성됩니다.**
+
+## Related Notes
+- [[pkm-sustainability]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[education-hub]] - 높은 연관성
+- [[ai-automation-hub]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성

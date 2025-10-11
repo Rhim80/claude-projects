@@ -37,3 +37,12 @@ published: false
 실적 공개
 
 매월 원두 or 커피 제공 (금액 산정)
+
+## Related Notes
+- [[imi-coffee-consulting-proposal-template]] - 높은 연관성
+- [[09_소경계_컨설팅_프로젝트]] - 높은 연관성
+- [[06_앙떼떼페레_Entetepere]] - 높은 연관성
+- [[05_아뜰리에스미다_Atelier_Smida]] - 높은 연관성
+- [[GPT_STEP1_COMPACT]] - 높은 연관성
+- [[07_카페_에이닐_컨설팅_프로젝트]] - 높은 연관성
+- [[01_고요새_제주]] - 높은 연관성

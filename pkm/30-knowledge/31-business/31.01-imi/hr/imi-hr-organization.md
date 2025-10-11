@@ -84,4 +84,11 @@ note: "직원교육-성과관리, 직원채용-공고-철학, 브랜드캘린더
 
 ---
 
-
+## Related Notes
+- [[imi-coffee-consulting-proposal-template]] - 높은 연관성
+- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
+- [[advertising-guide]] - 높은 연관성
+- [[ai-creator-collaboration-content]] - 높은 연관성
+- [[이미커피_컨설팅_워크플로우]] - 높은 연관성
+- [[GPT_STEP1_COMPACT]] - 높은 연관성
+- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성

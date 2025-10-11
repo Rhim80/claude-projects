@@ -161,3 +161,12 @@
 - **"일단 여기서 마무리할게요"** → 대화 종료
 
 ⚠️ **중요**: 7개 질문이 모두 완료되면 더 이상 추가 질문하지 말고 반드시 위 안내 메시지 출력
+
+## Related Notes
+- [[pkm-sustainability]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성
+- [[naver-seo-version]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성

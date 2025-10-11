@@ -121,3 +121,12 @@
 ---
 
 *이 허브는 15년 F&B 경험의 집약체입니다. 실무 중심의 운영 노하우와 AI 자동화가 결합된 현대적 비즈니스 운영 시스템을 담고 있습니다.*
+
+## Related Notes
+- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성
+- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
+- [[IMPROVED_TEMPLATE_V1.1]] - 높은 연관성
+- [[19th-gpters-submission]] - 높은 연관성
+- [[문의 답변]] - 높은 연관성
+- [[19th-proposal-simple]] - 높은 연관성
+- [[솔로프리너_생산성_치트키_AI_강의안]] - 높은 연관성

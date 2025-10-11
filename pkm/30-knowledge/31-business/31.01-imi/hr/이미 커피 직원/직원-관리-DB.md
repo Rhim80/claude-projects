@@ -86,3 +86,12 @@ source: notion
 ## 💾 원본 데이터
 
 CSV 파일: [[직원-관리-DB.csv]]
+
+## Related Notes
+- [[golden-brown-partnership-inquiry]] - 높은 연관성
+- [[payroll-a-분석]] - 높은 연관성
+- [[program-proposal]] - 높은 연관성
+- [[payroll-b-분석]] - 높은 연관성
+- [[19th-working-backwards-final]] - 높은 연관성
+- [[인사이트 플랫폼 AI 강의]] - 높은 연관성
+- [[planning-session-notes]] - 높은 연관성

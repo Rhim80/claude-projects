@@ -239,3 +239,12 @@ Claude Code + Obsidian 사전 설치 필수
 
 **제출일**: 2025년 10월 12일
 **작성자**: 이림 + 진여진
+
+## Related Notes
+- [[learning-roadmap]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성
+- [[education-hub]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성

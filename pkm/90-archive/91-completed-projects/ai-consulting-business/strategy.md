@@ -189,3 +189,12 @@ Phase 3: 시스템화 전략 (12-24개월)
 
 ---
 *최종 업데이트: 2025-08-30*
+
+## Related Notes
+- [[2025-10_비즈니스_재구조화_전략]] - 높은 연관성
+- [[detailed-plan]] - 높은 연관성
+- [[persuasion-strategy]] - 높은 연관성
+- [[platform-strategy]] - 높은 연관성
+- [[platform-concept]] - 높은 연관성
+- [[ideas-analysis]] - 높은 연관성
+- [[19th-cohort-proposal]] - 높은 연관성

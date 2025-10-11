@@ -140,3 +140,12 @@ published: false
 7. **오픈 체크포인트**: 테스트 오픈 완료, 그랜드 오픈 준비 완료
 
 이 리스트를 기반으로 구체적인 일정과 담당자 배정을 함께 논의해 나가면 좋을 것 같습니다. 각 항목에 대해 중요도와 우선순위를 정하고, 기존에 제시된 일정표(4월~6월)에 맞추어 조정해 나갈 수 있습니다.
+
+## Related Notes
+- [[소경계 카페 오픈을 위한 주요 작업 리스트]] - 높은 연관성
+- [[작업-진행상황]] - 높은 연관성
+- [[imi-coffee-consulting-proposal-template]] - 높은 연관성
+- [[창업교육-커리큘럼]] - 높은 연관성
+- [[gangneung-cafe-proposal-quote]] - 높은 연관성
+- [[gangneung-cafe-proposal-quote]] - 높은 연관성
+- [[exp-004-tasigomas-marketing]] - 높은 연관성

@@ -75,3 +75,12 @@ AI와의 심층 대화를 통해 완성한 '브랜딩 휠 캔버스'를 기반�
 **4주차** 종합 실습: 나의 브랜드 시스템 발표하기
 
 (과제 없음)
+
+## Related Notes
+- [[18th-cohort-original-proposal]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성
+- [[education-hub]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[ai-automation-hub]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성

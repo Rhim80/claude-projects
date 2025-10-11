@@ -327,3 +327,12 @@ lines: 529-648
 ---
 
 *작업 완료: 2025-10-10*
+
+## Related Notes
+- [[2025-10-11]] - 높은 연관성
+- [[2025-10-10]] - 높은 연관성
+- [[menu-development-hub]] - 높은 연관성
+- [[PKM-RESTRUCTURE-PLAN]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성
+- [[anthropic-non-developer-workflows]] - 높은 연관성
+- [[system-vs-tool-master]] - 높은 연관성

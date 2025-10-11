@@ -98,3 +98,12 @@
 - ✅ [[41-daily/2025-10-10]] → [[31-business/pkm-sustainability]]
 - ✅ [[31-business/pkm-sustainability]] Hub Note 생성
 - ✅ 00-inbox/README 업데이트 (Johnny Decimal 경로)
+
+## Related Notes
+- [[pkm-sustainability]] - 높은 연관성
+- [[detailed-plan]] - 높은 연관성
+- [[git-repository-study-plan]] - 높은 연관성
+- [[2025-10-11]] - 높은 연관성
+- [[작업-진행상황]] - 높은 연관성
+- [[2025-10-10]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성

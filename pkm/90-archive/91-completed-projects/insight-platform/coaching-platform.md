@@ -103,3 +103,12 @@
 ---
 
 *"AI가 대체할 수 없는 인간적 요소에서 경쟁 우위를 찾되, AI로 그 인간적 요소를 더욱 강화하는 도구를 만들자."*
+
+## Related Notes
+- [[platform-concept]] - 높은 연관성
+- [[platform-strategy]] - 높은 연관성
+- [[19th-cohort-proposal]] - 높은 연관성
+- [[ideas-analysis]] - 높은 연관성
+- [[anthropic-non-developer-workflows]] - 높은 연관성
+- [[program-proposal]] - 높은 연관성
+- [[advertising-guide]] - 높은 연관성

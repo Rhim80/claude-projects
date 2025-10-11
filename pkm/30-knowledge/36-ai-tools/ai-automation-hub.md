@@ -170,3 +170,12 @@
 ---
 
 *"비개발자도 AI와 자동화로 비즈니스를 최적화할 수 있다. 중요한 건 기술이 아니라 문제 해결 능력이다."*
+
+## Related Notes
+- [[2025-10_비즈니스_재구조화_전략]] - 높은 연관성
+- [[detailed-plan]] - 높은 연관성
+- [[gpters-final-presentation-beyond-ai-novelty]] - 높은 연관성
+- [[19th-working-backwards-final]] - 높은 연관성
+- [[PROJECT_HISTORY]] - 높은 연관성
+- [[19th-proposal-simple]] - 높은 연관성
+- [[19th-gpters-submission]] - 높은 연관성

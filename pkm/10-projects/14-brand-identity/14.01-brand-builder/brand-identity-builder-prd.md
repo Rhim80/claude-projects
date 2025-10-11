@@ -520,3 +520,12 @@ PROMPT_STEP_6="[Step 6 프롬프트 내용]"
 - 프로젝트 매니저: hovoo@imiwork.com
 - 기술 문의: dev@imiwork.com
 - 비즈니스 문의: biz@imiwork.com
+
+## Related Notes
+- [[system-vs-tool-master]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[ai-automation-hub]] - 높은 연관성
+- [[education-hub]] - 높은 연관성
+- [[naver-seo-version]] - 높은 연관성
+- [[menu-development-hub]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성

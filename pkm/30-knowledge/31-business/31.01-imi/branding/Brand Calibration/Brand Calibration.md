@@ -20,3 +20,12 @@ published: false
 2. 개인적 성장 향상 : 새로운 것을 시도하면 개인이 새로운 열정을 발견하고, 새로운 기술을 개발하고, 개인으로서 성장하도록 도울 수 있다. 이것은 개인적 성취감과 만족감으로 이어질 수 있다.
 
 3. 창의성 증가 : 새로운 것을 경험하면 창의성과 혁신에 영감을 줄 수 있다. 다양한 문화, 아이디어 및 관점에 대한 노출은 개인이 새로운 관점에서 문제와 도전에 접근하고 새로운 솔루션을 개발하는 데 도움이 될 수 있다.
+
+## Related Notes
+- [[step-5-brand-execution]] - 관련 주제
+- [[step-4-brand-validation]] - 관련 주제
+- [[step-3-brand-language]] - 관련 주제
+- [[brand-identity-builder-prd]] - 관련 주제
+- [[brand-identity-builder-prd]] - 관련 주제
+- [[step-2-brand-naming]] - 관련 주제
+- [[brand-identity-builder-prd-v2]] - 관련 주제

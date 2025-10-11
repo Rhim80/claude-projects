@@ -658,3 +658,12 @@ MAYA, Most Advanced Yet Acceptable : 가장 진보적이면서도 수용할 수 
 .
 일단. 대중의 주목을 받고 인기를 얻으려면 스스로 전파 요소를 만들어내야 한다.
 즉, 공유할 가치가 있는 무언가를 만들어내야 한다는 의미다.
+
+## Related Notes
+- [[19th-proposal-simple]] - 높은 연관성
+- [[19th-gpters-submission]] - 높은 연관성
+- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
+- [[CUSTOM_GPT_INSTRUCTIONS]] - 높은 연관성
+- [[ai-creator-collaboration-content]] - 높은 연관성
+- [[BRAND_FRAMEWORK_ANALYSIS]] - 높은 연관성
+- [[market-research]] - 높은 연관성

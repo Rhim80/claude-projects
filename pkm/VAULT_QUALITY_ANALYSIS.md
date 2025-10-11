@@ -76,3 +76,12 @@
 - [2169 words] **long_content**: `10-projects/11-consulting/11.03-so-gyeong-gye/소경계_프로젝트_회고록.md`
 - [2106 words] **long_content**: `30-knowledge/31-business/31.01-imi/consulting/계약시 확인사항.md`
 - [2060 words] **long_content**: `30-knowledge/34-learning/34.01-books/books/비즈니스의-미래.md`
+
+## Related Notes
+- [[SPLIT_SUMMARY]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[persuasion-strategy]] - 높은 연관성
+- [[2025-10-11]] - 높은 연관성
+- [[menu-development-hub]] - 높은 연관성
+- [[PKM-RESTRUCTURE-PLAN]] - 높은 연관성
+- [[2025-10-10]] - 높은 연관성

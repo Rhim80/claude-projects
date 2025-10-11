@@ -253,3 +253,12 @@ if (workStatus === '재직' &&
 ---
 
 *매월 25일부터 28일까지 4일간의 자동화된 급여 변동사항 처리로, 점장-관리팀-노무사 간의 완벽한 소통 체계를 구축합니다. GPT-4o-mini의 텍스트 분석과 HTML 리포트 생성으로 전문성과 효율성을 동시에 달성하는 시스템입니다.*
+
+## Related Notes
+- [[system-vs-tool-master]] - 높은 연관성
+- [[personal-tone-version]] - 높은 연관성
+- [[final-seo-version]] - 높은 연관성
+- [[naver-seo-version]] - 높은 연관성
+- [[business-operations-hub]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[pkm-sustainability]] - 높은 연관성

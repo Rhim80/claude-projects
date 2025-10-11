@@ -400,3 +400,12 @@ source: workflowy
 - 비즈니스로서 실제 운영의 이야기.
 
 - 실제 스몰브랜드 운영
+
+## Related Notes
+- [[imi-coffee-consulting-proposal-template]] - 높은 연관성
+- [[GPT_STEP1_COMPACT]] - 높은 연관성
+- [[문의 답변]] - 높은 연관성
+- [[이미커피_컨설팅_워크플로우]] - 높은 연관성
+- [[IMPROVED_GPT_STEP1_GUIDE]] - 높은 연관성
+- [[ai-creator-collaboration-content]] - 높은 연관성
+- [[IMPROVEMENT_ROADMAP]] - 높은 연관성

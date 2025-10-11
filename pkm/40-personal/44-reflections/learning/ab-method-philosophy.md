@@ -221,3 +221,12 @@ AB 철학 활용:
 ---
 
 **핵심 메시지: 복잡한 도구 없이도 체계적 사고만으로 충분히 효과적인 프로젝트 관리가 가능하다.**
+
+## Related Notes
+- [[IMPROVEMENT_ROADMAP]] - 높은 연관성
+- [[learning-roadmap]] - 높은 연관성
+- [[platform-concept]] - 높은 연관성
+- [[경탁주-프로젝트-기획]] - 높은 연관성
+- [[advertising-guide]] - 높은 연관성
+- [[19th-gpters-submission]] - 높은 연관성
+- [[19th-cohort-proposal]] - 높은 연관성
