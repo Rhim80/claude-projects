@@ -1,13 +1,10 @@
 ---
 title: "소경계 non-coffee menu"
+category: 90-archive
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-projects"
   - "dessert-menu"
-aliases:
   - "소경계 non-coffee menu 25dd0f53623d806ea215da7190186edb"
-notion-id: "25dd0f53623d806ea215da7190186edb"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Projects 🚀 230d0f53623d8153bf62f23dd93ce93f/소경계 프로젝트 1f7d0f53623d80adb89ac5403937e464/Dessert Menu 254d0f53623d801a8e71ef9af376dda7"
 published: false
 ---
 

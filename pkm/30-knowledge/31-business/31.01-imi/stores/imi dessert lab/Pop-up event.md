@@ -1,13 +1,10 @@
 ---
 title: "Pop-up event"
+category: 30-knowledge
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-areas"
   - "imi-dessert-lab"
-aliases:
   - "Pop-up event 90e093644f45432abfceb0a12f9f977e"
-notion-id: "90e093644f45432abfceb0a12f9f977e"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Areas 🔲 230d0f53623d812fa0e9f500c4679623/(주) 음 66e9b539f26a4b65b785de77451613c8/imi dessert lab 5cede3390c36445e9a8d7929b28a2c5a"
 published: false
 ---
 

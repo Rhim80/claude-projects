@@ -1,12 +1,9 @@
 ---
 title: "NOTE COFFEE HOUSE 프로젝트"
+category: 90-archive
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-projects"
-aliases:
   - "NOTE COFFEE HOUSE 프로젝트 1dbd0f53623d8037b87dd9f77ba11f65"
-notion-id: "1dbd0f53623d8037b87dd9f77ba11f65"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Projects 🚀 230d0f53623d8153bf62f23dd93ce93f"
 published: false
 ---
 

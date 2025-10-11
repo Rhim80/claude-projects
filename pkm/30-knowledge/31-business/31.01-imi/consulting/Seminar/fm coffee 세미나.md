@@ -1,13 +1,10 @@
 ---
 title: "fm coffee 세미나"
+category: 30-knowledge
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-areas"
   - "seminar"
-aliases:
   - "fm coffee 세미나 089bbfad87b7492eb385978283b9fa93"
-notion-id: "089bbfad87b7492eb385978283b9fa93"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Areas 🔲 230d0f53623d812fa0e9f500c4679623/(주) 음 66e9b539f26a4b65b785de77451613c8/Seminar fec8f8f2d3df47b1b21cd29d3a79973b"
 published: false
 ---
 

@@ -1,12 +1,9 @@
 ---
 title: "2023년 imi crew 연봉"
+category: 30-knowledge
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-areas"
-aliases:
   - "2023년 imi crew 연봉 b4ab162d40294b47bdf9b2b5a7a35148"
-notion-id: "b4ab162d40294b47bdf9b2b5a7a35148"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Areas 🔲 230d0f53623d812fa0e9f500c4679623/(주) 음 66e9b539f26a4b65b785de77451613c8/이미 커피 직원 72083782ed1d490182936249bd6da0b0"
 published: false
 ---
 

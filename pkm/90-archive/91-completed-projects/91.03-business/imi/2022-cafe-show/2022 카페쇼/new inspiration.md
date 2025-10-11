@@ -1,13 +1,10 @@
 ---
 title: "new inspiration"
+category: 90-archive
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-areas"
   - "2022"
-aliases:
   - "new inspiration 8ad936532a58470aad11cd36a72e5e98"
-notion-id: "8ad936532a58470aad11cd36a72e5e98"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Areas 🔲 230d0f53623d812fa0e9f500c4679623/(주) 음 66e9b539f26a4b65b785de77451613c8/카페쇼 d5523d3286ac43f885e3942db25ee5d1/2022 카페쇼 76c7acd179214d439817a38a3c1257ca"
 published: false
 ---
 

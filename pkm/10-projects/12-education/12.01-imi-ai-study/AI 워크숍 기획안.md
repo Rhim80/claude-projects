@@ -1,13 +1,10 @@
 ---
 title: "AI 워크숍 기획안"
+category: 10-projects
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-areas"
   - "imi-ai-study"
-aliases:
   - "AI 워크숍 기획안 1fad0f53623d803c966fcd9b2871c09d"
-notion-id: "1fad0f53623d803c966fcd9b2871c09d"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Areas 🔲 230d0f53623d812fa0e9f500c4679623/IMI AI STUDY 1d9d0f53623d8041bf76c077ebfc7363"
 published: false
 ---
 

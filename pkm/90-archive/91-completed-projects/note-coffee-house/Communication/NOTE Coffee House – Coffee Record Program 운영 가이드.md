@@ -1,14 +1,11 @@
 ---
 title: "NOTE Coffee House – Coffee Record Program 운영 가이드"
+category: 90-archive
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-projects"
   - "note-coffee-house"
   - "communication"
-aliases:
   - "NOTE Coffee House – Coffee Record Program 운영 가이드 21fd0f53623d8099bea9d0ba8adcf506"
-notion-id: "21fd0f53623d8099bea9d0ba8adcf506"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Projects 🚀 230d0f53623d8153bf62f23dd93ce93f/NOTE COFFEE HOUSE 프로젝트 1dbd0f53623d8037b87dd9f77ba11f65/Communication 1f8d0f53623d80ccb620dbe81b9339f6"
 published: false
 ---
 

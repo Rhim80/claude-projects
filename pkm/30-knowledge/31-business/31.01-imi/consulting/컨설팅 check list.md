@@ -1,13 +1,10 @@
 ---
 title: "컨설팅 check list"
+category: 30-knowledge
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-areas"
   - "consulting"
-aliases:
   - "컨설팅 check list 3a23fab92942423093da176288f71356"
-notion-id: "3a23fab92942423093da176288f71356"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Areas 🔲 230d0f53623d812fa0e9f500c4679623/(주) 음 66e9b539f26a4b65b785de77451613c8/Consulting 2dc9598b52424ea9a92ed0b3cf650ae9"
 published: false
 ---
 

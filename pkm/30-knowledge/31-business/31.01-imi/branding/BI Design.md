@@ -1,12 +1,9 @@
 ---
 title: "BI Design"
+category: 30-knowledge
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-areas"
-aliases:
   - "BI Design 1dfc917cb3014f86b6ce626043889df1"
-notion-id: "1dfc917cb3014f86b6ce626043889df1"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Areas 🔲 230d0f53623d812fa0e9f500c4679623/(주) 음 66e9b539f26a4b65b785de77451613c8"
 published: false
 ---
 

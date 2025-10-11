@@ -1,12 +1,9 @@
 ---
 title: "Budget"
+category: 90-archive
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-projects"
-aliases:
   - "Budget 1f7d0f53623d81e9b252ff3d41968f0b"
-notion-id: "1f7d0f53623d81e9b252ff3d41968f0b"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Projects 🚀 230d0f53623d8153bf62f23dd93ce93f/소경계 프로젝트 1f7d0f53623d80adb89ac5403937e464"
 published: false
 ---
 

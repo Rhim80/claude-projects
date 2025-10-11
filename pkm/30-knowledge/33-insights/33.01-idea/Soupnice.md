@@ -1,13 +1,10 @@
 ---
 title: "Soupnice"
+category: 30-knowledge
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-resources"
   - "idea"
-aliases:
   - "Soupnice 500d6fd51f834cf58df3457c9573d599"
-notion-id: "500d6fd51f834cf58df3457c9573d599"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Resources 📚 230d0f53623d81c88513e5dd43d84c47/idea e4dd2c14c0db49beabded867a50a855a"
 published: false
 ---
 

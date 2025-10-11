@@ -1,12 +1,9 @@
 ---
 title: "the roasters"
+category: 30-knowledge
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-areas"
-aliases:
   - "the roasters 0c2b90a4832c4ecebba3b98c6edcee57"
-notion-id: "0c2b90a4832c4ecebba3b98c6edcee57"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Areas 🔲 230d0f53623d812fa0e9f500c4679623/(주) 음 66e9b539f26a4b65b785de77451613c8"
 published: false
 ---
 

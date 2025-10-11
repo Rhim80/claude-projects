@@ -1,12 +1,9 @@
 ---
 title: "실천반 zero"
+category: 30-knowledge
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-resources"
-aliases:
   - "실천반 zero 8040dad7cf064ba28ab8cb7b7796284d"
-notion-id: "8040dad7cf064ba28ab8cb7b7796284d"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Resources 📚 230d0f53623d81c88513e5dd43d84c47/음워크숍 538c54d853e2488e83fd3053d148677c"
 published: false
 ---
 

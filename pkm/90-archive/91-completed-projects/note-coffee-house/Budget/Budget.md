@@ -1,13 +1,10 @@
 ---
 title: "Budget"
+category: 90-archive
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-projects"
   - "note-coffee-house"
-aliases:
   - "Budget 1dcd0f53623d8035a65ff3e1dbcb6e3f"
-notion-id: "1dcd0f53623d8035a65ff3e1dbcb6e3f"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Projects 🚀 230d0f53623d8153bf62f23dd93ce93f/NOTE COFFEE HOUSE 프로젝트 1dbd0f53623d8037b87dd9f77ba11f65"
 published: false
 ---
 

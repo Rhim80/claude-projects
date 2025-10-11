@@ -1,12 +1,9 @@
 ---
 title: "Community Project"
+category: 30-knowledge
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-areas"
-aliases:
   - "Community Project 1f8ae95ccdce412ba687daea466526f2"
-notion-id: "1f8ae95ccdce412ba687daea466526f2"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Areas 🔲 230d0f53623d812fa0e9f500c4679623/(주) 음 66e9b539f26a4b65b785de77451613c8"
 published: false
 ---
 

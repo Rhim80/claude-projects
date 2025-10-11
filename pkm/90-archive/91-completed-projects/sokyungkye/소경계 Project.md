@@ -1,12 +1,9 @@
 ---
 title: "소경계 Project"
+category: 90-archive
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-projects"
-aliases:
   - "소경계 Project 1f7d0f53623d817987ccf42f199d4a35"
-notion-id: "1f7d0f53623d817987ccf42f199d4a35"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Projects 🚀 230d0f53623d8153bf62f23dd93ce93f/소경계 프로젝트 1f7d0f53623d80adb89ac5403937e464"
 published: false
 ---
 

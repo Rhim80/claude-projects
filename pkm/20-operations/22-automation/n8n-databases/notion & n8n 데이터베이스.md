@@ -1,8 +1,7 @@
 ---
 title: "notion & n8n 데이터베이스"
-aliases:
-  - "notion & n8n 데이터베이스 22bd0f53623d80659a17d5f1a727c2ad"
-notion-id: "22bd0f53623d80659a17d5f1a727c2ad"
+category: 20-operations
+source: notion-migration
 published: false
 ---
 

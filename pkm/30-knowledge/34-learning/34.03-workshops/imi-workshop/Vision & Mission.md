@@ -1,12 +1,9 @@
 ---
 title: "Vision & Mission"
+category: 30-knowledge
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-resources"
-aliases:
   - "Vision & Mission 841ba7f67e084452ac14e3d8bfd3551b"
-notion-id: "841ba7f67e084452ac14e3d8bfd3551b"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Resources 📚 230d0f53623d81c88513e5dd43d84c47/음워크숍 538c54d853e2488e83fd3053d148677c"
 published: false
 ---
 

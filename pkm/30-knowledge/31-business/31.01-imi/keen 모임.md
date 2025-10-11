@@ -1,12 +1,9 @@
 ---
 title: "keen 모임"
+category: 30-knowledge
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-areas"
-aliases:
   - "keen 모임 0b2d88b32ea248ef8351291c60c8b4f0"
-notion-id: "0b2d88b32ea248ef8351291c60c8b4f0"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Areas 🔲 230d0f53623d812fa0e9f500c4679623/(주) 음 66e9b539f26a4b65b785de77451613c8"
 published: false
 ---
 

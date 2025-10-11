@@ -1,13 +1,10 @@
 ---
 title: "Pitch Deck"
+category: 30-knowledge
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-areas"
   - "brand-calibration"
-aliases:
   - "Pitch Deck f00eb1380cc24b18a4a1448072b84113"
-notion-id: "f00eb1380cc24b18a4a1448072b84113"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Areas 🔲 230d0f53623d812fa0e9f500c4679623/(주) 음 66e9b539f26a4b65b785de77451613c8/Brand Calibration b763e5f4a0d94fc0a1804daf2b4cbf05"
 published: false
 ---
 

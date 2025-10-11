@@ -1,13 +1,10 @@
 ---
 title: "Project 717"
+category: 30-knowledge
+source: notion-migration
 tags:
-  - "para-system"
-  - "db-resources"
   - "idea"
-aliases:
   - "Project 717 70af84c9bec647dfbdf55202df3704e5"
-notion-id: "70af84c9bec647dfbdf55202df3704e5"
-folder: "🚀 PARA System 230d0f53623d80fc9622ed288f937b25/DB Resources 📚 230d0f53623d81c88513e5dd43d84c47/idea e4dd2c14c0db49beabded867a50a855a"
 published: false
 ---
 
