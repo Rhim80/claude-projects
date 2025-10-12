@@ -10,6 +10,23 @@ published: false
 
 # 컨설팅 check list
 
+## 🌳 관련 Root Concepts
+- [[root-06-각오와-책임]] - "반드시 해야 할 중간 공유", "불편한 점 미리 공유" - 책임감 있는 소통 (본문 라인 23-26)
+- [[root-07-감각]] - "역광 확인", "식물 환경", "반사음", "에어컨 바람 방향" - 현장의 미세한 변수 감지 (본문 라인 38-54)
+
+## 🔗 상위 철학
+- [[imi-branding-philosophy]] - 창업의 각오와 실행의 디테일
+
+## 📚 관련 개념
+- [[컨설팅 제안서]] - 제안 → 체크리스트 순차 단계
+- [[계약시 확인사항]] - 계약 조건 → 실행 체크리스트
+
+## 💼 실제 적용 사례
+- [[10-projects/11-consulting/11.01-gangneung-cafe-2025/gangneung-cafe-proposal-quote]] - 강릉 카페 체크리스트 적용
+- [[10-projects/11-consulting/11.03-so-gyeong-gye/이미커피_컨설팅_워크플로우]] - 소경계 컨설팅 워크플로우
+
+---
+
 | **고지사항** |  |  |
 | --- | --- | --- |
 | 1 | 지역, 거리에 따라 컨설팅 기간동안 이미커피가 자주 방문하지 못할 것임을 고지 |  |
@@ -60,10 +77,3 @@ published: false
 | 2 | 필요한 도구
 집게, 서버, 빵칼 등등 |  |
 
-## Related Notes
-
-- [[00-system/01-templates/TEMPLATE_insight]] - business_strategy 관련; 30-knowledge ↔ 00-system 연결
-- [[10-projects/11-consulting/11.01-gangneung-cafe-2025/gangneung-cafe-proposal-quote]] - business_strategy 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/11-consulting/11.05-templates/gangneung-cafe-proposal-quote]] - business_strategy 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/11-consulting/11.03-so-gyeong-gye/이미커피_컨설팅_워크플로우]] - business_strategy 관련; 30-knowledge ↔ 10-projects 연결
-- [[ZETTELKASTEN_QUALITY_ASSESSMENT_REPORT]] - business_strategy 관련; 30-knowledge ↔ ZETTELKASTEN_QUALITY_ASSESSMENT_REPORT.md 연결
