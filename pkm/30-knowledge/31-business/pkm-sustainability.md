@@ -4,6 +4,14 @@
 
 ---
 
+## 🌳 관련 Root Concepts
+
+- [[00-roots/root-08-프로세스-공유]] - "시스템이 아니라 습관, 단계별 고도화 과정 공개" (본문)
+- [[00-roots/root-09-아카이브-사고]] - "활성 영역과 Archive 분리, 정기적 정리와 백업" (본문)
+- [[00-roots/root-04-동사-중심-사고]] - "작성, 업데이트, 링크 - 동작 중심 습관" (본문)
+
+---
+
 ## 🎯 핵심 철학
 
 **"지속 가능한 PKM은 시스템이 아니라 습관이다"**
@@ -130,8 +138,6 @@
 
 ## Related Notes
 
-- [[00-inbox/PKM-RESTRUCTURE-PLAN]] - cafe_operations, pkm_systems, content_creation, ai_automation, business_strategy, education 관련; '적용 사례' 개념 공유
-- [[00-inbox/Welcome]] - pkm_systems, ai_automation 관련; 30-knowledge ↔ 00-inbox 연결
-- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
-- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
-- [[10-projects/12-education/12.03-insight-platform/03_resources/content-analysis]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[business-operations-hub]] - 15년 F&B 경험의 PKM 실천 사례
+- [[00-roots/ROOT_VALIDATION_REPORT]] - 10개 Root 검증과 PKM 구조
+- [[41-daily]] - Daily Notes 실천 Hub

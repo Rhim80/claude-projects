@@ -6,6 +6,18 @@
 
 ---
 
+## 🌳 관련 Root Concepts
+
+이 Hub는 15년 F&B 경험이 담긴 문서들의 인덱스입니다. 개별 문서에서 Root 개념을 확인하세요.
+
+**Root 적용된 주요 문서**:
+- [[ai-business-maturity]] - root-06 (각오와-책임), root-05 (나음보다-다름), root-03 (주도성)
+- [[market-entry-framework]] - root-10 (소비자-중심), root-06 (각오와-책임), root-07 (감각)
+- [[31.01-imi/branding/imi-branding-philosophy]] - root-06 (각오와-책임), root-01 (의미가치), root-03 (주도성)
+- [[pkm-sustainability]] - root-08 (프로세스-공유), root-09 (아카이브-사고), root-04 (동사-중심-사고)
+
+---
+
 ## 📋 Overview
 
 이 허브는 15년간의 F&B 운영 경험과 4개 매장 운영 노하우를 담고 있습니다. 비즈니스 전략부터 일상 운영, 인사관리, 브랜딩까지 전 영역을 아우릅니다.

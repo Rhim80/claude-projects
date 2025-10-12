@@ -6,6 +6,14 @@
 
 ---
 
+## 🌳 관련 Root Concepts
+
+- [[00-roots/root-06-각오와-책임]] - "고통스럽고 무서워서 다른 사람들이 안 하는 것을 하는 능력" (본문)
+- [[00-roots/root-05-나음보다-다름]] - "AI 시대, 적당한 수준은 누구나 도달. 차별화는 과도함에서" (본문)
+- [[00-roots/root-03-주도성]] - "남들이 딸깍 한 번 할 때 100번 딸깍하는 주도적 집착" (본문)
+
+---
+
 ## 🎯 핵심 통찰: "딸깍 너머의 고민과 집착"
 
 ### AI 시대의 치명적 함정
@@ -235,8 +243,6 @@ Color 창업자의 통찰:
 
 ## Related Notes
 
-- [[10-projects/12-education/12.03-insight-platform/01_planning/program-proposal]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/13-imi-work/13.01-osmu-system/blog-content/aeo-ai-search-marketing-strategy]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/13-imi-work/13.01-osmu-system/temp-content-back-office-efficiency]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/13-imi-work/13.01-osmu-system/content/back-office-efficiency-front-office-delight]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
+- [[market-entry-framework]] - Color 창업 사례로 "딸깍 너머" 검증 실천
+- [[33-insights/do-too-much-alexandr-wang]] - DO TOO MUCH 철학 원문
+- [[33-insights/startup-reality-check]] - 창업 현실과 각오

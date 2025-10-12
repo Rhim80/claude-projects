@@ -10,6 +10,16 @@ note: "이미워크숍-브랜드철학, 성장과-브랜딩, 창업론-생존의
 
 > 이미커피 브랜드 철학, 성장 전략, 창업 생존 철학 통합 문서
 
+---
+
+## 🌳 관련 Root Concepts
+
+- [[../../00-roots/root-06-각오와-책임]] - "결코 누구도 당신의 선택에 책임져 주지 않습니다" (본문)
+- [[../../00-roots/root-01-의미가치]] - "창업은 왜 존재하는가, 나만의 무기는 무엇인가" (본문)
+- [[../../00-roots/root-03-주도성]] - "낯설고 두려운길. 아무도 가지 않아서 옳은지 모르는길" (본문)
+
+---
+
 ## 목차
 1. 이미 워크숍 및 브랜드 철학
 2. 성장과 브랜딩
@@ -123,8 +133,6 @@ note: "이미워크숍-브랜드철학, 성장과-브랜딩, 창업론-생존의
 
 ## Related Notes
 
-- [[10-projects/11-consulting/11.04-portfolio/03_리버헤드_Riverhead]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/13-imi-work/13.01-osmu-system/temp-content-back-office-efficiency]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/13-imi-work/13.01-osmu-system/content/back-office-efficiency-front-office-delight]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/13-imi-work/13.01-osmu-system/blog-content/aeo-ai-search-marketing-strategy]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/12-education/12.03-insight-platform/인사이트 플랫폼 AI 강의]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[../../ai-business-maturity]] - AI 시대의 각오와 집착
+- [[../../market-entry-framework]] - 시장 진입과 생존 전략
+- [[../../33-insights/startup-reality-check]] - 창업 현실 체크

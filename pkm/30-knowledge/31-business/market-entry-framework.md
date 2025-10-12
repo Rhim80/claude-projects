@@ -6,6 +6,14 @@
 
 ---
 
+## 🌳 관련 Root Concepts
+
+- [[00-roots/root-10-소비자-중심]] - "구매자들을 깊이 있게 이해하지 못합니다" - Color 창업자 (본문)
+- [[00-roots/root-06-각오와-책임]] - "수년과 여러 번의 피벗이 걸렸습니다" - 시장 학습의 각오 (본문)
+- [[00-roots/root-07-감각]] - "시장의 미묘한 신호 읽기, 구매 결정 순간의 복잡한 심리" (본문)
+
+---
+
 ## 창업 스토리
 
 오스만 라라키(Othman Laraki)와 엘라드 길(Elad Gil)은 Color의 아이디어를 단 하나의 기술적 통찰에서 얻었습니다. 둘 다 전 구글 프로덕트 매니저였으며, 함께 Mixer Labs라는 회사를 창업한 후 트위터에 인수되어 각각 제품 및 전략 VP 역할을 맡았습니다.
@@ -202,8 +210,6 @@ Color 팀은 곧 그들의 기본적인 가정이 틀렸다는 것을 깨달았�
 
 ## Related Notes
 
-- [[10-projects/12-education/12.03-insight-platform/03_resources/AI 강의 6월8일1-1_original]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/12-education/12.03-insight-platform/03_resources/AI 강의 6월8일1-3_original]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/13-imi-work/13.01-osmu-system/guides/IMI_WORK_PERSONA_GUIDE]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/12-education/12.03-insight-platform/03_resources/AI 강의 6월8일1-2_original]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/13-imi-work/13.01-osmu-system/temp-content-back-office-efficiency]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
+- [[ai-business-maturity]] - "딸깍 너머" 철학과 Color 사례 연결
+- [[imi-branding-philosophy]] - 창업과 생존에 대한 현실적 접근
+- [[33-insights/startup-reality-check]] - 시장 진입의 현실
