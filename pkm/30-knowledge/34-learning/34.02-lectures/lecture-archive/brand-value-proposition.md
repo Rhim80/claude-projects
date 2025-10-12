@@ -89,6 +89,12 @@ migrated: 2025-10-10
 - 그리고 여태까지 계속 스페셜티 커피쪽에서 일하던 사람이 돈을 많이 벌려면 본인의 가치인 스페셜티 커피를 한 게 정말 가능할까?
 - 만약 돈을 벌려면 오히려 포기해야 하는 것들도 생긴다
 
+## 🌳 관련 Root Concepts
+
+- [[00-roots/root-10-소비자-중심]] - "a라는 문제를 갖고 있는 고객" 중심 사고, 고객 가치 제안
+- [[00-roots/root-01-의미가치]] - 라이프스타일 가치 제공 (passion-able 사례)
+- [[00-roots/root-04-동사-중심-사고]] - Working Backwards, "c와 같은 일이 가능해집니다"
+
 ## Related Notes
 
 - [[30-knowledge/34-learning/34.02-lectures/lectures/브랜드-가치제안]] - business_strategy, ai_automation 관련; 'brand value proposition' 개념 공유

@@ -659,6 +659,13 @@ MAYA, Most Advanced Yet Acceptable : 가장 진보적이면서도 수용할 수 
 일단. 대중의 주목을 받고 인기를 얻으려면 스스로 전파 요소를 만들어내야 한다.
 즉, 공유할 가치가 있는 무언가를 만들어내야 한다는 의미다.
 
+## 🌳 관련 Root Concepts
+
+- [[00-roots/root-07-감각]] - "기술 vs 감각", 소비자 이해의 중요성
+- [[00-roots/root-10-소비자-중심]] - "소비자가 실력", 비즈니스 핵심
+- [[00-roots/root-09-아카이브-사고]] - "아카이브(기록&공유)", 브랜딩 기본
+- [[00-roots/root-05-나음보다-다름]] - MAYA 원칙, 최적의 새로움
+
 ## Related Notes
 
 - [[30-knowledge/34-learning/34.02-lectures/lectures/창업컨설팅-프로세스]] - ai_automation 관련; '예시:' 개념 공유

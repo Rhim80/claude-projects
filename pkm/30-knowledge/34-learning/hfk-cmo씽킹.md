@@ -755,6 +755,12 @@ source: workflowy
 
 ## Related Notes
 
+### Root Connections
+- [[30-knowledge/00-roots/root-04-동사-중심-사고]] - 마케팅은 "승리하기 위한 선택"의 연속, 실질적 액션과 운영에 집중
+- [[30-knowledge/00-roots/root-10-소비자-중심]] - Market-oriented Mindset, 고객에 대한 이해와 접점 경험 설계
+- [[30-knowledge/00-roots/root-05-나음보다-다름]] - 브랜드 차별화(Differentiation) vs 독특성(Distinctiveness), Better & Different
+
+### Related Content
 - [[30-knowledge/34-learning/34.02-lectures/lecture-archive/WIEE-세미나-노트]] - ai_automation 관련; 'yes' 개념 공유
 - [[10-projects/13-imi-work/13.01-osmu-system/guides/IMI_WORK_PERSONA_GUIDE]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
 - [[10-projects/12-education/12.02-gpters-ai-branding/templates/brand-wheel-canvas/IMPROVED_TEMPLATE_V1.1]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
