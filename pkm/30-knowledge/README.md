@@ -1,166 +1,262 @@
-# 📚 Resources
+# 30-Knowledge: IMI WORK 철학적 기반
 
-Your personal knowledge base of reference materials and evergreen notes.
+> "당신의 모든 비즈니스 결정을 설명하는 철학적 토대"
 
-## Purpose
+## 🎯 Overview
 
-Resources are **reference materials** that:
-- You might need someday
-- Aren't tied to specific projects
-- Represent topics of ongoing interest
-- Build your knowledge base over time
+30-knowledge는 **이림의 15년 F&B 경험 × AI 활용**에서 추출한 **10개의 철학적 루트(Philosophical Roots)**를 담고 있습니다.
 
-## What Belongs Here
+이 루트들은 서로 교차하며 **IMI WORK 철학**을 형성하고, 모든 비즈니스 활동(컨설팅, 교육, 카페 운영, 브랜딩)의 기반이 됩니다.
 
-### Simplified Structure (2025-10)
+## 📂 Structure
+
 ```
-03_Resources/
-├── 💡 insights/       # 아이디어, 인사이트, 메모 (구 ideas + inspirations + notes)
-├── 📚 knowledge/      # 책, 스터디, 워크숍, 강의 (구 books + study-notes + workshops)
-├── 🎯 business/       # 비즈니스 전략, 프레임워크 (구 business-strategy)
-├── 🛠 tools/          # AI 도구, 기술, 방법론 (구 ai-tools + ai-insights)
-└── 🍴 recipes/        # 레시피, 메뉴 개발
-```
-
-**원칙**: 머리속에서 떠올릴 수 있는 단순함 - 5개 핵심 폴더로 통합
-
-### Good Resources
-- Tutorial on Python decorators
-- Article about mental models
-- Book notes from "Thinking, Fast and Slow"
-- Framework for decision-making
-- List of cognitive biases
-- Industry trend analysis
-
-## Organization Principles
-
-### By Topic, Not Source
-❌ "Articles from Medium"
-✅ "AI Development Techniques"
-
-### Evergreen Over Ephemeral
-❌ "News from March 2024"
-✅ "Principles of Network Effects"
-
-### Atomic Notes
-- One concept per note
-- Self-contained understanding
-- Heavily linked to related ideas
-
-## Claude Code Workflows
-
-### Building Knowledge
-```
-I'm researching [topic].
-What do I already have in Resources?
-What gaps exist in my knowledge?
+30-knowledge/
+├── 00-roots/              # 10개 철학적 루트 (핵심)
+├── 31-business/           # 비즈니스 전략, 운영 지식
+├── 32-frameworks/         # 방법론, 프레임워크
+├── 33-insights/           # 검증된 인사이트 (재사용 가능)
+├── 34-learning/           # 학습 자료 (책, 강의, 워크숍)
+├── 35-recipes/            # 레시피, 메뉴 개발
+└── 36-ai-tools/           # AI 도구 활용법
 ```
 
-### Making Connections
+## 🌳 10개 철학적 루트
+
+### Tier 1: Foundation (기반)
+
+세계관과 인식의 출발점
+
+| Root | 핵심 철학 | IMI WORK 구현 |
+|------|----------|---------------|
+| **[[00-roots/root-01-감각]]** | 데이터 너머의 인간적 통찰 | SENSE & AI (15년 경험 × AI 도구) |
+| **[[00-roots/root-02-의미가치]]** | 효용을 넘어선 가치 창출 | 평균이 아닌 강점, 브랜딩 철학 |
+| **[[00-roots/root-03-과도함]]** | 평범함을 거부하는 실행력 | OSMU 자동화, 3개월 집중 프로젝트 |
+
+### Tier 2: Execution (실행)
+
+기반을 실현하는 행동 원칙
+
+| Root | 핵심 철학 | IMI WORK 구현 |
+|------|----------|---------------|
+| **[[00-roots/root-04-프로세스-공유]]** | 과정을 통한 연결과 소속감 | 블로그 공개, GPTers 함께 만들기 |
+| **[[00-roots/root-05-인사이드-아웃]]** | 내면 동기 기반 행동 | "나는 이렇게 생각한다" 관철 |
+| **[[00-roots/root-06-현장감]]** | 책상이 아닌 실제 현장 이해 | Playing Coach, 15년 오프라인 |
+
+### Tier 3: Sustainability (지속)
+
+시간의 힘을 활용하는 지속 가능성
+
+| Root | 핵심 철학 | IMI WORK 구현 |
+|------|----------|---------------|
+| **[[00-roots/root-07-아카이브-사고]]** | 과정을 기록하고 축적 | PKM Vault, n8n 백업, OSMU |
+| **[[00-roots/root-08-관계적-사고]]** | 연결과 맥락에서 가치 발견 | Zettelkasten, 개념 간 링크 |
+| **[[00-roots/root-09-통합적-사고]]** | 이질적 요소의 창조적 결합 | 오프라인 × AI, 카페 × 교육 |
+| **[[00-roots/root-10-층위적-사고]]** | 깊이를 설계하고 확장 | Johnny Decimal, 3계층 구조 |
+
+## 🔄 Root의 관계도
+
 ```
-Find all resources related to [concept].
-How do different sources approach this?
-What patterns emerge?
-```
-
-### Creating Synthesis
-```
-Review all notes about [topic] in Resources.
-Create a synthesis document of key insights.
-```
-
-### Finding Examples
-```
-I need examples of [concept].
-Search my resources for relevant cases.
-```
-
-## Resource Development
-
-### From Consumption to Creation
-1. **Capture**: Save interesting content
-2. **Process**: Extract key ideas
-3. **Connect**: Link to existing notes
-4. **Develop**: Build your own understanding
-5. **Create**: Generate original insights
-
-### Progressive Summarization
-- First pass: Highlight interesting parts
-- Second pass: Bold the most important
-- Third pass: Create summary at top
-- Fourth pass: Extract to own note
-
-## Claude Code Prompts
-
-### Knowledge Audit
-```
-Analyze my Resources folder.
-What topics am I building expertise in?
-Where are the gaps?
-```
-
-### Connection Discovery
-```
-Find surprising connections between 
-different topics in my Resources.
-```
-
-### Learning Path
-```
-Based on my resources about [topic],
-what should I learn next?
-Create a learning path.
-```
-
-### Concept Clarification
-```
-Explain [concept] using examples 
-from my existing resources.
-```
-
-## Best Practices
-
-### Naming Conventions
-- Clear, descriptive titles
-- Include key concepts in name
-- Avoid dates (unless historical)
-- Use consistent formatting
-
-### Note Structure
-```markdown
-# Concept Name
-
-## Summary
-One paragraph overview
-
-## Key Points
-- Main idea 1
-- Main idea 2
-- Main idea 3
-
-## Connections
-- Related to: [[Other Concept]]
-- Contrasts with: [[Different Idea]]
-- Examples: [[Case Study]]
-
-## Sources
-- Original article/book/video
+         ┌─────────────┐
+         │   감각      │ ← Tier 1: AI 시대의 인간 경쟁력
+         │ (Sense)    │
+         └──────┬──────┘
+                │
+         ┌──────┴──────┐
+         │  의미가치    │ ← 효용→의미 전환
+         │(Meaning)    │
+         └──────┬──────┘
+                │
+    ┌───────────┼───────────┐
+    │           │           │
+┌───┴───┐  ┌───┴───┐  ┌───┴───┐
+│과도함 │  │프로세스│  │인사이드│ ← Tier 2: 실행 원칙
+│(DO    │  │공유    │  │아웃    │
+│TOO    │  │(Process│  │(Inside │
+│MUCH)  │  │Sharing)│  │Out)    │
+└───┬───┘  └───┬───┘  └───┬───┘
+    │           │           │
+    └───────────┼───────────┘
+                │
+         ┌──────┴──────┐
+         │   현장감     │ ← 책상이 아닌 실전
+         │(Ground Truth│
+         └──────┬──────┘
+                │
+         ┌──────┴──────┐
+         │ 아카이브사고 │ ← Tier 3: 시간의 복리 효과
+         │(Archive)    │
+         └──────┬──────┘
+                │
+    ┌───────────┼───────────┐
+    │           │           │
+┌───┴───┐  ┌───┴───┐  ┌───┴───┐
+│관계적 │  │통합적 │  │층위적 │
+│사고   │  │사고   │  │사고   │
+│(Rela- │  │(Inte- │  │(Hiera-│
+│tional)│  │grative│  │rchical│
+└───────┘  └───────┘  └───────┘
 ```
 
-### Maintenance
-- Review and update regularly
-- Merge duplicate concepts
-- Strengthen connections
-- Delete what's no longer relevant
+## 🎓 "일을 잘한다는 것"과 "프로세스 이코노미"의 재해석
 
-## Tips
+이 둘은 독립된 루트가 아니라 **10개 루트의 특정 조합**입니다.
 
-- **Quality over quantity** - Better to deeply understand few concepts
-- **Your words matter** - Rewrite in your own understanding
-- **Links are gold** - Connections create value
-- **Review regularly** - Unused knowledge fades
-- **Share freely** - Teaching solidifies understanding
+### 일을 잘한다는 것 =
+- **감각** (기술 너머의 통찰)
+- \+ **의미가치** (효용→의미)
+- \+ **인사이드 아웃** (내면 확신)
 
-## Remember
+### 프로세스 이코노미 =
+- **프로세스 공유** (과정 중심)
+- \+ **의미가치** (의미 창출)
+- \+ **아카이브 사고** (과정 축적)
 
-Resources are your external brain. The value isn't in collecting, but in connecting and creating. Use Claude Code to help you see patterns and build understanding across your entire knowledge base.
+## 🚀 IMI WORK 철학 방정식
+
+```
+IMI WORK = 감각(15년 경험)
+           × 과도함(AI 자동화)
+           × 프로세스 공유(OSMU)
+           × 현장감(Playing Coach)
+           × 아카이브(PKM)
+           × 관계적 사고(Zettelkasten)
+           × 통합적 사고(오프라인 × AI)
+           × 층위적 사고(Johnny Decimal)
+```
+
+## 🤖 AI 시대의 경쟁력 구조
+
+### AI가 대체 못 하는 것 (당신의 경쟁력)
+- **감각**: 맥락과 취향의 이해
+- **현장감**: 15년 오프라인 경험
+- **인사이드 아웃**: 자신만의 철학
+
+### AI가 증폭시키는 것 (생산성 배수)
+- **아카이브 사고**: Claude Code + PKM
+- **프로세스 공유**: 자동화된 OSMU
+- **과도함**: n8n 워크플로우, 무한 반복 실험
+- **관계적 사고**: AI 기반 링크 생성
+- **층위적 사고**: 자동화된 계층 구조 관리
+
+## 📊 실전 활용법
+
+### 1. 의사결정 할 때
+**"이 결정이 어떤 루트에 기반하는가?"** 자문
+
+- 직관적 판단 → [[00-roots/root-01-감각]]
+- 차별화 고민 → [[00-roots/root-02-의미가치]]
+- 더 밀어붙일까 고민 → [[00-roots/root-03-과도함]]
+- 공유할까 말까 고민 → [[00-roots/root-04-프로세스-공유]]
+- 남들 따라할까 내 길 갈까 → [[00-roots/root-05-인사이드-아웃]]
+- 분석할까 직접 해볼까 → [[00-roots/root-06-현장감]]
+- 기록할까 말까 → [[00-roots/root-07-아카이브-사고]]
+- 연결할 개념이 있을까 → [[00-roots/root-08-관계적-사고]]
+- 이질적 요소를 결합할까 → [[00-roots/root-09-통합적-사고]]
+- 계층 구조를 설계할까 → [[00-roots/root-10-층위적-사고]]
+
+### 2. 프로젝트 회고할 때
+**"이 프로젝트는 어떤 루트를 활용했고, 어떤 루트가 부족했는가?"**
+
+성공 요인 = 활용된 루트
+개선 지점 = 부족한 루트
+
+### 3. 타인 설명할 때
+**"이 사람은 어떤 루트가 강한가?"**
+
+- 감각형: 디자이너, 브랜더
+- 과도함형: 창업자, 혁신가
+- 현장감형: 오퍼레이터, 매니저
+- 관계적 사고형: 연구자, 아키텍트
+- 통합적 사고형: 융합형 기획자
+
+## 📚 하위 폴더 가이드
+
+### 31-business: 비즈니스 지식
+- F&B 운영 노하우
+- 브랜딩 전략
+- 시장 진입 전략
+- 수익 모델
+
+### 32-frameworks: 프레임워크
+- 의사결정 프레임워크
+- 프로젝트 관리 방법론
+- 학습 시스템
+- 자동화 설계
+
+### 33-insights: 검증된 인사이트
+- 재사용 가능한 일반화된 지식
+- 여러 프로젝트에서 검증된 패턴
+- "idea" 폴더에서 검증 완료된 것들
+
+### 34-learning: 학습 자료
+- 책 노트
+- 강의 내용
+- 워크숍 자료
+- 온라인 코스
+
+### 35-recipes: 레시피
+- 카페 메뉴 개발
+- 페어링 디저트
+- 제조 프로세스
+
+### 36-ai-tools: AI 도구
+- Claude Code 활용법
+- n8n 자동화
+- GPT/Claude/Gemini 사용 사례
+- MCP 서버
+
+## 🔗 관련 문서
+
+- **[[00-roots/README.md]]** - 10개 Root 상세 설명
+- **[[KNOWLEDGE_ROOT_ANALYSIS.md]]** - 276개 파일 전체 분석 리포트
+- **[[34-learning/34.01-books/books/일을-잘한다는-것]]** - 감각, 의미가치, 인사이드 아웃
+- **[[34-learning/34.01-books/books/프로세스-이코노미]]** - 프로세스 공유, 의미가치
+- **[[33-insights/do-too-much-alexandr-wang]]** - 과도함, 현장감
+
+## 🎯 다음 단계
+
+1. **각 루트 정독**: 10개 파일을 천천히 읽으며 자신의 비즈니스에 적용
+2. **30-knowledge 재연결**: 모든 노트를 루트 관점에서 재구성 (진행 중)
+3. **10-projects 연결**: 활성 프로젝트와 루트의 관계 명확화 (예정)
+4. **루트 기반 의사결정**: 앞으로 모든 결정을 루트 기반으로
+
+## 💡 핵심 원칙
+
+### Quality over Quantity
+- 277개 파일보다 10개 철학적 루트가 더 중요
+- 깊이 있는 이해 > 표면적 수집
+
+### Connection is Value
+- 고립된 노트는 가치 없음
+- 루트와의 연결이 지식의 활성화
+
+### Philosophical Consistency
+- 모든 비즈니스 결정이 10개 루트로 설명 가능
+- 루트와 맞지 않는 것은 재고
+
+### Time Compounds
+- 아카이브된 지식은 시간이 지날수록 가치 증가
+- PKM은 미래의 자신을 위한 투자
+
+## 🔄 Maintenance
+
+### Weekly Review
+- 이번 주 어떤 루트를 사용했는가?
+- 새로운 인사이트를 어느 루트에 연결할까?
+
+### Monthly Cleanup
+- 고립된 노트 찾아서 루트와 연결
+- 중복 개념 통합
+- 더 이상 유효하지 않은 것 삭제
+
+### Quarterly Reflection
+- 루트별 사용 빈도 분석
+- 부족한 루트 집중 학습
+- 새로운 루트 후보 탐색
+
+---
+
+**이 폴더를 읽고 있다면**: 당신은 지금 IMI WORK 철학의 가장 깊은 곳에 와 있습니다. 이 10개 루트는 **15년 F&B 경험 × AI 활용**의 모든 것을 설명하는 철학적 토대입니다.
+
+**"일을 잘한다는 것"은 책 제목이 아니라, 이 10개 루트의 통합입니다.**

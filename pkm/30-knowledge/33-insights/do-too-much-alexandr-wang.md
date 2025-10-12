@@ -1,7 +1,26 @@
+---
+title: 너무 많이 하라 (DO TOO MUCH)
+author: Alexandr Wang (Scale AI CEO)
+tags: [leadership, 과도함, 실행력, playing-coach, 현장감]
+created: 2024-10-08
+source: blog-post
+root-concepts: [과도함, 현장감, 인사이드-아웃]
+---
+
 # 너무 많이 하라
 **리더가 되는 방법**
 *ALEXANDR WANG*
 *2024년 10월 8일*
+
+## 🌳 관련 Root Concepts
+
+이 글은 다음 철학적 루트의 핵심 출처입니다:
+
+- **[[../00-roots/root-03-과도함]]** - "사람들이 과도하다고 말하는 것이 그냥 성과다" (핵심 개념)
+- **[[../00-roots/root-06-현장감]]** - "Playing Coach형 리더십, 직접 실행" (Scale AI 사례)
+- **[[../00-roots/root-05-인사이드-아웃]]** - "합리적으로 보일 것보다 더 많이" (내면 확신)
+
+→ **"DO TOO MUCH" = 과도함 + 현장감 + 인사이드 아웃의 리더십**
 
 신입 창업자였을 때, 나는 종종 성공한 회사의 CEO들을 보며 "그들은 어떻게 해내는 걸까?"라고 궁금해했다.
 
