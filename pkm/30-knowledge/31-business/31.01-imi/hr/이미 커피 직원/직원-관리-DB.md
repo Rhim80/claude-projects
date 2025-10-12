@@ -86,11 +86,3 @@ source: notion
 ## 💾 원본 데이터
 
 CSV 파일: [[직원-관리-DB.csv]]
-
-## Related Notes
-
-- [[20-operations/22-automation/n8n-workflows-backup/n8n-project/workflows/payroll-systems/payroll-a-분석]] - ai_automation 관련; 30-knowledge ↔ 20-operations 연결
-- [[10-projects/13-imi-work/13.01-osmu-system/tracking/notion-page-setup-instructions]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/12-education/12.01-imi-ai-study/Claude + MCP +n8n 자동화 실습 Study/Claude + MCP +n8n 자동화 실습 Study]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/13-imi-work/13.01-osmu-system/tracking/notion-setup-guide]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/12-education/12.01-imi-ai-study/IMI AI STUDY]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

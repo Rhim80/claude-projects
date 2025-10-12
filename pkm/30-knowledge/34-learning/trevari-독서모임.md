@@ -140,11 +140,3 @@ source: workflowy
 - 허들
 
 ###
-
-## Related Notes
-
-- [[30-knowledge/34-learning/34.04-reading-groups/trevari-offline-business]] - ai_automation 관련; '시즌 2 시작 인스타 글' 개념 공유
-- [[10-projects/12-education/12.03-insight-platform/01_planning/program-proposal]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/11-consulting/11.04-portfolio/03_리버헤드_Riverhead]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/12-education/12.03-insight-platform/03_resources/content-analysis-revised]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/13-imi-work/13.01-osmu-system/guides/IMI_WORK_PERSONA_GUIDE]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

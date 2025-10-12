@@ -1,5 +1,14 @@
 # AI 시대 플레잉 코치형 리더십 트위터 스레드
 
+## 🌳 관련 Root Concepts
+
+- **[[../00-roots/root-03-주도성]]** - "팀과 함께 뛰면서 길을 찾아가는 리더" (스레드 5/5)
+- **[[../00-roots/root-08-프로세스-공유]]** - "직접 경험한 것을 공유" (스레드 4/5)
+
+→ **정보 독점 기반 권위가 사라진 AI 시대, 리더는 현장에서 팀과 함께 뛰며 프로세스를 공유하고 주도적으로 길을 찾아가야 한다.**
+
+---
+
 ## 📝 스레드 정보
 - **작성일**: 2025-08-30
 - **주제**: AI 시대에 리더가 플레잉 코치가 되어야 하는 이유
@@ -41,8 +50,6 @@ AI 시대에 리더십이 바뀌어야 할 것 같다는 생각이 요즘 자주
 
 ---
 *Tags: #트위터스레드 #리더십변화 #AI시대 #플레잉코치 #조직문화*
-
-## Related Notes
 
 - [[10-projects/13-imi-work/13.01-osmu-system/standalone-art/spring_melancholy_20250917_005322_info]] - ai_automation 관련; '주제' 개념 공유
 - [[10-projects/13-imi-work/13.01-osmu-system/tracking/notion-content-db-schema]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

@@ -207,9 +207,3 @@ Color 팀은 곧 그들의 기본적인 가정이 틀렸다는 것을 깨달았�
 **적용 포인트**:
 - 고급 컨설팅 시장 진입 시 "제품(서비스) 구축을 통한 학습" 접근법 활용
 - 기존 업체들이 제공하지 못하는 "오프라인 + AI" 융합 지점을 쐐기로 활용
-
-## Related Notes
-
-- [[ai-business-maturity]] - "딸깍 너머" 철학과 Color 사례 연결
-- [[imi-branding-philosophy]] - 창업과 생존에 대한 현실적 접근
-- [[33-insights/startup-reality-check]] - 시장 진입의 현실

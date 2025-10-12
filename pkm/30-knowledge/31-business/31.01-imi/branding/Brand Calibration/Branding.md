@@ -186,11 +186,3 @@ published: false
 * 브랜드 커뮤니케이션 아이덴티티는 미션, 프라미스, 스토리, 가치와 같은 무형적 아이덴티티를 가시화하는 과정입니다.
 
 * 제품/서비스를 어떻게 부를지에 필요한 네이밍 작업, 로고, 웹사이트, 홍보물 등에 해당하는 비주얼 아이덴티티 작업, 또한, 어떤 말투로 통일성 있게 소통할 것인지도 정해야 합니다.
-
-## Related Notes
-
-- [[30-knowledge/31-business/31.01-imi/stores/imi dessert lab/imi dessert lab]] - business_strategy 관련; '*' 개념 공유
-- [[10-projects/11-consulting/11.01-gangneung-cafe-2025/proposal-explanation]] - business_strategy 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/11-consulting/11.05-templates/imi-coffee-consulting-proposal-template]] - business_strategy 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/14-brand-identity/14.01-brand-builder/brand-identity-system/step-3-brand-language]] - business_strategy 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-working-backwards-final]] - business_strategy 관련; 30-knowledge ↔ 10-projects 연결

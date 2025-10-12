@@ -6,6 +6,23 @@
 
 ---
 
+## 🌳 Root 개념 적용 현황
+
+이 Hub는 **36-ai-tools** 폴더의 인덱스 파일로, 개별 파일들에 Root 링크가 적용되어 있습니다:
+
+### Root 사용 분포
+- **root-03 (주도성)**: 3회 - AI 시대 리더십, 교육 패러다임
+- **root-04 (동사-중심-사고)**: 1회 - 교육 패러다임
+- **root-05 (나음보다-다름)**: 1회 - 인간 감각의 중요성
+- **root-06 (각오와-책임)**: 1회 - 리더십 변화
+- **root-07 (감각)**: 1회 - 인간 감각의 중요성
+- **root-08 (프로세스-공유)**: 2회 - 리더십 변화, 플레잉 코치
+
+### 핵심 메시지
+**AI와 자동화 도구는 실무에 '주도적으로' 적용하고, '프로세스를 공유'하며 배울 때 진짜 가치를 만든다. 기술이 아닌 감각과 차별화로 경쟁한다.**
+
+---
+
 ## 📋 Overview
 
 비개발자가 AI와 자동화 도구를 활용해 비즈니스를 최적화한 실전 경험을 담고 있습니다. n8n 워크플로우 5개 운영, Claude Code 중심 AI 활용, 실무 중심 시스템 구축 노하우를 공유합니다.
@@ -181,11 +198,3 @@
 - [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/planning-session-notes]] - GPTers AI 브랜딩 스터디
 - [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-proposal-simple]] - GPTers AI 브랜딩 스터디
 - [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-working-backwards-final]] - Noah Brier의 Claudesidian PKM 시스템
-
-## Related Notes
-
-- [[40-personal/44-reflections/learning/git-repository-study-plan]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
-- [[10-projects/12-education/12.03-insight-platform/03_resources/content-analysis]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[40-personal/44-reflections/learning/ab-method-philosophy]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
-- [[10-projects/12-education/12.03-insight-platform/01_planning/program-proposal]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[00-system/04-docs/WINDOWS_SETUP]] - pkm_systems, ai_automation 관련; 30-knowledge ↔ 00-system 연결

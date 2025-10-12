@@ -108,11 +108,3 @@ source: workflowy
 - 
 
 -
-
-## Related Notes
-
-- [[20-operations/21-cafe-operations/ecommerce/strategy/market-research]] - ai_automation 관련; 30-knowledge ↔ 20-operations 연결
-- [[40-personal/사진-취미와-배움]] - ai_automation 관련; 30-knowledge ↔ 40-personal 연결
-- [[20-operations/21-cafe-operations/ecommerce/strategy/competitor-analysis]] - ai_automation 관련; 30-knowledge ↔ 20-operations 연결
-- [[20-operations/21-cafe-operations/ecommerce/marketing/channels/cafe24/setup-guide]] - ai_automation 관련; 30-knowledge ↔ 20-operations 연결
-- [[10-projects/13-imi-work/13.01-osmu-system/SUCCESS_GUIDE]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

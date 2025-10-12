@@ -225,11 +225,3 @@ Business Model
 * not too much
 * 감칠맛 = 땡기는 맛
 * 설탕 때문에 맛있는게 아니라 잘 만들어서 맛있는거야
-
-## Related Notes
-
-- [[30-knowledge/34-learning/34.02-lectures/lecture-archive/brand-value-proposition]] - business_strategy 관련; 'imi dessert lab' 개념 공유
-- [[30-knowledge/31-business/31.01-imi/branding/Brand Calibration/Branding]] - business_strategy 관련; '*' 개념 공유
-- [[10-projects/11-consulting/11.01-gangneung-cafe-2025/proposal-explanation]] - business_strategy 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/11-consulting/11.05-templates/imi-coffee-consulting-proposal-template]] - business_strategy 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/12-education/12.02-gpters-ai-branding/19th-cohort/19th-cohort-proposal]] - business_strategy 관련; 30-knowledge ↔ 10-projects 연결

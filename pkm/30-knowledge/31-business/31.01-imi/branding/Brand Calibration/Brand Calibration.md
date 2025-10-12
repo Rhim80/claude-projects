@@ -20,11 +20,3 @@ published: false
 2. 개인적 성장 향상 : 새로운 것을 시도하면 개인이 새로운 열정을 발견하고, 새로운 기술을 개발하고, 개인으로서 성장하도록 도울 수 있다. 이것은 개인적 성취감과 만족감으로 이어질 수 있다.
 
 3. 창의성 증가 : 새로운 것을 경험하면 창의성과 혁신에 영감을 줄 수 있다. 다양한 문화, 아이디어 및 관점에 대한 노출은 개인이 새로운 관점에서 문제와 도전에 접근하고 새로운 솔루션을 개발하는 데 도움이 될 수 있다.
-
-## Related Notes
-
-- [[00-system/01-templates/TEMPLATE_insight]] - business_strategy 관련; 30-knowledge ↔ 00-system 연결
-- [[00-system/01-templates/TEMPLATE_business]] - business_strategy 관련; 30-knowledge ↔ 00-system 연결
-- [[00-system/01-templates/daily-note-template]] - business_strategy 관련; 30-knowledge ↔ 00-system 연결
-- [[40-personal/41-daily/2025-10-11]] - business_strategy 관련; 30-knowledge ↔ 40-personal 연결
-- [[ZETTELKASTEN_QUALITY_ASSESSMENT_REPORT]] - business_strategy 관련; 30-knowledge ↔ ZETTELKASTEN_QUALITY_ASSESSMENT_REPORT.md 연결

@@ -138,11 +138,3 @@ migrated: 2025-10-10
 
 - **기간**: 2~5월 4달간
 - **모임**: 셋째 주 수요일
-
-## Related Notes
-
-- [[30-knowledge/34-learning/trevari-독서모임]] - ai_automation 관련; '시즌 2 시작 인스타 글' 개념 공유
-- [[10-projects/13-imi-work/13.01-osmu-system/standalone-art/spring_melancholy_20250917_005322_info]] - ai_automation 관련; '주제' 개념 공유
-- [[10-projects/12-education/12.03-insight-platform/인사이트 플랫폼 AI 강의]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/12-education/12.03-insight-platform/01_planning/program-proposal]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/12-education/12.04-insighter/인사이터 AI 강의/문의 답변]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

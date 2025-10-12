@@ -400,17 +400,3 @@ source: workflowy
 - 비즈니스로서 실제 운영의 이야기.
 
 - 실제 스몰브랜드 운영
-
-## Related Notes
-
-### Root Connections
-- [[30-knowledge/00-roots/root-07-감각]] - 공간 기획자에게 필요한 감각, 컨셉, 기획의 핵심
-- [[30-knowledge/00-roots/root-10-소비자-중심]] - 고객 중심 사고, 소비자의 선택을 받는 방법
-- [[30-knowledge/00-roots/root-05-나음보다-다름]] - 다름을 만드는 방법, 차별화된 공간 경험 설계
-
-### Related Content
-- [[10-projects/13-imi-work/13.01-osmu-system/blog-content/aeo-ai-search-marketing-strategy]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/13-imi-work/13.01-osmu-system/temp-content-back-office-efficiency]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/13-imi-work/13.01-osmu-system/content/back-office-efficiency-front-office-delight]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/12-education/12.04-insighter/솔로프리너_생산성_치트키_AI_강의안]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/12-education/12.03-insight-platform/01_planning/program-proposal]] - ai_automation 관련; 30-knowledge ↔ 10-projects 연결

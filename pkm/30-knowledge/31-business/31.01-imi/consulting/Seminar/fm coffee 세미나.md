@@ -215,11 +215,3 @@ FM 대표님이 앞의 직원에게 원하는 일이 뭔가요?
 하지만 사실은 이것이야말로 진정한 노력입니다.
 
 따라서 직업인으로서 일류가 되고 싶다면 오로지 커피 연습에만 열중하는 쉬운 노력만 하지 말라고 말합니다. 그보다 한 수 높은 단계에 있는 노력, 즉 바리스타로서의 전략을 세우는 노력을 해야한다는 것이죠.
-
-## Related Notes
-
-- [[10-projects/11-consulting/11.04-portfolio/06_앙떼떼페레_Entetepere]] - cafe_operations 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/11-consulting/11.01-gangneung-cafe-2025/proposal-explanation]] - cafe_operations 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/11-consulting/11.04-portfolio/07_카페_에이닐_컨설팅_프로젝트]] - cafe_operations 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/11-consulting/11.04-portfolio/01_고요새_제주]] - cafe_operations 관련; 30-knowledge ↔ 10-projects 연결
-- [[10-projects/11-consulting/11.04-portfolio/02_워커샵_대전]] - cafe_operations 관련; 30-knowledge ↔ 10-projects 연결

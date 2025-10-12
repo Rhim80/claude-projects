@@ -1,5 +1,14 @@
 # AI 시대 교육 패러다임 변화
 
+## 🌳 관련 Root Concepts
+
+- **[[../00-roots/root-04-동사-중심-사고]]** - "실행 경험과 프로젝트 중심" (본문 핵심 메시지)
+- **[[../00-roots/root-03-주도성]]** - "진짜 의지로 실제 프로젝트 함께하기" (스레드 마지막)
+
+→ **AI가 vertical 지식을 제공하는 시대에는 이론보다 '실행 경험'이 차별화 요소다. 동사 중심으로 프로젝트를 주도하며 배우는 것이 진짜 학습이다.**
+
+---
+
 ## 📝 스레드 정보
 - **작성일**: 2025-09-01
 - **주제**: AI 시대에 대학 교육의 의미와 프로젝트 기반 학습의 중요성
@@ -36,8 +45,6 @@ AI가 이렇게 도와주는 시대에, 결국 차별화는 '실행 경험'에 �
 
 ---
 *Tags: #교육혁신 #AI학습 #프로젝트기반학습 #스타트업 #협업*
-
-## Related Notes
 
 - [[10-projects/13-imi-work/13.01-osmu-system/archive/content-prompt-insight-0914]] - ai_automation 관련; '조회수' 개념 공유
 - [[10-projects/13-imi-work/13.01-osmu-system/standalone-art/spring_melancholy_20250917_005322_info]] - ai_automation 관련; '주제' 개념 공유

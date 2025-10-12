@@ -37,11 +37,3 @@ published: false
 실적 공개
 
 매월 원두 or 커피 제공 (금액 산정)
-
-## Related Notes
-
-- [[10-projects/12-education/12.01-imi-ai-study/AI 워크숍 기획안]] - cafe_operations 관련; 30-knowledge ↔ 10-projects 연결
-- [[ZETTELKASTEN_QUALITY_ASSESSMENT_REPORT]] - cafe_operations 관련; 30-knowledge ↔ ZETTELKASTEN_QUALITY_ASSESSMENT_REPORT.md 연결
-- [[40-personal/41-daily/2025-10-09]] - cafe_operations 관련; 30-knowledge ↔ 40-personal 연결
-- [[00-system/01-templates/daily-note-template]] - cafe_operations 관련; 30-knowledge ↔ 00-system 연결
-- [[40-personal/41-daily/2025-10-11]] - cafe_operations 관련; 30-knowledge ↔ 40-personal 연결

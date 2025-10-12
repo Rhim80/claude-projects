@@ -130,17 +130,3 @@ note: "이미워크숍-브랜드철학, 성장과-브랜딩, 창업론-생존의
 
 
 ---
-
-## Related Notes
-
-### 철학 → 실행 연결 (Tier 1 → Tier 2)
-- [[../consulting/Seminar/Seminar]] - 프로세스 공유의 실천 (교육)
-- [[../consulting/Seminar/스페셜티 커피업계 대표들을 위한 브랜딩 세미나]] - 감각과 소비자 중심 전달
-- [[Brand Calibration/Branding]] - 의미가치와 아카이브 사고의 브랜딩
-- [[BI Design]] - 감각의 시각화
-- [[../imi-operations-manual]] - 프로세스 공유와 아카이브 문서화
-
-### 외부 연결
-- [[../../ai-business-maturity]] - AI 시대의 각오와 집착
-- [[../../market-entry-framework]] - 시장 진입과 생존 전략
-- [[../../33-insights/startup-reality-check]] - 창업 현실 체크

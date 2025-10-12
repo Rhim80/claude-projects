@@ -240,9 +240,3 @@ Color 창업자의 통찰:
 ---
 
 *Tags: #AI활용전략 #비즈니스깊이 #실행력 #시장검증 #고객이해*
-
-## Related Notes
-
-- [[market-entry-framework]] - Color 창업 사례로 "딸깍 너머" 검증 실천
-- [[33-insights/do-too-much-alexandr-wang]] - DO TOO MUCH 철학 원문
-- [[33-insights/startup-reality-check]] - 창업 현실과 각오

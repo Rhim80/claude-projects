@@ -135,9 +135,3 @@
 - [[10-projects/11-consulting/11.01-gangneung-cafe-2025/proposal-explanation]] - 강릉 카페 프로젝트 관련
 - [[10-projects/11-consulting/11.01-gangneung-cafe-2025/gangneung-cafe-proposal-quote]] - 강릉 카페 프로젝트 관련
 - [[10-projects/11-consulting/11.05-templates/gangneung-cafe-proposal-quote]] - 강릉 카페 프로젝트 관련
-
-## Related Notes
-
-- [[business-operations-hub]] - 15년 F&B 경험의 PKM 실천 사례
-- [[00-roots/ROOT_VALIDATION_REPORT]] - 10개 Root 검증과 PKM 구조
-- [[41-daily]] - Daily Notes 실천 Hub
