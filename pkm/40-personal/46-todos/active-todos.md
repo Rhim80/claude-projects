@@ -14,6 +14,20 @@
 
 <!-- /todo 커맨드로 추가된 항목들이 여기 들어갑니다 -->
 
+- [ ] 인사이터 용 ai 강의 자료 만들기. 목요일까지
+  - added: 2025-10-13 18:30
+  - context: pkm/40-personal/41-daily/2025-10-13.md
+  - priority: high
+  - project: 12-education/12.04-insighter
+  - deadline: 2025-10-17 (목요일)
+
+- [ ] IMI Working Backwards 프로젝트 현실성 재검토 (또는 전환)
+  - added: 2025-10-13 18:35
+  - context: pkm/40-personal/41-daily/2025-10-13.md
+  - priority: normal
+  - project: 10-projects/15-imi-working-backwards
+  - note: 스케일 너무 큼 (30억 목표), 현실적으로 재조정 필요
+
 ---
 
 ## 🎯 Today (오늘 할 일)
