@@ -28,6 +28,14 @@
   - project: 10-projects/15-imi-working-backwards
   - note: 스케일 너무 큼 (30억 목표), 현실적으로 재조정 필요
 
+- [ ] 강릉 프로젝트 follow-up 체크 (연락 대기 중)
+  - added: 2025-10-14 14:40
+  - context: 계약 보류 (금액 이슈), 설득 메시지 발송 완료
+  - priority: low (대기 중)
+  - project: 10-projects/11-consulting/11.01-gangneung-cafe-2025
+  - scheduled: 2025-10-21 (월) - 연락 없으면 체크인
+  - note: 이번 주 내 클라이언트 재연락 예정, 재촉 금지
+
 ---
 
 ## 🎯 Today (오늘 할 일)
