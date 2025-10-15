@@ -28,13 +28,29 @@
   - project: 10-projects/15-imi-working-backwards
   - note: 스케일 너무 큼 (30억 목표), 현실적으로 재조정 필요
 
-- [ ] 강릉 프로젝트 follow-up 체크 (연락 대기 중)
+- [x] 강릉 프로젝트 follow-up 체크 (연락 대기 중)
   - added: 2025-10-14 14:40
+  - completed: 2025-10-15
+  - result: ✅ 계약 체결 완료, 계약금 수령
   - context: 계약 보류 (금액 이슈), 설득 메시지 발송 완료
-  - priority: low (대기 중)
   - project: 10-projects/11-consulting/11.01-gangneung-cafe-2025
-  - scheduled: 2025-10-21 (월) - 연락 없으면 체크인
-  - note: 이번 주 내 클라이언트 재연락 예정, 재촉 금지
+
+- [ ] 강릉 프로젝트 - 브랜드 질문지 발송
+  - added: 2025-10-15
+  - context: 계약금 수령 완료, 프로젝트 시작
+  - priority: high
+  - project: 10-projects/11-consulting/11.01-gangneung-cafe-2025
+  - deadline: 2025-10-16 (화)
+  - file: pkm/10-projects/11-consulting/11.05-templates/brand-questionnaire.html
+  - note: HTML 버전으로 발송, 클라이언트 작성 기한 1주일
+
+- [ ] 강릉 프로젝트 - 프로젝트 디렉토리 세팅
+  - added: 2025-10-15
+  - context: Step 1~5 작업 폴더 구조 생성
+  - priority: medium
+  - project: 10-projects/11-consulting/11.01-gangneung-cafe-2025
+  - scheduled: 2025-10-16 (화)
+  - note: 단계별 폴더 생성, 템플릿 및 참고 자료 준비
 
 ---
 
