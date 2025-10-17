@@ -14,12 +14,14 @@
 
 <!-- /todo 커맨드로 추가된 항목들이 여기 들어갑니다 -->
 
-- [ ] 인사이터 용 ai 강의 자료 만들기. 목요일까지
+- [x] 인사이터 용 ai 강의 자료 만들기. 목요일까지
   - added: 2025-10-13 18:30
+  - completed: 2025-10-17
+  - result: ✅ Flowith 슬라이드 2개 작성 및 공유 완료
+  - slides: https://flo.host/rlMsaJi/, https://flo.host/0DXxsAB/
   - context: pkm/40-personal/41-daily/2025-10-13.md
   - priority: high
   - project: 12-education/12.04-insighter
-  - deadline: 2025-10-17 (목요일)
 
 - [ ] IMI Working Backwards 프로젝트 현실성 재검토 (또는 전환)
   - added: 2025-10-13 18:35
@@ -35,22 +37,22 @@
   - context: 계약 보류 (금액 이슈), 설득 메시지 발송 완료
   - project: 10-projects/11-consulting/11.01-gangneung-cafe-2025
 
-- [ ] 강릉 프로젝트 - 브랜드 질문지 발송
+- [x] 강릉 프로젝트 - 브랜드 질문지 발송
   - added: 2025-10-15
+  - completed: 2025-10-17
+  - result: ✅ 브랜드 질문지 발송 완료
   - context: 계약금 수령 완료, 프로젝트 시작
   - priority: high
   - project: 10-projects/11-consulting/11.01-gangneung-cafe-2025
-  - deadline: 2025-10-16 (화)
   - file: pkm/10-projects/11-consulting/11.05-templates/brand-questionnaire.html
-  - note: HTML 버전으로 발송, 클라이언트 작성 기한 1주일
 
-- [ ] 강릉 프로젝트 - 프로젝트 디렉토리 세팅
+- [x] 강릉 프로젝트 - 프로젝트 디렉토리 세팅
   - added: 2025-10-15
+  - completed: 2025-10-16
+  - result: ✅ Step 1-5 폴더 구조, README, 템플릿 완성
   - context: Step 1~5 작업 폴더 구조 생성
   - priority: medium
   - project: 10-projects/11-consulting/11.01-gangneung-cafe-2025
-  - scheduled: 2025-10-16 (화)
-  - note: 단계별 폴더 생성, 템플릿 및 참고 자료 준비
 
 ---
 
@@ -78,7 +80,7 @@
 
 ---
 
-*Last updated: {{date}}*
+*Last updated: 2025-10-17*
 
 ## Related Notes
 
